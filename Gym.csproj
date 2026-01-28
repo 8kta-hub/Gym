@@ -46,16 +46,22 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Principal.cs">
+    <Compile Include="V\frm_Inicio.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Principal.Designer.cs">
-      <DependentUpon>Principal.cs</DependentUpon>
+    <Compile Include="V\frm_Inicio.Designer.cs">
+      <DependentUpon>frm_Inicio.cs</DependentUpon>
+    </Compile>
+    <Compile Include="V\frm_Principal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="V\frm_Principal.Designer.cs">
+      <DependentUpon>frm_Principal.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="Principal.resx">
-      <DependentUpon>Principal.cs</DependentUpon>
+    <EmbeddedResource Include="V\frm_Principal.resx">
+      <DependentUpon>frm_Principal.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -131,5 +137,6 @@
   <ItemGroup>
     <None Include="Resources\information.png" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

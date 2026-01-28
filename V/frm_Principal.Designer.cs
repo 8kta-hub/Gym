@@ -1,6 +1,6 @@
 ﻿namespace Gym
 {
-    partial class Principal
+    partial class frm_Principal
     {
         /// <summary>
         /// Variable del diseñador necesaria.
