@@ -46,10 +46,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="V\frm_Inicio.cs">
+    <Compile Include="V\frmHijos\frm_Inicio.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="V\frm_Inicio.Designer.cs">
+    <Compile Include="V\frmHijos\frm_Inicio.Designer.cs">
       <DependentUpon>frm_Inicio.cs</DependentUpon>
     </Compile>
     <Compile Include="V\frm_Principal.cs">
@@ -60,6 +60,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="V\frmHijos\frm_Inicio.resx">
+      <DependentUpon>frm_Inicio.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="V\frm_Principal.resx">
       <DependentUpon>frm_Principal.cs</DependentUpon>
     </EmbeddedResource>

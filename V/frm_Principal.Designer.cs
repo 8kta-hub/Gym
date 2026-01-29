@@ -28,7 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.pnl_PanelPrincipal = new System.Windows.Forms.Panel();
+            this.pnl_botones = new System.Windows.Forms.Panel();
+            this.label14 = new System.Windows.Forms.Label();
+            this.label13 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
@@ -40,8 +42,6 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.label13 = new System.Windows.Forms.Label();
-            this.label14 = new System.Windows.Forms.Label();
             this.btn_CerrarSesion = new System.Windows.Forms.Button();
             this.btn_Reporte = new System.Windows.Forms.Button();
             this.btn_Registro = new System.Windows.Forms.Button();
@@ -56,44 +56,65 @@
             this.btn_Roles = new System.Windows.Forms.Button();
             this.btn_Usuarios = new System.Windows.Forms.Button();
             this.btn_inicio = new System.Windows.Forms.Button();
-            this.pnl_PanelPrincipal.SuspendLayout();
+            this.pnl_base = new System.Windows.Forms.Panel();
+            this.pnl_botones.SuspendLayout();
             this.SuspendLayout();
             // 
-            // pnl_PanelPrincipal
+            // pnl_botones
             // 
-            this.pnl_PanelPrincipal.BackColor = System.Drawing.SystemColors.AppWorkspace;
-            this.pnl_PanelPrincipal.Controls.Add(this.label14);
-            this.pnl_PanelPrincipal.Controls.Add(this.label13);
-            this.pnl_PanelPrincipal.Controls.Add(this.label9);
-            this.pnl_PanelPrincipal.Controls.Add(this.label5);
-            this.pnl_PanelPrincipal.Controls.Add(this.label10);
-            this.pnl_PanelPrincipal.Controls.Add(this.label6);
-            this.pnl_PanelPrincipal.Controls.Add(this.label11);
-            this.pnl_PanelPrincipal.Controls.Add(this.label7);
-            this.pnl_PanelPrincipal.Controls.Add(this.label8);
-            this.pnl_PanelPrincipal.Controls.Add(this.label3);
-            this.pnl_PanelPrincipal.Controls.Add(this.label4);
-            this.pnl_PanelPrincipal.Controls.Add(this.label2);
-            this.pnl_PanelPrincipal.Controls.Add(this.label1);
-            this.pnl_PanelPrincipal.Controls.Add(this.btn_CerrarSesion);
-            this.pnl_PanelPrincipal.Controls.Add(this.btn_Reporte);
-            this.pnl_PanelPrincipal.Controls.Add(this.btn_Registro);
-            this.pnl_PanelPrincipal.Controls.Add(this.btn_Conceptos);
-            this.pnl_PanelPrincipal.Controls.Add(this.btn_Movimientos);
-            this.pnl_PanelPrincipal.Controls.Add(this.btn_Corte);
-            this.pnl_PanelPrincipal.Controls.Add(this.btn_Ventas);
-            this.pnl_PanelPrincipal.Controls.Add(this.btn_Compras);
-            this.pnl_PanelPrincipal.Controls.Add(this.btn_Productos);
-            this.pnl_PanelPrincipal.Controls.Add(this.btn_Membresia);
-            this.pnl_PanelPrincipal.Controls.Add(this.btn_Clientes);
-            this.pnl_PanelPrincipal.Controls.Add(this.btn_Roles);
-            this.pnl_PanelPrincipal.Controls.Add(this.btn_Usuarios);
-            this.pnl_PanelPrincipal.Controls.Add(this.btn_inicio);
-            this.pnl_PanelPrincipal.Dock = System.Windows.Forms.DockStyle.Top;
-            this.pnl_PanelPrincipal.Location = new System.Drawing.Point(0, 0);
-            this.pnl_PanelPrincipal.Name = "pnl_PanelPrincipal";
-            this.pnl_PanelPrincipal.Size = new System.Drawing.Size(1109, 84);
-            this.pnl_PanelPrincipal.TabIndex = 0;
+            this.pnl_botones.BackColor = System.Drawing.SystemColors.AppWorkspace;
+            this.pnl_botones.Controls.Add(this.label14);
+            this.pnl_botones.Controls.Add(this.label13);
+            this.pnl_botones.Controls.Add(this.label9);
+            this.pnl_botones.Controls.Add(this.label5);
+            this.pnl_botones.Controls.Add(this.label10);
+            this.pnl_botones.Controls.Add(this.label6);
+            this.pnl_botones.Controls.Add(this.label11);
+            this.pnl_botones.Controls.Add(this.label7);
+            this.pnl_botones.Controls.Add(this.label8);
+            this.pnl_botones.Controls.Add(this.label3);
+            this.pnl_botones.Controls.Add(this.label4);
+            this.pnl_botones.Controls.Add(this.label2);
+            this.pnl_botones.Controls.Add(this.label1);
+            this.pnl_botones.Controls.Add(this.btn_CerrarSesion);
+            this.pnl_botones.Controls.Add(this.btn_Reporte);
+            this.pnl_botones.Controls.Add(this.btn_Registro);
+            this.pnl_botones.Controls.Add(this.btn_Conceptos);
+            this.pnl_botones.Controls.Add(this.btn_Movimientos);
+            this.pnl_botones.Controls.Add(this.btn_Corte);
+            this.pnl_botones.Controls.Add(this.btn_Ventas);
+            this.pnl_botones.Controls.Add(this.btn_Compras);
+            this.pnl_botones.Controls.Add(this.btn_Productos);
+            this.pnl_botones.Controls.Add(this.btn_Membresia);
+            this.pnl_botones.Controls.Add(this.btn_Clientes);
+            this.pnl_botones.Controls.Add(this.btn_Roles);
+            this.pnl_botones.Controls.Add(this.btn_Usuarios);
+            this.pnl_botones.Controls.Add(this.btn_inicio);
+            this.pnl_botones.Dock = System.Windows.Forms.DockStyle.Top;
+            this.pnl_botones.Location = new System.Drawing.Point(0, 0);
+            this.pnl_botones.Name = "pnl_botones";
+            this.pnl_botones.Size = new System.Drawing.Size(1109, 84);
+            this.pnl_botones.TabIndex = 0;
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label14.Location = new System.Drawing.Point(892, 64);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(52, 13);
+            this.label14.TabIndex = 24;
+            this.label14.Text = "Reporte";
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label13.Location = new System.Drawing.Point(819, 64);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(54, 13);
+            this.label13.TabIndex = 23;
+            this.label13.Text = "Registro";
             // 
             // label9
             // 
@@ -205,34 +226,14 @@
             this.label1.TabIndex = 1;
             this.label1.Text = "Inicio";
             // 
-            // label13
-            // 
-            this.label13.AutoSize = true;
-            this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.Location = new System.Drawing.Point(819, 64);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(54, 13);
-            this.label13.TabIndex = 23;
-            this.label13.Text = "Registro";
-            // 
-            // label14
-            // 
-            this.label14.AutoSize = true;
-            this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label14.Location = new System.Drawing.Point(892, 64);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(52, 13);
-            this.label14.TabIndex = 24;
-            this.label14.Text = "Reporte";
-            // 
             // btn_CerrarSesion
             // 
             this.btn_CerrarSesion.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btn_CerrarSesion.BackgroundImage = global::Gym.Properties.Resources.cerrar_sesion__1_;
             this.btn_CerrarSesion.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btn_CerrarSesion.Location = new System.Drawing.Point(1076, 12);
+            this.btn_CerrarSesion.Location = new System.Drawing.Point(1067, 12);
             this.btn_CerrarSesion.Name = "btn_CerrarSesion";
-            this.btn_CerrarSesion.Size = new System.Drawing.Size(30, 26);
+            this.btn_CerrarSesion.Size = new System.Drawing.Size(30, 28);
             this.btn_CerrarSesion.TabIndex = 15;
             this.btn_CerrarSesion.UseVisualStyleBackColor = true;
             // 
@@ -366,26 +367,35 @@
             this.btn_inicio.TabIndex = 1;
             this.btn_inicio.UseVisualStyleBackColor = true;
             // 
-            // Principal
+            // pnl_base
+            // 
+            this.pnl_base.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pnl_base.Location = new System.Drawing.Point(0, 84);
+            this.pnl_base.Name = "pnl_base";
+            this.pnl_base.Size = new System.Drawing.Size(1109, 405);
+            this.pnl_base.TabIndex = 1;
+            // 
+            // frm_Principal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(1109, 450);
-            this.Controls.Add(this.pnl_PanelPrincipal);
-            this.Name = "Principal";
+            this.ClientSize = new System.Drawing.Size(1109, 489);
+            this.Controls.Add(this.pnl_base);
+            this.Controls.Add(this.pnl_botones);
+            this.Name = "frm_Principal";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Principal_Load);
-            this.pnl_PanelPrincipal.ResumeLayout(false);
-            this.pnl_PanelPrincipal.PerformLayout();
+            this.pnl_botones.ResumeLayout(false);
+            this.pnl_botones.PerformLayout();
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.Panel pnl_PanelPrincipal;
+        private System.Windows.Forms.Panel pnl_botones;
         private System.Windows.Forms.Button btn_Usuarios;
         private System.Windows.Forms.Button btn_inicio;
         private System.Windows.Forms.Button btn_Clientes;
@@ -413,6 +423,7 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.Panel pnl_base;
     }
 }
 

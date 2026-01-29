@@ -23,6 +23,20 @@ namespace Gym
             this.MinimumSize = new Size(1014, 489);
         }
 
+        //Abrir form hijo
+        void abrirForm(Form form)
+        {
+            while (pnl_base.Controls.Count > 0)
+            {
+                pnl_base.Controls.RemoveAt(0);
+            }
+            Form formHijo = form;
+            formHijo.TopLevel = false;
+            formHijo.FormBorderStyle = FormBorderStyle.None;
+            formHijo.Dock = DockStyle.Fill;
+            formHijo.Controls.Add(formHijo);
+            formHijo.Show();
+        }
 
     }
 }
