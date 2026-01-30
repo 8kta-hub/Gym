@@ -46,11 +46,24 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="M\ConDB.cs" />
     <Compile Include="V\frmHijos\frm_Inicio.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="V\frmHijos\frm_Inicio.Designer.cs">
       <DependentUpon>frm_Inicio.cs</DependentUpon>
+    </Compile>
+    <Compile Include="V\frmHijos\frm_Usuarios.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="V\frmHijos\frm_Usuarios.Designer.cs">
+      <DependentUpon>frm_Usuarios.cs</DependentUpon>
+    </Compile>
+    <Compile Include="V\frm_Login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="V\frm_Login.Designer.cs">
+      <DependentUpon>frm_Login.cs</DependentUpon>
     </Compile>
     <Compile Include="V\frm_Principal.cs">
       <SubType>Form</SubType>
@@ -62,6 +75,12 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="V\frmHijos\frm_Inicio.resx">
       <DependentUpon>frm_Inicio.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="V\frmHijos\frm_Usuarios.resx">
+      <DependentUpon>frm_Usuarios.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="V\frm_Login.resx">
+      <DependentUpon>frm_Login.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="V\frm_Principal.resx">
       <DependentUpon>frm_Principal.cs</DependentUpon>
@@ -140,6 +159,11 @@
   <ItemGroup>
     <None Include="Resources\information.png" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <None Include="Resources\hide.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\show.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
