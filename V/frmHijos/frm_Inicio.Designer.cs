@@ -40,6 +40,7 @@
             this.label7 = new System.Windows.Forms.Label();
             this.lbl_rolUsuairo = new System.Windows.Forms.Label();
             this.lbl_apellidUsuairo = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -160,11 +161,22 @@
             this.lbl_apellidUsuairo.TabIndex = 11;
             this.lbl_apellidUsuairo.Text = "######";
             // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(519, 23);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(49, 16);
+            this.label4.TabIndex = 12;
+            this.label4.Text = "######";
+            // 
             // frm_Inicio
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1028, 366);
+            this.Controls.Add(this.label4);
             this.Controls.Add(this.lbl_apellidUsuairo);
             this.Controls.Add(this.lbl_rolUsuairo);
             this.Controls.Add(this.label7);
@@ -200,5 +212,6 @@
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label lbl_rolUsuairo;
         private System.Windows.Forms.Label lbl_apellidUsuairo;
+        private System.Windows.Forms.Label label4;
     }
 }
