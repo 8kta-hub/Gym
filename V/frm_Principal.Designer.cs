@@ -42,6 +42,7 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.pnl_base = new System.Windows.Forms.Panel();
             this.btn_CerrarSesion = new System.Windows.Forms.Button();
             this.btn_Reporte = new System.Windows.Forms.Button();
             this.btn_Registro = new System.Windows.Forms.Button();
@@ -56,7 +57,6 @@
             this.btn_Roles = new System.Windows.Forms.Button();
             this.btn_Usuarios = new System.Windows.Forms.Button();
             this.btn_inicio = new System.Windows.Forms.Button();
-            this.pnl_base = new System.Windows.Forms.Panel();
             this.pnl_botones.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -226,6 +226,14 @@
             this.label1.TabIndex = 1;
             this.label1.Text = "Inicio";
             // 
+            // pnl_base
+            // 
+            this.pnl_base.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pnl_base.Location = new System.Drawing.Point(0, 84);
+            this.pnl_base.Name = "pnl_base";
+            this.pnl_base.Size = new System.Drawing.Size(1109, 405);
+            this.pnl_base.TabIndex = 1;
+            // 
             // btn_CerrarSesion
             // 
             this.btn_CerrarSesion.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
@@ -367,14 +375,6 @@
             this.btn_inicio.TabIndex = 1;
             this.btn_inicio.UseVisualStyleBackColor = true;
             // 
-            // pnl_base
-            // 
-            this.pnl_base.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pnl_base.Location = new System.Drawing.Point(0, 84);
-            this.pnl_base.Name = "pnl_base";
-            this.pnl_base.Size = new System.Drawing.Size(1109, 405);
-            this.pnl_base.TabIndex = 1;
-            // 
             // frm_Principal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -385,7 +385,6 @@
             this.Controls.Add(this.pnl_botones);
             this.Name = "frm_Principal";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Form1";
             this.Load += new System.EventHandler(this.Principal_Load);
             this.pnl_botones.ResumeLayout(false);
             this.pnl_botones.PerformLayout();

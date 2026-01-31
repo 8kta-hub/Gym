@@ -33,13 +33,13 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.lbl_nombreUsuairo = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.lbl_fecha = new System.Windows.Forms.Label();
             this.lbl_hora = new System.Windows.Forms.Label();
             this.btn_in_informacion = new System.Windows.Forms.Button();
             this.label7 = new System.Windows.Forms.Label();
             this.lbl_rolUsuairo = new System.Windows.Forms.Label();
             this.lbl_apellidUsuairo = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -92,14 +92,6 @@
             this.lbl_nombreUsuairo.TabIndex = 4;
             this.lbl_nombreUsuairo.Text = "######";
             // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Location = new System.Drawing.Point(819, 62);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(183, 167);
-            this.pictureBox1.TabIndex = 5;
-            this.pictureBox1.TabStop = false;
-            // 
             // lbl_fecha
             // 
             this.lbl_fecha.AutoSize = true;
@@ -122,12 +114,12 @@
             // 
             // btn_in_informacion
             // 
-            this.btn_in_informacion.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_in_informacion.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_in_informacion.Location = new System.Drawing.Point(120, 36);
             this.btn_in_informacion.Name = "btn_in_informacion";
-            this.btn_in_informacion.Size = new System.Drawing.Size(84, 23);
+            this.btn_in_informacion.Size = new System.Drawing.Size(93, 23);
             this.btn_in_informacion.TabIndex = 8;
-            this.btn_in_informacion.Text = "informacion";
+            this.btn_in_informacion.Text = "Informacion";
             this.btn_in_informacion.UseVisualStyleBackColor = true;
             // 
             // label7
@@ -159,6 +151,14 @@
             this.lbl_apellidUsuairo.Size = new System.Drawing.Size(49, 16);
             this.lbl_apellidUsuairo.TabIndex = 11;
             this.lbl_apellidUsuairo.Text = "######";
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Location = new System.Drawing.Point(819, 62);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(183, 167);
+            this.pictureBox1.TabIndex = 5;
+            this.pictureBox1.TabStop = false;
             // 
             // frm_Inicio
             // 

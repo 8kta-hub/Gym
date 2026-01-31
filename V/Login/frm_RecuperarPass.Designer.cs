@@ -1,6 +1,6 @@
-﻿namespace Gym.V.frmHijos
+﻿namespace Gym.V.Login
 {
-    partial class frm_Usuarios
+    partial class frm_RecuperarPass
     {
         /// <summary>
         /// Required designer variable.
@@ -30,13 +30,13 @@
         {
             this.SuspendLayout();
             // 
-            // frm_Usuarios
+            // frm_RecuperarPass
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1028, 366);
-            this.Name = "frm_Usuarios";
-            this.Text = "frm_Usuarios";
+            this.ClientSize = new System.Drawing.Size(350, 284);
+            this.Name = "frm_RecuperarPass";
+            this.Text = "frm_RecuperarPass";
             this.ResumeLayout(false);
 
         }
