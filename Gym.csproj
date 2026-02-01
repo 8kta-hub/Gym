@@ -53,6 +53,18 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="M\ConDB.cs" />
+    <Compile Include="V\frmHijos\Clientes\frm_Clientes_Membresias_Pago.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="V\frmHijos\Clientes\frm_Clientes_Membresias_Pago.Designer.cs">
+      <DependentUpon>frm_Clientes_Membresias_Pago.cs</DependentUpon>
+    </Compile>
+    <Compile Include="V\frmHijos\Clientes\frm_Clientes_Membresias.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="V\frmHijos\Clientes\frm_Clientes_Membresias.Designer.cs">
+      <DependentUpon>frm_Clientes_Membresias.cs</DependentUpon>
+    </Compile>
     <Compile Include="V\frmHijos\Clientes\frm_Clientes.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -89,6 +101,18 @@
     <Compile Include="V\frmHijos\Membresias\frm_Membresias_Nuevo.Designer.cs">
       <DependentUpon>frm_Membresias_Nuevo.cs</DependentUpon>
     </Compile>
+    <Compile Include="V\frmHijos\Roles\frm_Roles.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="V\frmHijos\Roles\frm_Roles.Designer.cs">
+      <DependentUpon>frm_Roles.cs</DependentUpon>
+    </Compile>
+    <Compile Include="V\frmHijos\Roles\frm_Roles_Nuevo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="V\frmHijos\Roles\frm_Roles_Nuevo.Designer.cs">
+      <DependentUpon>frm_Roles_Nuevo.cs</DependentUpon>
+    </Compile>
     <Compile Include="V\frmHijos\Usuarios\frm_Usuarios.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -100,6 +124,12 @@
     </Compile>
     <Compile Include="V\frmHijos\Usuarios\frm_Usuarios_Nuevo.Designer.cs">
       <DependentUpon>frm_Usuarios_Nuevo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="V\frmHijos\Usuarios\frm_Usuarios_Roles.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="V\frmHijos\Usuarios\frm_Usuarios_Roles.Designer.cs">
+      <DependentUpon>frm_Usuarios_Roles.cs</DependentUpon>
     </Compile>
     <Compile Include="V\Login\frm_Login.cs">
       <SubType>Form</SubType>
@@ -121,6 +151,12 @@
     <Compile Include="V\Login\frm_RecuperarPass.Designer.cs">
       <DependentUpon>frm_RecuperarPass.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="V\frmHijos\Clientes\frm_Clientes_Membresias_Pago.resx">
+      <DependentUpon>frm_Clientes_Membresias_Pago.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="V\frmHijos\Clientes\frm_Clientes_Membresias.resx">
+      <DependentUpon>frm_Clientes_Membresias.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="V\frmHijos\Clientes\frm_Clientes.resx">
       <DependentUpon>frm_Clientes.cs</DependentUpon>
     </EmbeddedResource>
@@ -139,11 +175,20 @@
     <EmbeddedResource Include="V\frmHijos\Membresias\frm_Membresias_Nuevo.resx">
       <DependentUpon>frm_Membresias_Nuevo.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="V\frmHijos\Roles\frm_Roles.resx">
+      <DependentUpon>frm_Roles.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="V\frmHijos\Roles\frm_Roles_Nuevo.resx">
+      <DependentUpon>frm_Roles_Nuevo.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="V\frmHijos\Usuarios\frm_Usuarios.resx">
       <DependentUpon>frm_Usuarios.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="V\frmHijos\Usuarios\frm_Usuarios_Nuevo.resx">
       <DependentUpon>frm_Usuarios_Nuevo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="V\frmHijos\Usuarios\frm_Usuarios_Roles.resx">
+      <DependentUpon>frm_Usuarios_Roles.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="V\Login\frm_Login.resx">
       <DependentUpon>frm_Login.cs</DependentUpon>
@@ -257,6 +302,8 @@
       <Version>4.3.1</Version>
     </PackageReference>
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <None Include="Resources\hombre.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

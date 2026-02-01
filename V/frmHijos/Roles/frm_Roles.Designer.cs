@@ -1,6 +1,6 @@
-﻿namespace Gym.V.frmHijos.Clientes
+﻿namespace Gym.V.frmHijos.Roles
 {
-    partial class frm_Clientes
+    partial class frm_Roles
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.textBox1 = new System.Windows.Forms.TextBox();
             this.button6 = new System.Windows.Forms.Button();
             this.button7 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
@@ -37,28 +36,16 @@
             this.button1 = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.label2 = new System.Windows.Forms.Label();
-            this.lbl_resultadosCantidad = new System.Windows.Forms.Label();
-            this.button5 = new System.Windows.Forms.Button();
-            this.button8 = new System.Windows.Forms.Button();
-            this.button9 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
-            // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(12, 74);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(559, 25);
-            this.textBox1.TabIndex = 31;
             // 
             // button6
             // 
             this.button6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button6.Location = new System.Drawing.Point(542, 50);
+            this.button6.Location = new System.Drawing.Point(439, 50);
             this.button6.Name = "button6";
             this.button6.Size = new System.Drawing.Size(29, 23);
-            this.button6.TabIndex = 30;
+            this.button6.TabIndex = 31;
             this.button6.UseVisualStyleBackColor = true;
             // 
             // button7
@@ -67,7 +54,7 @@
             this.button7.Location = new System.Drawing.Point(358, 51);
             this.button7.Name = "button7";
             this.button7.Size = new System.Drawing.Size(75, 23);
-            this.button7.TabIndex = 29;
+            this.button7.TabIndex = 30;
             this.button7.Text = "Eliminar";
             this.button7.UseVisualStyleBackColor = true;
             // 
@@ -77,7 +64,7 @@
             this.button3.Location = new System.Drawing.Point(174, 50);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(75, 23);
-            this.button3.TabIndex = 28;
+            this.button3.TabIndex = 29;
             this.button3.Text = "Habilitar";
             this.button3.UseVisualStyleBackColor = true;
             // 
@@ -87,7 +74,7 @@
             this.button4.Location = new System.Drawing.Point(255, 50);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(97, 23);
-            this.button4.TabIndex = 27;
+            this.button4.TabIndex = 28;
             this.button4.Text = "deshabilitar";
             this.button4.UseVisualStyleBackColor = true;
             // 
@@ -97,7 +84,7 @@
             this.button2.Location = new System.Drawing.Point(93, 50);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(75, 23);
-            this.button2.TabIndex = 26;
+            this.button2.TabIndex = 27;
             this.button2.Text = "Modificar";
             this.button2.UseVisualStyleBackColor = true;
             // 
@@ -107,17 +94,17 @@
             this.button1.Location = new System.Drawing.Point(12, 50);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 25;
+            this.button1.TabIndex = 26;
             this.button1.Text = "Nuevo";
             this.button1.UseVisualStyleBackColor = true;
             // 
             // dataGridView1
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(12, 105);
+            this.dataGridView1.Location = new System.Drawing.Point(12, 79);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(1004, 251);
-            this.dataGridView1.TabIndex = 24;
+            this.dataGridView1.Size = new System.Drawing.Size(1004, 277);
+            this.dataGridView1.TabIndex = 25;
             // 
             // label2
             // 
@@ -125,61 +112,15 @@
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(12, 11);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(95, 20);
-            this.label2.TabIndex = 23;
-            this.label2.Text = "CLIENTES";
+            this.label2.Size = new System.Drawing.Size(69, 20);
+            this.label2.TabIndex = 24;
+            this.label2.Text = "ROLES";
             // 
-            // lbl_resultadosCantidad
-            // 
-            this.lbl_resultadosCantidad.AutoSize = true;
-            this.lbl_resultadosCantidad.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_resultadosCantidad.ForeColor = System.Drawing.SystemColors.MenuHighlight;
-            this.lbl_resultadosCantidad.Location = new System.Drawing.Point(731, 79);
-            this.lbl_resultadosCantidad.Name = "lbl_resultadosCantidad";
-            this.lbl_resultadosCantidad.Size = new System.Drawing.Size(56, 16);
-            this.lbl_resultadosCantidad.TabIndex = 32;
-            this.lbl_resultadosCantidad.Text = "#######";
-            // 
-            // button5
-            // 
-            this.button5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button5.Location = new System.Drawing.Point(577, 74);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(77, 25);
-            this.button5.TabIndex = 33;
-            this.button5.Text = "Ver ultimos";
-            this.button5.UseVisualStyleBackColor = true;
-            // 
-            // button8
-            // 
-            this.button8.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button8.Location = new System.Drawing.Point(660, 74);
-            this.button8.Name = "button8";
-            this.button8.Size = new System.Drawing.Size(65, 25);
-            this.button8.TabIndex = 34;
-            this.button8.Text = "Ver todo";
-            this.button8.UseVisualStyleBackColor = true;
-            // 
-            // button9
-            // 
-            this.button9.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button9.Location = new System.Drawing.Point(439, 50);
-            this.button9.Name = "button9";
-            this.button9.Size = new System.Drawing.Size(97, 23);
-            this.button9.TabIndex = 35;
-            this.button9.Text = "Membresias ";
-            this.button9.UseVisualStyleBackColor = true;
-            // 
-            // frm_Clientes
+            // frm_Roles
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1028, 366);
-            this.Controls.Add(this.button9);
-            this.Controls.Add(this.button8);
-            this.Controls.Add(this.button5);
-            this.Controls.Add(this.lbl_resultadosCantidad);
-            this.Controls.Add(this.textBox1);
             this.Controls.Add(this.button6);
             this.Controls.Add(this.button7);
             this.Controls.Add(this.button3);
@@ -188,7 +129,10 @@
             this.Controls.Add(this.button1);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.label2);
-            this.Name = "frm_Clientes";
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
+            this.Name = "frm_Roles";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -196,8 +140,6 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Button button6;
         private System.Windows.Forms.Button button7;
         private System.Windows.Forms.Button button3;
@@ -206,9 +148,5 @@
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label lbl_resultadosCantidad;
-        private System.Windows.Forms.Button button5;
-        private System.Windows.Forms.Button button8;
-        private System.Windows.Forms.Button button9;
     }
 }
