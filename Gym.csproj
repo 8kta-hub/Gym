@@ -77,6 +77,18 @@
     <Compile Include="V\frmHijos\Clientes\frm_Clientes_Nuevo.Designer.cs">
       <DependentUpon>frm_Clientes_Nuevo.cs</DependentUpon>
     </Compile>
+    <Compile Include="V\frmHijos\Compras\frm_Compras.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="V\frmHijos\Compras\frm_Compras.Designer.cs">
+      <DependentUpon>frm_Compras.cs</DependentUpon>
+    </Compile>
+    <Compile Include="V\frmHijos\Compras\frm_Compras_Nuevo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="V\frmHijos\Compras\frm_Compras_Nuevo.Designer.cs">
+      <DependentUpon>frm_Compras_Nuevo.cs</DependentUpon>
+    </Compile>
     <Compile Include="V\frmHijos\frm_Inicio.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -100,6 +112,18 @@
     </Compile>
     <Compile Include="V\frmHijos\Membresias\frm_Membresias_Nuevo.Designer.cs">
       <DependentUpon>frm_Membresias_Nuevo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="V\frmHijos\Productos\frm_Productos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="V\frmHijos\Productos\frm_Productos.Designer.cs">
+      <DependentUpon>frm_Productos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="V\frmHijos\Productos\frm_Productos_Nuevo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="V\frmHijos\Productos\frm_Productos_Nuevo.Designer.cs">
+      <DependentUpon>frm_Productos_Nuevo.cs</DependentUpon>
     </Compile>
     <Compile Include="V\frmHijos\Roles\frm_Roles.cs">
       <SubType>Form</SubType>
@@ -163,6 +187,12 @@
     <EmbeddedResource Include="V\frmHijos\Clientes\frm_Clientes_Nuevo.resx">
       <DependentUpon>frm_Clientes_Nuevo.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="V\frmHijos\Compras\frm_Compras.resx">
+      <DependentUpon>frm_Compras.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="V\frmHijos\Compras\frm_Compras_Nuevo.resx">
+      <DependentUpon>frm_Compras_Nuevo.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="V\frmHijos\frm_Inicio.resx">
       <DependentUpon>frm_Inicio.cs</DependentUpon>
     </EmbeddedResource>
@@ -174,6 +204,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="V\frmHijos\Membresias\frm_Membresias_Nuevo.resx">
       <DependentUpon>frm_Membresias_Nuevo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="V\frmHijos\Productos\frm_Productos.resx">
+      <DependentUpon>frm_Productos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="V\frmHijos\Productos\frm_Productos_Nuevo.resx">
+      <DependentUpon>frm_Productos_Nuevo.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="V\frmHijos\Roles\frm_Roles.resx">
       <DependentUpon>frm_Roles.cs</DependentUpon>
