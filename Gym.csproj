@@ -77,6 +77,18 @@
     <Compile Include="V\frmHijos\Clientes\frm_Clientes_Nuevo.Designer.cs">
       <DependentUpon>frm_Clientes_Nuevo.cs</DependentUpon>
     </Compile>
+    <Compile Include="V\frmHijos\Conceptos\frm_Conceptos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="V\frmHijos\Conceptos\frm_Conceptos.Designer.cs">
+      <DependentUpon>frm_Conceptos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="V\frmHijos\Conceptos\frm_Conceptos_Nuevo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="V\frmHijos\Conceptos\frm_Conceptos_Nuevo.Designer.cs">
+      <DependentUpon>frm_Conceptos_Nuevo.cs</DependentUpon>
+    </Compile>
     <Compile Include="V\frmHijos\frm_Inicio.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -100,6 +112,12 @@
     </Compile>
     <Compile Include="V\frmHijos\Membresias\frm_Membresias_Nuevo.Designer.cs">
       <DependentUpon>frm_Membresias_Nuevo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="V\frmHijos\Reporte\frm_Reportes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="V\frmHijos\Reporte\frm_Reportes.Designer.cs">
+      <DependentUpon>frm_Reportes.cs</DependentUpon>
     </Compile>
     <Compile Include="V\frmHijos\Roles\frm_Roles.cs">
       <SubType>Form</SubType>
@@ -151,6 +169,12 @@
     <Compile Include="V\Login\frm_RecuperarPass.Designer.cs">
       <DependentUpon>frm_RecuperarPass.cs</DependentUpon>
     </Compile>
+    <Compile Include="V\Registro\frm_Registro.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="V\Registro\frm_Registro.Designer.cs">
+      <DependentUpon>frm_Registro.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="V\frmHijos\Clientes\frm_Clientes_Membresias_Pago.resx">
       <DependentUpon>frm_Clientes_Membresias_Pago.cs</DependentUpon>
     </EmbeddedResource>
@@ -163,6 +187,12 @@
     <EmbeddedResource Include="V\frmHijos\Clientes\frm_Clientes_Nuevo.resx">
       <DependentUpon>frm_Clientes_Nuevo.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="V\frmHijos\Conceptos\frm_Conceptos.resx">
+      <DependentUpon>frm_Conceptos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="V\frmHijos\Conceptos\frm_Conceptos_Nuevo.resx">
+      <DependentUpon>frm_Conceptos_Nuevo.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="V\frmHijos\frm_Inicio.resx">
       <DependentUpon>frm_Inicio.cs</DependentUpon>
     </EmbeddedResource>
@@ -174,6 +204,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="V\frmHijos\Membresias\frm_Membresias_Nuevo.resx">
       <DependentUpon>frm_Membresias_Nuevo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="V\frmHijos\Reporte\frm_Reportes.resx">
+      <DependentUpon>frm_Reportes.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="V\frmHijos\Roles\frm_Roles.resx">
       <DependentUpon>frm_Roles.cs</DependentUpon>
@@ -208,6 +241,9 @@
     </Compile>
     <EmbeddedResource Include="V\Login\frm_RecuperarPass.resx">
       <DependentUpon>frm_RecuperarPass.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="V\Registro\frm_Registro.resx">
+      <DependentUpon>frm_Registro.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -304,6 +340,10 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\hombre.png" />
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <None Include="Resources\configuraciones.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

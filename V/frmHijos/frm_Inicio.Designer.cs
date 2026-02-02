@@ -29,19 +29,19 @@
         private void InitializeComponent()
         {
             this.label2 = new System.Windows.Forms.Label();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dvg_EntradasDia = new System.Windows.Forms.DataGridView();
             this.label1 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.lbl_nombreUsuairo = new System.Windows.Forms.Label();
             this.lbl_fecha = new System.Windows.Forms.Label();
             this.lbl_hora = new System.Windows.Forms.Label();
-            this.btn_in_informacion = new System.Windows.Forms.Button();
+            this.btn_informacion_inicio = new System.Windows.Forms.Button();
             this.label7 = new System.Windows.Forms.Label();
             this.lbl_rolUsuairo = new System.Windows.Forms.Label();
             this.lbl_apellidUsuairo = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.pic_Usuario_Inicio = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.dvg_EntradasDia)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pic_Usuario_Inicio)).BeginInit();
             this.SuspendLayout();
             // 
             // label2
@@ -54,13 +54,13 @@
             this.label2.TabIndex = 2;
             this.label2.Text = "INICIO";
             // 
-            // dataGridView1
+            // dvg_EntradasDia
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(12, 62);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(782, 292);
-            this.dataGridView1.TabIndex = 0;
+            this.dvg_EntradasDia.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dvg_EntradasDia.Location = new System.Drawing.Point(12, 62);
+            this.dvg_EntradasDia.Name = "dvg_EntradasDia";
+            this.dvg_EntradasDia.Size = new System.Drawing.Size(782, 292);
+            this.dvg_EntradasDia.TabIndex = 0;
             // 
             // label1
             // 
@@ -85,42 +85,42 @@
             // lbl_nombreUsuairo
             // 
             this.lbl_nombreUsuairo.AutoSize = true;
-            this.lbl_nombreUsuairo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_nombreUsuairo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_nombreUsuairo.Location = new System.Drawing.Point(909, 241);
             this.lbl_nombreUsuairo.Name = "lbl_nombreUsuairo";
-            this.lbl_nombreUsuairo.Size = new System.Drawing.Size(49, 16);
+            this.lbl_nombreUsuairo.Size = new System.Drawing.Size(55, 16);
             this.lbl_nombreUsuairo.TabIndex = 4;
             this.lbl_nombreUsuairo.Text = "######";
             // 
             // lbl_fecha
             // 
             this.lbl_fecha.AutoSize = true;
-            this.lbl_fecha.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_fecha.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_fecha.Location = new System.Drawing.Point(816, 293);
             this.lbl_fecha.Name = "lbl_fecha";
-            this.lbl_fecha.Size = new System.Drawing.Size(49, 16);
+            this.lbl_fecha.Size = new System.Drawing.Size(55, 16);
             this.lbl_fecha.TabIndex = 6;
             this.lbl_fecha.Text = "######";
             // 
             // lbl_hora
             // 
             this.lbl_hora.AutoSize = true;
-            this.lbl_hora.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_hora.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_hora.Location = new System.Drawing.Point(816, 317);
             this.lbl_hora.Name = "lbl_hora";
-            this.lbl_hora.Size = new System.Drawing.Size(49, 16);
+            this.lbl_hora.Size = new System.Drawing.Size(55, 16);
             this.lbl_hora.TabIndex = 7;
             this.lbl_hora.Text = "######";
             // 
-            // btn_in_informacion
+            // btn_informacion_inicio
             // 
-            this.btn_in_informacion.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_in_informacion.Location = new System.Drawing.Point(120, 36);
-            this.btn_in_informacion.Name = "btn_in_informacion";
-            this.btn_in_informacion.Size = new System.Drawing.Size(93, 23);
-            this.btn_in_informacion.TabIndex = 8;
-            this.btn_in_informacion.Text = "Informacion";
-            this.btn_in_informacion.UseVisualStyleBackColor = true;
+            this.btn_informacion_inicio.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_informacion_inicio.Location = new System.Drawing.Point(120, 36);
+            this.btn_informacion_inicio.Name = "btn_informacion_inicio";
+            this.btn_informacion_inicio.Size = new System.Drawing.Size(93, 23);
+            this.btn_informacion_inicio.TabIndex = 8;
+            this.btn_informacion_inicio.Text = "Informacion";
+            this.btn_informacion_inicio.UseVisualStyleBackColor = true;
             // 
             // label7
             // 
@@ -135,33 +135,33 @@
             // lbl_rolUsuairo
             // 
             this.lbl_rolUsuairo.AutoSize = true;
-            this.lbl_rolUsuairo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_rolUsuairo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_rolUsuairo.Location = new System.Drawing.Point(859, 266);
             this.lbl_rolUsuairo.Name = "lbl_rolUsuairo";
-            this.lbl_rolUsuairo.Size = new System.Drawing.Size(49, 16);
+            this.lbl_rolUsuairo.Size = new System.Drawing.Size(55, 16);
             this.lbl_rolUsuairo.TabIndex = 10;
             this.lbl_rolUsuairo.Text = "######";
             // 
             // lbl_apellidUsuairo
             // 
             this.lbl_apellidUsuairo.AutoSize = true;
-            this.lbl_apellidUsuairo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_apellidUsuairo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_apellidUsuairo.Location = new System.Drawing.Point(964, 241);
             this.lbl_apellidUsuairo.Name = "lbl_apellidUsuairo";
-            this.lbl_apellidUsuairo.Size = new System.Drawing.Size(49, 16);
+            this.lbl_apellidUsuairo.Size = new System.Drawing.Size(55, 16);
             this.lbl_apellidUsuairo.TabIndex = 11;
             this.lbl_apellidUsuairo.Text = "######";
             // 
-            // pictureBox1
+            // pic_Usuario_Inicio
             // 
-            this.pictureBox1.Cursor = System.Windows.Forms.Cursors.No;
-            this.pictureBox1.Image = global::Gym.Properties.Resources.hombre;
-            this.pictureBox1.Location = new System.Drawing.Point(819, 62);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(183, 167);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 5;
-            this.pictureBox1.TabStop = false;
+            this.pic_Usuario_Inicio.Cursor = System.Windows.Forms.Cursors.No;
+            this.pic_Usuario_Inicio.Image = global::Gym.Properties.Resources.hombre;
+            this.pic_Usuario_Inicio.Location = new System.Drawing.Point(819, 62);
+            this.pic_Usuario_Inicio.Name = "pic_Usuario_Inicio";
+            this.pic_Usuario_Inicio.Size = new System.Drawing.Size(183, 167);
+            this.pic_Usuario_Inicio.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pic_Usuario_Inicio.TabIndex = 5;
+            this.pic_Usuario_Inicio.TabStop = false;
             // 
             // frm_Inicio
             // 
@@ -171,19 +171,19 @@
             this.Controls.Add(this.lbl_apellidUsuairo);
             this.Controls.Add(this.lbl_rolUsuairo);
             this.Controls.Add(this.label7);
-            this.Controls.Add(this.btn_in_informacion);
+            this.Controls.Add(this.btn_informacion_inicio);
             this.Controls.Add(this.lbl_hora);
             this.Controls.Add(this.lbl_fecha);
-            this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.pic_Usuario_Inicio);
             this.Controls.Add(this.lbl_nombreUsuairo);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.dvg_EntradasDia);
             this.Name = "frm_Inicio";
             this.Text = "frm_Inicio";
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dvg_EntradasDia)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pic_Usuario_Inicio)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -191,14 +191,14 @@
 
         #endregion
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dvg_EntradasDia;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label lbl_nombreUsuairo;
-        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox pic_Usuario_Inicio;
         private System.Windows.Forms.Label lbl_fecha;
         private System.Windows.Forms.Label lbl_hora;
-        private System.Windows.Forms.Button btn_in_informacion;
+        private System.Windows.Forms.Button btn_informacion_inicio;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label lbl_rolUsuairo;
         private System.Windows.Forms.Label lbl_apellidUsuairo;
