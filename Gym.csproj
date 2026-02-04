@@ -53,6 +53,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="M\ConDB.cs" />
+    <Compile Include="V\Configuracion\frm_Configuracion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="V\Configuracion\frm_Configuracion.Designer.cs">
+      <DependentUpon>frm_Configuracion.cs</DependentUpon>
+    </Compile>
     <Compile Include="V\frmHijos\Clientes\frm_Clientes_Membresias_Pago.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -235,6 +241,9 @@
     <Compile Include="V\Registro\frm_Registro.Designer.cs">
       <DependentUpon>frm_Registro.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="V\Configuracion\frm_Configuracion.resx">
+      <DependentUpon>frm_Configuracion.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="V\frmHijos\Clientes\frm_Clientes_Membresias_Pago.resx">
       <DependentUpon>frm_Clientes_Membresias_Pago.cs</DependentUpon>
     </EmbeddedResource>
@@ -431,7 +440,9 @@
   <ItemGroup>
     <None Include="Resources\hombre.png" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <None Include="Resources\barbell_12738426.png" />
+  </ItemGroup>
   <ItemGroup>
     <None Include="Resources\configuraciones.png" />
   </ItemGroup>

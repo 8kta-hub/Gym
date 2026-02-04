@@ -73,6 +73,16 @@ namespace Gym.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap barbell_12738426 {
+            get {
+                object obj = ResourceManager.GetObject("barbell_12738426", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap cart {
             get {
                 object obj = ResourceManager.GetObject("cart", resourceCulture);
