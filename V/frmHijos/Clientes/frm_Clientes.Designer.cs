@@ -29,87 +29,87 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frm_Clientes));
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.button7 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.txt_Buscar_Clientes = new System.Windows.Forms.TextBox();
+            this.btn_Eliminar_Clientes = new System.Windows.Forms.Button();
+            this.btn_Habilitar_Clientes = new System.Windows.Forms.Button();
+            this.btn_Deshabilitar_Clientes = new System.Windows.Forms.Button();
+            this.btn_Modificar_Clientes = new System.Windows.Forms.Button();
+            this.btn_Nuevo_Clientes = new System.Windows.Forms.Button();
+            this.dgv_Clientes = new System.Windows.Forms.DataGridView();
             this.label2 = new System.Windows.Forms.Label();
-            this.lbl_resultadosCantidad = new System.Windows.Forms.Label();
-            this.button5 = new System.Windows.Forms.Button();
-            this.button8 = new System.Windows.Forms.Button();
-            this.button9 = new System.Windows.Forms.Button();
+            this.lbl_resultadosCantidad_Clientes = new System.Windows.Forms.Label();
+            this.btn_VerUltimos_Clientes = new System.Windows.Forms.Button();
+            this.btn_VerTodo_Clientes = new System.Windows.Forms.Button();
+            this.btn_Membresias_Clientes = new System.Windows.Forms.Button();
             this.btn_ExportarExcel_Clientes = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_Clientes)).BeginInit();
             this.SuspendLayout();
             // 
-            // textBox1
+            // txt_Buscar_Clientes
             // 
-            this.textBox1.Location = new System.Drawing.Point(8, 69);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(553, 25);
-            this.textBox1.TabIndex = 31;
+            this.txt_Buscar_Clientes.Location = new System.Drawing.Point(8, 69);
+            this.txt_Buscar_Clientes.Multiline = true;
+            this.txt_Buscar_Clientes.Name = "txt_Buscar_Clientes";
+            this.txt_Buscar_Clientes.Size = new System.Drawing.Size(553, 25);
+            this.txt_Buscar_Clientes.TabIndex = 31;
             // 
-            // button7
+            // btn_Eliminar_Clientes
             // 
-            this.button7.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button7.Location = new System.Drawing.Point(344, 46);
-            this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(75, 23);
-            this.button7.TabIndex = 29;
-            this.button7.Text = "Eliminar";
-            this.button7.UseVisualStyleBackColor = true;
+            this.btn_Eliminar_Clientes.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Eliminar_Clientes.Location = new System.Drawing.Point(344, 46);
+            this.btn_Eliminar_Clientes.Name = "btn_Eliminar_Clientes";
+            this.btn_Eliminar_Clientes.Size = new System.Drawing.Size(75, 23);
+            this.btn_Eliminar_Clientes.TabIndex = 29;
+            this.btn_Eliminar_Clientes.Text = "Eliminar";
+            this.btn_Eliminar_Clientes.UseVisualStyleBackColor = true;
             // 
-            // button3
+            // btn_Habilitar_Clientes
             // 
-            this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.Location = new System.Drawing.Point(160, 45);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(75, 23);
-            this.button3.TabIndex = 28;
-            this.button3.Text = "Habilitar";
-            this.button3.UseVisualStyleBackColor = true;
+            this.btn_Habilitar_Clientes.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Habilitar_Clientes.Location = new System.Drawing.Point(160, 45);
+            this.btn_Habilitar_Clientes.Name = "btn_Habilitar_Clientes";
+            this.btn_Habilitar_Clientes.Size = new System.Drawing.Size(75, 23);
+            this.btn_Habilitar_Clientes.TabIndex = 28;
+            this.btn_Habilitar_Clientes.Text = "Habilitar";
+            this.btn_Habilitar_Clientes.UseVisualStyleBackColor = true;
             // 
-            // button4
+            // btn_Deshabilitar_Clientes
             // 
-            this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button4.Location = new System.Drawing.Point(241, 45);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(97, 23);
-            this.button4.TabIndex = 27;
-            this.button4.Text = "deshabilitar";
-            this.button4.UseVisualStyleBackColor = true;
+            this.btn_Deshabilitar_Clientes.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Deshabilitar_Clientes.Location = new System.Drawing.Point(241, 45);
+            this.btn_Deshabilitar_Clientes.Name = "btn_Deshabilitar_Clientes";
+            this.btn_Deshabilitar_Clientes.Size = new System.Drawing.Size(97, 23);
+            this.btn_Deshabilitar_Clientes.TabIndex = 27;
+            this.btn_Deshabilitar_Clientes.Text = "deshabilitar";
+            this.btn_Deshabilitar_Clientes.UseVisualStyleBackColor = true;
             // 
-            // button2
+            // btn_Modificar_Clientes
             // 
-            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Location = new System.Drawing.Point(79, 45);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 23);
-            this.button2.TabIndex = 26;
-            this.button2.Text = "Modificar";
-            this.button2.UseVisualStyleBackColor = true;
+            this.btn_Modificar_Clientes.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Modificar_Clientes.Location = new System.Drawing.Point(79, 45);
+            this.btn_Modificar_Clientes.Name = "btn_Modificar_Clientes";
+            this.btn_Modificar_Clientes.Size = new System.Drawing.Size(75, 23);
+            this.btn_Modificar_Clientes.TabIndex = 26;
+            this.btn_Modificar_Clientes.Text = "Modificar";
+            this.btn_Modificar_Clientes.UseVisualStyleBackColor = true;
             // 
-            // button1
+            // btn_Nuevo_Clientes
             // 
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(8, 45);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(65, 23);
-            this.button1.TabIndex = 25;
-            this.button1.Text = "Nuevo";
-            this.button1.UseVisualStyleBackColor = true;
+            this.btn_Nuevo_Clientes.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Nuevo_Clientes.Location = new System.Drawing.Point(8, 45);
+            this.btn_Nuevo_Clientes.Name = "btn_Nuevo_Clientes";
+            this.btn_Nuevo_Clientes.Size = new System.Drawing.Size(65, 23);
+            this.btn_Nuevo_Clientes.TabIndex = 25;
+            this.btn_Nuevo_Clientes.Text = "Nuevo";
+            this.btn_Nuevo_Clientes.UseVisualStyleBackColor = true;
             // 
-            // dataGridView1
+            // dgv_Clientes
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(8, 100);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(1011, 259);
-            this.dataGridView1.TabIndex = 24;
+            this.dgv_Clientes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgv_Clientes.Location = new System.Drawing.Point(8, 100);
+            this.dgv_Clientes.Name = "dgv_Clientes";
+            this.dgv_Clientes.Size = new System.Drawing.Size(1011, 259);
+            this.dgv_Clientes.TabIndex = 24;
             // 
             // label2
             // 
@@ -121,46 +121,46 @@
             this.label2.TabIndex = 23;
             this.label2.Text = "CLIENTES";
             // 
-            // lbl_resultadosCantidad
+            // lbl_resultadosCantidad_Clientes
             // 
-            this.lbl_resultadosCantidad.AutoSize = true;
-            this.lbl_resultadosCantidad.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_resultadosCantidad.ForeColor = System.Drawing.SystemColors.MenuHighlight;
-            this.lbl_resultadosCantidad.Location = new System.Drawing.Point(725, 74);
-            this.lbl_resultadosCantidad.Name = "lbl_resultadosCantidad";
-            this.lbl_resultadosCantidad.Size = new System.Drawing.Size(56, 16);
-            this.lbl_resultadosCantidad.TabIndex = 32;
-            this.lbl_resultadosCantidad.Text = "#######";
+            this.lbl_resultadosCantidad_Clientes.AutoSize = true;
+            this.lbl_resultadosCantidad_Clientes.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_resultadosCantidad_Clientes.ForeColor = System.Drawing.SystemColors.MenuHighlight;
+            this.lbl_resultadosCantidad_Clientes.Location = new System.Drawing.Point(725, 74);
+            this.lbl_resultadosCantidad_Clientes.Name = "lbl_resultadosCantidad_Clientes";
+            this.lbl_resultadosCantidad_Clientes.Size = new System.Drawing.Size(56, 16);
+            this.lbl_resultadosCantidad_Clientes.TabIndex = 32;
+            this.lbl_resultadosCantidad_Clientes.Text = "#######";
             // 
-            // button5
+            // btn_VerUltimos_Clientes
             // 
-            this.button5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button5.Location = new System.Drawing.Point(571, 69);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(77, 25);
-            this.button5.TabIndex = 33;
-            this.button5.Text = "Ver ultimos";
-            this.button5.UseVisualStyleBackColor = true;
+            this.btn_VerUltimos_Clientes.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_VerUltimos_Clientes.Location = new System.Drawing.Point(571, 69);
+            this.btn_VerUltimos_Clientes.Name = "btn_VerUltimos_Clientes";
+            this.btn_VerUltimos_Clientes.Size = new System.Drawing.Size(77, 25);
+            this.btn_VerUltimos_Clientes.TabIndex = 33;
+            this.btn_VerUltimos_Clientes.Text = "Ver ultimos";
+            this.btn_VerUltimos_Clientes.UseVisualStyleBackColor = true;
             // 
-            // button8
+            // btn_VerTodo_Clientes
             // 
-            this.button8.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button8.Location = new System.Drawing.Point(654, 69);
-            this.button8.Name = "button8";
-            this.button8.Size = new System.Drawing.Size(65, 25);
-            this.button8.TabIndex = 34;
-            this.button8.Text = "Ver todo";
-            this.button8.UseVisualStyleBackColor = true;
+            this.btn_VerTodo_Clientes.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_VerTodo_Clientes.Location = new System.Drawing.Point(654, 69);
+            this.btn_VerTodo_Clientes.Name = "btn_VerTodo_Clientes";
+            this.btn_VerTodo_Clientes.Size = new System.Drawing.Size(65, 25);
+            this.btn_VerTodo_Clientes.TabIndex = 34;
+            this.btn_VerTodo_Clientes.Text = "Ver todo";
+            this.btn_VerTodo_Clientes.UseVisualStyleBackColor = true;
             // 
-            // button9
+            // btn_Membresias_Clientes
             // 
-            this.button9.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button9.Location = new System.Drawing.Point(425, 45);
-            this.button9.Name = "button9";
-            this.button9.Size = new System.Drawing.Size(97, 23);
-            this.button9.TabIndex = 35;
-            this.button9.Text = "Membresias ";
-            this.button9.UseVisualStyleBackColor = true;
+            this.btn_Membresias_Clientes.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Membresias_Clientes.Location = new System.Drawing.Point(425, 45);
+            this.btn_Membresias_Clientes.Name = "btn_Membresias_Clientes";
+            this.btn_Membresias_Clientes.Size = new System.Drawing.Size(97, 23);
+            this.btn_Membresias_Clientes.TabIndex = 35;
+            this.btn_Membresias_Clientes.Text = "Membresias ";
+            this.btn_Membresias_Clientes.UseVisualStyleBackColor = true;
             // 
             // btn_ExportarExcel_Clientes
             // 
@@ -178,20 +178,20 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1028, 366);
             this.Controls.Add(this.btn_ExportarExcel_Clientes);
-            this.Controls.Add(this.button9);
-            this.Controls.Add(this.button8);
-            this.Controls.Add(this.button5);
-            this.Controls.Add(this.lbl_resultadosCantidad);
-            this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.button7);
-            this.Controls.Add(this.button3);
-            this.Controls.Add(this.button4);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.btn_Membresias_Clientes);
+            this.Controls.Add(this.btn_VerTodo_Clientes);
+            this.Controls.Add(this.btn_VerUltimos_Clientes);
+            this.Controls.Add(this.lbl_resultadosCantidad_Clientes);
+            this.Controls.Add(this.txt_Buscar_Clientes);
+            this.Controls.Add(this.btn_Eliminar_Clientes);
+            this.Controls.Add(this.btn_Habilitar_Clientes);
+            this.Controls.Add(this.btn_Deshabilitar_Clientes);
+            this.Controls.Add(this.btn_Modificar_Clientes);
+            this.Controls.Add(this.btn_Nuevo_Clientes);
+            this.Controls.Add(this.dgv_Clientes);
             this.Controls.Add(this.label2);
             this.Name = "frm_Clientes";
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_Clientes)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -199,18 +199,18 @@
 
         #endregion
 
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.Button button7;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.TextBox txt_Buscar_Clientes;
+        private System.Windows.Forms.Button btn_Eliminar_Clientes;
+        private System.Windows.Forms.Button btn_Habilitar_Clientes;
+        private System.Windows.Forms.Button btn_Deshabilitar_Clientes;
+        private System.Windows.Forms.Button btn_Modificar_Clientes;
+        private System.Windows.Forms.Button btn_Nuevo_Clientes;
+        private System.Windows.Forms.DataGridView dgv_Clientes;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label lbl_resultadosCantidad;
-        private System.Windows.Forms.Button button5;
-        private System.Windows.Forms.Button button8;
-        private System.Windows.Forms.Button button9;
+        private System.Windows.Forms.Label lbl_resultadosCantidad_Clientes;
+        private System.Windows.Forms.Button btn_VerUltimos_Clientes;
+        private System.Windows.Forms.Button btn_VerTodo_Clientes;
+        private System.Windows.Forms.Button btn_Membresias_Clientes;
         private System.Windows.Forms.Button btn_ExportarExcel_Clientes;
     }
 }

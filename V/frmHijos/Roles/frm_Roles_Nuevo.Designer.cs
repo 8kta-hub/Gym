@@ -28,22 +28,22 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.button1 = new System.Windows.Forms.Button();
+            this.btn_Guardar_RolesNuevo = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.flp_Permisos_RolesNuevo = new System.Windows.Forms.FlowLayoutPanel();
+            this.txt_Nombre_RolesNuevo = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
-            // button1
+            // btn_Guardar_RolesNuevo
             // 
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(205, 414);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 19;
-            this.button1.Text = "Guardar";
-            this.button1.UseVisualStyleBackColor = true;
+            this.btn_Guardar_RolesNuevo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Guardar_RolesNuevo.Location = new System.Drawing.Point(205, 414);
+            this.btn_Guardar_RolesNuevo.Name = "btn_Guardar_RolesNuevo";
+            this.btn_Guardar_RolesNuevo.Size = new System.Drawing.Size(75, 23);
+            this.btn_Guardar_RolesNuevo.TabIndex = 19;
+            this.btn_Guardar_RolesNuevo.Text = "Guardar";
+            this.btn_Guardar_RolesNuevo.UseVisualStyleBackColor = true;
             // 
             // label2
             // 
@@ -65,32 +65,32 @@
             this.label1.TabIndex = 17;
             this.label1.Text = "Nombre";
             // 
-            // flowLayoutPanel1
+            // flp_Permisos_RolesNuevo
             // 
-            this.flowLayoutPanel1.BackColor = System.Drawing.Color.White;
-            this.flowLayoutPanel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(13, 73);
-            this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(267, 335);
-            this.flowLayoutPanel1.TabIndex = 15;
+            this.flp_Permisos_RolesNuevo.BackColor = System.Drawing.Color.White;
+            this.flp_Permisos_RolesNuevo.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.flp_Permisos_RolesNuevo.Location = new System.Drawing.Point(13, 73);
+            this.flp_Permisos_RolesNuevo.Name = "flp_Permisos_RolesNuevo";
+            this.flp_Permisos_RolesNuevo.Size = new System.Drawing.Size(267, 335);
+            this.flp_Permisos_RolesNuevo.TabIndex = 15;
             // 
-            // textBox1
+            // txt_Nombre_RolesNuevo
             // 
-            this.textBox1.Location = new System.Drawing.Point(72, 9);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(121, 20);
-            this.textBox1.TabIndex = 20;
+            this.txt_Nombre_RolesNuevo.Location = new System.Drawing.Point(72, 9);
+            this.txt_Nombre_RolesNuevo.Name = "txt_Nombre_RolesNuevo";
+            this.txt_Nombre_RolesNuevo.Size = new System.Drawing.Size(121, 20);
+            this.txt_Nombre_RolesNuevo.TabIndex = 20;
             // 
             // frm_Roles_Nuevo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(291, 445);
-            this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.txt_Nombre_RolesNuevo);
+            this.Controls.Add(this.btn_Guardar_RolesNuevo);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.flowLayoutPanel1);
+            this.Controls.Add(this.flp_Permisos_RolesNuevo);
             this.Name = "frm_Roles_Nuevo";
             this.Text = "Datos del rol";
             this.ResumeLayout(false);
@@ -100,10 +100,10 @@
 
         #endregion
 
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btn_Guardar_RolesNuevo;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.FlowLayoutPanel flp_Permisos_RolesNuevo;
+        private System.Windows.Forms.TextBox txt_Nombre_RolesNuevo;
     }
 }

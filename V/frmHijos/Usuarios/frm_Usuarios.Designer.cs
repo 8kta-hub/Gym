@@ -29,76 +29,76 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frm_Usuarios));
-            this.button7 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.btn_Eliminar_Usuarios = new System.Windows.Forms.Button();
+            this.btn_Habilitar_Usuarios = new System.Windows.Forms.Button();
+            this.btn_Deshabilitar_Usuarios = new System.Windows.Forms.Button();
+            this.btn_Modificiar_Usuarios = new System.Windows.Forms.Button();
+            this.btn_Nuevo_Usuarios = new System.Windows.Forms.Button();
+            this.dgv_Usuarios = new System.Windows.Forms.DataGridView();
             this.label2 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.button5 = new System.Windows.Forms.Button();
+            this.txt_Buscar_Usuarios = new System.Windows.Forms.TextBox();
+            this.btn_Roles_Usuarios = new System.Windows.Forms.Button();
             this.btn_ExportarExcel_Usuarios = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_Usuarios)).BeginInit();
             this.SuspendLayout();
             // 
-            // button7
+            // btn_Eliminar_Usuarios
             // 
-            this.button7.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button7.Location = new System.Drawing.Point(358, 51);
-            this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(75, 23);
-            this.button7.TabIndex = 18;
-            this.button7.Text = "Eliminar";
-            this.button7.UseVisualStyleBackColor = true;
+            this.btn_Eliminar_Usuarios.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Eliminar_Usuarios.Location = new System.Drawing.Point(358, 51);
+            this.btn_Eliminar_Usuarios.Name = "btn_Eliminar_Usuarios";
+            this.btn_Eliminar_Usuarios.Size = new System.Drawing.Size(75, 23);
+            this.btn_Eliminar_Usuarios.TabIndex = 18;
+            this.btn_Eliminar_Usuarios.Text = "Eliminar";
+            this.btn_Eliminar_Usuarios.UseVisualStyleBackColor = true;
             // 
-            // button3
+            // btn_Habilitar_Usuarios
             // 
-            this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.Location = new System.Drawing.Point(174, 50);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(75, 23);
-            this.button3.TabIndex = 17;
-            this.button3.Text = "Habilitar";
-            this.button3.UseVisualStyleBackColor = true;
+            this.btn_Habilitar_Usuarios.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Habilitar_Usuarios.Location = new System.Drawing.Point(174, 50);
+            this.btn_Habilitar_Usuarios.Name = "btn_Habilitar_Usuarios";
+            this.btn_Habilitar_Usuarios.Size = new System.Drawing.Size(75, 23);
+            this.btn_Habilitar_Usuarios.TabIndex = 17;
+            this.btn_Habilitar_Usuarios.Text = "Habilitar";
+            this.btn_Habilitar_Usuarios.UseVisualStyleBackColor = true;
             // 
-            // button4
+            // btn_Deshabilitar_Usuarios
             // 
-            this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button4.Location = new System.Drawing.Point(255, 50);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(97, 23);
-            this.button4.TabIndex = 16;
-            this.button4.Text = "deshabilitar";
-            this.button4.UseVisualStyleBackColor = true;
+            this.btn_Deshabilitar_Usuarios.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Deshabilitar_Usuarios.Location = new System.Drawing.Point(255, 50);
+            this.btn_Deshabilitar_Usuarios.Name = "btn_Deshabilitar_Usuarios";
+            this.btn_Deshabilitar_Usuarios.Size = new System.Drawing.Size(97, 23);
+            this.btn_Deshabilitar_Usuarios.TabIndex = 16;
+            this.btn_Deshabilitar_Usuarios.Text = "deshabilitar";
+            this.btn_Deshabilitar_Usuarios.UseVisualStyleBackColor = true;
             // 
-            // button2
+            // btn_Modificiar_Usuarios
             // 
-            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Location = new System.Drawing.Point(93, 50);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 23);
-            this.button2.TabIndex = 15;
-            this.button2.Text = "Modificar";
-            this.button2.UseVisualStyleBackColor = true;
+            this.btn_Modificiar_Usuarios.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Modificiar_Usuarios.Location = new System.Drawing.Point(93, 50);
+            this.btn_Modificiar_Usuarios.Name = "btn_Modificiar_Usuarios";
+            this.btn_Modificiar_Usuarios.Size = new System.Drawing.Size(75, 23);
+            this.btn_Modificiar_Usuarios.TabIndex = 15;
+            this.btn_Modificiar_Usuarios.Text = "Modificar";
+            this.btn_Modificiar_Usuarios.UseVisualStyleBackColor = true;
             // 
-            // button1
+            // btn_Nuevo_Usuarios
             // 
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(12, 50);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 14;
-            this.button1.Text = "Nuevo";
-            this.button1.UseVisualStyleBackColor = true;
+            this.btn_Nuevo_Usuarios.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Nuevo_Usuarios.Location = new System.Drawing.Point(12, 50);
+            this.btn_Nuevo_Usuarios.Name = "btn_Nuevo_Usuarios";
+            this.btn_Nuevo_Usuarios.Size = new System.Drawing.Size(75, 23);
+            this.btn_Nuevo_Usuarios.TabIndex = 14;
+            this.btn_Nuevo_Usuarios.Text = "Nuevo";
+            this.btn_Nuevo_Usuarios.UseVisualStyleBackColor = true;
             // 
-            // dataGridView1
+            // dgv_Usuarios
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(12, 105);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(1004, 251);
-            this.dataGridView1.TabIndex = 13;
+            this.dgv_Usuarios.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgv_Usuarios.Location = new System.Drawing.Point(12, 105);
+            this.dgv_Usuarios.Name = "dgv_Usuarios";
+            this.dgv_Usuarios.Size = new System.Drawing.Size(1004, 251);
+            this.dgv_Usuarios.TabIndex = 13;
             // 
             // label2
             // 
@@ -110,22 +110,22 @@
             this.label2.TabIndex = 12;
             this.label2.Text = "USUARIOS";
             // 
-            // textBox1
+            // txt_Buscar_Usuarios
             // 
-            this.textBox1.Location = new System.Drawing.Point(12, 79);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(518, 20);
-            this.textBox1.TabIndex = 22;
+            this.txt_Buscar_Usuarios.Location = new System.Drawing.Point(12, 79);
+            this.txt_Buscar_Usuarios.Name = "txt_Buscar_Usuarios";
+            this.txt_Buscar_Usuarios.Size = new System.Drawing.Size(518, 20);
+            this.txt_Buscar_Usuarios.TabIndex = 22;
             // 
-            // button5
+            // btn_Roles_Usuarios
             // 
-            this.button5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button5.Location = new System.Drawing.Point(439, 51);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(56, 23);
-            this.button5.TabIndex = 23;
-            this.button5.Text = "Roles";
-            this.button5.UseVisualStyleBackColor = true;
+            this.btn_Roles_Usuarios.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Roles_Usuarios.Location = new System.Drawing.Point(439, 51);
+            this.btn_Roles_Usuarios.Name = "btn_Roles_Usuarios";
+            this.btn_Roles_Usuarios.Size = new System.Drawing.Size(56, 23);
+            this.btn_Roles_Usuarios.TabIndex = 23;
+            this.btn_Roles_Usuarios.Text = "Roles";
+            this.btn_Roles_Usuarios.UseVisualStyleBackColor = true;
             // 
             // btn_ExportarExcel_Usuarios
             // 
@@ -143,36 +143,36 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1028, 366);
             this.Controls.Add(this.btn_ExportarExcel_Usuarios);
-            this.Controls.Add(this.button5);
-            this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.button7);
-            this.Controls.Add(this.button3);
-            this.Controls.Add(this.button4);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.btn_Roles_Usuarios);
+            this.Controls.Add(this.txt_Buscar_Usuarios);
+            this.Controls.Add(this.btn_Eliminar_Usuarios);
+            this.Controls.Add(this.btn_Habilitar_Usuarios);
+            this.Controls.Add(this.btn_Deshabilitar_Usuarios);
+            this.Controls.Add(this.btn_Modificiar_Usuarios);
+            this.Controls.Add(this.btn_Nuevo_Usuarios);
+            this.Controls.Add(this.dgv_Usuarios);
             this.Controls.Add(this.label2);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "frm_Usuarios";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frm_Usuarios";
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_Usuarios)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-        private System.Windows.Forms.Button button7;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.Button btn_Eliminar_Usuarios;
+        private System.Windows.Forms.Button btn_Habilitar_Usuarios;
+        private System.Windows.Forms.Button btn_Deshabilitar_Usuarios;
+        private System.Windows.Forms.Button btn_Modificiar_Usuarios;
+        private System.Windows.Forms.Button btn_Nuevo_Usuarios;
+        private System.Windows.Forms.DataGridView dgv_Usuarios;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.Button button5;
+        private System.Windows.Forms.TextBox txt_Buscar_Usuarios;
+        private System.Windows.Forms.Button btn_Roles_Usuarios;
         private System.Windows.Forms.Button btn_ExportarExcel_Usuarios;
     }
 }

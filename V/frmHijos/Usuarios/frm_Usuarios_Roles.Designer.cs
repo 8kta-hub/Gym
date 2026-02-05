@@ -28,29 +28,29 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.flp_Permisos_UsuariosRoles = new System.Windows.Forms.FlowLayoutPanel();
+            this.cmb_Nombre_UsuariosRoles = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btn_Guardar_UsuariosRoles = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
-            // flowLayoutPanel1
+            // flp_Permisos_UsuariosRoles
             // 
-            this.flowLayoutPanel1.BackColor = System.Drawing.Color.White;
-            this.flowLayoutPanel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(12, 77);
-            this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(267, 335);
-            this.flowLayoutPanel1.TabIndex = 0;
+            this.flp_Permisos_UsuariosRoles.BackColor = System.Drawing.Color.White;
+            this.flp_Permisos_UsuariosRoles.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.flp_Permisos_UsuariosRoles.Location = new System.Drawing.Point(12, 77);
+            this.flp_Permisos_UsuariosRoles.Name = "flp_Permisos_UsuariosRoles";
+            this.flp_Permisos_UsuariosRoles.Size = new System.Drawing.Size(267, 335);
+            this.flp_Permisos_UsuariosRoles.TabIndex = 0;
             // 
-            // comboBox1
+            // cmb_Nombre_UsuariosRoles
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(74, 12);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(121, 21);
-            this.comboBox1.TabIndex = 1;
+            this.cmb_Nombre_UsuariosRoles.FormattingEnabled = true;
+            this.cmb_Nombre_UsuariosRoles.Location = new System.Drawing.Point(74, 12);
+            this.cmb_Nombre_UsuariosRoles.Name = "cmb_Nombre_UsuariosRoles";
+            this.cmb_Nombre_UsuariosRoles.Size = new System.Drawing.Size(121, 21);
+            this.cmb_Nombre_UsuariosRoles.TabIndex = 1;
             // 
             // label1
             // 
@@ -72,26 +72,26 @@
             this.label2.TabIndex = 3;
             this.label2.Text = "Permisos disponibles";
             // 
-            // button1
+            // btn_Guardar_UsuariosRoles
             // 
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(204, 418);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 14;
-            this.button1.Text = "Guardar";
-            this.button1.UseVisualStyleBackColor = true;
+            this.btn_Guardar_UsuariosRoles.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Guardar_UsuariosRoles.Location = new System.Drawing.Point(204, 418);
+            this.btn_Guardar_UsuariosRoles.Name = "btn_Guardar_UsuariosRoles";
+            this.btn_Guardar_UsuariosRoles.Size = new System.Drawing.Size(75, 23);
+            this.btn_Guardar_UsuariosRoles.TabIndex = 14;
+            this.btn_Guardar_UsuariosRoles.Text = "Guardar";
+            this.btn_Guardar_UsuariosRoles.UseVisualStyleBackColor = true;
             // 
             // frm_Usuarios_Roles
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(291, 445);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.btn_Guardar_UsuariosRoles);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.comboBox1);
-            this.Controls.Add(this.flowLayoutPanel1);
+            this.Controls.Add(this.cmb_Nombre_UsuariosRoles);
+            this.Controls.Add(this.flp_Permisos_UsuariosRoles);
             this.Name = "frm_Usuarios_Roles";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Roles de usuarios";
@@ -102,10 +102,10 @@
 
         #endregion
 
-        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.FlowLayoutPanel flp_Permisos_UsuariosRoles;
+        private System.Windows.Forms.ComboBox cmb_Nombre_UsuariosRoles;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btn_Guardar_UsuariosRoles;
     }
 }

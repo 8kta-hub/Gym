@@ -32,26 +32,26 @@
             this.label7 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
             this.label13 = new System.Windows.Forms.Label();
-            this.label12 = new System.Windows.Forms.Label();
-            this.label11 = new System.Windows.Forms.Label();
-            this.label10 = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
+            this.lbl_Vencimiento = new System.Windows.Forms.Label();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.lbl_Adeudo_Registro = new System.Windows.Forms.Label();
+            this.label14 = new System.Windows.Forms.Label();
+            this.lbl_Clases_Registro = new System.Windows.Forms.Label();
+            this.lbl_DNI_Registro = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
+            this.lbl_Nombre_Registro = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.label15 = new System.Windows.Forms.Label();
-            this.label14 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.label8 = new System.Windows.Forms.Label();
+            this.txt_Clave_Registro = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
+            this.lbl_Fecha_Registro = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -59,7 +59,7 @@
             this.panel1.BackColor = System.Drawing.SystemColors.Control;
             this.panel1.Controls.Add(this.label7);
             this.panel1.Controls.Add(this.panel3);
-            this.panel1.Controls.Add(this.textBox1);
+            this.panel1.Controls.Add(this.txt_Clave_Registro);
             this.panel1.Controls.Add(this.label2);
             this.panel1.Location = new System.Drawing.Point(39, 39);
             this.panel1.Name = "panel1";
@@ -80,12 +80,12 @@
             // 
             this.panel3.BackColor = System.Drawing.Color.White;
             this.panel3.Controls.Add(this.label13);
-            this.panel3.Controls.Add(this.label12);
+            this.panel3.Controls.Add(this.lbl_Vencimiento);
             this.panel3.Controls.Add(this.panel2);
-            this.panel3.Controls.Add(this.label11);
-            this.panel3.Controls.Add(this.label10);
+            this.panel3.Controls.Add(this.lbl_Clases_Registro);
+            this.panel3.Controls.Add(this.lbl_DNI_Registro);
             this.panel3.Controls.Add(this.label8);
-            this.panel3.Controls.Add(this.label9);
+            this.panel3.Controls.Add(this.lbl_Nombre_Registro);
             this.panel3.Controls.Add(this.pictureBox1);
             this.panel3.Controls.Add(this.label6);
             this.panel3.Controls.Add(this.label5);
@@ -106,45 +106,87 @@
             this.label13.TabIndex = 26;
             this.label13.Text = "BIENVENIDO/A :";
             // 
-            // label12
+            // lbl_Vencimiento
             // 
-            this.label12.AutoSize = true;
-            this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.Location = new System.Drawing.Point(291, 225);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(129, 29);
-            this.label12.TabIndex = 25;
-            this.label12.Text = "## ## ####";
+            this.lbl_Vencimiento.AutoSize = true;
+            this.lbl_Vencimiento.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_Vencimiento.Location = new System.Drawing.Point(291, 225);
+            this.lbl_Vencimiento.Name = "lbl_Vencimiento";
+            this.lbl_Vencimiento.Size = new System.Drawing.Size(129, 29);
+            this.lbl_Vencimiento.TabIndex = 25;
+            this.lbl_Vencimiento.Text = "## ## ####";
             // 
-            // label11
+            // panel2
             // 
-            this.label11.AutoSize = true;
-            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.Location = new System.Drawing.Point(291, 179);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(65, 29);
-            this.label11.TabIndex = 24;
-            this.label11.Text = "####";
+            this.panel2.BackColor = System.Drawing.Color.White;
+            this.panel2.Controls.Add(this.lbl_Adeudo_Registro);
+            this.panel2.Controls.Add(this.label14);
+            this.panel2.Location = new System.Drawing.Point(586, 255);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(118, 31);
+            this.panel2.TabIndex = 17;
             // 
-            // label10
+            // lbl_Adeudo_Registro
             // 
-            this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(291, 135);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(117, 29);
-            this.label10.TabIndex = 23;
-            this.label10.Text = "########";
+            this.lbl_Adeudo_Registro.AutoSize = true;
+            this.lbl_Adeudo_Registro.BackColor = System.Drawing.Color.Transparent;
+            this.lbl_Adeudo_Registro.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_Adeudo_Registro.Location = new System.Drawing.Point(30, 6);
+            this.lbl_Adeudo_Registro.Name = "lbl_Adeudo_Registro";
+            this.lbl_Adeudo_Registro.Size = new System.Drawing.Size(40, 20);
+            this.lbl_Adeudo_Registro.TabIndex = 28;
+            this.lbl_Adeudo_Registro.Text = "0.00";
             // 
-            // label9
+            // label14
             // 
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(291, 86);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(117, 29);
-            this.label9.TabIndex = 22;
-            this.label9.Text = "########";
+            this.label14.AutoSize = true;
+            this.label14.BackColor = System.Drawing.Color.Transparent;
+            this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label14.Location = new System.Drawing.Point(5, 6);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(18, 20);
+            this.label14.TabIndex = 27;
+            this.label14.Text = "$";
+            // 
+            // lbl_Clases_Registro
+            // 
+            this.lbl_Clases_Registro.AutoSize = true;
+            this.lbl_Clases_Registro.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_Clases_Registro.Location = new System.Drawing.Point(291, 179);
+            this.lbl_Clases_Registro.Name = "lbl_Clases_Registro";
+            this.lbl_Clases_Registro.Size = new System.Drawing.Size(65, 29);
+            this.lbl_Clases_Registro.TabIndex = 24;
+            this.lbl_Clases_Registro.Text = "####";
+            // 
+            // lbl_DNI_Registro
+            // 
+            this.lbl_DNI_Registro.AutoSize = true;
+            this.lbl_DNI_Registro.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_DNI_Registro.Location = new System.Drawing.Point(291, 135);
+            this.lbl_DNI_Registro.Name = "lbl_DNI_Registro";
+            this.lbl_DNI_Registro.Size = new System.Drawing.Size(117, 29);
+            this.lbl_DNI_Registro.TabIndex = 23;
+            this.lbl_DNI_Registro.Text = "########";
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.Location = new System.Drawing.Point(489, 258);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(96, 24);
+            this.label8.TabIndex = 8;
+            this.label8.Text = "ADEUDO";
+            // 
+            // lbl_Nombre_Registro
+            // 
+            this.lbl_Nombre_Registro.AutoSize = true;
+            this.lbl_Nombre_Registro.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_Nombre_Registro.Location = new System.Drawing.Point(291, 86);
+            this.lbl_Nombre_Registro.Name = "lbl_Nombre_Registro";
+            this.lbl_Nombre_Registro.Size = new System.Drawing.Size(117, 29);
+            this.lbl_Nombre_Registro.TabIndex = 22;
+            this.lbl_Nombre_Registro.Text = "########";
             // 
             // pictureBox1
             // 
@@ -196,55 +238,13 @@
             this.label3.TabIndex = 17;
             this.label3.Text = "NOMBRE";
             // 
-            // panel2
+            // txt_Clave_Registro
             // 
-            this.panel2.BackColor = System.Drawing.Color.White;
-            this.panel2.Controls.Add(this.label15);
-            this.panel2.Controls.Add(this.label14);
-            this.panel2.Location = new System.Drawing.Point(586, 255);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(118, 31);
-            this.panel2.TabIndex = 17;
-            // 
-            // label15
-            // 
-            this.label15.AutoSize = true;
-            this.label15.BackColor = System.Drawing.Color.Transparent;
-            this.label15.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label15.Location = new System.Drawing.Point(30, 6);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(40, 20);
-            this.label15.TabIndex = 28;
-            this.label15.Text = "0.00";
-            // 
-            // label14
-            // 
-            this.label14.AutoSize = true;
-            this.label14.BackColor = System.Drawing.Color.Transparent;
-            this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label14.Location = new System.Drawing.Point(5, 6);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(18, 20);
-            this.label14.TabIndex = 27;
-            this.label14.Text = "$";
-            // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(121, 378);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(312, 31);
-            this.textBox1.TabIndex = 14;
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(489, 258);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(96, 24);
-            this.label8.TabIndex = 8;
-            this.label8.Text = "ADEUDO";
+            this.txt_Clave_Registro.Location = new System.Drawing.Point(121, 378);
+            this.txt_Clave_Registro.Multiline = true;
+            this.txt_Clave_Registro.Name = "txt_Clave_Registro";
+            this.txt_Clave_Registro.Size = new System.Drawing.Size(312, 31);
+            this.txt_Clave_Registro.TabIndex = 14;
             // 
             // label2
             // 
@@ -256,16 +256,16 @@
             this.label2.TabIndex = 2;
             this.label2.Text = "GIMNASIO BENAVIDES";
             // 
-            // label1
+            // lbl_Fecha_Registro
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(38, 7);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(158, 25);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "## / ## / ####";
+            this.lbl_Fecha_Registro.AutoSize = true;
+            this.lbl_Fecha_Registro.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_Fecha_Registro.ForeColor = System.Drawing.Color.White;
+            this.lbl_Fecha_Registro.Location = new System.Drawing.Point(38, 7);
+            this.lbl_Fecha_Registro.Name = "lbl_Fecha_Registro";
+            this.lbl_Fecha_Registro.Size = new System.Drawing.Size(158, 25);
+            this.lbl_Fecha_Registro.TabIndex = 1;
+            this.lbl_Fecha_Registro.Text = "## / ## / ####";
             // 
             // frm_Registro
             // 
@@ -273,7 +273,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlDarkDark;
             this.ClientSize = new System.Drawing.Size(842, 484);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.lbl_Fecha_Registro);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MaximizeBox = false;
@@ -285,9 +285,9 @@
             this.panel1.PerformLayout();
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -296,24 +296,24 @@
         #endregion
 
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txt_Clave_Registro;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label lbl_Fecha_Registro;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Label label13;
-        private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Label lbl_Vencimiento;
+        private System.Windows.Forms.Label lbl_Clases_Registro;
+        private System.Windows.Forms.Label lbl_DNI_Registro;
+        private System.Windows.Forms.Label lbl_Nombre_Registro;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Label label15;
+        private System.Windows.Forms.Label lbl_Adeudo_Registro;
         private System.Windows.Forms.Label label14;
     }
 }

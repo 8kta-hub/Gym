@@ -29,63 +29,63 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frm_Conceptos));
-            this.button7 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.btn_Eliminar_Conceptos = new System.Windows.Forms.Button();
+            this.btn_Habilitar_Conceptos = new System.Windows.Forms.Button();
+            this.btn_Modificar_Conceptos = new System.Windows.Forms.Button();
+            this.btn_Nuevo_Conceptos = new System.Windows.Forms.Button();
+            this.dgv_Conceptos = new System.Windows.Forms.DataGridView();
             this.label2 = new System.Windows.Forms.Label();
             this.btn_ExportarExcel_Conceptos = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_Conceptos)).BeginInit();
             this.SuspendLayout();
             // 
-            // button7
+            // btn_Eliminar_Conceptos
             // 
-            this.button7.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button7.Location = new System.Drawing.Point(240, 47);
-            this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(75, 23);
-            this.button7.TabIndex = 42;
-            this.button7.Text = "Eliminar";
-            this.button7.UseVisualStyleBackColor = true;
+            this.btn_Eliminar_Conceptos.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Eliminar_Conceptos.Location = new System.Drawing.Point(240, 47);
+            this.btn_Eliminar_Conceptos.Name = "btn_Eliminar_Conceptos";
+            this.btn_Eliminar_Conceptos.Size = new System.Drawing.Size(75, 23);
+            this.btn_Eliminar_Conceptos.TabIndex = 42;
+            this.btn_Eliminar_Conceptos.Text = "Eliminar";
+            this.btn_Eliminar_Conceptos.UseVisualStyleBackColor = true;
             // 
-            // button3
+            // btn_Habilitar_Conceptos
             // 
-            this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.Location = new System.Drawing.Point(159, 47);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(75, 23);
-            this.button3.TabIndex = 41;
-            this.button3.Text = "Habilitar";
-            this.button3.UseVisualStyleBackColor = true;
+            this.btn_Habilitar_Conceptos.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Habilitar_Conceptos.Location = new System.Drawing.Point(159, 47);
+            this.btn_Habilitar_Conceptos.Name = "btn_Habilitar_Conceptos";
+            this.btn_Habilitar_Conceptos.Size = new System.Drawing.Size(75, 23);
+            this.btn_Habilitar_Conceptos.TabIndex = 41;
+            this.btn_Habilitar_Conceptos.Text = "Habilitar";
+            this.btn_Habilitar_Conceptos.UseVisualStyleBackColor = true;
             // 
-            // button2
+            // btn_Modificar_Conceptos
             // 
-            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Location = new System.Drawing.Point(78, 47);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 23);
-            this.button2.TabIndex = 39;
-            this.button2.Text = "Modificar";
-            this.button2.UseVisualStyleBackColor = true;
+            this.btn_Modificar_Conceptos.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Modificar_Conceptos.Location = new System.Drawing.Point(78, 47);
+            this.btn_Modificar_Conceptos.Name = "btn_Modificar_Conceptos";
+            this.btn_Modificar_Conceptos.Size = new System.Drawing.Size(75, 23);
+            this.btn_Modificar_Conceptos.TabIndex = 39;
+            this.btn_Modificar_Conceptos.Text = "Modificar";
+            this.btn_Modificar_Conceptos.UseVisualStyleBackColor = true;
             // 
-            // button1
+            // btn_Nuevo_Conceptos
             // 
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(9, 47);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(63, 23);
-            this.button1.TabIndex = 38;
-            this.button1.Text = "Nuevo";
-            this.button1.UseVisualStyleBackColor = true;
+            this.btn_Nuevo_Conceptos.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Nuevo_Conceptos.Location = new System.Drawing.Point(9, 47);
+            this.btn_Nuevo_Conceptos.Name = "btn_Nuevo_Conceptos";
+            this.btn_Nuevo_Conceptos.Size = new System.Drawing.Size(63, 23);
+            this.btn_Nuevo_Conceptos.TabIndex = 38;
+            this.btn_Nuevo_Conceptos.Text = "Nuevo";
+            this.btn_Nuevo_Conceptos.UseVisualStyleBackColor = true;
             // 
-            // dataGridView1
+            // dgv_Conceptos
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(9, 76);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(1011, 285);
-            this.dataGridView1.TabIndex = 37;
+            this.dgv_Conceptos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgv_Conceptos.Location = new System.Drawing.Point(9, 76);
+            this.dgv_Conceptos.Name = "dgv_Conceptos";
+            this.dgv_Conceptos.Size = new System.Drawing.Size(1011, 285);
+            this.dgv_Conceptos.TabIndex = 37;
             // 
             // label2
             // 
@@ -113,26 +113,26 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1028, 366);
             this.Controls.Add(this.btn_ExportarExcel_Conceptos);
-            this.Controls.Add(this.button7);
-            this.Controls.Add(this.button3);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.btn_Eliminar_Conceptos);
+            this.Controls.Add(this.btn_Habilitar_Conceptos);
+            this.Controls.Add(this.btn_Modificar_Conceptos);
+            this.Controls.Add(this.btn_Nuevo_Conceptos);
+            this.Controls.Add(this.dgv_Conceptos);
             this.Controls.Add(this.label2);
             this.Name = "frm_Conceptos";
             this.Text = "frm_Conceptos";
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_Conceptos)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-        private System.Windows.Forms.Button button7;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.Button btn_Eliminar_Conceptos;
+        private System.Windows.Forms.Button btn_Habilitar_Conceptos;
+        private System.Windows.Forms.Button btn_Modificar_Conceptos;
+        private System.Windows.Forms.Button btn_Nuevo_Conceptos;
+        private System.Windows.Forms.DataGridView dgv_Conceptos;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button btn_ExportarExcel_Conceptos;
     }

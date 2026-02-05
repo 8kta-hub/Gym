@@ -29,29 +29,29 @@
         private void InitializeComponent()
         {
             this.button1 = new System.Windows.Forms.Button();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.txt_Nombre_UsuariosNuevo = new System.Windows.Forms.TextBox();
+            this.txt_DNI_UsuariosNuevo = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.txt_Telefono_UsuariosNuevo = new System.Windows.Forms.TextBox();
+            this.txt_Email_UsuariosNuevo = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
-            this.textBox7 = new System.Windows.Forms.TextBox();
-            this.textBox8 = new System.Windows.Forms.TextBox();
-            this.textBox9 = new System.Windows.Forms.TextBox();
-            this.textBox10 = new System.Windows.Forms.TextBox();
-            this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
-            this.numericUpDown2 = new System.Windows.Forms.NumericUpDown();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).BeginInit();
+            this.txt_Usuario_UsuariosNuevo = new System.Windows.Forms.TextBox();
+            this.txt_Contraseña_UsuariosNuevo = new System.Windows.Forms.TextBox();
+            this.txt_Descripcion_UsuariosNuevo = new System.Windows.Forms.TextBox();
+            this.txt_Apellido_UsuariosNuevo = new System.Windows.Forms.TextBox();
+            this.nud_HorarioEntrada_UsuariosNuevo = new System.Windows.Forms.NumericUpDown();
+            this.nud_HorarioSalida_UsuariosNuevo = new System.Windows.Forms.NumericUpDown();
+            this.cmb_Rol_UsuariosNuevo = new System.Windows.Forms.ComboBox();
+            ((System.ComponentModel.ISupportInitialize)(this.nud_HorarioEntrada_UsuariosNuevo)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nud_HorarioSalida_UsuariosNuevo)).BeginInit();
             this.SuspendLayout();
             // 
             // button1
@@ -64,19 +64,19 @@
             this.button1.Text = "Guardar";
             this.button1.UseVisualStyleBackColor = true;
             // 
-            // textBox3
+            // txt_Nombre_UsuariosNuevo
             // 
-            this.textBox3.Location = new System.Drawing.Point(146, 16);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(233, 20);
-            this.textBox3.TabIndex = 24;
+            this.txt_Nombre_UsuariosNuevo.Location = new System.Drawing.Point(146, 16);
+            this.txt_Nombre_UsuariosNuevo.Name = "txt_Nombre_UsuariosNuevo";
+            this.txt_Nombre_UsuariosNuevo.Size = new System.Drawing.Size(233, 20);
+            this.txt_Nombre_UsuariosNuevo.TabIndex = 24;
             // 
-            // textBox2
+            // txt_DNI_UsuariosNuevo
             // 
-            this.textBox2.Location = new System.Drawing.Point(146, 84);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(233, 20);
-            this.textBox2.TabIndex = 23;
+            this.txt_DNI_UsuariosNuevo.Location = new System.Drawing.Point(146, 84);
+            this.txt_DNI_UsuariosNuevo.Name = "txt_DNI_UsuariosNuevo";
+            this.txt_DNI_UsuariosNuevo.Size = new System.Drawing.Size(233, 20);
+            this.txt_DNI_UsuariosNuevo.TabIndex = 23;
             // 
             // label5
             // 
@@ -138,19 +138,19 @@
             this.label1.TabIndex = 14;
             this.label1.Text = "Nombre";
             // 
-            // textBox1
+            // txt_Telefono_UsuariosNuevo
             // 
-            this.textBox1.Location = new System.Drawing.Point(146, 118);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(233, 20);
-            this.textBox1.TabIndex = 28;
+            this.txt_Telefono_UsuariosNuevo.Location = new System.Drawing.Point(146, 118);
+            this.txt_Telefono_UsuariosNuevo.Name = "txt_Telefono_UsuariosNuevo";
+            this.txt_Telefono_UsuariosNuevo.Size = new System.Drawing.Size(233, 20);
+            this.txt_Telefono_UsuariosNuevo.TabIndex = 28;
             // 
-            // textBox4
+            // txt_Email_UsuariosNuevo
             // 
-            this.textBox4.Location = new System.Drawing.Point(146, 152);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(233, 20);
-            this.textBox4.TabIndex = 27;
+            this.txt_Email_UsuariosNuevo.Location = new System.Drawing.Point(146, 152);
+            this.txt_Email_UsuariosNuevo.Name = "txt_Email_UsuariosNuevo";
+            this.txt_Email_UsuariosNuevo.Size = new System.Drawing.Size(233, 20);
+            this.txt_Email_UsuariosNuevo.TabIndex = 27;
             // 
             // label7
             // 
@@ -192,66 +192,66 @@
             this.label10.TabIndex = 32;
             this.label10.Text = "Descripcion";
             // 
-            // textBox7
+            // txt_Usuario_UsuariosNuevo
             // 
-            this.textBox7.Location = new System.Drawing.Point(146, 186);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(233, 20);
-            this.textBox7.TabIndex = 34;
+            this.txt_Usuario_UsuariosNuevo.Location = new System.Drawing.Point(146, 186);
+            this.txt_Usuario_UsuariosNuevo.Name = "txt_Usuario_UsuariosNuevo";
+            this.txt_Usuario_UsuariosNuevo.Size = new System.Drawing.Size(233, 20);
+            this.txt_Usuario_UsuariosNuevo.TabIndex = 34;
             // 
-            // textBox8
+            // txt_Contraseña_UsuariosNuevo
             // 
-            this.textBox8.Location = new System.Drawing.Point(146, 223);
-            this.textBox8.Name = "textBox8";
-            this.textBox8.Size = new System.Drawing.Size(233, 20);
-            this.textBox8.TabIndex = 33;
+            this.txt_Contraseña_UsuariosNuevo.Location = new System.Drawing.Point(146, 223);
+            this.txt_Contraseña_UsuariosNuevo.Name = "txt_Contraseña_UsuariosNuevo";
+            this.txt_Contraseña_UsuariosNuevo.Size = new System.Drawing.Size(233, 20);
+            this.txt_Contraseña_UsuariosNuevo.TabIndex = 33;
             // 
-            // textBox9
+            // txt_Descripcion_UsuariosNuevo
             // 
-            this.textBox9.Location = new System.Drawing.Point(146, 322);
-            this.textBox9.Multiline = true;
-            this.textBox9.Name = "textBox9";
-            this.textBox9.Size = new System.Drawing.Size(233, 70);
-            this.textBox9.TabIndex = 38;
+            this.txt_Descripcion_UsuariosNuevo.Location = new System.Drawing.Point(146, 322);
+            this.txt_Descripcion_UsuariosNuevo.Multiline = true;
+            this.txt_Descripcion_UsuariosNuevo.Name = "txt_Descripcion_UsuariosNuevo";
+            this.txt_Descripcion_UsuariosNuevo.Size = new System.Drawing.Size(233, 70);
+            this.txt_Descripcion_UsuariosNuevo.TabIndex = 38;
             // 
-            // textBox10
+            // txt_Apellido_UsuariosNuevo
             // 
-            this.textBox10.Location = new System.Drawing.Point(146, 50);
-            this.textBox10.Name = "textBox10";
-            this.textBox10.Size = new System.Drawing.Size(233, 20);
-            this.textBox10.TabIndex = 37;
+            this.txt_Apellido_UsuariosNuevo.Location = new System.Drawing.Point(146, 50);
+            this.txt_Apellido_UsuariosNuevo.Name = "txt_Apellido_UsuariosNuevo";
+            this.txt_Apellido_UsuariosNuevo.Size = new System.Drawing.Size(233, 20);
+            this.txt_Apellido_UsuariosNuevo.TabIndex = 37;
             // 
-            // numericUpDown1
+            // nud_HorarioEntrada_UsuariosNuevo
             // 
-            this.numericUpDown1.Location = new System.Drawing.Point(146, 288);
-            this.numericUpDown1.Name = "numericUpDown1";
-            this.numericUpDown1.Size = new System.Drawing.Size(109, 20);
-            this.numericUpDown1.TabIndex = 39;
+            this.nud_HorarioEntrada_UsuariosNuevo.Location = new System.Drawing.Point(146, 288);
+            this.nud_HorarioEntrada_UsuariosNuevo.Name = "nud_HorarioEntrada_UsuariosNuevo";
+            this.nud_HorarioEntrada_UsuariosNuevo.Size = new System.Drawing.Size(109, 20);
+            this.nud_HorarioEntrada_UsuariosNuevo.TabIndex = 39;
             // 
-            // numericUpDown2
+            // nud_HorarioSalida_UsuariosNuevo
             // 
-            this.numericUpDown2.Location = new System.Drawing.Point(270, 288);
-            this.numericUpDown2.Name = "numericUpDown2";
-            this.numericUpDown2.Size = new System.Drawing.Size(109, 20);
-            this.numericUpDown2.TabIndex = 40;
+            this.nud_HorarioSalida_UsuariosNuevo.Location = new System.Drawing.Point(270, 288);
+            this.nud_HorarioSalida_UsuariosNuevo.Name = "nud_HorarioSalida_UsuariosNuevo";
+            this.nud_HorarioSalida_UsuariosNuevo.Size = new System.Drawing.Size(109, 20);
+            this.nud_HorarioSalida_UsuariosNuevo.TabIndex = 40;
             // 
-            // comboBox1
+            // cmb_Rol_UsuariosNuevo
             // 
-            this.comboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(146, 253);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(233, 21);
-            this.comboBox1.TabIndex = 41;
+            this.cmb_Rol_UsuariosNuevo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmb_Rol_UsuariosNuevo.FormattingEnabled = true;
+            this.cmb_Rol_UsuariosNuevo.Location = new System.Drawing.Point(146, 253);
+            this.cmb_Rol_UsuariosNuevo.Name = "cmb_Rol_UsuariosNuevo";
+            this.cmb_Rol_UsuariosNuevo.Size = new System.Drawing.Size(233, 21);
+            this.cmb_Rol_UsuariosNuevo.TabIndex = 41;
             // 
             // frm_Usuarios_Nuevo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(402, 437);
-            this.Controls.Add(this.comboBox1);
-            this.Controls.Add(this.numericUpDown2);
-            this.Controls.Add(this.numericUpDown1);
+            this.Controls.Add(this.cmb_Rol_UsuariosNuevo);
+            this.Controls.Add(this.nud_HorarioSalida_UsuariosNuevo);
+            this.Controls.Add(this.nud_HorarioEntrada_UsuariosNuevo);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.label8);
@@ -262,15 +262,15 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.textBox9);
-            this.Controls.Add(this.textBox10);
-            this.Controls.Add(this.textBox7);
-            this.Controls.Add(this.textBox8);
-            this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.textBox4);
+            this.Controls.Add(this.txt_Descripcion_UsuariosNuevo);
+            this.Controls.Add(this.txt_Apellido_UsuariosNuevo);
+            this.Controls.Add(this.txt_Usuario_UsuariosNuevo);
+            this.Controls.Add(this.txt_Contraseña_UsuariosNuevo);
+            this.Controls.Add(this.txt_Telefono_UsuariosNuevo);
+            this.Controls.Add(this.txt_Email_UsuariosNuevo);
             this.Controls.Add(this.button1);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.textBox2);
+            this.Controls.Add(this.txt_Nombre_UsuariosNuevo);
+            this.Controls.Add(this.txt_DNI_UsuariosNuevo);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
@@ -278,8 +278,8 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Datos del usuario";
             this.Load += new System.EventHandler(this.frm_Usuarios_Nuevo_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nud_HorarioEntrada_UsuariosNuevo)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nud_HorarioSalida_UsuariosNuevo)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -288,26 +288,26 @@
         #endregion
 
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox txt_Nombre_UsuariosNuevo;
+        private System.Windows.Forms.TextBox txt_DNI_UsuariosNuevo;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.TextBox txt_Telefono_UsuariosNuevo;
+        private System.Windows.Forms.TextBox txt_Email_UsuariosNuevo;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.TextBox textBox7;
-        private System.Windows.Forms.TextBox textBox8;
-        private System.Windows.Forms.TextBox textBox9;
-        private System.Windows.Forms.TextBox textBox10;
-        private System.Windows.Forms.NumericUpDown numericUpDown1;
-        private System.Windows.Forms.NumericUpDown numericUpDown2;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.TextBox txt_Usuario_UsuariosNuevo;
+        private System.Windows.Forms.TextBox txt_Contraseña_UsuariosNuevo;
+        private System.Windows.Forms.TextBox txt_Descripcion_UsuariosNuevo;
+        private System.Windows.Forms.TextBox txt_Apellido_UsuariosNuevo;
+        private System.Windows.Forms.NumericUpDown nud_HorarioEntrada_UsuariosNuevo;
+        private System.Windows.Forms.NumericUpDown nud_HorarioSalida_UsuariosNuevo;
+        private System.Windows.Forms.ComboBox cmb_Rol_UsuariosNuevo;
     }
 }

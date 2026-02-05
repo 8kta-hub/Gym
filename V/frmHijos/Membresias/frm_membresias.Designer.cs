@@ -30,15 +30,15 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frm_membresias));
             this.label2 = new System.Windows.Forms.Label();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button7 = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
+            this.dgv_Membresias = new System.Windows.Forms.DataGridView();
+            this.btn_Nuevo_Membresias = new System.Windows.Forms.Button();
+            this.btn_Modificar_Membresias = new System.Windows.Forms.Button();
+            this.btn_Habilitar_Membresias = new System.Windows.Forms.Button();
+            this.btn_Deshabilitar_Membresias = new System.Windows.Forms.Button();
+            this.btn_Eliminar_Membresias = new System.Windows.Forms.Button();
+            this.btn_Horarios_Membresias = new System.Windows.Forms.Button();
             this.btn_ExportarExcel_Membresia = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_Membresias)).BeginInit();
             this.SuspendLayout();
             // 
             // label2
@@ -51,73 +51,73 @@
             this.label2.TabIndex = 3;
             this.label2.Text = "MEMBRESíAS";
             // 
-            // dataGridView1
+            // dgv_Membresias
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(12, 74);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(1004, 280);
-            this.dataGridView1.TabIndex = 4;
+            this.dgv_Membresias.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgv_Membresias.Location = new System.Drawing.Point(12, 74);
+            this.dgv_Membresias.Name = "dgv_Membresias";
+            this.dgv_Membresias.Size = new System.Drawing.Size(1004, 280);
+            this.dgv_Membresias.TabIndex = 4;
             // 
-            // button1
+            // btn_Nuevo_Membresias
             // 
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(12, 45);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 5;
-            this.button1.Text = "Nuevo";
-            this.button1.UseVisualStyleBackColor = true;
+            this.btn_Nuevo_Membresias.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Nuevo_Membresias.Location = new System.Drawing.Point(12, 45);
+            this.btn_Nuevo_Membresias.Name = "btn_Nuevo_Membresias";
+            this.btn_Nuevo_Membresias.Size = new System.Drawing.Size(75, 23);
+            this.btn_Nuevo_Membresias.TabIndex = 5;
+            this.btn_Nuevo_Membresias.Text = "Nuevo";
+            this.btn_Nuevo_Membresias.UseVisualStyleBackColor = true;
             // 
-            // button2
+            // btn_Modificar_Membresias
             // 
-            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Location = new System.Drawing.Point(93, 45);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 23);
-            this.button2.TabIndex = 6;
-            this.button2.Text = "Modificar";
-            this.button2.UseVisualStyleBackColor = true;
+            this.btn_Modificar_Membresias.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Modificar_Membresias.Location = new System.Drawing.Point(93, 45);
+            this.btn_Modificar_Membresias.Name = "btn_Modificar_Membresias";
+            this.btn_Modificar_Membresias.Size = new System.Drawing.Size(75, 23);
+            this.btn_Modificar_Membresias.TabIndex = 6;
+            this.btn_Modificar_Membresias.Text = "Modificar";
+            this.btn_Modificar_Membresias.UseVisualStyleBackColor = true;
             // 
-            // button3
+            // btn_Habilitar_Membresias
             // 
-            this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.Location = new System.Drawing.Point(174, 45);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(75, 23);
-            this.button3.TabIndex = 8;
-            this.button3.Text = "Habilitar";
-            this.button3.UseVisualStyleBackColor = true;
+            this.btn_Habilitar_Membresias.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Habilitar_Membresias.Location = new System.Drawing.Point(174, 45);
+            this.btn_Habilitar_Membresias.Name = "btn_Habilitar_Membresias";
+            this.btn_Habilitar_Membresias.Size = new System.Drawing.Size(75, 23);
+            this.btn_Habilitar_Membresias.TabIndex = 8;
+            this.btn_Habilitar_Membresias.Text = "Habilitar";
+            this.btn_Habilitar_Membresias.UseVisualStyleBackColor = true;
             // 
-            // button4
+            // btn_Deshabilitar_Membresias
             // 
-            this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button4.Location = new System.Drawing.Point(255, 45);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(97, 23);
-            this.button4.TabIndex = 7;
-            this.button4.Text = "deshabilitar";
-            this.button4.UseVisualStyleBackColor = true;
+            this.btn_Deshabilitar_Membresias.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Deshabilitar_Membresias.Location = new System.Drawing.Point(255, 45);
+            this.btn_Deshabilitar_Membresias.Name = "btn_Deshabilitar_Membresias";
+            this.btn_Deshabilitar_Membresias.Size = new System.Drawing.Size(97, 23);
+            this.btn_Deshabilitar_Membresias.TabIndex = 7;
+            this.btn_Deshabilitar_Membresias.Text = "deshabilitar";
+            this.btn_Deshabilitar_Membresias.UseVisualStyleBackColor = true;
             // 
-            // button7
+            // btn_Eliminar_Membresias
             // 
-            this.button7.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button7.Location = new System.Drawing.Point(358, 46);
-            this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(75, 23);
-            this.button7.TabIndex = 9;
-            this.button7.Text = "Eliminar";
-            this.button7.UseVisualStyleBackColor = true;
+            this.btn_Eliminar_Membresias.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Eliminar_Membresias.Location = new System.Drawing.Point(358, 46);
+            this.btn_Eliminar_Membresias.Name = "btn_Eliminar_Membresias";
+            this.btn_Eliminar_Membresias.Size = new System.Drawing.Size(75, 23);
+            this.btn_Eliminar_Membresias.TabIndex = 9;
+            this.btn_Eliminar_Membresias.Text = "Eliminar";
+            this.btn_Eliminar_Membresias.UseVisualStyleBackColor = true;
             // 
-            // button5
+            // btn_Horarios_Membresias
             // 
-            this.button5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button5.Location = new System.Drawing.Point(439, 46);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(75, 23);
-            this.button5.TabIndex = 11;
-            this.button5.Text = "Horarios";
-            this.button5.UseVisualStyleBackColor = true;
+            this.btn_Horarios_Membresias.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Horarios_Membresias.Location = new System.Drawing.Point(439, 46);
+            this.btn_Horarios_Membresias.Name = "btn_Horarios_Membresias";
+            this.btn_Horarios_Membresias.Size = new System.Drawing.Size(75, 23);
+            this.btn_Horarios_Membresias.TabIndex = 11;
+            this.btn_Horarios_Membresias.Text = "Horarios";
+            this.btn_Horarios_Membresias.UseVisualStyleBackColor = true;
             // 
             // btn_ExportarExcel_Membresia
             // 
@@ -135,17 +135,17 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1028, 366);
             this.Controls.Add(this.btn_ExportarExcel_Membresia);
-            this.Controls.Add(this.button5);
-            this.Controls.Add(this.button7);
-            this.Controls.Add(this.button3);
-            this.Controls.Add(this.button4);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.btn_Horarios_Membresias);
+            this.Controls.Add(this.btn_Eliminar_Membresias);
+            this.Controls.Add(this.btn_Habilitar_Membresias);
+            this.Controls.Add(this.btn_Deshabilitar_Membresias);
+            this.Controls.Add(this.btn_Modificar_Membresias);
+            this.Controls.Add(this.btn_Nuevo_Membresias);
+            this.Controls.Add(this.dgv_Membresias);
             this.Controls.Add(this.label2);
             this.Name = "frm_membresias";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_Membresias)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -154,13 +154,13 @@
         #endregion
 
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Button button7;
-        private System.Windows.Forms.Button button5;
+        private System.Windows.Forms.DataGridView dgv_Membresias;
+        private System.Windows.Forms.Button btn_Nuevo_Membresias;
+        private System.Windows.Forms.Button btn_Modificar_Membresias;
+        private System.Windows.Forms.Button btn_Habilitar_Membresias;
+        private System.Windows.Forms.Button btn_Deshabilitar_Membresias;
+        private System.Windows.Forms.Button btn_Eliminar_Membresias;
+        private System.Windows.Forms.Button btn_Horarios_Membresias;
         private System.Windows.Forms.Button btn_ExportarExcel_Membresia;
     }
 }

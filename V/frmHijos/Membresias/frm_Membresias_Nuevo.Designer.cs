@@ -34,15 +34,15 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
-            this.numericUpDown2 = new System.Windows.Forms.NumericUpDown();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
-            this.button1 = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).BeginInit();
+            this.cmb_Meses_MembresiasNuevo = new System.Windows.Forms.ComboBox();
+            this.nud_Dias_MembresiasNuevo = new System.Windows.Forms.NumericUpDown();
+            this.nud_Semanas_MembresiasNuevo = new System.Windows.Forms.NumericUpDown();
+            this.txt_Precio_MembresiasNuevo = new System.Windows.Forms.TextBox();
+            this.txt_Nombre_MembresiasNuevo = new System.Windows.Forms.TextBox();
+            this.cmb_Tipo_MembresiasNuevo = new System.Windows.Forms.ComboBox();
+            this.btn_Guardar_MembresiasNuevo = new System.Windows.Forms.Button();
+            ((System.ComponentModel.ISupportInitialize)(this.nud_Dias_MembresiasNuevo)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nud_Semanas_MembresiasNuevo)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -111,72 +111,72 @@
             this.label6.Text = "Semanas";
             this.label6.Click += new System.EventHandler(this.label6_Click);
             // 
-            // comboBox1
+            // cmb_Meses_MembresiasNuevo
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(113, 161);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(153, 21);
-            this.comboBox1.TabIndex = 7;
+            this.cmb_Meses_MembresiasNuevo.FormattingEnabled = true;
+            this.cmb_Meses_MembresiasNuevo.Location = new System.Drawing.Point(113, 161);
+            this.cmb_Meses_MembresiasNuevo.Name = "cmb_Meses_MembresiasNuevo";
+            this.cmb_Meses_MembresiasNuevo.Size = new System.Drawing.Size(153, 21);
+            this.cmb_Meses_MembresiasNuevo.TabIndex = 7;
             // 
-            // numericUpDown1
+            // nud_Dias_MembresiasNuevo
             // 
-            this.numericUpDown1.Location = new System.Drawing.Point(113, 250);
-            this.numericUpDown1.Name = "numericUpDown1";
-            this.numericUpDown1.Size = new System.Drawing.Size(152, 20);
-            this.numericUpDown1.TabIndex = 8;
+            this.nud_Dias_MembresiasNuevo.Location = new System.Drawing.Point(113, 250);
+            this.nud_Dias_MembresiasNuevo.Name = "nud_Dias_MembresiasNuevo";
+            this.nud_Dias_MembresiasNuevo.Size = new System.Drawing.Size(152, 20);
+            this.nud_Dias_MembresiasNuevo.TabIndex = 8;
             // 
-            // numericUpDown2
+            // nud_Semanas_MembresiasNuevo
             // 
-            this.numericUpDown2.Location = new System.Drawing.Point(113, 206);
-            this.numericUpDown2.Name = "numericUpDown2";
-            this.numericUpDown2.Size = new System.Drawing.Size(152, 20);
-            this.numericUpDown2.TabIndex = 9;
+            this.nud_Semanas_MembresiasNuevo.Location = new System.Drawing.Point(113, 206);
+            this.nud_Semanas_MembresiasNuevo.Name = "nud_Semanas_MembresiasNuevo";
+            this.nud_Semanas_MembresiasNuevo.Size = new System.Drawing.Size(152, 20);
+            this.nud_Semanas_MembresiasNuevo.TabIndex = 9;
             // 
-            // textBox2
+            // txt_Precio_MembresiasNuevo
             // 
-            this.textBox2.Location = new System.Drawing.Point(113, 74);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(152, 20);
-            this.textBox2.TabIndex = 10;
+            this.txt_Precio_MembresiasNuevo.Location = new System.Drawing.Point(113, 74);
+            this.txt_Precio_MembresiasNuevo.Name = "txt_Precio_MembresiasNuevo";
+            this.txt_Precio_MembresiasNuevo.Size = new System.Drawing.Size(152, 20);
+            this.txt_Precio_MembresiasNuevo.TabIndex = 10;
             // 
-            // textBox3
+            // txt_Nombre_MembresiasNuevo
             // 
-            this.textBox3.Location = new System.Drawing.Point(113, 30);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(152, 20);
-            this.textBox3.TabIndex = 11;
+            this.txt_Nombre_MembresiasNuevo.Location = new System.Drawing.Point(113, 30);
+            this.txt_Nombre_MembresiasNuevo.Name = "txt_Nombre_MembresiasNuevo";
+            this.txt_Nombre_MembresiasNuevo.Size = new System.Drawing.Size(152, 20);
+            this.txt_Nombre_MembresiasNuevo.TabIndex = 11;
             // 
-            // comboBox2
+            // cmb_Tipo_MembresiasNuevo
             // 
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(112, 117);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(153, 21);
-            this.comboBox2.TabIndex = 12;
+            this.cmb_Tipo_MembresiasNuevo.FormattingEnabled = true;
+            this.cmb_Tipo_MembresiasNuevo.Location = new System.Drawing.Point(112, 117);
+            this.cmb_Tipo_MembresiasNuevo.Name = "cmb_Tipo_MembresiasNuevo";
+            this.cmb_Tipo_MembresiasNuevo.Size = new System.Drawing.Size(153, 21);
+            this.cmb_Tipo_MembresiasNuevo.TabIndex = 12;
             // 
-            // button1
+            // btn_Guardar_MembresiasNuevo
             // 
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(191, 287);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 13;
-            this.button1.Text = "Guardar";
-            this.button1.UseVisualStyleBackColor = true;
+            this.btn_Guardar_MembresiasNuevo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Guardar_MembresiasNuevo.Location = new System.Drawing.Point(191, 287);
+            this.btn_Guardar_MembresiasNuevo.Name = "btn_Guardar_MembresiasNuevo";
+            this.btn_Guardar_MembresiasNuevo.Size = new System.Drawing.Size(75, 23);
+            this.btn_Guardar_MembresiasNuevo.TabIndex = 13;
+            this.btn_Guardar_MembresiasNuevo.Text = "Guardar";
+            this.btn_Guardar_MembresiasNuevo.UseVisualStyleBackColor = true;
             // 
             // frm_Membresias_Nuevo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(293, 322);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.comboBox2);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.numericUpDown2);
-            this.Controls.Add(this.numericUpDown1);
-            this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.btn_Guardar_MembresiasNuevo);
+            this.Controls.Add(this.cmb_Tipo_MembresiasNuevo);
+            this.Controls.Add(this.txt_Nombre_MembresiasNuevo);
+            this.Controls.Add(this.txt_Precio_MembresiasNuevo);
+            this.Controls.Add(this.nud_Semanas_MembresiasNuevo);
+            this.Controls.Add(this.nud_Dias_MembresiasNuevo);
+            this.Controls.Add(this.cmb_Meses_MembresiasNuevo);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label4);
@@ -189,8 +189,8 @@
             this.Name = "frm_Membresias_Nuevo";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Datos de la Membresía";
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nud_Dias_MembresiasNuevo)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nud_Semanas_MembresiasNuevo)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -204,12 +204,12 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.NumericUpDown numericUpDown1;
-        private System.Windows.Forms.NumericUpDown numericUpDown2;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.ComboBox comboBox2;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.ComboBox cmb_Meses_MembresiasNuevo;
+        private System.Windows.Forms.NumericUpDown nud_Dias_MembresiasNuevo;
+        private System.Windows.Forms.NumericUpDown nud_Semanas_MembresiasNuevo;
+        private System.Windows.Forms.TextBox txt_Precio_MembresiasNuevo;
+        private System.Windows.Forms.TextBox txt_Nombre_MembresiasNuevo;
+        private System.Windows.Forms.ComboBox cmb_Tipo_MembresiasNuevo;
+        private System.Windows.Forms.Button btn_Guardar_MembresiasNuevo;
     }
 }

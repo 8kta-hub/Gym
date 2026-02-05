@@ -28,63 +28,61 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
+            this.btn_CargarFoto_ClientesNuevo = new System.Windows.Forms.Button();
+            this.btn_TomarFoto_ClientesNuevo = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.textBox6 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.txt_Email_ClientesNuevo = new System.Windows.Forms.TextBox();
+            this.txt_DNI_ClientesNuevo = new System.Windows.Forms.TextBox();
+            this.txt_Apellido_ClientesNuevo = new System.Windows.Forms.TextBox();
+            this.txt_Telefono_ClientesNuevo = new System.Windows.Forms.TextBox();
+            this.txt_Codigo_ClientesNuevo = new System.Windows.Forms.TextBox();
+            this.txt_Nombre_ClientesNuevo = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.dtp_FechaNacimiento_ClientesNuevo = new System.Windows.Forms.DateTimePicker();
             this.label7 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btn_Guardar_ClientesNuevo = new System.Windows.Forms.Button();
             this.label6 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.pcb_FotoPerfil_ClientesNuevo = new System.Windows.Forms.PictureBox();
             this.groupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pcb_FotoPerfil_ClientesNuevo)).BeginInit();
             this.SuspendLayout();
             // 
-            // button2
+            // btn_CargarFoto_ClientesNuevo
             // 
-            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Location = new System.Drawing.Point(382, 181);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(78, 23);
-            this.button2.TabIndex = 37;
-            this.button2.Text = "Cargar foto";
-            this.button2.UseVisualStyleBackColor = true;
+            this.btn_CargarFoto_ClientesNuevo.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_CargarFoto_ClientesNuevo.Location = new System.Drawing.Point(382, 181);
+            this.btn_CargarFoto_ClientesNuevo.Name = "btn_CargarFoto_ClientesNuevo";
+            this.btn_CargarFoto_ClientesNuevo.Size = new System.Drawing.Size(78, 23);
+            this.btn_CargarFoto_ClientesNuevo.TabIndex = 37;
+            this.btn_CargarFoto_ClientesNuevo.Text = "Cargar foto";
+            this.btn_CargarFoto_ClientesNuevo.UseVisualStyleBackColor = true;
             // 
-            // button3
+            // btn_TomarFoto_ClientesNuevo
             // 
-            this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.Location = new System.Drawing.Point(470, 181);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(81, 23);
-            this.button3.TabIndex = 38;
-            this.button3.Text = "Tomar foto";
-            this.button3.UseVisualStyleBackColor = true;
+            this.btn_TomarFoto_ClientesNuevo.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_TomarFoto_ClientesNuevo.Location = new System.Drawing.Point(470, 181);
+            this.btn_TomarFoto_ClientesNuevo.Name = "btn_TomarFoto_ClientesNuevo";
+            this.btn_TomarFoto_ClientesNuevo.Size = new System.Drawing.Size(81, 23);
+            this.btn_TomarFoto_ClientesNuevo.TabIndex = 38;
+            this.btn_TomarFoto_ClientesNuevo.Text = "Tomar foto";
+            this.btn_TomarFoto_ClientesNuevo.UseVisualStyleBackColor = true;
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.textBox5);
-            this.groupBox1.Controls.Add(this.textBox6);
-            this.groupBox1.Controls.Add(this.textBox3);
-            this.groupBox1.Controls.Add(this.textBox4);
-            this.groupBox1.Controls.Add(this.textBox1);
-            this.groupBox1.Controls.Add(this.textBox2);
+            this.groupBox1.Controls.Add(this.txt_Email_ClientesNuevo);
+            this.groupBox1.Controls.Add(this.txt_DNI_ClientesNuevo);
+            this.groupBox1.Controls.Add(this.txt_Apellido_ClientesNuevo);
+            this.groupBox1.Controls.Add(this.txt_Telefono_ClientesNuevo);
+            this.groupBox1.Controls.Add(this.txt_Codigo_ClientesNuevo);
+            this.groupBox1.Controls.Add(this.txt_Nombre_ClientesNuevo);
             this.groupBox1.Controls.Add(this.label5);
-            this.groupBox1.Controls.Add(this.dateTimePicker1);
+            this.groupBox1.Controls.Add(this.dtp_FechaNacimiento_ClientesNuevo);
             this.groupBox1.Controls.Add(this.label7);
-            this.groupBox1.Controls.Add(this.button1);
+            this.groupBox1.Controls.Add(this.btn_Guardar_ClientesNuevo);
             this.groupBox1.Controls.Add(this.label6);
             this.groupBox1.Controls.Add(this.label4);
             this.groupBox1.Controls.Add(this.label3);
@@ -96,53 +94,53 @@
             this.groupBox1.TabIndex = 46;
             this.groupBox1.TabStop = false;
             // 
-            // textBox5
+            // txt_Email_ClientesNuevo
             // 
-            this.textBox5.Location = new System.Drawing.Point(149, 210);
-            this.textBox5.Multiline = true;
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(195, 24);
-            this.textBox5.TabIndex = 60;
+            this.txt_Email_ClientesNuevo.Location = new System.Drawing.Point(149, 210);
+            this.txt_Email_ClientesNuevo.Multiline = true;
+            this.txt_Email_ClientesNuevo.Name = "txt_Email_ClientesNuevo";
+            this.txt_Email_ClientesNuevo.Size = new System.Drawing.Size(195, 24);
+            this.txt_Email_ClientesNuevo.TabIndex = 60;
             // 
-            // textBox6
+            // txt_DNI_ClientesNuevo
             // 
-            this.textBox6.Location = new System.Drawing.Point(149, 250);
-            this.textBox6.Multiline = true;
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(195, 24);
-            this.textBox6.TabIndex = 59;
+            this.txt_DNI_ClientesNuevo.Location = new System.Drawing.Point(149, 250);
+            this.txt_DNI_ClientesNuevo.Multiline = true;
+            this.txt_DNI_ClientesNuevo.Name = "txt_DNI_ClientesNuevo";
+            this.txt_DNI_ClientesNuevo.Size = new System.Drawing.Size(195, 24);
+            this.txt_DNI_ClientesNuevo.TabIndex = 59;
             // 
-            // textBox3
+            // txt_Apellido_ClientesNuevo
             // 
-            this.textBox3.Location = new System.Drawing.Point(148, 96);
-            this.textBox3.Multiline = true;
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(195, 24);
-            this.textBox3.TabIndex = 58;
+            this.txt_Apellido_ClientesNuevo.Location = new System.Drawing.Point(148, 96);
+            this.txt_Apellido_ClientesNuevo.Multiline = true;
+            this.txt_Apellido_ClientesNuevo.Name = "txt_Apellido_ClientesNuevo";
+            this.txt_Apellido_ClientesNuevo.Size = new System.Drawing.Size(195, 24);
+            this.txt_Apellido_ClientesNuevo.TabIndex = 58;
             // 
-            // textBox4
+            // txt_Telefono_ClientesNuevo
             // 
-            this.textBox4.Location = new System.Drawing.Point(148, 137);
-            this.textBox4.Multiline = true;
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(195, 24);
-            this.textBox4.TabIndex = 57;
+            this.txt_Telefono_ClientesNuevo.Location = new System.Drawing.Point(148, 137);
+            this.txt_Telefono_ClientesNuevo.Multiline = true;
+            this.txt_Telefono_ClientesNuevo.Name = "txt_Telefono_ClientesNuevo";
+            this.txt_Telefono_ClientesNuevo.Size = new System.Drawing.Size(195, 24);
+            this.txt_Telefono_ClientesNuevo.TabIndex = 57;
             // 
-            // textBox1
+            // txt_Codigo_ClientesNuevo
             // 
-            this.textBox1.Location = new System.Drawing.Point(148, 18);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(195, 24);
-            this.textBox1.TabIndex = 56;
+            this.txt_Codigo_ClientesNuevo.Location = new System.Drawing.Point(148, 18);
+            this.txt_Codigo_ClientesNuevo.Multiline = true;
+            this.txt_Codigo_ClientesNuevo.Name = "txt_Codigo_ClientesNuevo";
+            this.txt_Codigo_ClientesNuevo.Size = new System.Drawing.Size(195, 24);
+            this.txt_Codigo_ClientesNuevo.TabIndex = 56;
             // 
-            // textBox2
+            // txt_Nombre_ClientesNuevo
             // 
-            this.textBox2.Location = new System.Drawing.Point(148, 56);
-            this.textBox2.Multiline = true;
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(195, 24);
-            this.textBox2.TabIndex = 55;
+            this.txt_Nombre_ClientesNuevo.Location = new System.Drawing.Point(148, 56);
+            this.txt_Nombre_ClientesNuevo.Multiline = true;
+            this.txt_Nombre_ClientesNuevo.Name = "txt_Nombre_ClientesNuevo";
+            this.txt_Nombre_ClientesNuevo.Size = new System.Drawing.Size(195, 24);
+            this.txt_Nombre_ClientesNuevo.TabIndex = 55;
             // 
             // label5
             // 
@@ -154,12 +152,12 @@
             this.label5.TabIndex = 54;
             this.label5.Text = "DNI";
             // 
-            // dateTimePicker1
+            // dtp_FechaNacimiento_ClientesNuevo
             // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(148, 175);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(196, 20);
-            this.dateTimePicker1.TabIndex = 53;
+            this.dtp_FechaNacimiento_ClientesNuevo.Location = new System.Drawing.Point(148, 175);
+            this.dtp_FechaNacimiento_ClientesNuevo.Name = "dtp_FechaNacimiento_ClientesNuevo";
+            this.dtp_FechaNacimiento_ClientesNuevo.Size = new System.Drawing.Size(196, 20);
+            this.dtp_FechaNacimiento_ClientesNuevo.TabIndex = 53;
             // 
             // label7
             // 
@@ -171,15 +169,15 @@
             this.label7.TabIndex = 52;
             this.label7.Text = "Codigo";
             // 
-            // button1
+            // btn_Guardar_ClientesNuevo
             // 
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(268, 325);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 51;
-            this.button1.Text = "Guardar";
-            this.button1.UseVisualStyleBackColor = true;
+            this.btn_Guardar_ClientesNuevo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Guardar_ClientesNuevo.Location = new System.Drawing.Point(268, 325);
+            this.btn_Guardar_ClientesNuevo.Name = "btn_Guardar_ClientesNuevo";
+            this.btn_Guardar_ClientesNuevo.Size = new System.Drawing.Size(75, 23);
+            this.btn_Guardar_ClientesNuevo.TabIndex = 51;
+            this.btn_Guardar_ClientesNuevo.Text = "Guardar";
+            this.btn_Guardar_ClientesNuevo.UseVisualStyleBackColor = true;
             // 
             // label6
             // 
@@ -231,23 +229,15 @@
             this.label1.TabIndex = 46;
             this.label1.Text = "Nombre";
             // 
-            // pictureBox1
+            // pcb_FotoPerfil_ClientesNuevo
             // 
-            this.pictureBox1.Image = global::Gym.Properties.Resources.hombre;
-            this.pictureBox1.Location = new System.Drawing.Point(382, 20);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(169, 155);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 39;
-            this.pictureBox1.TabStop = false;
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.Location = new System.Drawing.Point(382, 210);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(169, 155);
-            this.pictureBox2.TabIndex = 35;
-            this.pictureBox2.TabStop = false;
+            this.pcb_FotoPerfil_ClientesNuevo.Image = global::Gym.Properties.Resources.hombre;
+            this.pcb_FotoPerfil_ClientesNuevo.Location = new System.Drawing.Point(382, 20);
+            this.pcb_FotoPerfil_ClientesNuevo.Name = "pcb_FotoPerfil_ClientesNuevo";
+            this.pcb_FotoPerfil_ClientesNuevo.Size = new System.Drawing.Size(169, 155);
+            this.pcb_FotoPerfil_ClientesNuevo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pcb_FotoPerfil_ClientesNuevo.TabIndex = 39;
+            this.pcb_FotoPerfil_ClientesNuevo.TabStop = false;
             // 
             // frm_Clientes_Nuevo
             // 
@@ -255,10 +245,9 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(563, 380);
             this.Controls.Add(this.groupBox1);
-            this.Controls.Add(this.pictureBox1);
-            this.Controls.Add(this.button3);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.pictureBox2);
+            this.Controls.Add(this.pcb_FotoPerfil_ClientesNuevo);
+            this.Controls.Add(this.btn_TomarFoto_ClientesNuevo);
+            this.Controls.Add(this.btn_CargarFoto_ClientesNuevo);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
@@ -266,28 +255,26 @@
             this.Text = "Datos de clientes";
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pcb_FotoPerfil_ClientesNuevo)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
-        private System.Windows.Forms.PictureBox pictureBox2;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Button btn_CargarFoto_ClientesNuevo;
+        private System.Windows.Forms.Button btn_TomarFoto_ClientesNuevo;
+        private System.Windows.Forms.PictureBox pcb_FotoPerfil_ClientesNuevo;
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.TextBox textBox6;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox txt_Email_ClientesNuevo;
+        private System.Windows.Forms.TextBox txt_DNI_ClientesNuevo;
+        private System.Windows.Forms.TextBox txt_Apellido_ClientesNuevo;
+        private System.Windows.Forms.TextBox txt_Telefono_ClientesNuevo;
+        private System.Windows.Forms.TextBox txt_Codigo_ClientesNuevo;
+        private System.Windows.Forms.TextBox txt_Nombre_ClientesNuevo;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.DateTimePicker dtp_FechaNacimiento_ClientesNuevo;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btn_Guardar_ClientesNuevo;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;

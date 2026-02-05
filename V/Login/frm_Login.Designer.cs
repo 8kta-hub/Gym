@@ -33,8 +33,8 @@
             this.label2 = new System.Windows.Forms.Label();
             this.txt_Login_Contraseña = new System.Windows.Forms.TextBox();
             this.txt_login_Usuari = new System.Windows.Forms.TextBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.button2 = new System.Windows.Forms.Button();
+            this.lbl_OlvidarContraseña_Login = new System.Windows.Forms.Label();
+            this.btn_MostrarContraseña_Login = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btn_Login_Acceder
@@ -84,38 +84,38 @@
             this.txt_login_Usuari.Size = new System.Drawing.Size(199, 29);
             this.txt_login_Usuari.TabIndex = 5;
             // 
-            // label3
+            // lbl_OlvidarContraseña_Login
             // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.label3.Location = new System.Drawing.Point(152, 209);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(155, 16);
-            this.label3.TabIndex = 6;
-            this.label3.Text = "Olvidaste la contraseña?";
+            this.lbl_OlvidarContraseña_Login.AutoSize = true;
+            this.lbl_OlvidarContraseña_Login.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_OlvidarContraseña_Login.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.lbl_OlvidarContraseña_Login.Location = new System.Drawing.Point(152, 209);
+            this.lbl_OlvidarContraseña_Login.Name = "lbl_OlvidarContraseña_Login";
+            this.lbl_OlvidarContraseña_Login.Size = new System.Drawing.Size(155, 16);
+            this.lbl_OlvidarContraseña_Login.TabIndex = 6;
+            this.lbl_OlvidarContraseña_Login.Text = "Olvidaste la contraseña?";
             // 
-            // button2
+            // btn_MostrarContraseña_Login
             // 
-            this.button2.BackgroundImage = global::Gym.Properties.Resources.show;
-            this.button2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button2.Location = new System.Drawing.Point(359, 174);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(28, 29);
-            this.button2.TabIndex = 1;
-            this.button2.UseVisualStyleBackColor = true;
+            this.btn_MostrarContraseña_Login.BackgroundImage = global::Gym.Properties.Resources.show;
+            this.btn_MostrarContraseña_Login.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btn_MostrarContraseña_Login.Location = new System.Drawing.Point(359, 174);
+            this.btn_MostrarContraseña_Login.Name = "btn_MostrarContraseña_Login";
+            this.btn_MostrarContraseña_Login.Size = new System.Drawing.Size(28, 29);
+            this.btn_MostrarContraseña_Login.TabIndex = 1;
+            this.btn_MostrarContraseña_Login.UseVisualStyleBackColor = true;
             // 
             // frm_Login
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(510, 301);
-            this.Controls.Add(this.label3);
+            this.Controls.Add(this.lbl_OlvidarContraseña_Login);
             this.Controls.Add(this.txt_login_Usuari);
             this.Controls.Add(this.txt_Login_Contraseña);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.button2);
+            this.Controls.Add(this.btn_MostrarContraseña_Login);
             this.Controls.Add(this.btn_Login_Acceder);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MaximizeBox = false;
@@ -129,11 +129,11 @@
         #endregion
 
         private System.Windows.Forms.Button btn_Login_Acceder;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button btn_MostrarContraseña_Login;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox txt_Login_Contraseña;
         private System.Windows.Forms.TextBox txt_login_Usuari;
-        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label lbl_OlvidarContraseña_Login;
     }
 }
