@@ -44,7 +44,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(9, 12);
+            this.label1.Location = new System.Drawing.Point(8, 9);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(119, 20);
             this.label1.TabIndex = 0;
@@ -53,7 +53,7 @@
             // btn_Nuevo_Productos
             // 
             this.btn_Nuevo_Productos.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_Nuevo_Productos.Location = new System.Drawing.Point(13, 55);
+            this.btn_Nuevo_Productos.Location = new System.Drawing.Point(12, 50);
             this.btn_Nuevo_Productos.Name = "btn_Nuevo_Productos";
             this.btn_Nuevo_Productos.Size = new System.Drawing.Size(66, 23);
             this.btn_Nuevo_Productos.TabIndex = 1;
@@ -63,7 +63,7 @@
             // btn_Modificar_Productos
             // 
             this.btn_Modificar_Productos.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_Modificar_Productos.Location = new System.Drawing.Point(85, 55);
+            this.btn_Modificar_Productos.Location = new System.Drawing.Point(84, 50);
             this.btn_Modificar_Productos.Name = "btn_Modificar_Productos";
             this.btn_Modificar_Productos.Size = new System.Drawing.Size(75, 23);
             this.btn_Modificar_Productos.TabIndex = 2;
@@ -73,9 +73,9 @@
             // btn_Deshabilitar_Productos
             // 
             this.btn_Deshabilitar_Productos.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_Deshabilitar_Productos.Location = new System.Drawing.Point(166, 55);
+            this.btn_Deshabilitar_Productos.Location = new System.Drawing.Point(165, 50);
             this.btn_Deshabilitar_Productos.Name = "btn_Deshabilitar_Productos";
-            this.btn_Deshabilitar_Productos.Size = new System.Drawing.Size(75, 23);
+            this.btn_Deshabilitar_Productos.Size = new System.Drawing.Size(97, 23);
             this.btn_Deshabilitar_Productos.TabIndex = 3;
             this.btn_Deshabilitar_Productos.Text = "Deshabilitar";
             this.btn_Deshabilitar_Productos.UseVisualStyleBackColor = true;
@@ -83,7 +83,7 @@
             // btn_Habilitar_Productos
             // 
             this.btn_Habilitar_Productos.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_Habilitar_Productos.Location = new System.Drawing.Point(247, 55);
+            this.btn_Habilitar_Productos.Location = new System.Drawing.Point(268, 50);
             this.btn_Habilitar_Productos.Name = "btn_Habilitar_Productos";
             this.btn_Habilitar_Productos.Size = new System.Drawing.Size(75, 23);
             this.btn_Habilitar_Productos.TabIndex = 4;
@@ -93,7 +93,7 @@
             // btn_Eliminar_Productos
             // 
             this.btn_Eliminar_Productos.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_Eliminar_Productos.Location = new System.Drawing.Point(328, 55);
+            this.btn_Eliminar_Productos.Location = new System.Drawing.Point(349, 50);
             this.btn_Eliminar_Productos.Name = "btn_Eliminar_Productos";
             this.btn_Eliminar_Productos.Size = new System.Drawing.Size(75, 23);
             this.btn_Eliminar_Productos.TabIndex = 5;
@@ -106,16 +106,16 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dgv_Productos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgv_Productos.Location = new System.Drawing.Point(9, 84);
+            this.dgv_Productos.Location = new System.Drawing.Point(12, 79);
             this.dgv_Productos.Name = "dgv_Productos";
-            this.dgv_Productos.Size = new System.Drawing.Size(1010, 274);
+            this.dgv_Productos.Size = new System.Drawing.Size(1004, 280);
             this.dgv_Productos.TabIndex = 7;
             // 
             // btn_ExportarExcel_Productos
             // 
             this.btn_ExportarExcel_Productos.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btn_ExportarExcel_Productos.BackgroundImage")));
             this.btn_ExportarExcel_Productos.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btn_ExportarExcel_Productos.Location = new System.Drawing.Point(409, 46);
+            this.btn_ExportarExcel_Productos.Location = new System.Drawing.Point(430, 41);
             this.btn_ExportarExcel_Productos.Name = "btn_ExportarExcel_Productos";
             this.btn_ExportarExcel_Productos.Size = new System.Drawing.Size(33, 32);
             this.btn_ExportarExcel_Productos.TabIndex = 38;

@@ -47,7 +47,7 @@
             // 
             this.btn_Buscar_Movimientos.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btn_Buscar_Movimientos.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_Buscar_Movimientos.Location = new System.Drawing.Point(951, 46);
+            this.btn_Buscar_Movimientos.Location = new System.Drawing.Point(950, 50);
             this.btn_Buscar_Movimientos.Name = "btn_Buscar_Movimientos";
             this.btn_Buscar_Movimientos.Size = new System.Drawing.Size(66, 23);
             this.btn_Buscar_Movimientos.TabIndex = 21;
@@ -57,7 +57,7 @@
             // dtp_FechaFinal_Movimientos
             // 
             this.dtp_FechaFinal_Movimientos.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.dtp_FechaFinal_Movimientos.Location = new System.Drawing.Point(731, 49);
+            this.dtp_FechaFinal_Movimientos.Location = new System.Drawing.Point(731, 53);
             this.dtp_FechaFinal_Movimientos.Name = "dtp_FechaFinal_Movimientos";
             this.dtp_FechaFinal_Movimientos.Size = new System.Drawing.Size(200, 20);
             this.dtp_FechaFinal_Movimientos.TabIndex = 20;
@@ -68,7 +68,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(648, 53);
+            this.label3.Location = new System.Drawing.Point(648, 54);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(77, 16);
             this.label3.TabIndex = 19;
@@ -79,7 +79,7 @@
             this.label2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(348, 53);
+            this.label2.Location = new System.Drawing.Point(348, 54);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(82, 16);
             this.label2.TabIndex = 18;
@@ -88,7 +88,7 @@
             // dtp_FechaInicial_Movimientos
             // 
             this.dtp_FechaInicial_Movimientos.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.dtp_FechaInicial_Movimientos.Location = new System.Drawing.Point(436, 49);
+            this.dtp_FechaInicial_Movimientos.Location = new System.Drawing.Point(436, 53);
             this.dtp_FechaInicial_Movimientos.Name = "dtp_FechaInicial_Movimientos";
             this.dtp_FechaInicial_Movimientos.Size = new System.Drawing.Size(200, 20);
             this.dtp_FechaInicial_Movimientos.TabIndex = 17;
@@ -99,15 +99,15 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dgv_Movimientos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgv_Movimientos.Location = new System.Drawing.Point(9, 75);
+            this.dgv_Movimientos.Location = new System.Drawing.Point(12, 79);
             this.dgv_Movimientos.Name = "dgv_Movimientos";
-            this.dgv_Movimientos.Size = new System.Drawing.Size(1011, 285);
+            this.dgv_Movimientos.Size = new System.Drawing.Size(1004, 280);
             this.dgv_Movimientos.TabIndex = 16;
             // 
             // btn_Eliminar_Movimientos
             // 
             this.btn_Eliminar_Movimientos.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_Eliminar_Movimientos.Location = new System.Drawing.Point(158, 46);
+            this.btn_Eliminar_Movimientos.Location = new System.Drawing.Point(158, 50);
             this.btn_Eliminar_Movimientos.Name = "btn_Eliminar_Movimientos";
             this.btn_Eliminar_Movimientos.Size = new System.Drawing.Size(75, 23);
             this.btn_Eliminar_Movimientos.TabIndex = 14;
@@ -117,7 +117,7 @@
             // btn_Modificar_Movimientos
             // 
             this.btn_Modificar_Movimientos.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_Modificar_Movimientos.Location = new System.Drawing.Point(77, 46);
+            this.btn_Modificar_Movimientos.Location = new System.Drawing.Point(77, 50);
             this.btn_Modificar_Movimientos.Name = "btn_Modificar_Movimientos";
             this.btn_Modificar_Movimientos.Size = new System.Drawing.Size(75, 23);
             this.btn_Modificar_Movimientos.TabIndex = 13;
@@ -127,7 +127,7 @@
             // btn_Nuevo_Movimientos
             // 
             this.btn_Nuevo_Movimientos.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_Nuevo_Movimientos.Location = new System.Drawing.Point(9, 46);
+            this.btn_Nuevo_Movimientos.Location = new System.Drawing.Point(9, 50);
             this.btn_Nuevo_Movimientos.Name = "btn_Nuevo_Movimientos";
             this.btn_Nuevo_Movimientos.Size = new System.Drawing.Size(62, 23);
             this.btn_Nuevo_Movimientos.TabIndex = 12;
@@ -138,7 +138,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(10, 8);
+            this.label1.Location = new System.Drawing.Point(8, 9);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(133, 20);
             this.label1.TabIndex = 11;
@@ -148,7 +148,7 @@
             // 
             this.btn_ExportarExcel_Movimientos.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btn_ExportarExcel_Movimientos.BackgroundImage")));
             this.btn_ExportarExcel_Movimientos.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btn_ExportarExcel_Movimientos.Location = new System.Drawing.Point(239, 37);
+            this.btn_ExportarExcel_Movimientos.Location = new System.Drawing.Point(239, 41);
             this.btn_ExportarExcel_Movimientos.Name = "btn_ExportarExcel_Movimientos";
             this.btn_ExportarExcel_Movimientos.Size = new System.Drawing.Size(33, 32);
             this.btn_ExportarExcel_Movimientos.TabIndex = 39;
@@ -189,7 +189,7 @@
         private System.Windows.Forms.Button btn_Eliminar_Movimientos;
         private System.Windows.Forms.Button btn_Modificar_Movimientos;
         private System.Windows.Forms.Button btn_Nuevo_Movimientos;
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btn_ExportarExcel_Movimientos;
+        private System.Windows.Forms.Label label1;
     }
 }

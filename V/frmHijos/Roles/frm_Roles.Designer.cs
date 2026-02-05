@@ -43,7 +43,7 @@
             // btn_Eliminar_Roles
             // 
             this.btn_Eliminar_Roles.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_Eliminar_Roles.Location = new System.Drawing.Point(358, 51);
+            this.btn_Eliminar_Roles.Location = new System.Drawing.Point(348, 50);
             this.btn_Eliminar_Roles.Name = "btn_Eliminar_Roles";
             this.btn_Eliminar_Roles.Size = new System.Drawing.Size(75, 23);
             this.btn_Eliminar_Roles.TabIndex = 30;
@@ -53,7 +53,7 @@
             // btn_Habilitar_Roles
             // 
             this.btn_Habilitar_Roles.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_Habilitar_Roles.Location = new System.Drawing.Point(174, 50);
+            this.btn_Habilitar_Roles.Location = new System.Drawing.Point(164, 50);
             this.btn_Habilitar_Roles.Name = "btn_Habilitar_Roles";
             this.btn_Habilitar_Roles.Size = new System.Drawing.Size(75, 23);
             this.btn_Habilitar_Roles.TabIndex = 29;
@@ -63,7 +63,7 @@
             // btn_Deshabilitar_Roles
             // 
             this.btn_Deshabilitar_Roles.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_Deshabilitar_Roles.Location = new System.Drawing.Point(255, 50);
+            this.btn_Deshabilitar_Roles.Location = new System.Drawing.Point(245, 50);
             this.btn_Deshabilitar_Roles.Name = "btn_Deshabilitar_Roles";
             this.btn_Deshabilitar_Roles.Size = new System.Drawing.Size(97, 23);
             this.btn_Deshabilitar_Roles.TabIndex = 28;
@@ -73,7 +73,7 @@
             // btn_Modificar_Roles
             // 
             this.btn_Modificar_Roles.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_Modificar_Roles.Location = new System.Drawing.Point(93, 50);
+            this.btn_Modificar_Roles.Location = new System.Drawing.Point(83, 50);
             this.btn_Modificar_Roles.Name = "btn_Modificar_Roles";
             this.btn_Modificar_Roles.Size = new System.Drawing.Size(75, 23);
             this.btn_Modificar_Roles.TabIndex = 27;
@@ -85,24 +85,27 @@
             this.btn_Nuevo_Roles.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_Nuevo_Roles.Location = new System.Drawing.Point(12, 50);
             this.btn_Nuevo_Roles.Name = "btn_Nuevo_Roles";
-            this.btn_Nuevo_Roles.Size = new System.Drawing.Size(75, 23);
+            this.btn_Nuevo_Roles.Size = new System.Drawing.Size(65, 23);
             this.btn_Nuevo_Roles.TabIndex = 26;
             this.btn_Nuevo_Roles.Text = "Nuevo";
             this.btn_Nuevo_Roles.UseVisualStyleBackColor = true;
             // 
             // dgv_Roles
             // 
+            this.dgv_Roles.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.dgv_Roles.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgv_Roles.Location = new System.Drawing.Point(12, 79);
             this.dgv_Roles.Name = "dgv_Roles";
-            this.dgv_Roles.Size = new System.Drawing.Size(1004, 277);
+            this.dgv_Roles.Size = new System.Drawing.Size(1004, 280);
             this.dgv_Roles.TabIndex = 25;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(12, 11);
+            this.label2.Location = new System.Drawing.Point(8, 9);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(69, 20);
             this.label2.TabIndex = 24;
@@ -112,7 +115,7 @@
             // 
             this.btn_ExportarExcel_Roles.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btn_ExportarExcel_Roles.BackgroundImage")));
             this.btn_ExportarExcel_Roles.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btn_ExportarExcel_Roles.Location = new System.Drawing.Point(439, 41);
+            this.btn_ExportarExcel_Roles.Location = new System.Drawing.Point(429, 41);
             this.btn_ExportarExcel_Roles.Name = "btn_ExportarExcel_Roles";
             this.btn_ExportarExcel_Roles.Size = new System.Drawing.Size(33, 32);
             this.btn_ExportarExcel_Roles.TabIndex = 38;

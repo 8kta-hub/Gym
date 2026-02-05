@@ -42,7 +42,7 @@
             // btn_Eliminar_Conceptos
             // 
             this.btn_Eliminar_Conceptos.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_Eliminar_Conceptos.Location = new System.Drawing.Point(240, 47);
+            this.btn_Eliminar_Conceptos.Location = new System.Drawing.Point(240, 50);
             this.btn_Eliminar_Conceptos.Name = "btn_Eliminar_Conceptos";
             this.btn_Eliminar_Conceptos.Size = new System.Drawing.Size(75, 23);
             this.btn_Eliminar_Conceptos.TabIndex = 42;
@@ -52,7 +52,7 @@
             // btn_Habilitar_Conceptos
             // 
             this.btn_Habilitar_Conceptos.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_Habilitar_Conceptos.Location = new System.Drawing.Point(159, 47);
+            this.btn_Habilitar_Conceptos.Location = new System.Drawing.Point(159, 50);
             this.btn_Habilitar_Conceptos.Name = "btn_Habilitar_Conceptos";
             this.btn_Habilitar_Conceptos.Size = new System.Drawing.Size(75, 23);
             this.btn_Habilitar_Conceptos.TabIndex = 41;
@@ -62,7 +62,7 @@
             // btn_Modificar_Conceptos
             // 
             this.btn_Modificar_Conceptos.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_Modificar_Conceptos.Location = new System.Drawing.Point(78, 47);
+            this.btn_Modificar_Conceptos.Location = new System.Drawing.Point(78, 50);
             this.btn_Modificar_Conceptos.Name = "btn_Modificar_Conceptos";
             this.btn_Modificar_Conceptos.Size = new System.Drawing.Size(75, 23);
             this.btn_Modificar_Conceptos.TabIndex = 39;
@@ -72,7 +72,7 @@
             // btn_Nuevo_Conceptos
             // 
             this.btn_Nuevo_Conceptos.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_Nuevo_Conceptos.Location = new System.Drawing.Point(9, 47);
+            this.btn_Nuevo_Conceptos.Location = new System.Drawing.Point(9, 50);
             this.btn_Nuevo_Conceptos.Name = "btn_Nuevo_Conceptos";
             this.btn_Nuevo_Conceptos.Size = new System.Drawing.Size(63, 23);
             this.btn_Nuevo_Conceptos.TabIndex = 38;
@@ -85,16 +85,16 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dgv_Conceptos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgv_Conceptos.Location = new System.Drawing.Point(9, 76);
+            this.dgv_Conceptos.Location = new System.Drawing.Point(12, 79);
             this.dgv_Conceptos.Name = "dgv_Conceptos";
-            this.dgv_Conceptos.Size = new System.Drawing.Size(1011, 285);
+            this.dgv_Conceptos.Size = new System.Drawing.Size(1004, 280);
             this.dgv_Conceptos.TabIndex = 37;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(12, 11);
+            this.label2.Location = new System.Drawing.Point(8, 9);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(116, 20);
             this.label2.TabIndex = 36;
@@ -104,7 +104,7 @@
             // 
             this.btn_ExportarExcel_Conceptos.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btn_ExportarExcel_Conceptos.BackgroundImage")));
             this.btn_ExportarExcel_Conceptos.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btn_ExportarExcel_Conceptos.Location = new System.Drawing.Point(321, 38);
+            this.btn_ExportarExcel_Conceptos.Location = new System.Drawing.Point(321, 41);
             this.btn_ExportarExcel_Conceptos.Name = "btn_ExportarExcel_Conceptos";
             this.btn_ExportarExcel_Conceptos.Size = new System.Drawing.Size(33, 32);
             this.btn_ExportarExcel_Conceptos.TabIndex = 43;

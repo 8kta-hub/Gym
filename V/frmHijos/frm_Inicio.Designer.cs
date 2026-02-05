@@ -56,6 +56,9 @@
             // 
             // dvg_EntradasDia
             // 
+            this.dvg_EntradasDia.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.dvg_EntradasDia.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dvg_EntradasDia.Location = new System.Drawing.Point(12, 62);
             this.dvg_EntradasDia.Name = "dvg_EntradasDia";
@@ -74,9 +77,10 @@
             // 
             // label3
             // 
+            this.label3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(816, 241);
+            this.label3.Location = new System.Drawing.Point(814, 241);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(87, 16);
             this.label3.TabIndex = 3;
@@ -84,9 +88,10 @@
             // 
             // lbl_nombreUsuairo
             // 
+            this.lbl_nombreUsuairo.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.lbl_nombreUsuairo.AutoSize = true;
             this.lbl_nombreUsuairo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_nombreUsuairo.Location = new System.Drawing.Point(909, 241);
+            this.lbl_nombreUsuairo.Location = new System.Drawing.Point(907, 241);
             this.lbl_nombreUsuairo.Name = "lbl_nombreUsuairo";
             this.lbl_nombreUsuairo.Size = new System.Drawing.Size(55, 16);
             this.lbl_nombreUsuairo.TabIndex = 4;
@@ -94,9 +99,10 @@
             // 
             // lbl_fecha
             // 
+            this.lbl_fecha.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.lbl_fecha.AutoSize = true;
             this.lbl_fecha.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_fecha.Location = new System.Drawing.Point(816, 293);
+            this.lbl_fecha.Location = new System.Drawing.Point(814, 293);
             this.lbl_fecha.Name = "lbl_fecha";
             this.lbl_fecha.Size = new System.Drawing.Size(55, 16);
             this.lbl_fecha.TabIndex = 6;
@@ -104,9 +110,10 @@
             // 
             // lbl_hora
             // 
+            this.lbl_hora.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.lbl_hora.AutoSize = true;
             this.lbl_hora.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_hora.Location = new System.Drawing.Point(816, 317);
+            this.lbl_hora.Location = new System.Drawing.Point(814, 317);
             this.lbl_hora.Name = "lbl_hora";
             this.lbl_hora.Size = new System.Drawing.Size(55, 16);
             this.lbl_hora.TabIndex = 7;
@@ -124,9 +131,10 @@
             // 
             // label7
             // 
+            this.label7.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(816, 266);
+            this.label7.Location = new System.Drawing.Point(814, 266);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(37, 16);
             this.label7.TabIndex = 9;
@@ -134,9 +142,10 @@
             // 
             // lbl_rolUsuairo
             // 
+            this.lbl_rolUsuairo.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.lbl_rolUsuairo.AutoSize = true;
             this.lbl_rolUsuairo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_rolUsuairo.Location = new System.Drawing.Point(859, 266);
+            this.lbl_rolUsuairo.Location = new System.Drawing.Point(857, 266);
             this.lbl_rolUsuairo.Name = "lbl_rolUsuairo";
             this.lbl_rolUsuairo.Size = new System.Drawing.Size(55, 16);
             this.lbl_rolUsuairo.TabIndex = 10;
@@ -144,9 +153,10 @@
             // 
             // lbl_apellidUsuairo
             // 
+            this.lbl_apellidUsuairo.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.lbl_apellidUsuairo.AutoSize = true;
             this.lbl_apellidUsuairo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_apellidUsuairo.Location = new System.Drawing.Point(964, 241);
+            this.lbl_apellidUsuairo.Location = new System.Drawing.Point(962, 241);
             this.lbl_apellidUsuairo.Name = "lbl_apellidUsuairo";
             this.lbl_apellidUsuairo.Size = new System.Drawing.Size(55, 16);
             this.lbl_apellidUsuairo.TabIndex = 11;
@@ -154,9 +164,10 @@
             // 
             // pic_Usuario_Inicio
             // 
+            this.pic_Usuario_Inicio.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.pic_Usuario_Inicio.Cursor = System.Windows.Forms.Cursors.No;
             this.pic_Usuario_Inicio.Image = global::Gym.Properties.Resources.hombre;
-            this.pic_Usuario_Inicio.Location = new System.Drawing.Point(819, 62);
+            this.pic_Usuario_Inicio.Location = new System.Drawing.Point(817, 62);
             this.pic_Usuario_Inicio.Name = "pic_Usuario_Inicio";
             this.pic_Usuario_Inicio.Size = new System.Drawing.Size(183, 167);
             this.pic_Usuario_Inicio.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;

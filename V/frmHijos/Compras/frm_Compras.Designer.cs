@@ -47,7 +47,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(6, 8);
+            this.label1.Location = new System.Drawing.Point(8, 9);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(96, 20);
             this.label1.TabIndex = 0;
@@ -56,7 +56,7 @@
             // btn_Nuevo_Compras
             // 
             this.btn_Nuevo_Compras.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_Nuevo_Compras.Location = new System.Drawing.Point(8, 46);
+            this.btn_Nuevo_Compras.Location = new System.Drawing.Point(12, 50);
             this.btn_Nuevo_Compras.Name = "btn_Nuevo_Compras";
             this.btn_Nuevo_Compras.Size = new System.Drawing.Size(64, 23);
             this.btn_Nuevo_Compras.TabIndex = 1;
@@ -66,7 +66,7 @@
             // btn_Detalle_Compras
             // 
             this.btn_Detalle_Compras.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_Detalle_Compras.Location = new System.Drawing.Point(78, 46);
+            this.btn_Detalle_Compras.Location = new System.Drawing.Point(82, 49);
             this.btn_Detalle_Compras.Name = "btn_Detalle_Compras";
             this.btn_Detalle_Compras.Size = new System.Drawing.Size(93, 23);
             this.btn_Detalle_Compras.TabIndex = 2;
@@ -76,7 +76,7 @@
             // btn_Eliminar_Compras
             // 
             this.btn_Eliminar_Compras.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_Eliminar_Compras.Location = new System.Drawing.Point(177, 46);
+            this.btn_Eliminar_Compras.Location = new System.Drawing.Point(181, 49);
             this.btn_Eliminar_Compras.Name = "btn_Eliminar_Compras";
             this.btn_Eliminar_Compras.Size = new System.Drawing.Size(75, 23);
             this.btn_Eliminar_Compras.TabIndex = 3;
@@ -89,15 +89,15 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dgv_Compras.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgv_Compras.Location = new System.Drawing.Point(8, 75);
+            this.dgv_Compras.Location = new System.Drawing.Point(12, 79);
             this.dgv_Compras.Name = "dgv_Compras";
-            this.dgv_Compras.Size = new System.Drawing.Size(1011, 285);
+            this.dgv_Compras.Size = new System.Drawing.Size(1004, 280);
             this.dgv_Compras.TabIndex = 5;
             // 
             // dtp_FechaInicial_Compras
             // 
             this.dtp_FechaInicial_Compras.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.dtp_FechaInicial_Compras.Location = new System.Drawing.Point(444, 49);
+            this.dtp_FechaInicial_Compras.Location = new System.Drawing.Point(444, 52);
             this.dtp_FechaInicial_Compras.Name = "dtp_FechaInicial_Compras";
             this.dtp_FechaInicial_Compras.Size = new System.Drawing.Size(200, 20);
             this.dtp_FechaInicial_Compras.TabIndex = 6;
@@ -107,7 +107,7 @@
             this.label2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(356, 53);
+            this.label2.Location = new System.Drawing.Point(356, 54);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(82, 16);
             this.label2.TabIndex = 7;
@@ -118,7 +118,7 @@
             this.label3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(656, 53);
+            this.label3.Location = new System.Drawing.Point(656, 54);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(77, 16);
             this.label3.TabIndex = 8;
@@ -127,7 +127,7 @@
             // dtp_FechaFinal_Compras
             // 
             this.dtp_FechaFinal_Compras.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.dtp_FechaFinal_Compras.Location = new System.Drawing.Point(739, 49);
+            this.dtp_FechaFinal_Compras.Location = new System.Drawing.Point(739, 53);
             this.dtp_FechaFinal_Compras.Name = "dtp_FechaFinal_Compras";
             this.dtp_FechaFinal_Compras.Size = new System.Drawing.Size(200, 20);
             this.dtp_FechaFinal_Compras.TabIndex = 9;
@@ -136,7 +136,7 @@
             // 
             this.btn_Buscar_Compras.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btn_Buscar_Compras.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_Buscar_Compras.Location = new System.Drawing.Point(956, 46);
+            this.btn_Buscar_Compras.Location = new System.Drawing.Point(953, 50);
             this.btn_Buscar_Compras.Name = "btn_Buscar_Compras";
             this.btn_Buscar_Compras.Size = new System.Drawing.Size(63, 23);
             this.btn_Buscar_Compras.TabIndex = 10;
@@ -147,7 +147,7 @@
             // 
             this.btn_ExportarExcel_Compras.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btn_ExportarExcel_Compras.BackgroundImage")));
             this.btn_ExportarExcel_Compras.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btn_ExportarExcel_Compras.Location = new System.Drawing.Point(258, 37);
+            this.btn_ExportarExcel_Compras.Location = new System.Drawing.Point(262, 40);
             this.btn_ExportarExcel_Compras.Name = "btn_ExportarExcel_Compras";
             this.btn_ExportarExcel_Compras.Size = new System.Drawing.Size(33, 32);
             this.btn_ExportarExcel_Compras.TabIndex = 44;

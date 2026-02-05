@@ -48,7 +48,7 @@
             // 
             this.btn_Buscar_Ventas.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btn_Buscar_Ventas.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_Buscar_Ventas.Location = new System.Drawing.Point(958, 43);
+            this.btn_Buscar_Ventas.Location = new System.Drawing.Point(958, 50);
             this.btn_Buscar_Ventas.Name = "btn_Buscar_Ventas";
             this.btn_Buscar_Ventas.Size = new System.Drawing.Size(62, 23);
             this.btn_Buscar_Ventas.TabIndex = 21;
@@ -58,7 +58,7 @@
             // dtp_FechaFinal_Ventas
             // 
             this.dtp_FechaFinal_Ventas.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.dtp_FechaFinal_Ventas.Location = new System.Drawing.Point(768, 46);
+            this.dtp_FechaFinal_Ventas.Location = new System.Drawing.Point(768, 53);
             this.dtp_FechaFinal_Ventas.Name = "dtp_FechaFinal_Ventas";
             this.dtp_FechaFinal_Ventas.Size = new System.Drawing.Size(184, 20);
             this.dtp_FechaFinal_Ventas.TabIndex = 20;
@@ -68,7 +68,7 @@
             this.label3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(685, 50);
+            this.label3.Location = new System.Drawing.Point(685, 54);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(77, 16);
             this.label3.TabIndex = 19;
@@ -79,7 +79,7 @@
             this.label2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(407, 50);
+            this.label2.Location = new System.Drawing.Point(407, 54);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(82, 16);
             this.label2.TabIndex = 18;
@@ -88,7 +88,7 @@
             // dtp_FechaInicial_Ventas
             // 
             this.dtp_FechaInicial_Ventas.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.dtp_FechaInicial_Ventas.Location = new System.Drawing.Point(495, 46);
+            this.dtp_FechaInicial_Ventas.Location = new System.Drawing.Point(495, 53);
             this.dtp_FechaInicial_Ventas.Name = "dtp_FechaInicial_Ventas";
             this.dtp_FechaInicial_Ventas.Size = new System.Drawing.Size(184, 20);
             this.dtp_FechaInicial_Ventas.TabIndex = 17;
@@ -99,15 +99,15 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dgv_Ventas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgv_Ventas.Location = new System.Drawing.Point(9, 75);
+            this.dgv_Ventas.Location = new System.Drawing.Point(12, 79);
             this.dgv_Ventas.Name = "dgv_Ventas";
-            this.dgv_Ventas.Size = new System.Drawing.Size(1011, 285);
+            this.dgv_Ventas.Size = new System.Drawing.Size(1004, 280);
             this.dgv_Ventas.TabIndex = 16;
             // 
             // btn_Eliminar_Ventas
             // 
             this.btn_Eliminar_Ventas.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_Eliminar_Ventas.Location = new System.Drawing.Point(173, 46);
+            this.btn_Eliminar_Ventas.Location = new System.Drawing.Point(173, 50);
             this.btn_Eliminar_Ventas.Name = "btn_Eliminar_Ventas";
             this.btn_Eliminar_Ventas.Size = new System.Drawing.Size(75, 23);
             this.btn_Eliminar_Ventas.TabIndex = 14;
@@ -117,7 +117,7 @@
             // btn_Detalle_Ventas
             // 
             this.btn_Detalle_Ventas.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_Detalle_Ventas.Location = new System.Drawing.Point(79, 46);
+            this.btn_Detalle_Ventas.Location = new System.Drawing.Point(79, 50);
             this.btn_Detalle_Ventas.Name = "btn_Detalle_Ventas";
             this.btn_Detalle_Ventas.Size = new System.Drawing.Size(88, 23);
             this.btn_Detalle_Ventas.TabIndex = 13;
@@ -127,7 +127,7 @@
             // btn_Nuevo_Ventas
             // 
             this.btn_Nuevo_Ventas.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_Nuevo_Ventas.Location = new System.Drawing.Point(12, 46);
+            this.btn_Nuevo_Ventas.Location = new System.Drawing.Point(12, 50);
             this.btn_Nuevo_Ventas.Name = "btn_Nuevo_Ventas";
             this.btn_Nuevo_Ventas.Size = new System.Drawing.Size(61, 23);
             this.btn_Nuevo_Ventas.TabIndex = 12;
@@ -138,7 +138,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(12, 11);
+            this.label1.Location = new System.Drawing.Point(8, 9);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(79, 20);
             this.label1.TabIndex = 11;
@@ -147,7 +147,7 @@
             // btn_Reimprimir_Ventas
             // 
             this.btn_Reimprimir_Ventas.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_Reimprimir_Ventas.Location = new System.Drawing.Point(254, 46);
+            this.btn_Reimprimir_Ventas.Location = new System.Drawing.Point(254, 50);
             this.btn_Reimprimir_Ventas.Name = "btn_Reimprimir_Ventas";
             this.btn_Reimprimir_Ventas.Size = new System.Drawing.Size(94, 23);
             this.btn_Reimprimir_Ventas.TabIndex = 22;
@@ -158,7 +158,7 @@
             // 
             this.btn_ExportarExcel_Conceptos.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btn_ExportarExcel_Conceptos.BackgroundImage")));
             this.btn_ExportarExcel_Conceptos.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btn_ExportarExcel_Conceptos.Location = new System.Drawing.Point(354, 37);
+            this.btn_ExportarExcel_Conceptos.Location = new System.Drawing.Point(354, 41);
             this.btn_ExportarExcel_Conceptos.Name = "btn_ExportarExcel_Conceptos";
             this.btn_ExportarExcel_Conceptos.Size = new System.Drawing.Size(33, 32);
             this.btn_ExportarExcel_Conceptos.TabIndex = 44;
