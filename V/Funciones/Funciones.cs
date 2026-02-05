@@ -10,7 +10,7 @@ namespace Gym.V.Funciones
     public class Funciones
     {
         //Abrir form hijo
-        void abrirForm(Form form, Panel panel)
+        public static void abrirForm(Form form, Panel panel)
         {
             while (panel.Controls.Count > 0)
             {

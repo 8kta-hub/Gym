@@ -19,6 +19,7 @@ using Gym.V.frmHijos.Movimientos;
 using Gym.V.frmHijos.Conceptos;
 using Gym.V.frmHijos.Registro;
 using Gym.V.frmHijos.Reporte;
+using Gym.V.Funciones;
 
 namespace Gym
 {
@@ -28,7 +29,7 @@ namespace Gym
         {
             InitializeComponent();
             frm_Inicio Inicio = new frm_Inicio();
-            abrirForm(Inicio);
+            Funciones.abrirForm(Inicio, pnl_base);
         }
 
         private void Principal_Load(object sender, EventArgs e)
@@ -37,103 +38,88 @@ namespace Gym
             this.MinimumSize = new Size(1014, 489);
         }
 
-        //Abrir form hijo
-        void abrirForm(Form form)
-        {
-            while (pnl_base.Controls.Count > 0)
-            {
-                pnl_base.Controls.RemoveAt(0);
-            }
-            Form formHijo = form;
-            formHijo.TopLevel = false;
-            formHijo.FormBorderStyle = FormBorderStyle.None;
-            formHijo.Dock = DockStyle.Fill;
-            pnl_base.Controls.Add(formHijo);
-            formHijo.Show();
-        }
-
         private void btn_inicio_Click(object sender, EventArgs e)
         {
             frm_Inicio Inicio = new frm_Inicio();
-            abrirForm(Inicio);
+            Funciones.abrirForm(Inicio,pnl_base);
         }
 
         private void btn_Usuarios_Click(object sender, EventArgs e)
         {
             frm_Usuarios Usuarios = new frm_Usuarios();
-            abrirForm(Usuarios);
+            Funciones.abrirForm(Usuarios,pnl_base);
         }
 
         private void btn_Roles_Click(object sender, EventArgs e)
         {
             frm_Roles Roles = new frm_Roles();
-            abrirForm(Roles);
+            Funciones.abrirForm(Roles,pnl_base);
         }
 
         private void btn_Clientes_Click(object sender, EventArgs e)
         {
             frm_Clientes Clientes = new frm_Clientes();
-            abrirForm(Clientes);
+            Funciones.abrirForm(Clientes,pnl_base);
         }
 
         private void btn_Membresia_Click(object sender, EventArgs e)
         {
             frm_membresias Membresias = new frm_membresias();
-            abrirForm(Membresias);
+            Funciones.abrirForm(Membresias,pnl_base);
         }
 
         private void btn_Productos_Click(object sender, EventArgs e)
         {
             frm_Productos Productos = new frm_Productos();
-            abrirForm(Productos);
+            Funciones.abrirForm(Productos,pnl_base);
         }
 
         private void btn_Compras_Click(object sender, EventArgs e)
         {
             frm_Compras Compras = new frm_Compras();
-            abrirForm(Compras);
+            Funciones.abrirForm(Compras,pnl_base);
         }
 
         private void btn_Ventas_Click(object sender, EventArgs e)
         {
             frm_Ventas Ventas = new frm_Ventas();
-            abrirForm(Ventas);
+            Funciones.abrirForm(Ventas,pnl_base);
         }
 
         private void btn_Corte_Click(object sender, EventArgs e)
         {
             frm_Corte Corte = new frm_Corte();
-            abrirForm(Corte);
+            Funciones.abrirForm(Corte,pnl_base);
         }
 
         private void btn_Movimientos_Click(object sender, EventArgs e)
         {
             frm_Movimientos Movimientos = new frm_Movimientos();
-            abrirForm(Movimientos);
+            Funciones.abrirForm(Movimientos,pnl_base);
         }
 
         private void btn_Conceptos_Click(object sender, EventArgs e)
         {
             frm_Conceptos Conceptos = new frm_Conceptos();
-            abrirForm(Conceptos);
+            Funciones.abrirForm(Conceptos,pnl_base);
         }
 
         private void btn_Registro_Click(object sender, EventArgs e)
         {
             frm_Registro Registro = new frm_Registro();
-            abrirForm(Registro);
+            Funciones.abrirForm(Registro,pnl_base);
         }
 
         private void btn_Reporte_Click(object sender, EventArgs e)
         {
             frm_Reportes Reporte = new frm_Reportes();
-            abrirForm(Reporte);
+            Funciones.abrirForm(Reporte,pnl_base);
         }
 
         private void btn_Congifuracion_Click(object sender, EventArgs e)
         {
             frm_Configuracion Config = new frm_Configuracion();
-            abrirForm(Config);
+            Funciones.abrirForm(Config,pnl_base);
         }
     }
 }
