@@ -47,6 +47,7 @@
             // 
             // btn_Buscar_Corte
             // 
+            this.btn_Buscar_Corte.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btn_Buscar_Corte.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_Buscar_Corte.Location = new System.Drawing.Point(953, 68);
             this.btn_Buscar_Corte.Name = "btn_Buscar_Corte";
@@ -57,6 +58,7 @@
             // 
             // dtp_FechaFinal_Corte
             // 
+            this.dtp_FechaFinal_Corte.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.dtp_FechaFinal_Corte.Location = new System.Drawing.Point(747, 71);
             this.dtp_FechaFinal_Corte.Name = "dtp_FechaFinal_Corte";
             this.dtp_FechaFinal_Corte.Size = new System.Drawing.Size(200, 20);
@@ -64,6 +66,7 @@
             // 
             // label3
             // 
+            this.label3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.Location = new System.Drawing.Point(664, 75);
@@ -74,6 +77,7 @@
             // 
             // label2
             // 
+            this.label2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(367, 75);
@@ -84,6 +88,7 @@
             // 
             // dtp_FechaInicial_Corte
             // 
+            this.dtp_FechaInicial_Corte.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.dtp_FechaInicial_Corte.Location = new System.Drawing.Point(455, 71);
             this.dtp_FechaInicial_Corte.Name = "dtp_FechaInicial_Corte";
             this.dtp_FechaInicial_Corte.Size = new System.Drawing.Size(200, 20);

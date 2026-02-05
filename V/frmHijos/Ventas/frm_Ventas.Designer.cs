@@ -46,6 +46,7 @@
             // 
             // btn_Buscar_Ventas
             // 
+            this.btn_Buscar_Ventas.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btn_Buscar_Ventas.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_Buscar_Ventas.Location = new System.Drawing.Point(958, 43);
             this.btn_Buscar_Ventas.Name = "btn_Buscar_Ventas";
@@ -56,6 +57,7 @@
             // 
             // dtp_FechaFinal_Ventas
             // 
+            this.dtp_FechaFinal_Ventas.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.dtp_FechaFinal_Ventas.Location = new System.Drawing.Point(768, 46);
             this.dtp_FechaFinal_Ventas.Name = "dtp_FechaFinal_Ventas";
             this.dtp_FechaFinal_Ventas.Size = new System.Drawing.Size(184, 20);
@@ -63,6 +65,7 @@
             // 
             // label3
             // 
+            this.label3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.Location = new System.Drawing.Point(685, 50);
@@ -73,6 +76,7 @@
             // 
             // label2
             // 
+            this.label2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(407, 50);
@@ -83,6 +87,7 @@
             // 
             // dtp_FechaInicial_Ventas
             // 
+            this.dtp_FechaInicial_Ventas.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.dtp_FechaInicial_Ventas.Location = new System.Drawing.Point(495, 46);
             this.dtp_FechaInicial_Ventas.Name = "dtp_FechaInicial_Ventas";
             this.dtp_FechaInicial_Ventas.Size = new System.Drawing.Size(184, 20);
@@ -90,6 +95,9 @@
             // 
             // dgv_Ventas
             // 
+            this.dgv_Ventas.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.dgv_Ventas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgv_Ventas.Location = new System.Drawing.Point(9, 75);
             this.dgv_Ventas.Name = "dgv_Ventas";
@@ -132,9 +140,9 @@
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(12, 11);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(66, 20);
+            this.label1.Size = new System.Drawing.Size(79, 20);
             this.label1.TabIndex = 11;
-            this.label1.Text = "Ventas";
+            this.label1.Text = "VENTAS";
             // 
             // btn_Reimprimir_Ventas
             // 

@@ -45,6 +45,7 @@
             // 
             // btn_Buscar_Movimientos
             // 
+            this.btn_Buscar_Movimientos.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btn_Buscar_Movimientos.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_Buscar_Movimientos.Location = new System.Drawing.Point(951, 46);
             this.btn_Buscar_Movimientos.Name = "btn_Buscar_Movimientos";
@@ -55,6 +56,7 @@
             // 
             // dtp_FechaFinal_Movimientos
             // 
+            this.dtp_FechaFinal_Movimientos.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.dtp_FechaFinal_Movimientos.Location = new System.Drawing.Point(731, 49);
             this.dtp_FechaFinal_Movimientos.Name = "dtp_FechaFinal_Movimientos";
             this.dtp_FechaFinal_Movimientos.Size = new System.Drawing.Size(200, 20);
@@ -62,6 +64,8 @@
             // 
             // label3
             // 
+            this.label3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.Location = new System.Drawing.Point(648, 53);
@@ -72,6 +76,7 @@
             // 
             // label2
             // 
+            this.label2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(348, 53);
@@ -82,6 +87,7 @@
             // 
             // dtp_FechaInicial_Movimientos
             // 
+            this.dtp_FechaInicial_Movimientos.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.dtp_FechaInicial_Movimientos.Location = new System.Drawing.Point(436, 49);
             this.dtp_FechaInicial_Movimientos.Name = "dtp_FechaInicial_Movimientos";
             this.dtp_FechaInicial_Movimientos.Size = new System.Drawing.Size(200, 20);
@@ -89,6 +95,9 @@
             // 
             // dgv_Movimientos
             // 
+            this.dgv_Movimientos.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.dgv_Movimientos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgv_Movimientos.Location = new System.Drawing.Point(9, 75);
             this.dgv_Movimientos.Name = "dgv_Movimientos";
