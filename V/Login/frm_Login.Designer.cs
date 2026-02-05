@@ -101,7 +101,7 @@
             // 
             this.btn_MostrarContraseña_Login.BackgroundImage = global::Gym.Properties.Resources.show;
             this.btn_MostrarContraseña_Login.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btn_MostrarContraseña_Login.Location = new System.Drawing.Point(359, 303);
+            this.btn_MostrarContraseña_Login.Location = new System.Drawing.Point(360, 303);
             this.btn_MostrarContraseña_Login.Name = "btn_MostrarContraseña_Login";
             this.btn_MostrarContraseña_Login.Size = new System.Drawing.Size(28, 29);
             this.btn_MostrarContraseña_Login.TabIndex = 1;
