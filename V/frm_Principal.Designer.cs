@@ -108,6 +108,7 @@
             this.btn_Congifuracion.Size = new System.Drawing.Size(32, 31);
             this.btn_Congifuracion.TabIndex = 25;
             this.btn_Congifuracion.UseVisualStyleBackColor = true;
+            this.btn_Congifuracion.Click += new System.EventHandler(this.btn_Congifuracion_Click);
             // 
             // label14
             // 
@@ -272,6 +273,7 @@
             this.btn_Reporte.Size = new System.Drawing.Size(54, 50);
             this.btn_Reporte.TabIndex = 14;
             this.btn_Reporte.UseVisualStyleBackColor = true;
+            this.btn_Reporte.Click += new System.EventHandler(this.btn_Reporte_Click);
             // 
             // btn_Registro
             // 
@@ -282,6 +284,7 @@
             this.btn_Registro.Size = new System.Drawing.Size(54, 50);
             this.btn_Registro.TabIndex = 13;
             this.btn_Registro.UseVisualStyleBackColor = true;
+            this.btn_Registro.Click += new System.EventHandler(this.btn_Registro_Click);
             // 
             // btn_Conceptos
             // 
@@ -292,6 +295,7 @@
             this.btn_Conceptos.Size = new System.Drawing.Size(54, 50);
             this.btn_Conceptos.TabIndex = 12;
             this.btn_Conceptos.UseVisualStyleBackColor = true;
+            this.btn_Conceptos.Click += new System.EventHandler(this.btn_Conceptos_Click);
             // 
             // btn_Movimientos
             // 
@@ -302,6 +306,7 @@
             this.btn_Movimientos.Size = new System.Drawing.Size(54, 50);
             this.btn_Movimientos.TabIndex = 11;
             this.btn_Movimientos.UseVisualStyleBackColor = true;
+            this.btn_Movimientos.Click += new System.EventHandler(this.btn_Movimientos_Click);
             // 
             // btn_Corte
             // 
@@ -312,6 +317,7 @@
             this.btn_Corte.Size = new System.Drawing.Size(54, 50);
             this.btn_Corte.TabIndex = 10;
             this.btn_Corte.UseVisualStyleBackColor = true;
+            this.btn_Corte.Click += new System.EventHandler(this.btn_Corte_Click);
             // 
             // btn_Ventas
             // 
@@ -322,6 +328,7 @@
             this.btn_Ventas.Size = new System.Drawing.Size(54, 50);
             this.btn_Ventas.TabIndex = 8;
             this.btn_Ventas.UseVisualStyleBackColor = true;
+            this.btn_Ventas.Click += new System.EventHandler(this.btn_Ventas_Click);
             // 
             // btn_Compras
             // 
@@ -332,6 +339,7 @@
             this.btn_Compras.Size = new System.Drawing.Size(54, 50);
             this.btn_Compras.TabIndex = 7;
             this.btn_Compras.UseVisualStyleBackColor = true;
+            this.btn_Compras.Click += new System.EventHandler(this.btn_Compras_Click);
             // 
             // btn_Productos
             // 
@@ -342,6 +350,7 @@
             this.btn_Productos.Size = new System.Drawing.Size(54, 50);
             this.btn_Productos.TabIndex = 6;
             this.btn_Productos.UseVisualStyleBackColor = true;
+            this.btn_Productos.Click += new System.EventHandler(this.btn_Productos_Click);
             // 
             // btn_Membresia
             // 
@@ -352,6 +361,7 @@
             this.btn_Membresia.Size = new System.Drawing.Size(54, 50);
             this.btn_Membresia.TabIndex = 5;
             this.btn_Membresia.UseVisualStyleBackColor = true;
+            this.btn_Membresia.Click += new System.EventHandler(this.btn_Membresia_Click);
             // 
             // btn_Clientes
             // 
@@ -362,6 +372,7 @@
             this.btn_Clientes.Size = new System.Drawing.Size(54, 50);
             this.btn_Clientes.TabIndex = 4;
             this.btn_Clientes.UseVisualStyleBackColor = true;
+            this.btn_Clientes.Click += new System.EventHandler(this.btn_Clientes_Click);
             // 
             // btn_Roles
             // 
@@ -372,6 +383,7 @@
             this.btn_Roles.Size = new System.Drawing.Size(54, 50);
             this.btn_Roles.TabIndex = 3;
             this.btn_Roles.UseVisualStyleBackColor = true;
+            this.btn_Roles.Click += new System.EventHandler(this.btn_Roles_Click);
             // 
             // btn_Usuarios
             // 
@@ -382,6 +394,7 @@
             this.btn_Usuarios.Size = new System.Drawing.Size(54, 50);
             this.btn_Usuarios.TabIndex = 2;
             this.btn_Usuarios.UseVisualStyleBackColor = true;
+            this.btn_Usuarios.Click += new System.EventHandler(this.btn_Usuarios_Click);
             // 
             // btn_inicio
             // 

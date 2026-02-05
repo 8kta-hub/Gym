@@ -215,6 +215,7 @@
     <Compile Include="V\frmHijos\Ventas\frm_Ventas_Nuevo.Designer.cs">
       <DependentUpon>frm_Ventas_Nuevo.cs</DependentUpon>
     </Compile>
+    <Compile Include="V\Funciones\Funciones.cs" />
     <Compile Include="V\Login\frm_Login.cs">
       <SubType>Form</SubType>
     </Compile>

@@ -91,6 +91,7 @@
             this.btn_Nuevo_Usuarios.TabIndex = 14;
             this.btn_Nuevo_Usuarios.Text = "Nuevo";
             this.btn_Nuevo_Usuarios.UseVisualStyleBackColor = true;
+            this.btn_Nuevo_Usuarios.Click += new System.EventHandler(this.btn_Nuevo_Usuarios_Click);
             // 
             // dgv_Usuarios
             // 
