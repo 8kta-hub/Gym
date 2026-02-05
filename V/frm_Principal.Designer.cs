@@ -392,6 +392,7 @@
             this.btn_inicio.Size = new System.Drawing.Size(54, 50);
             this.btn_inicio.TabIndex = 1;
             this.btn_inicio.UseVisualStyleBackColor = true;
+            this.btn_inicio.Click += new System.EventHandler(this.btn_inicio_Click);
             // 
             // pnl_base
             // 

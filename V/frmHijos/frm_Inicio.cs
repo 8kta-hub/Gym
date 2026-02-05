@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Gym.V
+namespace Gym.V.frmHijos
 {
     public partial class frm_Inicio : Form
     {

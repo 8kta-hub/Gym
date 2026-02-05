@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Gym.V.frmHijos;
 
 namespace Gym
 {
@@ -34,9 +35,14 @@ namespace Gym
             formHijo.TopLevel = false;
             formHijo.FormBorderStyle = FormBorderStyle.None;
             formHijo.Dock = DockStyle.Fill;
-            formHijo.Controls.Add(formHijo);
+            pnl_base.Controls.Add(formHijo);
             formHijo.Show();
         }
 
+        private void btn_inicio_Click(object sender, EventArgs e)
+        {
+            frm_Inicio Inicio = new frm_Inicio();
+            abrirForm(Inicio);
+        }
     }
 }

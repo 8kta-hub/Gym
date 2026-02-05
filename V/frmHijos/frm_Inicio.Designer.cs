@@ -1,4 +1,4 @@
-﻿namespace Gym.V
+﻿namespace Gym.V.frmHijos
 {
     partial class frm_Inicio
     {
