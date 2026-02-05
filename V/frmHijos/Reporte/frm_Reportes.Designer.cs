@@ -146,6 +146,9 @@
             // 
             // dgv__ReportesMovimientos
             // 
+            this.dgv__ReportesMovimientos.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.dgv__ReportesMovimientos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgv__ReportesMovimientos.Location = new System.Drawing.Point(8, 72);
             this.dgv__ReportesMovimientos.Name = "dgv__ReportesMovimientos";
@@ -216,6 +219,8 @@
             // 
             // dgv_ReportesVentas
             // 
+            this.dgv_ReportesVentas.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
             this.dgv_ReportesVentas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgv_ReportesVentas.Location = new System.Drawing.Point(8, 77);
             this.dgv_ReportesVentas.Name = "dgv_ReportesVentas";
@@ -296,6 +301,9 @@
             // 
             // dgv_ReportesVisitas
             // 
+            this.dgv_ReportesVisitas.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.dgv_ReportesVisitas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgv_ReportesVisitas.Location = new System.Drawing.Point(8, 78);
             this.dgv_ReportesVisitas.Name = "dgv_ReportesVisitas";
@@ -394,6 +402,9 @@
             // 
             // dgv_ReportesRegistro
             // 
+            this.dgv_ReportesRegistro.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.dgv_ReportesRegistro.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgv_ReportesRegistro.Location = new System.Drawing.Point(8, 77);
             this.dgv_ReportesRegistro.Name = "dgv_ReportesRegistro";
@@ -459,6 +470,9 @@
             // 
             // dgv_ReportesClientes
             // 
+            this.dgv_ReportesClientes.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.dgv_ReportesClientes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgv_ReportesClientes.Location = new System.Drawing.Point(8, 41);
             this.dgv_ReportesClientes.Name = "dgv_ReportesClientes";
@@ -505,6 +519,9 @@
             // 
             // dgv_ReportesMembresias
             // 
+            this.dgv_ReportesMembresias.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.dgv_ReportesMembresias.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgv_ReportesMembresias.Location = new System.Drawing.Point(8, 78);
             this.dgv_ReportesMembresias.Name = "dgv_ReportesMembresias";
@@ -515,7 +532,7 @@
             // 
             this.lbl_Total_ReportesMembresias.AutoSize = true;
             this.lbl_Total_ReportesMembresias.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_Total_ReportesMembresias.Location = new System.Drawing.Point(665, 61);
+            this.lbl_Total_ReportesMembresias.Location = new System.Drawing.Point(507, 60);
             this.lbl_Total_ReportesMembresias.Name = "lbl_Total_ReportesMembresias";
             this.lbl_Total_ReportesMembresias.Size = new System.Drawing.Size(47, 13);
             this.lbl_Total_ReportesMembresias.TabIndex = 35;
@@ -525,7 +542,7 @@
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(598, 58);
+            this.label6.Location = new System.Drawing.Point(440, 57);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(38, 16);
             this.label6.TabIndex = 34;
@@ -591,6 +608,9 @@
             // 
             // dgv_ReportesInventario
             // 
+            this.dgv_ReportesInventario.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.dgv_ReportesInventario.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgv_ReportesInventario.Location = new System.Drawing.Point(8, 41);
             this.dgv_ReportesInventario.Name = "dgv_ReportesInventario";

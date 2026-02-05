@@ -85,6 +85,9 @@
             // 
             // dgv_Compras
             // 
+            this.dgv_Compras.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.dgv_Compras.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgv_Compras.Location = new System.Drawing.Point(8, 75);
             this.dgv_Compras.Name = "dgv_Compras";
@@ -93,6 +96,7 @@
             // 
             // dtp_FechaInicial_Compras
             // 
+            this.dtp_FechaInicial_Compras.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.dtp_FechaInicial_Compras.Location = new System.Drawing.Point(444, 49);
             this.dtp_FechaInicial_Compras.Name = "dtp_FechaInicial_Compras";
             this.dtp_FechaInicial_Compras.Size = new System.Drawing.Size(200, 20);
@@ -100,6 +104,7 @@
             // 
             // label2
             // 
+            this.label2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(356, 53);
@@ -110,6 +115,7 @@
             // 
             // label3
             // 
+            this.label3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.Location = new System.Drawing.Point(656, 53);
@@ -120,6 +126,7 @@
             // 
             // dtp_FechaFinal_Compras
             // 
+            this.dtp_FechaFinal_Compras.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.dtp_FechaFinal_Compras.Location = new System.Drawing.Point(739, 49);
             this.dtp_FechaFinal_Compras.Name = "dtp_FechaFinal_Compras";
             this.dtp_FechaFinal_Compras.Size = new System.Drawing.Size(200, 20);
@@ -127,6 +134,7 @@
             // 
             // btn_Buscar_Compras
             // 
+            this.btn_Buscar_Compras.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btn_Buscar_Compras.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_Buscar_Compras.Location = new System.Drawing.Point(956, 46);
             this.btn_Buscar_Compras.Name = "btn_Buscar_Compras";

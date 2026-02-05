@@ -81,6 +81,9 @@
             // 
             // dgv_Conceptos
             // 
+            this.dgv_Conceptos.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.dgv_Conceptos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgv_Conceptos.Location = new System.Drawing.Point(9, 76);
             this.dgv_Conceptos.Name = "dgv_Conceptos";
