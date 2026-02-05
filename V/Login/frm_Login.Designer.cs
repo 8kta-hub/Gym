@@ -39,7 +39,7 @@
             // 
             // btn_Login_Acceder
             // 
-            this.btn_Login_Acceder.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Login_Acceder.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_Login_Acceder.Location = new System.Drawing.Point(216, 247);
             this.btn_Login_Acceder.Name = "btn_Login_Acceder";
             this.btn_Login_Acceder.Size = new System.Drawing.Size(75, 23);
@@ -99,9 +99,9 @@
             // 
             this.button2.BackgroundImage = global::Gym.Properties.Resources.show;
             this.button2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button2.Location = new System.Drawing.Point(372, 176);
+            this.button2.Location = new System.Drawing.Point(359, 174);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(28, 27);
+            this.button2.Size = new System.Drawing.Size(28, 29);
             this.button2.TabIndex = 1;
             this.button2.UseVisualStyleBackColor = true;
             // 

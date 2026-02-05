@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.button6 = new System.Windows.Forms.Button();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frm_Roles));
             this.button7 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
@@ -36,17 +36,9 @@
             this.button1 = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.label2 = new System.Windows.Forms.Label();
+            this.btn_ExportarExcel_Roles = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
-            // 
-            // button6
-            // 
-            this.button6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button6.Location = new System.Drawing.Point(439, 50);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(29, 23);
-            this.button6.TabIndex = 31;
-            this.button6.UseVisualStyleBackColor = true;
             // 
             // button7
             // 
@@ -116,12 +108,22 @@
             this.label2.TabIndex = 24;
             this.label2.Text = "ROLES";
             // 
+            // btn_ExportarExcel_Roles
+            // 
+            this.btn_ExportarExcel_Roles.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btn_ExportarExcel_Roles.BackgroundImage")));
+            this.btn_ExportarExcel_Roles.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btn_ExportarExcel_Roles.Location = new System.Drawing.Point(439, 41);
+            this.btn_ExportarExcel_Roles.Name = "btn_ExportarExcel_Roles";
+            this.btn_ExportarExcel_Roles.Size = new System.Drawing.Size(33, 32);
+            this.btn_ExportarExcel_Roles.TabIndex = 38;
+            this.btn_ExportarExcel_Roles.UseVisualStyleBackColor = true;
+            // 
             // frm_Roles
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1028, 366);
-            this.Controls.Add(this.button6);
+            this.Controls.Add(this.btn_ExportarExcel_Roles);
             this.Controls.Add(this.button7);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.button4);
@@ -140,7 +142,6 @@
         }
 
         #endregion
-        private System.Windows.Forms.Button button6;
         private System.Windows.Forms.Button button7;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button4;
@@ -148,5 +149,6 @@
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Button btn_ExportarExcel_Roles;
     }
 }

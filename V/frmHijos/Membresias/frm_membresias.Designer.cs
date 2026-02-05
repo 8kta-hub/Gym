@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frm_membresias));
             this.label2 = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.button1 = new System.Windows.Forms.Button();
@@ -36,7 +37,7 @@
             this.button4 = new System.Windows.Forms.Button();
             this.button7 = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
-            this.button6 = new System.Windows.Forms.Button();
+            this.btn_ExportarExcel_Membresia = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -118,21 +119,22 @@
             this.button5.Text = "Horarios";
             this.button5.UseVisualStyleBackColor = true;
             // 
-            // button6
+            // btn_ExportarExcel_Membresia
             // 
-            this.button6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button6.Location = new System.Drawing.Point(520, 46);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(29, 23);
-            this.button6.TabIndex = 12;
-            this.button6.UseVisualStyleBackColor = true;
+            this.btn_ExportarExcel_Membresia.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btn_ExportarExcel_Membresia.BackgroundImage")));
+            this.btn_ExportarExcel_Membresia.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btn_ExportarExcel_Membresia.Location = new System.Drawing.Point(520, 36);
+            this.btn_ExportarExcel_Membresia.Name = "btn_ExportarExcel_Membresia";
+            this.btn_ExportarExcel_Membresia.Size = new System.Drawing.Size(33, 32);
+            this.btn_ExportarExcel_Membresia.TabIndex = 39;
+            this.btn_ExportarExcel_Membresia.UseVisualStyleBackColor = true;
             // 
             // frm_membresias
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1028, 366);
-            this.Controls.Add(this.button6);
+            this.Controls.Add(this.btn_ExportarExcel_Membresia);
             this.Controls.Add(this.button5);
             this.Controls.Add(this.button7);
             this.Controls.Add(this.button3);
@@ -159,6 +161,6 @@
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Button button7;
         private System.Windows.Forms.Button button5;
-        private System.Windows.Forms.Button button6;
+        private System.Windows.Forms.Button btn_ExportarExcel_Membresia;
     }
 }

@@ -28,8 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frm_Clientes));
             this.textBox1 = new System.Windows.Forms.TextBox();
-            this.button6 = new System.Windows.Forms.Button();
             this.button7 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
@@ -41,30 +41,22 @@
             this.button5 = new System.Windows.Forms.Button();
             this.button8 = new System.Windows.Forms.Button();
             this.button9 = new System.Windows.Forms.Button();
+            this.btn_ExportarExcel_Clientes = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(12, 74);
+            this.textBox1.Location = new System.Drawing.Point(8, 69);
             this.textBox1.Multiline = true;
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(559, 25);
+            this.textBox1.Size = new System.Drawing.Size(553, 25);
             this.textBox1.TabIndex = 31;
-            // 
-            // button6
-            // 
-            this.button6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button6.Location = new System.Drawing.Point(542, 50);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(29, 23);
-            this.button6.TabIndex = 30;
-            this.button6.UseVisualStyleBackColor = true;
             // 
             // button7
             // 
             this.button7.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button7.Location = new System.Drawing.Point(358, 51);
+            this.button7.Location = new System.Drawing.Point(344, 46);
             this.button7.Name = "button7";
             this.button7.Size = new System.Drawing.Size(75, 23);
             this.button7.TabIndex = 29;
@@ -74,7 +66,7 @@
             // button3
             // 
             this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.Location = new System.Drawing.Point(174, 50);
+            this.button3.Location = new System.Drawing.Point(160, 45);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(75, 23);
             this.button3.TabIndex = 28;
@@ -84,7 +76,7 @@
             // button4
             // 
             this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button4.Location = new System.Drawing.Point(255, 50);
+            this.button4.Location = new System.Drawing.Point(241, 45);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(97, 23);
             this.button4.TabIndex = 27;
@@ -94,7 +86,7 @@
             // button2
             // 
             this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Location = new System.Drawing.Point(93, 50);
+            this.button2.Location = new System.Drawing.Point(79, 45);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(75, 23);
             this.button2.TabIndex = 26;
@@ -104,9 +96,9 @@
             // button1
             // 
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(12, 50);
+            this.button1.Location = new System.Drawing.Point(8, 45);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.Size = new System.Drawing.Size(65, 23);
             this.button1.TabIndex = 25;
             this.button1.Text = "Nuevo";
             this.button1.UseVisualStyleBackColor = true;
@@ -114,9 +106,9 @@
             // dataGridView1
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(12, 105);
+            this.dataGridView1.Location = new System.Drawing.Point(8, 100);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(1004, 251);
+            this.dataGridView1.Size = new System.Drawing.Size(1011, 259);
             this.dataGridView1.TabIndex = 24;
             // 
             // label2
@@ -134,7 +126,7 @@
             this.lbl_resultadosCantidad.AutoSize = true;
             this.lbl_resultadosCantidad.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_resultadosCantidad.ForeColor = System.Drawing.SystemColors.MenuHighlight;
-            this.lbl_resultadosCantidad.Location = new System.Drawing.Point(731, 79);
+            this.lbl_resultadosCantidad.Location = new System.Drawing.Point(725, 74);
             this.lbl_resultadosCantidad.Name = "lbl_resultadosCantidad";
             this.lbl_resultadosCantidad.Size = new System.Drawing.Size(56, 16);
             this.lbl_resultadosCantidad.TabIndex = 32;
@@ -143,7 +135,7 @@
             // button5
             // 
             this.button5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button5.Location = new System.Drawing.Point(577, 74);
+            this.button5.Location = new System.Drawing.Point(571, 69);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(77, 25);
             this.button5.TabIndex = 33;
@@ -153,7 +145,7 @@
             // button8
             // 
             this.button8.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button8.Location = new System.Drawing.Point(660, 74);
+            this.button8.Location = new System.Drawing.Point(654, 69);
             this.button8.Name = "button8";
             this.button8.Size = new System.Drawing.Size(65, 25);
             this.button8.TabIndex = 34;
@@ -163,24 +155,34 @@
             // button9
             // 
             this.button9.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button9.Location = new System.Drawing.Point(439, 50);
+            this.button9.Location = new System.Drawing.Point(425, 45);
             this.button9.Name = "button9";
             this.button9.Size = new System.Drawing.Size(97, 23);
             this.button9.TabIndex = 35;
             this.button9.Text = "Membresias ";
             this.button9.UseVisualStyleBackColor = true;
             // 
+            // btn_ExportarExcel_Clientes
+            // 
+            this.btn_ExportarExcel_Clientes.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btn_ExportarExcel_Clientes.BackgroundImage")));
+            this.btn_ExportarExcel_Clientes.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btn_ExportarExcel_Clientes.Location = new System.Drawing.Point(528, 36);
+            this.btn_ExportarExcel_Clientes.Name = "btn_ExportarExcel_Clientes";
+            this.btn_ExportarExcel_Clientes.Size = new System.Drawing.Size(33, 32);
+            this.btn_ExportarExcel_Clientes.TabIndex = 45;
+            this.btn_ExportarExcel_Clientes.UseVisualStyleBackColor = true;
+            // 
             // frm_Clientes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1028, 366);
+            this.Controls.Add(this.btn_ExportarExcel_Clientes);
             this.Controls.Add(this.button9);
             this.Controls.Add(this.button8);
             this.Controls.Add(this.button5);
             this.Controls.Add(this.lbl_resultadosCantidad);
             this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.button6);
             this.Controls.Add(this.button7);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.button4);
@@ -198,7 +200,6 @@
         #endregion
 
         private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.Button button6;
         private System.Windows.Forms.Button button7;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button4;
@@ -210,5 +211,6 @@
         private System.Windows.Forms.Button button5;
         private System.Windows.Forms.Button button8;
         private System.Windows.Forms.Button button9;
+        private System.Windows.Forms.Button btn_ExportarExcel_Clientes;
     }
 }

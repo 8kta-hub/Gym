@@ -28,29 +28,21 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.button6 = new System.Windows.Forms.Button();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frm_Conceptos));
             this.button7 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.label2 = new System.Windows.Forms.Label();
+            this.btn_ExportarExcel_Conceptos = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
-            // 
-            // button6
-            // 
-            this.button6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button6.Location = new System.Drawing.Point(336, 49);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(29, 23);
-            this.button6.TabIndex = 43;
-            this.button6.UseVisualStyleBackColor = true;
             // 
             // button7
             // 
             this.button7.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button7.Location = new System.Drawing.Point(255, 50);
+            this.button7.Location = new System.Drawing.Point(240, 47);
             this.button7.Name = "button7";
             this.button7.Size = new System.Drawing.Size(75, 23);
             this.button7.TabIndex = 42;
@@ -60,7 +52,7 @@
             // button3
             // 
             this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.Location = new System.Drawing.Point(174, 50);
+            this.button3.Location = new System.Drawing.Point(159, 47);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(75, 23);
             this.button3.TabIndex = 41;
@@ -70,7 +62,7 @@
             // button2
             // 
             this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Location = new System.Drawing.Point(93, 50);
+            this.button2.Location = new System.Drawing.Point(78, 47);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(75, 23);
             this.button2.TabIndex = 39;
@@ -80,9 +72,9 @@
             // button1
             // 
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(12, 50);
+            this.button1.Location = new System.Drawing.Point(9, 47);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.Size = new System.Drawing.Size(63, 23);
             this.button1.TabIndex = 38;
             this.button1.Text = "Nuevo";
             this.button1.UseVisualStyleBackColor = true;
@@ -90,9 +82,9 @@
             // dataGridView1
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(12, 79);
+            this.dataGridView1.Location = new System.Drawing.Point(9, 76);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(1004, 277);
+            this.dataGridView1.Size = new System.Drawing.Size(1011, 285);
             this.dataGridView1.TabIndex = 37;
             // 
             // label2
@@ -105,12 +97,22 @@
             this.label2.TabIndex = 36;
             this.label2.Text = "CONCEPTOS";
             // 
+            // btn_ExportarExcel_Conceptos
+            // 
+            this.btn_ExportarExcel_Conceptos.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btn_ExportarExcel_Conceptos.BackgroundImage")));
+            this.btn_ExportarExcel_Conceptos.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btn_ExportarExcel_Conceptos.Location = new System.Drawing.Point(321, 38);
+            this.btn_ExportarExcel_Conceptos.Name = "btn_ExportarExcel_Conceptos";
+            this.btn_ExportarExcel_Conceptos.Size = new System.Drawing.Size(33, 32);
+            this.btn_ExportarExcel_Conceptos.TabIndex = 43;
+            this.btn_ExportarExcel_Conceptos.UseVisualStyleBackColor = true;
+            // 
             // frm_Conceptos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1028, 366);
-            this.Controls.Add(this.button6);
+            this.Controls.Add(this.btn_ExportarExcel_Conceptos);
             this.Controls.Add(this.button7);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.button2);
@@ -126,13 +128,12 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.Button button6;
         private System.Windows.Forms.Button button7;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Button btn_ExportarExcel_Conceptos;
     }
 }
