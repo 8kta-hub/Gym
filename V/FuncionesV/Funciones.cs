@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Gym.V.Funciones
+namespace Gym.V.FuncionesV
 {
     public class Funciones
     {
@@ -23,5 +23,13 @@ namespace Gym.V.Funciones
             panel.Controls.Add(formHijo);
             formHijo.Show();
         }
+
+        //Abrir form modal
+        public static DialogResult abrirFormModal(Form form, Form padre)
+        {
+            form.StartPosition = FormStartPosition.CenterParent;
+            return form.ShowDialog(padre);
+        }
+
     }
 }

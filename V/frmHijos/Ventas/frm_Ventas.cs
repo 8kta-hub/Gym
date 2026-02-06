@@ -1,4 +1,6 @@
-﻿using System;
+﻿using Gym.V.frmHijos.Roles;
+using Gym.V.FuncionesV;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -15,6 +17,12 @@ namespace Gym.V.frmHijos.Ventas
         public frm_Ventas()
         {
             InitializeComponent();
+        }
+
+        private void btn_Nuevo_Ventas_Click(object sender, EventArgs e)
+        {
+            frm_Ventas_Nuevo frm = new frm_Ventas_Nuevo();
+            Funciones.abrirFormModal(frm, this);
         }
     }
 }

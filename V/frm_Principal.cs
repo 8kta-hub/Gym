@@ -19,7 +19,7 @@ using Gym.V.frmHijos.Movimientos;
 using Gym.V.frmHijos.Conceptos;
 using Gym.V.frmHijos.Registro;
 using Gym.V.frmHijos.Reporte;
-using Gym.V.Funciones;
+using Gym.V.FuncionesV;
 
 namespace Gym
 {

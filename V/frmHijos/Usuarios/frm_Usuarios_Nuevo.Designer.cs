@@ -275,6 +275,7 @@
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "frm_Usuarios_Nuevo";
+            this.ShowIcon = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Datos del usuario";
             this.Load += new System.EventHandler(this.frm_Usuarios_Nuevo_Load);

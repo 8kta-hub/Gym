@@ -92,6 +92,7 @@
             this.btn_Modificar_Clientes.TabIndex = 26;
             this.btn_Modificar_Clientes.Text = "Modificar";
             this.btn_Modificar_Clientes.UseVisualStyleBackColor = true;
+            this.btn_Modificar_Clientes.Click += new System.EventHandler(this.btn_Modificar_Clientes_Click);
             // 
             // btn_Nuevo_Clientes
             // 
@@ -102,6 +103,7 @@
             this.btn_Nuevo_Clientes.TabIndex = 25;
             this.btn_Nuevo_Clientes.Text = "Nuevo";
             this.btn_Nuevo_Clientes.UseVisualStyleBackColor = true;
+            this.btn_Nuevo_Clientes.Click += new System.EventHandler(this.btn_Nuevo_Clientes_Click);
             // 
             // dgv_Clientes
             // 
@@ -164,6 +166,7 @@
             this.btn_Membresias_Clientes.TabIndex = 35;
             this.btn_Membresias_Clientes.Text = "Membresias ";
             this.btn_Membresias_Clientes.UseVisualStyleBackColor = true;
+            this.btn_Membresias_Clientes.Click += new System.EventHandler(this.btn_Membresias_Clientes_Click);
             // 
             // btn_ExportarExcel_Clientes
             // 

@@ -172,7 +172,7 @@
             // btn_Guardar_ClientesNuevo
             // 
             this.btn_Guardar_ClientesNuevo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_Guardar_ClientesNuevo.Location = new System.Drawing.Point(268, 325);
+            this.btn_Guardar_ClientesNuevo.Location = new System.Drawing.Point(269, 316);
             this.btn_Guardar_ClientesNuevo.Name = "btn_Guardar_ClientesNuevo";
             this.btn_Guardar_ClientesNuevo.Size = new System.Drawing.Size(75, 23);
             this.btn_Guardar_ClientesNuevo.TabIndex = 51;
@@ -252,6 +252,7 @@
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "frm_Clientes_Nuevo";
+            this.ShowIcon = false;
             this.Text = "Datos de clientes";
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();

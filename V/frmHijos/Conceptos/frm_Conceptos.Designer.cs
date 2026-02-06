@@ -68,6 +68,7 @@
             this.btn_Modificar_Conceptos.TabIndex = 39;
             this.btn_Modificar_Conceptos.Text = "Modificar";
             this.btn_Modificar_Conceptos.UseVisualStyleBackColor = true;
+            this.btn_Modificar_Conceptos.Click += new System.EventHandler(this.btn_Modificar_Conceptos_Click);
             // 
             // btn_Nuevo_Conceptos
             // 
@@ -78,6 +79,7 @@
             this.btn_Nuevo_Conceptos.TabIndex = 38;
             this.btn_Nuevo_Conceptos.Text = "Nuevo";
             this.btn_Nuevo_Conceptos.UseVisualStyleBackColor = true;
+            this.btn_Nuevo_Conceptos.Click += new System.EventHandler(this.btn_Nuevo_Conceptos_Click);
             // 
             // dgv_Conceptos
             // 

@@ -93,6 +93,7 @@
             this.Controls.Add(this.cmb_Nombre_UsuariosRoles);
             this.Controls.Add(this.flp_Permisos_UsuariosRoles);
             this.Name = "frm_Usuarios_Roles";
+            this.ShowIcon = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Roles de usuarios";
             this.ResumeLayout(false);

@@ -1,4 +1,6 @@
-﻿using System;
+﻿using Gym.V.frmHijos.Usuarios;
+using Gym.V.FuncionesV;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -15,6 +17,18 @@ namespace Gym.V.frmHijos.Roles
         public frm_Roles()
         {
             InitializeComponent();
+        }
+
+        private void btn_Nuevo_Roles_Click(object sender, EventArgs e)
+        {
+            frm_Roles_Nuevo frm = new frm_Roles_Nuevo();
+            Funciones.abrirFormModal(frm, this);
+        }
+
+        private void btn_Modificar_Roles_Click(object sender, EventArgs e)
+        {
+            frm_Roles_Nuevo frm = new frm_Roles_Nuevo();
+            Funciones.abrirFormModal(frm, this);
         }
     }
 }

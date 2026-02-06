@@ -85,30 +85,30 @@
             // lbl_Total_ClientesMembresiasPagos
             // 
             this.lbl_Total_ClientesMembresiasPagos.AutoSize = true;
-            this.lbl_Total_ClientesMembresiasPagos.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_Total_ClientesMembresiasPagos.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_Total_ClientesMembresiasPagos.Location = new System.Drawing.Point(128, 83);
             this.lbl_Total_ClientesMembresiasPagos.Name = "lbl_Total_ClientesMembresiasPagos";
-            this.lbl_Total_ClientesMembresiasPagos.Size = new System.Drawing.Size(56, 18);
+            this.lbl_Total_ClientesMembresiasPagos.Size = new System.Drawing.Size(62, 18);
             this.lbl_Total_ClientesMembresiasPagos.TabIndex = 67;
             this.lbl_Total_ClientesMembresiasPagos.Text = "$$$$$$";
             // 
             // lbl_Precio_ClientesMembresiasPagos
             // 
             this.lbl_Precio_ClientesMembresiasPagos.AutoSize = true;
-            this.lbl_Precio_ClientesMembresiasPagos.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_Precio_ClientesMembresiasPagos.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_Precio_ClientesMembresiasPagos.Location = new System.Drawing.Point(128, 57);
             this.lbl_Precio_ClientesMembresiasPagos.Name = "lbl_Precio_ClientesMembresiasPagos";
-            this.lbl_Precio_ClientesMembresiasPagos.Size = new System.Drawing.Size(56, 18);
+            this.lbl_Precio_ClientesMembresiasPagos.Size = new System.Drawing.Size(62, 18);
             this.lbl_Precio_ClientesMembresiasPagos.TabIndex = 66;
             this.lbl_Precio_ClientesMembresiasPagos.Text = "$$$$$$";
             // 
             // lbl_Fecha_ClientesMembresiasPagos
             // 
             this.lbl_Fecha_ClientesMembresiasPagos.AutoSize = true;
-            this.lbl_Fecha_ClientesMembresiasPagos.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_Fecha_ClientesMembresiasPagos.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_Fecha_ClientesMembresiasPagos.Location = new System.Drawing.Point(128, 31);
             this.lbl_Fecha_ClientesMembresiasPagos.Name = "lbl_Fecha_ClientesMembresiasPagos";
-            this.lbl_Fecha_ClientesMembresiasPagos.Size = new System.Drawing.Size(82, 18);
+            this.lbl_Fecha_ClientesMembresiasPagos.Size = new System.Drawing.Size(92, 18);
             this.lbl_Fecha_ClientesMembresiasPagos.TabIndex = 65;
             this.lbl_Fecha_ClientesMembresiasPagos.Text = "##-##-####";
             // 
@@ -281,6 +281,7 @@
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "frm_Clientes_Membresias_Pago";
+            this.ShowIcon = false;
             this.Text = "Pago de la Membresia";
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();

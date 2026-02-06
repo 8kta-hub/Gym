@@ -79,6 +79,7 @@
             this.btn_Modificar_Roles.TabIndex = 27;
             this.btn_Modificar_Roles.Text = "Modificar";
             this.btn_Modificar_Roles.UseVisualStyleBackColor = true;
+            this.btn_Modificar_Roles.Click += new System.EventHandler(this.btn_Modificar_Roles_Click);
             // 
             // btn_Nuevo_Roles
             // 
@@ -89,6 +90,7 @@
             this.btn_Nuevo_Roles.TabIndex = 26;
             this.btn_Nuevo_Roles.Text = "Nuevo";
             this.btn_Nuevo_Roles.UseVisualStyleBackColor = true;
+            this.btn_Nuevo_Roles.Click += new System.EventHandler(this.btn_Nuevo_Roles_Click);
             // 
             // dgv_Roles
             // 

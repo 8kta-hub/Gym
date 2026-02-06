@@ -81,6 +81,7 @@
             this.btn_Modificiar_Usuarios.TabIndex = 15;
             this.btn_Modificiar_Usuarios.Text = "Modificar";
             this.btn_Modificiar_Usuarios.UseVisualStyleBackColor = true;
+            this.btn_Modificiar_Usuarios.Click += new System.EventHandler(this.btn_Modificiar_Usuarios_Click);
             // 
             // btn_Nuevo_Usuarios
             // 
@@ -130,6 +131,7 @@
             this.btn_Roles_Usuarios.TabIndex = 23;
             this.btn_Roles_Usuarios.Text = "Roles";
             this.btn_Roles_Usuarios.UseVisualStyleBackColor = true;
+            this.btn_Roles_Usuarios.Click += new System.EventHandler(this.btn_Roles_Usuarios_Click);
             // 
             // btn_ExportarExcel_Usuarios
             // 

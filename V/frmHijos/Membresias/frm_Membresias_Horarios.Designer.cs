@@ -140,6 +140,7 @@
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "frm_Membresias_Horarios";
+            this.ShowIcon = false;
             this.Text = "Horarios de membresias";
             ((System.ComponentModel.ISupportInitialize)(this.dgv_MembresiasHorario)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.nud_HorarioInicial_MembresiasHorario)).EndInit();

@@ -133,6 +133,7 @@
             this.btn_Nuevo_Ventas.TabIndex = 12;
             this.btn_Nuevo_Ventas.Text = "Nuevo";
             this.btn_Nuevo_Ventas.UseVisualStyleBackColor = true;
+            this.btn_Nuevo_Ventas.Click += new System.EventHandler(this.btn_Nuevo_Ventas_Click);
             // 
             // label1
             // 

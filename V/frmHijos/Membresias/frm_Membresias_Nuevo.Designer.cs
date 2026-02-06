@@ -187,6 +187,7 @@
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "frm_Membresias_Nuevo";
+            this.ShowIcon = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Datos de la Membresía";
             ((System.ComponentModel.ISupportInitialize)(this.nud_Dias_MembresiasNuevo)).EndInit();

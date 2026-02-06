@@ -59,6 +59,7 @@
             this.btn_Nuevo_Productos.TabIndex = 1;
             this.btn_Nuevo_Productos.Text = "Nuevo";
             this.btn_Nuevo_Productos.UseVisualStyleBackColor = true;
+            this.btn_Nuevo_Productos.Click += new System.EventHandler(this.btn_Nuevo_Productos_Click);
             // 
             // btn_Modificar_Productos
             // 
@@ -69,6 +70,7 @@
             this.btn_Modificar_Productos.TabIndex = 2;
             this.btn_Modificar_Productos.Text = "Modificar";
             this.btn_Modificar_Productos.UseVisualStyleBackColor = true;
+            this.btn_Modificar_Productos.Click += new System.EventHandler(this.btn_Modificar_Productos_Click);
             // 
             // btn_Deshabilitar_Productos
             // 

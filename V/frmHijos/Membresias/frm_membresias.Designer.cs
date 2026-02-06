@@ -71,6 +71,7 @@
             this.btn_Nuevo_Membresias.TabIndex = 5;
             this.btn_Nuevo_Membresias.Text = "Nuevo";
             this.btn_Nuevo_Membresias.UseVisualStyleBackColor = true;
+            this.btn_Nuevo_Membresias.Click += new System.EventHandler(this.btn_Nuevo_Membresias_Click);
             // 
             // btn_Modificar_Membresias
             // 
@@ -81,6 +82,7 @@
             this.btn_Modificar_Membresias.TabIndex = 6;
             this.btn_Modificar_Membresias.Text = "Modificar";
             this.btn_Modificar_Membresias.UseVisualStyleBackColor = true;
+            this.btn_Modificar_Membresias.Click += new System.EventHandler(this.btn_Modificar_Membresias_Click);
             // 
             // btn_Habilitar_Membresias
             // 
@@ -121,6 +123,7 @@
             this.btn_Horarios_Membresias.TabIndex = 11;
             this.btn_Horarios_Membresias.Text = "Horarios";
             this.btn_Horarios_Membresias.UseVisualStyleBackColor = true;
+            this.btn_Horarios_Membresias.Click += new System.EventHandler(this.btn_Horarios_Membresias_Click);
             // 
             // btn_ExportarExcel_Membresia
             // 

@@ -29,24 +29,24 @@
         private void InitializeComponent()
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.dtp_FechaInicial_CorteNuevo = new System.Windows.Forms.DateTimePicker();
-            this.label2 = new System.Windows.Forms.Label();
-            this.dtp_FechaFinal_CorteNuevo = new System.Windows.Forms.DateTimePicker();
-            this.label3 = new System.Windows.Forms.Label();
-            this.txt_Obvservacion_CorteNuevo = new System.Windows.Forms.TextBox();
             this.btn_Consultar_CorteNuevo = new System.Windows.Forms.Button();
+            this.txt_Obvservacion_CorteNuevo = new System.Windows.Forms.TextBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.dtp_FechaFinal_CorteNuevo = new System.Windows.Forms.DateTimePicker();
+            this.label2 = new System.Windows.Forms.Label();
+            this.dtp_FechaInicial_CorteNuevo = new System.Windows.Forms.DateTimePicker();
+            this.label1 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.label4 = new System.Windows.Forms.Label();
-            this.lbl_Ingresos_CorteNuevo = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.lbl_Egresos_CorteNuevo = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
-            this.lbl_CajaInicial_CorteNuevo = new System.Windows.Forms.Label();
-            this.label10 = new System.Windows.Forms.Label();
-            this.lbl_CajaFinal_CorteNuevo = new System.Windows.Forms.Label();
-            this.dgv_CorteNuevo = new System.Windows.Forms.DataGridView();
             this.button1 = new System.Windows.Forms.Button();
+            this.dgv_CorteNuevo = new System.Windows.Forms.DataGridView();
+            this.lbl_CajaFinal_CorteNuevo = new System.Windows.Forms.Label();
+            this.label10 = new System.Windows.Forms.Label();
+            this.lbl_CajaInicial_CorteNuevo = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
+            this.lbl_Egresos_CorteNuevo = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.lbl_Ingresos_CorteNuevo = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_CorteNuevo)).BeginInit();
@@ -68,62 +68,67 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Datos del Corte";
             // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(6, 29);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(70, 13);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Fecha Inicial:";
-            // 
-            // dtp_FechaInicial_CorteNuevo
-            // 
-            this.dtp_FechaInicial_CorteNuevo.Location = new System.Drawing.Point(104, 23);
-            this.dtp_FechaInicial_CorteNuevo.Name = "dtp_FechaInicial_CorteNuevo";
-            this.dtp_FechaInicial_CorteNuevo.Size = new System.Drawing.Size(200, 20);
-            this.dtp_FechaInicial_CorteNuevo.TabIndex = 1;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(366, 29);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(65, 13);
-            this.label2.TabIndex = 2;
-            this.label2.Text = "Fecha Final:";
-            // 
-            // dtp_FechaFinal_CorteNuevo
-            // 
-            this.dtp_FechaFinal_CorteNuevo.Location = new System.Drawing.Point(453, 23);
-            this.dtp_FechaFinal_CorteNuevo.Name = "dtp_FechaFinal_CorteNuevo";
-            this.dtp_FechaFinal_CorteNuevo.Size = new System.Drawing.Size(200, 20);
-            this.dtp_FechaFinal_CorteNuevo.TabIndex = 3;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(6, 61);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(67, 13);
-            this.label3.TabIndex = 4;
-            this.label3.Text = "Observacion";
-            // 
-            // txt_Obvservacion_CorteNuevo
-            // 
-            this.txt_Obvservacion_CorteNuevo.Location = new System.Drawing.Point(104, 61);
-            this.txt_Obvservacion_CorteNuevo.Name = "txt_Obvservacion_CorteNuevo";
-            this.txt_Obvservacion_CorteNuevo.Size = new System.Drawing.Size(645, 20);
-            this.txt_Obvservacion_CorteNuevo.TabIndex = 5;
-            // 
             // btn_Consultar_CorteNuevo
             // 
-            this.btn_Consultar_CorteNuevo.Location = new System.Drawing.Point(695, 96);
+            this.btn_Consultar_CorteNuevo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Consultar_CorteNuevo.Location = new System.Drawing.Point(687, 98);
             this.btn_Consultar_CorteNuevo.Name = "btn_Consultar_CorteNuevo";
             this.btn_Consultar_CorteNuevo.Size = new System.Drawing.Size(75, 23);
             this.btn_Consultar_CorteNuevo.TabIndex = 6;
             this.btn_Consultar_CorteNuevo.Text = "Consultar";
             this.btn_Consultar_CorteNuevo.UseVisualStyleBackColor = true;
+            // 
+            // txt_Obvservacion_CorteNuevo
+            // 
+            this.txt_Obvservacion_CorteNuevo.Location = new System.Drawing.Point(104, 61);
+            this.txt_Obvservacion_CorteNuevo.Multiline = true;
+            this.txt_Obvservacion_CorteNuevo.Name = "txt_Obvservacion_CorteNuevo";
+            this.txt_Obvservacion_CorteNuevo.Size = new System.Drawing.Size(552, 58);
+            this.txt_Obvservacion_CorteNuevo.TabIndex = 5;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(10, 61);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(84, 16);
+            this.label3.TabIndex = 4;
+            this.label3.Text = "Observacion";
+            // 
+            // dtp_FechaFinal_CorteNuevo
+            // 
+            this.dtp_FechaFinal_CorteNuevo.Location = new System.Drawing.Point(456, 25);
+            this.dtp_FechaFinal_CorteNuevo.Name = "dtp_FechaFinal_CorteNuevo";
+            this.dtp_FechaFinal_CorteNuevo.Size = new System.Drawing.Size(200, 20);
+            this.dtp_FechaFinal_CorteNuevo.TabIndex = 3;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(370, 29);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(80, 16);
+            this.label2.TabIndex = 2;
+            this.label2.Text = "Fecha Final:";
+            // 
+            // dtp_FechaInicial_CorteNuevo
+            // 
+            this.dtp_FechaInicial_CorteNuevo.Location = new System.Drawing.Point(101, 25);
+            this.dtp_FechaInicial_CorteNuevo.Name = "dtp_FechaInicial_CorteNuevo";
+            this.dtp_FechaInicial_CorteNuevo.Size = new System.Drawing.Size(200, 20);
+            this.dtp_FechaInicial_CorteNuevo.TabIndex = 1;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(10, 29);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(85, 16);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "Fecha Inicial:";
             // 
             // groupBox2
             // 
@@ -144,94 +149,103 @@
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Informacion";
             // 
-            // label4
+            // button1
             // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(6, 29);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(88, 13);
-            this.label4.TabIndex = 0;
-            this.label4.Text = "Total de ingresos";
-            // 
-            // lbl_Ingresos_CorteNuevo
-            // 
-            this.lbl_Ingresos_CorteNuevo.AutoSize = true;
-            this.lbl_Ingresos_CorteNuevo.Location = new System.Drawing.Point(189, 29);
-            this.lbl_Ingresos_CorteNuevo.Name = "lbl_Ingresos_CorteNuevo";
-            this.lbl_Ingresos_CorteNuevo.Size = new System.Drawing.Size(28, 13);
-            this.lbl_Ingresos_CorteNuevo.TabIndex = 1;
-            this.lbl_Ingresos_CorteNuevo.Text = "###";
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(438, 29);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(87, 13);
-            this.label6.TabIndex = 2;
-            this.label6.Text = "Total de Egresos";
-            // 
-            // lbl_Egresos_CorteNuevo
-            // 
-            this.lbl_Egresos_CorteNuevo.AutoSize = true;
-            this.lbl_Egresos_CorteNuevo.Location = new System.Drawing.Point(625, 29);
-            this.lbl_Egresos_CorteNuevo.Name = "lbl_Egresos_CorteNuevo";
-            this.lbl_Egresos_CorteNuevo.Size = new System.Drawing.Size(28, 13);
-            this.lbl_Egresos_CorteNuevo.TabIndex = 3;
-            this.lbl_Egresos_CorteNuevo.Text = "###";
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(6, 63);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(115, 13);
-            this.label8.TabIndex = 4;
-            this.label8.Text = "Efectivo en Caja Inicial";
-            // 
-            // lbl_CajaInicial_CorteNuevo
-            // 
-            this.lbl_CajaInicial_CorteNuevo.AutoSize = true;
-            this.lbl_CajaInicial_CorteNuevo.Location = new System.Drawing.Point(189, 63);
-            this.lbl_CajaInicial_CorteNuevo.Name = "lbl_CajaInicial_CorteNuevo";
-            this.lbl_CajaInicial_CorteNuevo.Size = new System.Drawing.Size(28, 13);
-            this.lbl_CajaInicial_CorteNuevo.TabIndex = 5;
-            this.lbl_CajaInicial_CorteNuevo.Text = "###";
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(438, 63);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(110, 13);
-            this.label10.TabIndex = 6;
-            this.label10.Text = "Efectivo en Caja Final";
-            // 
-            // lbl_CajaFinal_CorteNuevo
-            // 
-            this.lbl_CajaFinal_CorteNuevo.AutoSize = true;
-            this.lbl_CajaFinal_CorteNuevo.Location = new System.Drawing.Point(625, 63);
-            this.lbl_CajaFinal_CorteNuevo.Name = "lbl_CajaFinal_CorteNuevo";
-            this.lbl_CajaFinal_CorteNuevo.Size = new System.Drawing.Size(28, 13);
-            this.lbl_CajaFinal_CorteNuevo.TabIndex = 7;
-            this.lbl_CajaFinal_CorteNuevo.Text = "###";
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.Location = new System.Drawing.Point(647, 255);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(115, 23);
+            this.button1.TabIndex = 9;
+            this.button1.Text = "Realizar Corte";
+            this.button1.UseVisualStyleBackColor = true;
             // 
             // dgv_CorteNuevo
             // 
             this.dgv_CorteNuevo.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgv_CorteNuevo.Location = new System.Drawing.Point(9, 89);
+            this.dgv_CorteNuevo.Location = new System.Drawing.Point(8, 89);
             this.dgv_CorteNuevo.Name = "dgv_CorteNuevo";
             this.dgv_CorteNuevo.Size = new System.Drawing.Size(761, 160);
             this.dgv_CorteNuevo.TabIndex = 8;
             // 
-            // button1
+            // lbl_CajaFinal_CorteNuevo
             // 
-            this.button1.Location = new System.Drawing.Point(674, 255);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(96, 23);
-            this.button1.TabIndex = 9;
-            this.button1.Text = "Realizar Corte";
-            this.button1.UseVisualStyleBackColor = true;
+            this.lbl_CajaFinal_CorteNuevo.AutoSize = true;
+            this.lbl_CajaFinal_CorteNuevo.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_CajaFinal_CorteNuevo.Location = new System.Drawing.Point(599, 57);
+            this.lbl_CajaFinal_CorteNuevo.Name = "lbl_CajaFinal_CorteNuevo";
+            this.lbl_CajaFinal_CorteNuevo.Size = new System.Drawing.Size(43, 24);
+            this.lbl_CajaFinal_CorteNuevo.TabIndex = 7;
+            this.lbl_CajaFinal_CorteNuevo.Text = "###";
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.Location = new System.Drawing.Point(442, 63);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(136, 16);
+            this.label10.TabIndex = 6;
+            this.label10.Text = "Efectivo en Caja Final";
+            // 
+            // lbl_CajaInicial_CorteNuevo
+            // 
+            this.lbl_CajaInicial_CorteNuevo.AutoSize = true;
+            this.lbl_CajaInicial_CorteNuevo.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_CajaInicial_CorteNuevo.Location = new System.Drawing.Point(163, 57);
+            this.lbl_CajaInicial_CorteNuevo.Name = "lbl_CajaInicial_CorteNuevo";
+            this.lbl_CajaInicial_CorteNuevo.Size = new System.Drawing.Size(43, 24);
+            this.lbl_CajaInicial_CorteNuevo.TabIndex = 5;
+            this.lbl_CajaInicial_CorteNuevo.Text = "###";
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.Location = new System.Drawing.Point(10, 63);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(141, 16);
+            this.label8.TabIndex = 4;
+            this.label8.Text = "Efectivo en Caja Inicial";
+            // 
+            // lbl_Egresos_CorteNuevo
+            // 
+            this.lbl_Egresos_CorteNuevo.AutoSize = true;
+            this.lbl_Egresos_CorteNuevo.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_Egresos_CorteNuevo.Location = new System.Drawing.Point(599, 23);
+            this.lbl_Egresos_CorteNuevo.Name = "lbl_Egresos_CorteNuevo";
+            this.lbl_Egresos_CorteNuevo.Size = new System.Drawing.Size(43, 24);
+            this.lbl_Egresos_CorteNuevo.TabIndex = 3;
+            this.lbl_Egresos_CorteNuevo.Text = "###";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(442, 29);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(111, 16);
+            this.label6.TabIndex = 2;
+            this.label6.Text = "Total de Egresos";
+            // 
+            // lbl_Ingresos_CorteNuevo
+            // 
+            this.lbl_Ingresos_CorteNuevo.AutoSize = true;
+            this.lbl_Ingresos_CorteNuevo.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_Ingresos_CorteNuevo.Location = new System.Drawing.Point(163, 23);
+            this.lbl_Ingresos_CorteNuevo.Name = "lbl_Ingresos_CorteNuevo";
+            this.lbl_Ingresos_CorteNuevo.Size = new System.Drawing.Size(43, 24);
+            this.lbl_Ingresos_CorteNuevo.TabIndex = 1;
+            this.lbl_Ingresos_CorteNuevo.Text = "###";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(10, 29);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(112, 16);
+            this.label4.TabIndex = 0;
+            this.label4.Text = "Total de ingresos";
             // 
             // frm_Corte_Nuevo
             // 
@@ -240,8 +254,11 @@
             this.ClientSize = new System.Drawing.Size(800, 452);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "frm_Corte_Nuevo";
-            this.Text = "frm_Corte_Nuevo";
+            this.ShowIcon = false;
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.groupBox2.ResumeLayout(false);

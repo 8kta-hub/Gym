@@ -91,7 +91,11 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.flp_Permisos_RolesNuevo);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "frm_Roles_Nuevo";
+            this.ShowIcon = false;
             this.Text = "Datos del rol";
             this.ResumeLayout(false);
             this.PerformLayout();

@@ -83,40 +83,40 @@
             // lbl_DNI_ClientesMembresias
             // 
             this.lbl_DNI_ClientesMembresias.AutoSize = true;
-            this.lbl_DNI_ClientesMembresias.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_DNI_ClientesMembresias.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_DNI_ClientesMembresias.Location = new System.Drawing.Point(127, 135);
             this.lbl_DNI_ClientesMembresias.Name = "lbl_DNI_ClientesMembresias";
-            this.lbl_DNI_ClientesMembresias.Size = new System.Drawing.Size(56, 18);
+            this.lbl_DNI_ClientesMembresias.Size = new System.Drawing.Size(69, 20);
             this.lbl_DNI_ClientesMembresias.TabIndex = 62;
             this.lbl_DNI_ClientesMembresias.Text = "######";
             // 
             // lbl_Telefono_ClientesMembresias
             // 
             this.lbl_Telefono_ClientesMembresias.AutoSize = true;
-            this.lbl_Telefono_ClientesMembresias.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_Telefono_ClientesMembresias.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_Telefono_ClientesMembresias.Location = new System.Drawing.Point(127, 98);
             this.lbl_Telefono_ClientesMembresias.Name = "lbl_Telefono_ClientesMembresias";
-            this.lbl_Telefono_ClientesMembresias.Size = new System.Drawing.Size(56, 18);
+            this.lbl_Telefono_ClientesMembresias.Size = new System.Drawing.Size(69, 20);
             this.lbl_Telefono_ClientesMembresias.TabIndex = 61;
             this.lbl_Telefono_ClientesMembresias.Text = "######";
             // 
             // lbl_Apellido_ClientesMembresias
             // 
             this.lbl_Apellido_ClientesMembresias.AutoSize = true;
-            this.lbl_Apellido_ClientesMembresias.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_Apellido_ClientesMembresias.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_Apellido_ClientesMembresias.Location = new System.Drawing.Point(127, 61);
             this.lbl_Apellido_ClientesMembresias.Name = "lbl_Apellido_ClientesMembresias";
-            this.lbl_Apellido_ClientesMembresias.Size = new System.Drawing.Size(56, 18);
+            this.lbl_Apellido_ClientesMembresias.Size = new System.Drawing.Size(69, 20);
             this.lbl_Apellido_ClientesMembresias.TabIndex = 60;
             this.lbl_Apellido_ClientesMembresias.Text = "######";
             // 
             // lbl_Nombre_ClientesMembresias
             // 
             this.lbl_Nombre_ClientesMembresias.AutoSize = true;
-            this.lbl_Nombre_ClientesMembresias.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_Nombre_ClientesMembresias.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_Nombre_ClientesMembresias.Location = new System.Drawing.Point(127, 24);
             this.lbl_Nombre_ClientesMembresias.Name = "lbl_Nombre_ClientesMembresias";
-            this.lbl_Nombre_ClientesMembresias.Size = new System.Drawing.Size(56, 18);
+            this.lbl_Nombre_ClientesMembresias.Size = new System.Drawing.Size(69, 20);
             this.lbl_Nombre_ClientesMembresias.TabIndex = 59;
             this.lbl_Nombre_ClientesMembresias.Text = "######";
             // 
@@ -226,10 +226,10 @@
             // lbl_Dias_ClientesMembresias
             // 
             this.lbl_Dias_ClientesMembresias.AutoSize = true;
-            this.lbl_Dias_ClientesMembresias.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_Dias_ClientesMembresias.Location = new System.Drawing.Point(127, 181);
+            this.lbl_Dias_ClientesMembresias.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_Dias_ClientesMembresias.Location = new System.Drawing.Point(127, 175);
             this.lbl_Dias_ClientesMembresias.Name = "lbl_Dias_ClientesMembresias";
-            this.lbl_Dias_ClientesMembresias.Size = new System.Drawing.Size(56, 18);
+            this.lbl_Dias_ClientesMembresias.Size = new System.Drawing.Size(69, 20);
             this.lbl_Dias_ClientesMembresias.TabIndex = 70;
             this.lbl_Dias_ClientesMembresias.Text = "######";
             // 
@@ -244,19 +244,19 @@
             // lbl_Semanas_ClientesMembresias
             // 
             this.lbl_Semanas_ClientesMembresias.AutoSize = true;
-            this.lbl_Semanas_ClientesMembresias.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_Semanas_ClientesMembresias.Location = new System.Drawing.Point(127, 144);
+            this.lbl_Semanas_ClientesMembresias.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_Semanas_ClientesMembresias.Location = new System.Drawing.Point(127, 138);
             this.lbl_Semanas_ClientesMembresias.Name = "lbl_Semanas_ClientesMembresias";
-            this.lbl_Semanas_ClientesMembresias.Size = new System.Drawing.Size(56, 18);
+            this.lbl_Semanas_ClientesMembresias.Size = new System.Drawing.Size(69, 20);
             this.lbl_Semanas_ClientesMembresias.TabIndex = 69;
             this.lbl_Semanas_ClientesMembresias.Text = "######";
             // 
             // btn_Eliminar_ClientesMembresias
             // 
             this.btn_Eliminar_ClientesMembresias.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_Eliminar_ClientesMembresias.Location = new System.Drawing.Point(376, 174);
+            this.btn_Eliminar_ClientesMembresias.Location = new System.Drawing.Point(368, 174);
             this.btn_Eliminar_ClientesMembresias.Name = "btn_Eliminar_ClientesMembresias";
-            this.btn_Eliminar_ClientesMembresias.Size = new System.Drawing.Size(148, 23);
+            this.btn_Eliminar_ClientesMembresias.Size = new System.Drawing.Size(165, 23);
             this.btn_Eliminar_ClientesMembresias.TabIndex = 4;
             this.btn_Eliminar_ClientesMembresias.Text = "Eliminar Membresia";
             this.btn_Eliminar_ClientesMembresias.UseVisualStyleBackColor = true;
@@ -264,10 +264,10 @@
             // lbl_Meses_ClientesMembresias
             // 
             this.lbl_Meses_ClientesMembresias.AutoSize = true;
-            this.lbl_Meses_ClientesMembresias.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_Meses_ClientesMembresias.Location = new System.Drawing.Point(127, 107);
+            this.lbl_Meses_ClientesMembresias.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_Meses_ClientesMembresias.Location = new System.Drawing.Point(127, 101);
             this.lbl_Meses_ClientesMembresias.Name = "lbl_Meses_ClientesMembresias";
-            this.lbl_Meses_ClientesMembresias.Size = new System.Drawing.Size(56, 18);
+            this.lbl_Meses_ClientesMembresias.Size = new System.Drawing.Size(69, 20);
             this.lbl_Meses_ClientesMembresias.TabIndex = 68;
             this.lbl_Meses_ClientesMembresias.Text = "######";
             // 
@@ -275,31 +275,31 @@
             // 
             this.btn_Agregar_ClientesMembresias.BackColor = System.Drawing.Color.Transparent;
             this.btn_Agregar_ClientesMembresias.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_Agregar_ClientesMembresias.Location = new System.Drawing.Point(361, 63);
+            this.btn_Agregar_ClientesMembresias.Location = new System.Drawing.Point(368, 63);
             this.btn_Agregar_ClientesMembresias.Name = "btn_Agregar_ClientesMembresias";
-            this.btn_Agregar_ClientesMembresias.Size = new System.Drawing.Size(163, 23);
+            this.btn_Agregar_ClientesMembresias.Size = new System.Drawing.Size(156, 23);
             this.btn_Agregar_ClientesMembresias.TabIndex = 5;
-            this.btn_Agregar_ClientesMembresias.Text = "+ Agregar Membresia";
+            this.btn_Agregar_ClientesMembresias.Text = " Agregar Membresia";
             this.btn_Agregar_ClientesMembresias.UseVisualStyleBackColor = false;
             // 
             // lbl_Precio_ClientesMembresias
             // 
             this.lbl_Precio_ClientesMembresias.AutoSize = true;
-            this.lbl_Precio_ClientesMembresias.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_Precio_ClientesMembresias.Location = new System.Drawing.Point(127, 70);
+            this.lbl_Precio_ClientesMembresias.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_Precio_ClientesMembresias.Location = new System.Drawing.Point(127, 64);
             this.lbl_Precio_ClientesMembresias.Name = "lbl_Precio_ClientesMembresias";
-            this.lbl_Precio_ClientesMembresias.Size = new System.Drawing.Size(56, 18);
+            this.lbl_Precio_ClientesMembresias.Size = new System.Drawing.Size(69, 20);
             this.lbl_Precio_ClientesMembresias.TabIndex = 67;
             this.lbl_Precio_ClientesMembresias.Text = "$$$$$$";
             // 
             // btn_Pagar_ClientesMembresias
             // 
             this.btn_Pagar_ClientesMembresias.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_Pagar_ClientesMembresias.Location = new System.Drawing.Point(224, 174);
+            this.btn_Pagar_ClientesMembresias.Location = new System.Drawing.Point(220, 174);
             this.btn_Pagar_ClientesMembresias.Name = "btn_Pagar_ClientesMembresias";
-            this.btn_Pagar_ClientesMembresias.Size = new System.Drawing.Size(146, 23);
+            this.btn_Pagar_ClientesMembresias.Size = new System.Drawing.Size(142, 23);
             this.btn_Pagar_ClientesMembresias.TabIndex = 3;
-            this.btn_Pagar_ClientesMembresias.Text = "+ Pagar Membresia";
+            this.btn_Pagar_ClientesMembresias.Text = " Pagar Membresia";
             this.btn_Pagar_ClientesMembresias.UseVisualStyleBackColor = true;
             // 
             // label13
@@ -345,7 +345,7 @@
             // dgv_ClientesMembresias
             // 
             this.dgv_ClientesMembresias.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgv_ClientesMembresias.Location = new System.Drawing.Point(12, 402);
+            this.dgv_ClientesMembresias.Location = new System.Drawing.Point(12, 405);
             this.dgv_ClientesMembresias.Name = "dgv_ClientesMembresias";
             this.dgv_ClientesMembresias.Size = new System.Drawing.Size(539, 160);
             this.dgv_ClientesMembresias.TabIndex = 2;
@@ -362,6 +362,7 @@
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "frm_Clientes_Membresias";
+            this.ShowIcon = false;
             this.Text = "Membresias de clientes";
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();

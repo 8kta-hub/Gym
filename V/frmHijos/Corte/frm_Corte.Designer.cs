@@ -124,6 +124,7 @@
             this.btn_Detalle_Corte.TabIndex = 13;
             this.btn_Detalle_Corte.Text = "Ver Detalle";
             this.btn_Detalle_Corte.UseVisualStyleBackColor = true;
+            this.btn_Detalle_Corte.Click += new System.EventHandler(this.btn_Detalle_Corte_Click);
             // 
             // btn_Nuevo_Corte
             // 
@@ -134,6 +135,7 @@
             this.btn_Nuevo_Corte.TabIndex = 12;
             this.btn_Nuevo_Corte.Text = "Nuevo";
             this.btn_Nuevo_Corte.UseVisualStyleBackColor = true;
+            this.btn_Nuevo_Corte.Click += new System.EventHandler(this.btn_Nuevo_Corte_Click);
             // 
             // label1
             // 

@@ -1,4 +1,6 @@
-﻿using System;
+﻿using Gym.V.frmHijos.Ventas;
+using Gym.V.FuncionesV;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -15,6 +17,18 @@ namespace Gym.V.frmHijos.Productos
         public frm_Productos()
         {
             InitializeComponent();
+        }
+
+        private void btn_Nuevo_Productos_Click(object sender, EventArgs e)
+        {
+            frm_Productos_Nuevo frm = new frm_Productos_Nuevo();
+            Funciones.abrirFormModal(frm, this);
+        }
+
+        private void btn_Modificar_Productos_Click(object sender, EventArgs e)
+        {
+            frm_Productos_Nuevo frm = new frm_Productos_Nuevo();
+            Funciones.abrirFormModal(frm, this);
         }
     }
 }

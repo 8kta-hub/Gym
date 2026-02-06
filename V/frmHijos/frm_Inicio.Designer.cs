@@ -165,7 +165,7 @@
             // pic_Usuario_Inicio
             // 
             this.pic_Usuario_Inicio.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.pic_Usuario_Inicio.Cursor = System.Windows.Forms.Cursors.No;
+            this.pic_Usuario_Inicio.Cursor = System.Windows.Forms.Cursors.Arrow;
             this.pic_Usuario_Inicio.Image = global::Gym.Properties.Resources.hombre;
             this.pic_Usuario_Inicio.Location = new System.Drawing.Point(817, 62);
             this.pic_Usuario_Inicio.Name = "pic_Usuario_Inicio";

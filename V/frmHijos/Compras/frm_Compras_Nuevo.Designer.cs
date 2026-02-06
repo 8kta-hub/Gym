@@ -29,17 +29,17 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
-            this.label1 = new System.Windows.Forms.Label();
-            this.txt_Codigo_ComprasNuevo = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.cmb_Producto_ComprasNuevo = new System.Windows.Forms.ComboBox();
+            this.lbl_Precio_ComprasNuevo = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.lbl_Costo_ComprasNuevo = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.btn_Agregar_ComprasNuevo = new System.Windows.Forms.Button();
             this.txt_Cantidad_ComprasNuevo = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.btn_Agregar_ComprasNuevo = new System.Windows.Forms.Button();
-            this.label4 = new System.Windows.Forms.Label();
-            this.lbl_Costo_ComprasNuevo = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.lbl_Precio_ComprasNuevo = new System.Windows.Forms.Label();
+            this.cmb_Producto_ComprasNuevo = new System.Windows.Forms.ComboBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.txt_Codigo_ComprasNuevo = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
             this.dgv_ComprasNuevo = new System.Windows.Forms.DataGridView();
             this.label5 = new System.Windows.Forms.Label();
             this.lbl_Total_ComprasNuevo = new System.Windows.Forms.Label();
@@ -68,38 +68,50 @@
             this.panel1.Size = new System.Drawing.Size(776, 100);
             this.panel1.TabIndex = 0;
             // 
-            // label1
+            // lbl_Precio_ComprasNuevo
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(24, 26);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(40, 13);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "Codigo";
+            this.lbl_Precio_ComprasNuevo.AutoSize = true;
+            this.lbl_Precio_ComprasNuevo.Location = new System.Drawing.Point(288, 70);
+            this.lbl_Precio_ComprasNuevo.Name = "lbl_Precio_ComprasNuevo";
+            this.lbl_Precio_ComprasNuevo.Size = new System.Drawing.Size(35, 13);
+            this.lbl_Precio_ComprasNuevo.TabIndex = 11;
+            this.lbl_Precio_ComprasNuevo.Text = "####";
             // 
-            // txt_Codigo_ComprasNuevo
+            // label6
             // 
-            this.txt_Codigo_ComprasNuevo.Location = new System.Drawing.Point(83, 23);
-            this.txt_Codigo_ComprasNuevo.Name = "txt_Codigo_ComprasNuevo";
-            this.txt_Codigo_ComprasNuevo.Size = new System.Drawing.Size(116, 20);
-            this.txt_Codigo_ComprasNuevo.TabIndex = 2;
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(235, 70);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(37, 13);
+            this.label6.TabIndex = 10;
+            this.label6.Text = "Precio";
             // 
-            // label2
+            // lbl_Costo_ComprasNuevo
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(235, 26);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(50, 13);
-            this.label2.TabIndex = 3;
-            this.label2.Text = "Producto";
+            this.lbl_Costo_ComprasNuevo.AutoSize = true;
+            this.lbl_Costo_ComprasNuevo.Location = new System.Drawing.Point(80, 70);
+            this.lbl_Costo_ComprasNuevo.Name = "lbl_Costo_ComprasNuevo";
+            this.lbl_Costo_ComprasNuevo.Size = new System.Drawing.Size(35, 13);
+            this.lbl_Costo_ComprasNuevo.TabIndex = 9;
+            this.lbl_Costo_ComprasNuevo.Text = "####";
             // 
-            // cmb_Producto_ComprasNuevo
+            // label4
             // 
-            this.cmb_Producto_ComprasNuevo.FormattingEnabled = true;
-            this.cmb_Producto_ComprasNuevo.Location = new System.Drawing.Point(291, 23);
-            this.cmb_Producto_ComprasNuevo.Name = "cmb_Producto_ComprasNuevo";
-            this.cmb_Producto_ComprasNuevo.Size = new System.Drawing.Size(233, 21);
-            this.cmb_Producto_ComprasNuevo.TabIndex = 4;
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(24, 70);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(34, 13);
+            this.label4.TabIndex = 8;
+            this.label4.Text = "Costo";
+            // 
+            // btn_Agregar_ComprasNuevo
+            // 
+            this.btn_Agregar_ComprasNuevo.Location = new System.Drawing.Point(689, 20);
+            this.btn_Agregar_ComprasNuevo.Name = "btn_Agregar_ComprasNuevo";
+            this.btn_Agregar_ComprasNuevo.Size = new System.Drawing.Size(75, 23);
+            this.btn_Agregar_ComprasNuevo.TabIndex = 7;
+            this.btn_Agregar_ComprasNuevo.Text = "Agregar";
+            this.btn_Agregar_ComprasNuevo.UseVisualStyleBackColor = true;
             // 
             // txt_Cantidad_ComprasNuevo
             // 
@@ -117,50 +129,38 @@
             this.label3.TabIndex = 5;
             this.label3.Text = "Cantidad";
             // 
-            // btn_Agregar_ComprasNuevo
+            // cmb_Producto_ComprasNuevo
             // 
-            this.btn_Agregar_ComprasNuevo.Location = new System.Drawing.Point(689, 20);
-            this.btn_Agregar_ComprasNuevo.Name = "btn_Agregar_ComprasNuevo";
-            this.btn_Agregar_ComprasNuevo.Size = new System.Drawing.Size(75, 23);
-            this.btn_Agregar_ComprasNuevo.TabIndex = 7;
-            this.btn_Agregar_ComprasNuevo.Text = "Agregar";
-            this.btn_Agregar_ComprasNuevo.UseVisualStyleBackColor = true;
+            this.cmb_Producto_ComprasNuevo.FormattingEnabled = true;
+            this.cmb_Producto_ComprasNuevo.Location = new System.Drawing.Point(291, 23);
+            this.cmb_Producto_ComprasNuevo.Name = "cmb_Producto_ComprasNuevo";
+            this.cmb_Producto_ComprasNuevo.Size = new System.Drawing.Size(233, 21);
+            this.cmb_Producto_ComprasNuevo.TabIndex = 4;
             // 
-            // label4
+            // label2
             // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(24, 70);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(34, 13);
-            this.label4.TabIndex = 8;
-            this.label4.Text = "Costo";
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(235, 26);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(50, 13);
+            this.label2.TabIndex = 3;
+            this.label2.Text = "Producto";
             // 
-            // lbl_Costo_ComprasNuevo
+            // txt_Codigo_ComprasNuevo
             // 
-            this.lbl_Costo_ComprasNuevo.AutoSize = true;
-            this.lbl_Costo_ComprasNuevo.Location = new System.Drawing.Point(80, 70);
-            this.lbl_Costo_ComprasNuevo.Name = "lbl_Costo_ComprasNuevo";
-            this.lbl_Costo_ComprasNuevo.Size = new System.Drawing.Size(35, 13);
-            this.lbl_Costo_ComprasNuevo.TabIndex = 9;
-            this.lbl_Costo_ComprasNuevo.Text = "####";
+            this.txt_Codigo_ComprasNuevo.Location = new System.Drawing.Point(83, 23);
+            this.txt_Codigo_ComprasNuevo.Name = "txt_Codigo_ComprasNuevo";
+            this.txt_Codigo_ComprasNuevo.Size = new System.Drawing.Size(116, 20);
+            this.txt_Codigo_ComprasNuevo.TabIndex = 2;
             // 
-            // label6
+            // label1
             // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(235, 70);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(37, 13);
-            this.label6.TabIndex = 10;
-            this.label6.Text = "Precio";
-            // 
-            // lbl_Precio_ComprasNuevo
-            // 
-            this.lbl_Precio_ComprasNuevo.AutoSize = true;
-            this.lbl_Precio_ComprasNuevo.Location = new System.Drawing.Point(288, 70);
-            this.lbl_Precio_ComprasNuevo.Name = "lbl_Precio_ComprasNuevo";
-            this.lbl_Precio_ComprasNuevo.Size = new System.Drawing.Size(35, 13);
-            this.lbl_Precio_ComprasNuevo.TabIndex = 11;
-            this.lbl_Precio_ComprasNuevo.Text = "####";
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(24, 26);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(40, 13);
+            this.label1.TabIndex = 1;
+            this.label1.Text = "Codigo";
             // 
             // dgv_ComprasNuevo
             // 
@@ -226,8 +226,10 @@
             this.Controls.Add(this.label5);
             this.Controls.Add(this.dgv_ComprasNuevo);
             this.Controls.Add(this.panel1);
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "frm_Compras_Nuevo";
-            this.Text = "frm_Compras_Nuevo";
+            this.ShowIcon = false;
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_ComprasNuevo)).EndInit();

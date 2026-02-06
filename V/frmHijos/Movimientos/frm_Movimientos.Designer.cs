@@ -123,6 +123,7 @@
             this.btn_Modificar_Movimientos.TabIndex = 13;
             this.btn_Modificar_Movimientos.Text = "Modificar";
             this.btn_Modificar_Movimientos.UseVisualStyleBackColor = true;
+            this.btn_Modificar_Movimientos.Click += new System.EventHandler(this.btn_Modificar_Movimientos_Click);
             // 
             // btn_Nuevo_Movimientos
             // 
@@ -133,6 +134,7 @@
             this.btn_Nuevo_Movimientos.TabIndex = 12;
             this.btn_Nuevo_Movimientos.Text = "Nuevo";
             this.btn_Nuevo_Movimientos.UseVisualStyleBackColor = true;
+            this.btn_Nuevo_Movimientos.Click += new System.EventHandler(this.btn_Nuevo_Movimientos_Click);
             // 
             // label1
             // 

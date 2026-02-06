@@ -1,4 +1,6 @@
-﻿using System;
+﻿using Gym.V.frmHijos.Corte;
+using Gym.V.FuncionesV;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -15,6 +17,18 @@ namespace Gym.V.frmHijos.Conceptos
         public frm_Conceptos()
         {
             InitializeComponent();
+        }
+
+        private void btn_Nuevo_Conceptos_Click(object sender, EventArgs e)
+        {
+            frm_Conceptos_Nuevo frm = new frm_Conceptos_Nuevo();
+            Funciones.abrirFormModal(frm, this);
+        }
+
+        private void btn_Modificar_Conceptos_Click(object sender, EventArgs e)
+        {
+            frm_Conceptos_Nuevo frm = new frm_Conceptos_Nuevo();
+            Funciones.abrirFormModal(frm, this);
         }
     }
 }
