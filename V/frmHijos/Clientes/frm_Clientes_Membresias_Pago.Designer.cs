@@ -116,7 +116,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(10, 83);
+            this.label3.Location = new System.Drawing.Point(7, 83);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(89, 16);
             this.label3.TabIndex = 64;
@@ -242,15 +242,15 @@
             // dgv__ClientesMembresiasPagos
             // 
             this.dgv__ClientesMembresiasPagos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgv__ClientesMembresiasPagos.Location = new System.Drawing.Point(12, 372);
+            this.dgv__ClientesMembresiasPagos.Location = new System.Drawing.Point(12, 385);
             this.dgv__ClientesMembresiasPagos.Name = "dgv__ClientesMembresiasPagos";
-            this.dgv__ClientesMembresiasPagos.Size = new System.Drawing.Size(380, 163);
+            this.dgv__ClientesMembresiasPagos.Size = new System.Drawing.Size(380, 191);
             this.dgv__ClientesMembresiasPagos.TabIndex = 2;
             // 
             // btn_Reimprimir_ClientesMembresiasPagos
             // 
             this.btn_Reimprimir_ClientesMembresiasPagos.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_Reimprimir_ClientesMembresiasPagos.Location = new System.Drawing.Point(167, 338);
+            this.btn_Reimprimir_ClientesMembresiasPagos.Location = new System.Drawing.Point(167, 351);
             this.btn_Reimprimir_ClientesMembresiasPagos.Name = "btn_Reimprimir_ClientesMembresiasPagos";
             this.btn_Reimprimir_ClientesMembresiasPagos.Size = new System.Drawing.Size(91, 28);
             this.btn_Reimprimir_ClientesMembresiasPagos.TabIndex = 81;
@@ -260,7 +260,7 @@
             // btn_Eliminar_ClientesMembresiasPagos
             // 
             this.btn_Eliminar_ClientesMembresiasPagos.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_Eliminar_ClientesMembresiasPagos.Location = new System.Drawing.Point(264, 338);
+            this.btn_Eliminar_ClientesMembresiasPagos.Location = new System.Drawing.Point(264, 351);
             this.btn_Eliminar_ClientesMembresiasPagos.Name = "btn_Eliminar_ClientesMembresiasPagos";
             this.btn_Eliminar_ClientesMembresiasPagos.Size = new System.Drawing.Size(113, 28);
             this.btn_Eliminar_ClientesMembresiasPagos.TabIndex = 82;
@@ -271,7 +271,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(404, 547);
+            this.ClientSize = new System.Drawing.Size(404, 588);
             this.Controls.Add(this.btn_Eliminar_ClientesMembresiasPagos);
             this.Controls.Add(this.btn_Reimprimir_ClientesMembresiasPagos);
             this.Controls.Add(this.dgv__ClientesMembresiasPagos);

@@ -1,4 +1,6 @@
-﻿using System;
+﻿using Gym.V.frmHijos.Compras;
+using Gym.V.FuncionesV;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -15,6 +17,12 @@ namespace Gym.V.frmHijos.Clientes
         public frm_Clientes_Membresias()
         {
             InitializeComponent();
+        }
+
+        private void btn_Pagar_ClientesMembresias_Click(object sender, EventArgs e)
+        {
+            frm_Clientes_Membresias_Pago frm = new frm_Clientes_Membresias_Pago();
+            Funciones.abrirFormModal(frm, this);
         }
     }
 }

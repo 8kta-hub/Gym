@@ -301,6 +301,7 @@
             this.btn_Pagar_ClientesMembresias.TabIndex = 3;
             this.btn_Pagar_ClientesMembresias.Text = " Pagar Membresia";
             this.btn_Pagar_ClientesMembresias.UseVisualStyleBackColor = true;
+            this.btn_Pagar_ClientesMembresias.Click += new System.EventHandler(this.btn_Pagar_ClientesMembresias_Click);
             // 
             // label13
             // 

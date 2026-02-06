@@ -53,7 +53,7 @@
             // btn_RealizarVentas_VentasNuevo
             // 
             this.btn_RealizarVentas_VentasNuevo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_RealizarVentas_VentasNuevo.Location = new System.Drawing.Point(669, 379);
+            this.btn_RealizarVentas_VentasNuevo.Location = new System.Drawing.Point(669, 381);
             this.btn_RealizarVentas_VentasNuevo.Name = "btn_RealizarVentas_VentasNuevo";
             this.btn_RealizarVentas_VentasNuevo.Size = new System.Drawing.Size(119, 27);
             this.btn_RealizarVentas_VentasNuevo.TabIndex = 18;
@@ -82,7 +82,7 @@
             // 
             this.lbl_Total_VentasNuevo.AutoSize = true;
             this.lbl_Total_VentasNuevo.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_Total_VentasNuevo.Location = new System.Drawing.Point(71, 382);
+            this.lbl_Total_VentasNuevo.Location = new System.Drawing.Point(71, 383);
             this.lbl_Total_VentasNuevo.Name = "lbl_Total_VentasNuevo";
             this.lbl_Total_VentasNuevo.Size = new System.Drawing.Size(54, 24);
             this.lbl_Total_VentasNuevo.TabIndex = 16;
@@ -92,7 +92,7 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(12, 383);
+            this.label5.Location = new System.Drawing.Point(12, 384);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(44, 20);
             this.label5.TabIndex = 15;
@@ -246,6 +246,7 @@
             this.MinimizeBox = false;
             this.Name = "frm_Ventas_Nuevo";
             this.ShowIcon = false;
+            this.Text = "Nueva venta";
             ((System.ComponentModel.ISupportInitialize)(this.dgv_VentasNuevo)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
