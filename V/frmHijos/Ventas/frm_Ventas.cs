@@ -24,5 +24,11 @@ namespace Gym.V.frmHijos.Ventas
             frm_Ventas_Nuevo frm = new frm_Ventas_Nuevo();
             Funciones.abrirFormModal(frm, this);
         }
+
+        private void btn_Detalle_Ventas_Click(object sender, EventArgs e)
+        {
+            frm_Ventas_Detalle VentasDetalle = new frm_Ventas_Detalle();
+            Funciones.abrirFormModal(VentasDetalle, this);
+        }
     }
 }

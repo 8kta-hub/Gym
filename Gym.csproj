@@ -89,6 +89,12 @@
     <Compile Include="V\frmHijos\Compras\frm_Compras.Designer.cs">
       <DependentUpon>frm_Compras.cs</DependentUpon>
     </Compile>
+    <Compile Include="V\frmHijos\Compras\frm_Compras_Detalle.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="V\frmHijos\Compras\frm_Compras_Detalle.Designer.cs">
+      <DependentUpon>frm_Compras_Detalle.cs</DependentUpon>
+    </Compile>
     <Compile Include="V\frmHijos\Compras\frm_Compras_Nuevo.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -209,6 +215,12 @@
     <Compile Include="V\frmHijos\Ventas\frm_Ventas.Designer.cs">
       <DependentUpon>frm_Ventas.cs</DependentUpon>
     </Compile>
+    <Compile Include="V\frmHijos\Ventas\frm_Ventas_Detalle.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="V\frmHijos\Ventas\frm_Ventas_Detalle.Designer.cs">
+      <DependentUpon>frm_Ventas_Detalle.cs</DependentUpon>
+    </Compile>
     <Compile Include="V\frmHijos\Ventas\frm_Ventas_Nuevo.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -259,6 +271,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="V\frmHijos\Compras\frm_Compras.resx">
       <DependentUpon>frm_Compras.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="V\frmHijos\Compras\frm_Compras_Detalle.resx">
+      <DependentUpon>frm_Compras_Detalle.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="V\frmHijos\Compras\frm_Compras_Nuevo.resx">
       <DependentUpon>frm_Compras_Nuevo.cs</DependentUpon>
@@ -319,6 +334,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="V\frmHijos\Ventas\frm_Ventas.resx">
       <DependentUpon>frm_Ventas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="V\frmHijos\Ventas\frm_Ventas_Detalle.resx">
+      <DependentUpon>frm_Ventas_Detalle.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="V\frmHijos\Ventas\frm_Ventas_Nuevo.resx">
       <DependentUpon>frm_Ventas_Nuevo.cs</DependentUpon>

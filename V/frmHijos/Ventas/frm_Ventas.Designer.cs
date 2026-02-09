@@ -123,6 +123,7 @@
             this.btn_Detalle_Ventas.TabIndex = 13;
             this.btn_Detalle_Ventas.Text = "Ver Detalle";
             this.btn_Detalle_Ventas.UseVisualStyleBackColor = true;
+            this.btn_Detalle_Ventas.Click += new System.EventHandler(this.btn_Detalle_Ventas_Click);
             // 
             // btn_Nuevo_Ventas
             // 

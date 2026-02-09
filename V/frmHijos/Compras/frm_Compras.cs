@@ -27,7 +27,8 @@ namespace Gym.V.frmHijos.Compras
 
         private void btn_Detalle_Compras_Click(object sender, EventArgs e)
         {
-
+            frm_Compras_Detalle ComprasDetalle = new frm_Compras_Detalle();
+            Funciones.abrirFormModal(ComprasDetalle, this);
         }
     }
 }
