@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.btn_Cerrar_VentasDetalle = new System.Windows.Forms.Button();
             this.lbl_Total_VentasDetalle = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.dgv_VentasDetalle = new System.Windows.Forms.DataGridView();
@@ -43,33 +42,25 @@
             ((System.ComponentModel.ISupportInitialize)(this.dgv_VentasDetalle)).BeginInit();
             this.SuspendLayout();
             // 
-            // btn_Cerrar_VentasDetalle
-            // 
-            this.btn_Cerrar_VentasDetalle.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_Cerrar_VentasDetalle.Location = new System.Drawing.Point(117, 405);
-            this.btn_Cerrar_VentasDetalle.Name = "btn_Cerrar_VentasDetalle";
-            this.btn_Cerrar_VentasDetalle.Size = new System.Drawing.Size(75, 23);
-            this.btn_Cerrar_VentasDetalle.TabIndex = 35;
-            this.btn_Cerrar_VentasDetalle.Text = "Cerrar";
-            this.btn_Cerrar_VentasDetalle.UseVisualStyleBackColor = true;
-            // 
             // lbl_Total_VentasDetalle
             // 
             this.lbl_Total_VentasDetalle.AutoSize = true;
-            this.lbl_Total_VentasDetalle.Location = new System.Drawing.Point(98, 366);
+            this.lbl_Total_VentasDetalle.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_Total_VentasDetalle.Location = new System.Drawing.Point(78, 358);
             this.lbl_Total_VentasDetalle.Name = "lbl_Total_VentasDetalle";
-            this.lbl_Total_VentasDetalle.Size = new System.Drawing.Size(28, 13);
+            this.lbl_Total_VentasDetalle.Size = new System.Drawing.Size(43, 24);
             this.lbl_Total_VentasDetalle.TabIndex = 34;
             this.lbl_Total_VentasDetalle.Text = "###";
             // 
             // label7
             // 
             this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.Location = new System.Drawing.Point(9, 366);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(34, 13);
+            this.label7.Size = new System.Drawing.Size(38, 16);
             this.label7.TabIndex = 33;
-            this.label7.Text = "Total:";
+            this.label7.Text = "Total";
             // 
             // dgv_VentasDetalle
             // 
@@ -82,65 +73,72 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(9, 181);
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(9, 178);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(35, 13);
+            this.label3.Size = new System.Drawing.Size(39, 16);
             this.label3.TabIndex = 31;
-            this.label3.Text = "Items:";
+            this.label3.Text = "Items";
             // 
             // lbl_Usuario_VentasDetalle
             // 
             this.lbl_Usuario_VentasDetalle.AutoSize = true;
-            this.lbl_Usuario_VentasDetalle.Location = new System.Drawing.Point(98, 139);
+            this.lbl_Usuario_VentasDetalle.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_Usuario_VentasDetalle.Location = new System.Drawing.Point(78, 131);
             this.lbl_Usuario_VentasDetalle.Name = "lbl_Usuario_VentasDetalle";
-            this.lbl_Usuario_VentasDetalle.Size = new System.Drawing.Size(28, 13);
+            this.lbl_Usuario_VentasDetalle.Size = new System.Drawing.Size(43, 24);
             this.lbl_Usuario_VentasDetalle.TabIndex = 30;
             this.lbl_Usuario_VentasDetalle.Text = "###";
             // 
             // label6
             // 
             this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.Location = new System.Drawing.Point(9, 139);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(46, 13);
+            this.label6.Size = new System.Drawing.Size(54, 16);
             this.label6.TabIndex = 29;
-            this.label6.Text = "Usuario:";
+            this.label6.Text = "Usuario";
             // 
             // lbl_Fecha_VentasDetalle
             // 
             this.lbl_Fecha_VentasDetalle.AutoSize = true;
-            this.lbl_Fecha_VentasDetalle.Location = new System.Drawing.Point(98, 98);
+            this.lbl_Fecha_VentasDetalle.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_Fecha_VentasDetalle.Location = new System.Drawing.Point(78, 90);
             this.lbl_Fecha_VentasDetalle.Name = "lbl_Fecha_VentasDetalle";
-            this.lbl_Fecha_VentasDetalle.Size = new System.Drawing.Size(28, 13);
+            this.lbl_Fecha_VentasDetalle.Size = new System.Drawing.Size(43, 24);
             this.lbl_Fecha_VentasDetalle.TabIndex = 28;
             this.lbl_Fecha_VentasDetalle.Text = "###";
             // 
             // label4
             // 
             this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.Location = new System.Drawing.Point(9, 98);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(40, 13);
+            this.label4.Size = new System.Drawing.Size(45, 16);
             this.label4.TabIndex = 27;
-            this.label4.Text = "Fecha:";
+            this.label4.Text = "Fecha";
             // 
             // lbl_Cliente_VentasDetalle
             // 
             this.lbl_Cliente_VentasDetalle.AutoSize = true;
-            this.lbl_Cliente_VentasDetalle.Location = new System.Drawing.Point(98, 62);
+            this.lbl_Cliente_VentasDetalle.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_Cliente_VentasDetalle.Location = new System.Drawing.Point(78, 54);
             this.lbl_Cliente_VentasDetalle.Name = "lbl_Cliente_VentasDetalle";
-            this.lbl_Cliente_VentasDetalle.Size = new System.Drawing.Size(28, 13);
+            this.lbl_Cliente_VentasDetalle.Size = new System.Drawing.Size(43, 24);
             this.lbl_Cliente_VentasDetalle.TabIndex = 26;
             this.lbl_Cliente_VentasDetalle.Text = "###";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(9, 62);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(42, 13);
+            this.label2.Size = new System.Drawing.Size(48, 16);
             this.label2.TabIndex = 25;
-            this.label2.Text = "Cliente:";
+            this.label2.Text = "Cliente";
             // 
             // label1
             // 
@@ -156,8 +154,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(319, 437);
-            this.Controls.Add(this.btn_Cerrar_VentasDetalle);
+            this.ClientSize = new System.Drawing.Size(319, 402);
             this.Controls.Add(this.lbl_Total_VentasDetalle);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.dgv_VentasDetalle);
@@ -169,8 +166,11 @@
             this.Controls.Add(this.lbl_Cliente_VentasDetalle);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "frm_Ventas_Detalle";
-            this.Text = "frm_Ventas_Detalle";
+            this.Text = "Ventas detalle";
             ((System.ComponentModel.ISupportInitialize)(this.dgv_VentasDetalle)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -178,8 +178,6 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.Button btn_Cerrar_VentasDetalle;
         private System.Windows.Forms.Label lbl_Total_VentasDetalle;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.DataGridView dgv_VentasDetalle;
