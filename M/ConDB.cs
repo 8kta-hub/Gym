@@ -19,6 +19,7 @@ namespace Gym.M
         {
             using(SqlConnection cnn = new SqlConnection(strcnn))
             {
+                cnn.Open();
                 SqlCommand command = new SqlCommand(consulta, cnn);
                 SqlDataReader lector = command.ExecuteReader();
                 DataTable dt = new DataTable();
