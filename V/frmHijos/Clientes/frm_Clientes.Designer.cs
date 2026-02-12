@@ -197,6 +197,7 @@
             this.Controls.Add(this.dgv_Clientes);
             this.Controls.Add(this.label2);
             this.Name = "frm_Clientes";
+            this.Load += new System.EventHandler(this.frm_Clientes_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgv_Clientes)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

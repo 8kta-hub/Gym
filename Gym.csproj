@@ -52,6 +52,17 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="C\ControladoarCompras.cs" />
+    <Compile Include="C\ControladorClientes.cs" />
+    <Compile Include="C\ControladorConceptos.cs" />
+    <Compile Include="C\ControladorCorte.cs" />
+    <Compile Include="C\ControladorMembresias.cs" />
+    <Compile Include="C\ControladorMembresiasHorarios.cs" />
+    <Compile Include="C\ControladorMovimientos.cs" />
+    <Compile Include="C\ControladorProductos.cs" />
+    <Compile Include="C\ControladorRoles.cs" />
+    <Compile Include="C\ControladorUsuarios.cs" />
+    <Compile Include="C\ControladorVentas.cs" />
     <Compile Include="M\ConDB.cs" />
     <Compile Include="V\Configuracion\frm_Configuracion.cs">
       <SubType>Form</SubType>
