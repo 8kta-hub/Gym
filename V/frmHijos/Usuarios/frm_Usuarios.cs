@@ -9,14 +9,18 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using Gym.V.frmHijos.Usuarios;
 using Gym.V.FuncionesV;
+using Gym.M;
 
 namespace Gym.V.frmHijos
 {
     public partial class frm_Usuarios : Form
     {
+        string query = "Select nombre, apellido, dni, telefono, email, usuario, descripcion, estado, foto From Usuarios";
+        ConDB consultaSql = new ConDB();
         public frm_Usuarios()
         {
             InitializeComponent();
+            consultaSql.CargarTabla(query, dgv_Usuarios);
         }
 
         private void btn_Nuevo_Usuarios_Click(object sender, EventArgs e)
