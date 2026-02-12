@@ -9,14 +9,22 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Gym.M;
 
 namespace Gym.V.frmHijos.Compras
 {
     public partial class frm_Compras : Form
     {
+        string query = "Select total, fecha, estado From Compras";
+        ConDB consultaSql = new ConDB();
         public frm_Compras()
         {
             InitializeComponent();
+        }
+
+        private void frm_Compras_Load(object sender, EventArgs e)
+        {
+            consultaSql.CargarTabla(query, dgv_Compras);
         }
 
         private void btn_Nuevo_Compras_Click(object sender, EventArgs e)

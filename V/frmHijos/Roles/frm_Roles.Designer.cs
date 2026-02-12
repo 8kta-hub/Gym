@@ -140,6 +140,7 @@
             this.MinimizeBox = false;
             this.Name = "frm_Roles";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Load += new System.EventHandler(this.frm_Roles_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgv_Roles)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

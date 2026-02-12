@@ -174,6 +174,7 @@
             this.Controls.Add(this.label1);
             this.Name = "frm_Movimientos";
             this.Text = "frm_Movimientos";
+            this.Load += new System.EventHandler(this.frm_Movimientos_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgv_Movimientos)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

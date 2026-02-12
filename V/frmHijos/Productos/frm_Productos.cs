@@ -9,14 +9,22 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Gym.M;
 
 namespace Gym.V.frmHijos.Productos
 {
     public partial class frm_Productos : Form
     {
+        string query = "Select codigo, nombre, descripcion, costo, precio_venta, fecha_creacion, estado From Productos";
+        ConDB consultaSql = new ConDB();
         public frm_Productos()
         {
             InitializeComponent();
+        }
+
+        private void frm_Productos_Load(object sender, EventArgs e)
+        {
+            consultaSql.CargarTabla(query, dgv_Productos);
         }
 
         private void btn_Nuevo_Productos_Click(object sender, EventArgs e)

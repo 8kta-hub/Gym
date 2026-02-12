@@ -173,6 +173,7 @@
             this.Controls.Add(this.label1);
             this.Name = "frm_Compras";
             this.Text = "frm_Compras";
+            this.Load += new System.EventHandler(this.frm_Compras_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgv_Compras)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

@@ -185,6 +185,7 @@
             this.Controls.Add(this.label1);
             this.Name = "frm_Ventas";
             this.Text = "frm_Ventas";
+            this.Load += new System.EventHandler(this.frm_Ventas_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgv_Ventas)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

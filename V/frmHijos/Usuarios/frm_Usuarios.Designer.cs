@@ -163,6 +163,7 @@
             this.Name = "frm_Usuarios";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frm_Usuarios";
+            this.Load += new System.EventHandler(this.frm_Usuarios_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgv_Usuarios)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

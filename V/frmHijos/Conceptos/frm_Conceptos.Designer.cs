@@ -126,6 +126,7 @@
             this.Controls.Add(this.label2);
             this.Name = "frm_Conceptos";
             this.Text = "frm_Conceptos";
+            this.Load += new System.EventHandler(this.frm_Conceptos_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgv_Conceptos)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

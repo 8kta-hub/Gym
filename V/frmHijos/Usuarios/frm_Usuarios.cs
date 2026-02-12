@@ -15,11 +15,15 @@ namespace Gym.V.frmHijos
 {
     public partial class frm_Usuarios : Form
     {
-        string query = "Select nombre, apellido, dni, telefono, email, usuario, descripcion, estado, foto From Usuarios";
+        string query = "Select nombre, apellido, dni, telefono, email, usuario, descripcion, estado From Usuarios";
         ConDB consultaSql = new ConDB();
         public frm_Usuarios()
         {
             InitializeComponent();
+        }
+
+        private void frm_Usuarios_Load(object sender, EventArgs e)
+        {
             consultaSql.CargarTabla(query, dgv_Usuarios);
         }
 
@@ -40,5 +44,6 @@ namespace Gym.V.frmHijos
             frm_Usuarios_Roles frm = new frm_Usuarios_Roles();
             Funciones.abrirFormModal(frm, this);
         }
+
     }
 }

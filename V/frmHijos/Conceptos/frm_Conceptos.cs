@@ -9,14 +9,22 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Gym.M;
 
 namespace Gym.V.frmHijos.Conceptos
 {
     public partial class frm_Conceptos : Form
     {
+        string query = "Select nombre, tipo, estado, fecha_creacion, modificable From Conceptos";
+        ConDB consultaSql = new ConDB();
         public frm_Conceptos()
         {
             InitializeComponent();
+        }
+
+        private void frm_Conceptos_Load(object sender, EventArgs e)
+        {
+            consultaSql.CargarTabla(query, dgv_Conceptos);
         }
 
         private void btn_Nuevo_Conceptos_Click(object sender, EventArgs e)

@@ -197,6 +197,7 @@
             this.Controls.Add(this.label1);
             this.Name = "frm_Corte";
             this.Text = "frm_Corte";
+            this.Load += new System.EventHandler(this.frm_Corte_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgv_Corte)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

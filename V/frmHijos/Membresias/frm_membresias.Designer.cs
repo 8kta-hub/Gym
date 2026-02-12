@@ -151,6 +151,7 @@
             this.Controls.Add(this.label2);
             this.Name = "frm_membresias";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Load += new System.EventHandler(this.frm_membresias_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgv_Membresias)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
