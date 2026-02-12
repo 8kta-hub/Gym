@@ -11,8 +11,8 @@ namespace Gym.M
 {
     public class ConDB
     {
-        public static string strcnn = "Data Source = DESKTOP-2UJD34U\\SQLEXPRESS; Initial Catalog = gim_db; Integrated Security = True;";
-        //public static string strcnn = "Data Source = OKTY; Initial Catalog = gim_db; Integrated Security = True;";
+        public static string strcnn = "Data Source = DESKTOP-2UJD34U\\SQLEXPRESS; Initial Catalog = Gimnasio; Integrated Security = True;";
+        //public static string strcnn = "Data Source = localhost\\SQLEXPRESS; Initial Catalog = Gimnasio; Integrated Security = True;";
 
 
         public void CargarTabla(string consulta, DataGridView dgv)
