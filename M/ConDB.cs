@@ -14,10 +14,10 @@ namespace Gym.M
         //public static string strcnn = "Data Source = DESKTOP-2UJD34U\\SQLEXPRESS; Initial Catalog = Gimnasio; Integrated Security = True;";
         public static string strcnn = "Data Source = localhost\\SQLEXPRESS; Initial Catalog = Gimnasio; Integrated Security = True;";
 
-
+        //Método SELECT
         public void CargarTabla(string consulta, DataGridView dgv)
         {
-            using(SqlConnection cnn = new SqlConnection(strcnn))
+            using (SqlConnection cnn = new SqlConnection(strcnn))
             {
                 cnn.Open();
                 SqlCommand command = new SqlCommand(consulta, cnn);
@@ -25,6 +25,21 @@ namespace Gym.M
                 DataTable dt = new DataTable();
                 dt.Load(lector);
                 dgv.DataSource = dt;
+            }
+        }
+
+        //Método INSERT, UPDATE, DELETE
+        public int EjecutarComando(string consulta, SqlParameter[] parametros = null)
+        {
+            using (SqlConnection cn = new SqlConnection(strcnn))
+            {
+                cn.Open();
+                SqlCommand cmd = new SqlCommand(consulta, cn);
+
+                if (parametros != null)
+                    cmd.Parameters.AddRange(parametros);
+
+                return cmd.ExecuteNonQuery();
             }
         }
     }
