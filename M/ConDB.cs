@@ -30,6 +30,7 @@ namespace Gym.M
 
 
 
+
         //Método INSERT, UPDATE, DELETE
         public int EjecutarComando(string consulta, SqlParameter[] parametros = null)
         {

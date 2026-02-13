@@ -33,7 +33,7 @@
             this.btn_ExportarExcel_Reporte_Movimientos = new System.Windows.Forms.Button();
             this.cmb_Tipo_ReportesMovimientos = new System.Windows.Forms.ComboBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.dgv__ReportesMovimientos = new System.Windows.Forms.DataGridView();
+            this.dgv_ReportesMovimientos = new System.Windows.Forms.DataGridView();
             this.label4 = new System.Windows.Forms.Label();
             this.btn_Buscar_ReportesMovimientos = new System.Windows.Forms.Button();
             this.dtp_FechaFinal_ReportesMovimientos = new System.Windows.Forms.DateTimePicker();
@@ -82,7 +82,7 @@
             this.label19 = new System.Windows.Forms.Label();
             this.tbc_Reportes = new System.Windows.Forms.TabControl();
             this.tabPage8.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgv__ReportesMovimientos)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_ReportesMovimientos)).BeginInit();
             this.tabPage6.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_ReportesVentas)).BeginInit();
             this.tabPage5.SuspendLayout();
@@ -103,7 +103,7 @@
             this.tabPage8.Controls.Add(this.btn_ExportarExcel_Reporte_Movimientos);
             this.tabPage8.Controls.Add(this.cmb_Tipo_ReportesMovimientos);
             this.tabPage8.Controls.Add(this.label2);
-            this.tabPage8.Controls.Add(this.dgv__ReportesMovimientos);
+            this.tabPage8.Controls.Add(this.dgv_ReportesMovimientos);
             this.tabPage8.Controls.Add(this.label4);
             this.tabPage8.Controls.Add(this.btn_Buscar_ReportesMovimientos);
             this.tabPage8.Controls.Add(this.dtp_FechaFinal_ReportesMovimientos);
@@ -144,16 +144,16 @@
             this.label2.TabIndex = 42;
             this.label2.Text = "Tipo";
             // 
-            // dgv__ReportesMovimientos
+            // dgv_ReportesMovimientos
             // 
-            this.dgv__ReportesMovimientos.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.dgv_ReportesMovimientos.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.dgv__ReportesMovimientos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgv__ReportesMovimientos.Location = new System.Drawing.Point(8, 72);
-            this.dgv__ReportesMovimientos.Name = "dgv__ReportesMovimientos";
-            this.dgv__ReportesMovimientos.Size = new System.Drawing.Size(1004, 260);
-            this.dgv__ReportesMovimientos.TabIndex = 40;
+            this.dgv_ReportesMovimientos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgv_ReportesMovimientos.Location = new System.Drawing.Point(8, 72);
+            this.dgv_ReportesMovimientos.Name = "dgv_ReportesMovimientos";
+            this.dgv_ReportesMovimientos.Size = new System.Drawing.Size(1004, 260);
+            this.dgv_ReportesMovimientos.TabIndex = 40;
             // 
             // label4
             // 
@@ -652,9 +652,10 @@
             this.Controls.Add(this.tbc_Reportes);
             this.Name = "frm_Reportes";
             this.Text = "frm_Reportes";
+            this.Load += new System.EventHandler(this.frm_Reportes_Load);
             this.tabPage8.ResumeLayout(false);
             this.tabPage8.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgv__ReportesMovimientos)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_ReportesMovimientos)).EndInit();
             this.tabPage6.ResumeLayout(false);
             this.tabPage6.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_ReportesVentas)).EndInit();
@@ -683,7 +684,7 @@
         private System.Windows.Forms.TabPage tabPage8;
         private System.Windows.Forms.ComboBox cmb_Tipo_ReportesMovimientos;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.DataGridView dgv__ReportesMovimientos;
+        private System.Windows.Forms.DataGridView dgv_ReportesMovimientos;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Button btn_Buscar_ReportesMovimientos;
         private System.Windows.Forms.DateTimePicker dtp_FechaFinal_ReportesMovimientos;
