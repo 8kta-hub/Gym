@@ -30,19 +30,37 @@ namespace Gym.V.frmHijos.Clientes
         private void btn_Nuevo_Clientes_Click(object sender, EventArgs e)
         {
             frm_Clientes_Nuevo frm = new frm_Clientes_Nuevo();
-            Funciones.abrirFormModal(frm, this);
+
+            DialogResult resultado = Funciones.abrirFormModal(frm, this);
+
+            if (resultado == DialogResult.OK)
+            {
+                CargarClientes();
+            }
         }
 
         private void btn_Modificar_Clientes_Click(object sender, EventArgs e)
         {
             frm_Clientes_Nuevo frm = new frm_Clientes_Nuevo();
-            Funciones.abrirFormModal(frm, this);
+
+            DialogResult resultado = Funciones.abrirFormModal(frm, this);
+
+            if (resultado == DialogResult.OK)
+            {
+                CargarClientes();
+            }
         }
 
         private void btn_Membresias_Clientes_Click(object sender, EventArgs e)
         {
             frm_Clientes_Membresias frm = new frm_Clientes_Membresias();
-            Funciones.abrirFormModal(frm, this);
+
+            DialogResult resultado = Funciones.abrirFormModal(frm, this);
+
+            if (resultado == DialogResult.OK)
+            {
+                CargarClientes();
+            }
         }
 
         private void CargarClientes()
@@ -53,6 +71,10 @@ namespace Gym.V.frmHijos.Clientes
             dgv_Clientes.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
             dgv_Clientes.MultiSelect = false;
             dgv_Clientes.ReadOnly = true;
+
+            dgv_Clientes.Columns["id_cliente"].Visible = false;
         }
+
+
     }
 }

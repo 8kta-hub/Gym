@@ -47,6 +47,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.pcb_FotoPerfil_ClientesNuevo = new System.Windows.Forms.PictureBox();
+            this.chk_Activo = new System.Windows.Forms.CheckBox();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pcb_FotoPerfil_ClientesNuevo)).BeginInit();
             this.SuspendLayout();
@@ -73,6 +74,7 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.chk_Activo);
             this.groupBox1.Controls.Add(this.txt_Email_ClientesNuevo);
             this.groupBox1.Controls.Add(this.txt_DNI_ClientesNuevo);
             this.groupBox1.Controls.Add(this.txt_Apellido_ClientesNuevo);
@@ -154,6 +156,7 @@
             // 
             // dtp_FechaNacimiento_ClientesNuevo
             // 
+            this.dtp_FechaNacimiento_ClientesNuevo.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.dtp_FechaNacimiento_ClientesNuevo.Location = new System.Drawing.Point(148, 175);
             this.dtp_FechaNacimiento_ClientesNuevo.Name = "dtp_FechaNacimiento_ClientesNuevo";
             this.dtp_FechaNacimiento_ClientesNuevo.Size = new System.Drawing.Size(196, 20);
@@ -178,6 +181,7 @@
             this.btn_Guardar_ClientesNuevo.TabIndex = 51;
             this.btn_Guardar_ClientesNuevo.Text = "Guardar";
             this.btn_Guardar_ClientesNuevo.UseVisualStyleBackColor = true;
+            this.btn_Guardar_ClientesNuevo.Click += new System.EventHandler(this.btn_Guardar_ClientesNuevo_Click);
             // 
             // label6
             // 
@@ -239,6 +243,17 @@
             this.pcb_FotoPerfil_ClientesNuevo.TabIndex = 39;
             this.pcb_FotoPerfil_ClientesNuevo.TabStop = false;
             // 
+            // chk_Activo
+            // 
+            this.chk_Activo.AutoSize = true;
+            this.chk_Activo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.chk_Activo.Location = new System.Drawing.Point(13, 296);
+            this.chk_Activo.Name = "chk_Activo";
+            this.chk_Activo.Size = new System.Drawing.Size(107, 20);
+            this.chk_Activo.TabIndex = 61;
+            this.chk_Activo.Text = "Cliente Activo";
+            this.chk_Activo.UseVisualStyleBackColor = true;
+            // 
             // frm_Clientes_Nuevo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -281,5 +296,6 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.CheckBox chk_Activo;
     }
 }
