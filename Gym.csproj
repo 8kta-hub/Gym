@@ -60,6 +60,7 @@
     <Compile Include="C\ControladorMembresiasHorarios.cs" />
     <Compile Include="C\ControladorMovimientos.cs" />
     <Compile Include="C\ControladorProductos.cs" />
+    <Compile Include="C\ControladorReportes.cs" />
     <Compile Include="C\ControladorRoles.cs" />
     <Compile Include="C\ControladorUsuarios.cs" />
     <Compile Include="C\ControladorVentas.cs" />
