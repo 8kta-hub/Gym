@@ -9,14 +9,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using Gym.M;
+using Gym.C;
 
 namespace Gym.V.frmHijos.Productos
 {
     public partial class frm_Productos : Form
     {
-        string query = "Select codigo, nombre, descripcion, costo, precio_venta, fecha_creacion, estado From Productos";
-        ConDB consultaSql = new ConDB();
+        ControladorProductos controlador = new ControladorProductos();
         public frm_Productos()
         {
             InitializeComponent();
@@ -24,7 +23,7 @@ namespace Gym.V.frmHijos.Productos
 
         private void frm_Productos_Load(object sender, EventArgs e)
         {
-            consultaSql.CargarTabla(query, dgv_Productos);
+            CargarProductos();
         }
 
         private void btn_Nuevo_Productos_Click(object sender, EventArgs e)
@@ -37,6 +36,15 @@ namespace Gym.V.frmHijos.Productos
         {
             frm_Productos_Nuevo frm = new frm_Productos_Nuevo();
             Funciones.abrirFormModal(frm, this);
+        }
+
+        private void CargarProductos()
+        {
+            controlador.ListarProductos(dgv_Productos);
+            dgv_Productos.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            dgv_Productos.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+            dgv_Productos.MultiSelect = false;
+            dgv_Productos.ReadOnly = true;
         }
     }
 }

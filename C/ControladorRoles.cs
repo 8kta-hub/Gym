@@ -16,7 +16,6 @@ namespace Gym.C
         {
             string consulta = @"
                 SELECT 
-                    id_rol,
                     nombre,
                     permiso,
                     descripcion,

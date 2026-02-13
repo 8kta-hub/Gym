@@ -5,6 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Data.SqlClient;
 
 namespace Gym.C
 {
@@ -16,7 +17,6 @@ namespace Gym.C
         {
             string consulta = @"
                 SELECT 
-                    id_usuario,
                     nombre,
                     apellido,
                     dni,
@@ -29,6 +29,41 @@ namespace Gym.C
             ";
 
             conexion.CargarTabla(consulta, dgv);
+        }
+
+        public bool InsertarUsuario(string nombre, string apellido, string dni, 
+                                    string telefono, string email, string usuario, string contrasena,
+                                    int idRol, DateTime horarioInicio,
+                                    DateTime horarioFin, string descripcion)
+        {
+            string comando = 
+                @"Insert Into Usuarios (nombre, apellido, dni, telefono, email, usuario, contrasena, descripcion) 
+                Values (@nombre, @apellido, @dni, @telefono, @email, @usuario, @contrasena, @descripcion)
+
+                Declare @id_usuario int = Scope_Identity();
+
+                Insert Into Usuario_Rol (id_usuario, id_rol)
+                Values (@id_usuario, @id_rol)
+                ";
+
+            SqlParameter[] parametros =
+            {
+                new SqlParameter("@nombre", nombre),
+                new SqlParameter("@apellido", apellido),
+                new SqlParameter("@dni", dni),
+                new SqlParameter("@telefono", telefono),
+                new SqlParameter("@email", email),
+                new SqlParameter("@usuario", usuario),
+                new SqlParameter("@contrasena", contrasena),
+                new SqlParameter("@descripcion", descripcion),
+                new SqlParameter("@id_rol", idRol)
+            };
+
+            int filas = conexion.EjecutarComando(comando, parametros);
+
+            return filas > 0;
+
+
         }
     }
 }

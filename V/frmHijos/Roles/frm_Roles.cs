@@ -9,14 +9,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using Gym.M;
+using Gym.C;
 
 namespace Gym.V.frmHijos.Roles
 {
     public partial class frm_Roles : Form
     {
-        string query = "Select nombre, permiso, descripcion, activo From Roles";
-        ConDB consultaSql = new ConDB();
+        ControladorRoles controlador = new ControladorRoles();
         public frm_Roles()
         {
             InitializeComponent();
@@ -24,7 +23,7 @@ namespace Gym.V.frmHijos.Roles
 
         private void frm_Roles_Load(object sender, EventArgs e)
         {
-            consultaSql.CargarTabla(query, dgv_Roles);
+            CargarRoles();
         }
 
         private void btn_Nuevo_Roles_Click(object sender, EventArgs e)
@@ -37,6 +36,15 @@ namespace Gym.V.frmHijos.Roles
         {
             frm_Roles_Nuevo frm = new frm_Roles_Nuevo();
             Funciones.abrirFormModal(frm, this);
+        }
+
+        private void CargarRoles()
+        {
+            controlador.ListarRoles(dgv_Roles);
+            dgv_Roles.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            dgv_Roles.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+            dgv_Roles.MultiSelect = false;
+            dgv_Roles.ReadOnly = true;
         }
     }
 }

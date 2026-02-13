@@ -9,14 +9,13 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using Gym.V.frmHijos.Usuarios;
 using Gym.V.FuncionesV;
-using Gym.M;
+using Gym.C;
 
 namespace Gym.V.frmHijos
 {
     public partial class frm_Usuarios : Form
     {
-        string query = "Select nombre, apellido, dni, telefono, email, usuario, descripcion, estado From Usuarios";
-        ConDB consultaSql = new ConDB();
+        ControladorUsuarios controlador = new ControladorUsuarios();
         public frm_Usuarios()
         {
             InitializeComponent();
@@ -24,7 +23,7 @@ namespace Gym.V.frmHijos
 
         private void frm_Usuarios_Load(object sender, EventArgs e)
         {
-            consultaSql.CargarTabla(query, dgv_Usuarios);
+            CargarUsuarios();
         }
 
         private void btn_Nuevo_Usuarios_Click(object sender, EventArgs e)
@@ -45,5 +44,13 @@ namespace Gym.V.frmHijos
             Funciones.abrirFormModal(frm, this);
         }
 
+        private void CargarUsuarios()
+        {
+            controlador.ListarUsuarios(dgv_Usuarios);
+            dgv_Usuarios.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            dgv_Usuarios.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+            dgv_Usuarios.MultiSelect = false;
+            dgv_Usuarios.ReadOnly = true;
+        }
     }
 }

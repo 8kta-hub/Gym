@@ -16,7 +16,6 @@ namespace Gym.C
         {
             string consulta = @"
                 SELECT 
-                    pr.id_producto,
                     p.nombre AS Proveedor,
                     pr.codigo,
                     pr.nombre,
@@ -28,7 +27,6 @@ namespace Gym.C
                     pr.fecha_creacion
                 FROM Productos pr
                 INNER JOIN Proveedores p ON pr.id_proveedor = p.id_proveedor
-
             ";
 
             conexion.CargarTabla(consulta, dgv);

@@ -9,14 +9,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using Gym.M;
+using Gym.C;
 
 namespace Gym.V.frmHijos.Ventas
 {
     public partial class frm_Ventas : Form
     {
-        string query = "Select total, fecha, estado From Operaciones";
-        ConDB consultaSql = new ConDB();
+        ControladorVentas controlador = new ControladorVentas();
         public frm_Ventas()
         {
             InitializeComponent();
@@ -24,7 +23,7 @@ namespace Gym.V.frmHijos.Ventas
 
         private void frm_Ventas_Load(object sender, EventArgs e)
         {
-            consultaSql.CargarTabla(query, dgv_Ventas);
+            CargarVentas();
         }
 
         private void btn_Nuevo_Ventas_Click(object sender, EventArgs e)
@@ -39,5 +38,13 @@ namespace Gym.V.frmHijos.Ventas
             Funciones.abrirFormModal(VentasDetalle, this);
         }
 
+        private void CargarVentas()
+        {
+            controlador.ListarVentas(dgv_Ventas);
+            dgv_Ventas.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            dgv_Ventas.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+            dgv_Ventas.MultiSelect = false;
+            dgv_Ventas.ReadOnly = true;
+        }
     }
 }
