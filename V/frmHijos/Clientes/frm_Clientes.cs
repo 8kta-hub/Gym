@@ -17,6 +17,7 @@ namespace Gym.V.frmHijos.Clientes
     public partial class frm_Clientes : Form
     {
         ControladorClientes controlador = new ControladorClientes();
+
         public frm_Clientes()
         {
             InitializeComponent();

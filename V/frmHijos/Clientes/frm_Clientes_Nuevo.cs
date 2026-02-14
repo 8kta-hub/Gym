@@ -60,10 +60,25 @@ namespace Gym.V.frmHijos.Clientes
                 bool activo = chk_Activo.Checked;
                 DateTime fechaNac = dtp_FechaNacimiento_ClientesNuevo.Value;
 
-                bool resultado = controlador.InsertClientes(
-                    codCliente, nombre, apellido,
-                    dni, telefono, email, activo, fechaNac
-                );
+                bool resultado;
+
+                if (NuevoCl)
+                {
+                    // INSERT
+                    resultado = controlador.InsertClientes(
+                        codCliente, nombre, apellido,
+                        dni, telefono, email, activo, fechaNac
+                    );
+                }
+                else
+                {
+                    // UPDATE
+                    resultado = controlador.UpdateClientes(
+                        ClienteActual.IdCliente,
+                        codCliente, nombre, apellido,
+                        dni, telefono, email, activo, fechaNac
+                    );
+                }
 
                 if (resultado)
                 {
@@ -80,6 +95,7 @@ namespace Gym.V.frmHijos.Clientes
                 MessageBox.Show("Error: " + ex.Message);
             }
         }
+
 
         private void CargarDatosEnControles(Cliente cliente)
         {

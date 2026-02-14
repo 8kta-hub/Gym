@@ -57,14 +57,20 @@ namespace Gym.C
         }
 
         public bool UpdateClientes(int idCliente, int codCliente, string nombre,
-                             string apellido, string dni, string telefono,
-                             string email, bool activo, DateTime fechaNac)
+                                   string apellido, string dni, string telefono,
+                                   string email, bool activo, DateTime fechaNac)
         {
             string consulta = @"
-            INSERT INTO Clientes
-            (cod_cliente, nombre, apellido, dni, telefono, email, activo, fecha_nac) 
-            VALUES
-            (@codCliente, @nombre, @apellido, @dni, @telefono, @email, @activo, @fechaNac)";
+                    UPDATE Clientes SET
+                        cod_cliente = @codCliente,
+                        nombre = @nombre,
+                        apellido = @apellido,
+                        dni = @dni,
+                        telefono = @telefono,
+                        email = @email,
+                        activo = @activo,
+                        fecha_nac = @fechaNac
+                    WHERE id_cliente = @idCliente";
 
             SqlParameter[] parametros =
             {
@@ -82,6 +88,7 @@ namespace Gym.C
             int filas = conexion.EjecutarComando(consulta, parametros);
             return filas > 0;
         }
+
         public bool DeleteClientes(int idCliente)
         {
             string consulta = "UPDATE Clientes SET Activo = 0 WHERE id_cliente = @IdCliente";
