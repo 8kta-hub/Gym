@@ -21,7 +21,8 @@ namespace Gym.C
                     dni,
                     telefono,
                     email,
-                    fecha_nac
+                    fecha_nac,
+                    activo
                 FROM Clientes";
 
             conexion.CargarTabla(consulta, dgv);
@@ -31,13 +32,13 @@ namespace Gym.C
 
         public bool InsertClientes(int codCliente, string nombre,
                                    string apellido, string dni, string telefono,
-                                   string email, DateTime fechaNac)
+                                   string email, bool activo, DateTime fechaNac)
         {
             string consulta = @"
                     INSERT INTO Clientes
-                    (cod_cliente, nombre, apellido, dni, telefono, email, fecha_nac)
+                    (cod_cliente, nombre, apellido, dni, telefono, email, fecha_nac, activo)
                     VALUES
-                    (@codCliente, @nombre, @apellido, @dni, @telefono, @email, @fechaNac)";
+                    (@codCliente, @nombre, @apellido, @dni, @telefono, @email, @fechaNac, @activo)";
 
             SqlParameter[] parametros =
             {
@@ -47,7 +48,7 @@ namespace Gym.C
                         new SqlParameter("@dni", dni),
                         new SqlParameter("@telefono", telefono),
                         new SqlParameter("@email", email),
-
+                        new SqlParameter("@activo", activo),
                         new SqlParameter("@fechaNac", fechaNac)
                     };
 
@@ -83,10 +84,7 @@ namespace Gym.C
         }
         public bool DeleteClientes(int idCliente)
         {
-            string consulta = @"
-                UPDATE FROM Clientes
-                SET activo = 0
-                WHERE id_cliente = @idCliente";
+            string consulta = "UPDATE Clientes SET Activo = 0 WHERE id_cliente = @IdCliente";
 
             SqlParameter[] parametros =
             {

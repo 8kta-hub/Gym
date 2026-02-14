@@ -31,6 +31,7 @@
             this.btn_CargarFoto_ClientesNuevo = new System.Windows.Forms.Button();
             this.btn_TomarFoto_ClientesNuevo = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.chk_Activo = new System.Windows.Forms.CheckBox();
             this.txt_Email_ClientesNuevo = new System.Windows.Forms.TextBox();
             this.txt_DNI_ClientesNuevo = new System.Windows.Forms.TextBox();
             this.txt_Apellido_ClientesNuevo = new System.Windows.Forms.TextBox();
@@ -47,7 +48,6 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.pcb_FotoPerfil_ClientesNuevo = new System.Windows.Forms.PictureBox();
-            this.chk_Activo = new System.Windows.Forms.CheckBox();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pcb_FotoPerfil_ClientesNuevo)).BeginInit();
             this.SuspendLayout();
@@ -96,52 +96,63 @@
             this.groupBox1.TabIndex = 46;
             this.groupBox1.TabStop = false;
             // 
+            // chk_Activo
+            // 
+            this.chk_Activo.AutoSize = true;
+            this.chk_Activo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.chk_Activo.Location = new System.Drawing.Point(13, 296);
+            this.chk_Activo.Name = "chk_Activo";
+            this.chk_Activo.Size = new System.Drawing.Size(107, 20);
+            this.chk_Activo.TabIndex = 61;
+            this.chk_Activo.Text = "Cliente Activo";
+            this.chk_Activo.UseVisualStyleBackColor = true;
+            // 
             // txt_Email_ClientesNuevo
             // 
-            this.txt_Email_ClientesNuevo.Location = new System.Drawing.Point(149, 210);
-            this.txt_Email_ClientesNuevo.Multiline = true;
+            this.txt_Email_ClientesNuevo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_Email_ClientesNuevo.Location = new System.Drawing.Point(149, 209);
             this.txt_Email_ClientesNuevo.Name = "txt_Email_ClientesNuevo";
-            this.txt_Email_ClientesNuevo.Size = new System.Drawing.Size(195, 24);
+            this.txt_Email_ClientesNuevo.Size = new System.Drawing.Size(195, 22);
             this.txt_Email_ClientesNuevo.TabIndex = 60;
             // 
             // txt_DNI_ClientesNuevo
             // 
-            this.txt_DNI_ClientesNuevo.Location = new System.Drawing.Point(149, 250);
-            this.txt_DNI_ClientesNuevo.Multiline = true;
+            this.txt_DNI_ClientesNuevo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_DNI_ClientesNuevo.Location = new System.Drawing.Point(149, 247);
             this.txt_DNI_ClientesNuevo.Name = "txt_DNI_ClientesNuevo";
-            this.txt_DNI_ClientesNuevo.Size = new System.Drawing.Size(195, 24);
+            this.txt_DNI_ClientesNuevo.Size = new System.Drawing.Size(195, 22);
             this.txt_DNI_ClientesNuevo.TabIndex = 59;
             // 
             // txt_Apellido_ClientesNuevo
             // 
-            this.txt_Apellido_ClientesNuevo.Location = new System.Drawing.Point(148, 96);
-            this.txt_Apellido_ClientesNuevo.Multiline = true;
+            this.txt_Apellido_ClientesNuevo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_Apellido_ClientesNuevo.Location = new System.Drawing.Point(149, 95);
             this.txt_Apellido_ClientesNuevo.Name = "txt_Apellido_ClientesNuevo";
-            this.txt_Apellido_ClientesNuevo.Size = new System.Drawing.Size(195, 24);
+            this.txt_Apellido_ClientesNuevo.Size = new System.Drawing.Size(195, 22);
             this.txt_Apellido_ClientesNuevo.TabIndex = 58;
             // 
             // txt_Telefono_ClientesNuevo
             // 
-            this.txt_Telefono_ClientesNuevo.Location = new System.Drawing.Point(148, 137);
-            this.txt_Telefono_ClientesNuevo.Multiline = true;
+            this.txt_Telefono_ClientesNuevo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_Telefono_ClientesNuevo.Location = new System.Drawing.Point(149, 133);
             this.txt_Telefono_ClientesNuevo.Name = "txt_Telefono_ClientesNuevo";
-            this.txt_Telefono_ClientesNuevo.Size = new System.Drawing.Size(195, 24);
+            this.txt_Telefono_ClientesNuevo.Size = new System.Drawing.Size(195, 22);
             this.txt_Telefono_ClientesNuevo.TabIndex = 57;
             // 
             // txt_Codigo_ClientesNuevo
             // 
-            this.txt_Codigo_ClientesNuevo.Location = new System.Drawing.Point(148, 18);
-            this.txt_Codigo_ClientesNuevo.Multiline = true;
+            this.txt_Codigo_ClientesNuevo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_Codigo_ClientesNuevo.Location = new System.Drawing.Point(149, 17);
             this.txt_Codigo_ClientesNuevo.Name = "txt_Codigo_ClientesNuevo";
-            this.txt_Codigo_ClientesNuevo.Size = new System.Drawing.Size(195, 24);
+            this.txt_Codigo_ClientesNuevo.Size = new System.Drawing.Size(195, 22);
             this.txt_Codigo_ClientesNuevo.TabIndex = 56;
             // 
             // txt_Nombre_ClientesNuevo
             // 
-            this.txt_Nombre_ClientesNuevo.Location = new System.Drawing.Point(148, 56);
-            this.txt_Nombre_ClientesNuevo.Multiline = true;
+            this.txt_Nombre_ClientesNuevo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_Nombre_ClientesNuevo.Location = new System.Drawing.Point(149, 57);
             this.txt_Nombre_ClientesNuevo.Name = "txt_Nombre_ClientesNuevo";
-            this.txt_Nombre_ClientesNuevo.Size = new System.Drawing.Size(195, 24);
+            this.txt_Nombre_ClientesNuevo.Size = new System.Drawing.Size(195, 22);
             this.txt_Nombre_ClientesNuevo.TabIndex = 55;
             // 
             // label5
@@ -157,7 +168,7 @@
             // dtp_FechaNacimiento_ClientesNuevo
             // 
             this.dtp_FechaNacimiento_ClientesNuevo.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.dtp_FechaNacimiento_ClientesNuevo.Location = new System.Drawing.Point(148, 175);
+            this.dtp_FechaNacimiento_ClientesNuevo.Location = new System.Drawing.Point(148, 171);
             this.dtp_FechaNacimiento_ClientesNuevo.Name = "dtp_FechaNacimiento_ClientesNuevo";
             this.dtp_FechaNacimiento_ClientesNuevo.Size = new System.Drawing.Size(196, 20);
             this.dtp_FechaNacimiento_ClientesNuevo.TabIndex = 53;
@@ -243,17 +254,6 @@
             this.pcb_FotoPerfil_ClientesNuevo.TabIndex = 39;
             this.pcb_FotoPerfil_ClientesNuevo.TabStop = false;
             // 
-            // chk_Activo
-            // 
-            this.chk_Activo.AutoSize = true;
-            this.chk_Activo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.chk_Activo.Location = new System.Drawing.Point(13, 296);
-            this.chk_Activo.Name = "chk_Activo";
-            this.chk_Activo.Size = new System.Drawing.Size(107, 20);
-            this.chk_Activo.TabIndex = 61;
-            this.chk_Activo.Text = "Cliente Activo";
-            this.chk_Activo.UseVisualStyleBackColor = true;
-            // 
             // frm_Clientes_Nuevo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -269,6 +269,7 @@
             this.Name = "frm_Clientes_Nuevo";
             this.ShowIcon = false;
             this.Text = "Datos de clientes";
+            this.Load += new System.EventHandler(this.frm_Clientes_Nuevo_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pcb_FotoPerfil_ClientesNuevo)).EndInit();

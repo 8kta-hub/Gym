@@ -65,6 +65,7 @@
     <Compile Include="C\ControladorUsuarios.cs" />
     <Compile Include="C\ControladorVentas.cs" />
     <Compile Include="M\ConDB.cs" />
+    <Compile Include="M\Entidades\Ent_Cliente.cs" />
     <Compile Include="V\Configuracion\frm_Configuracion.cs">
       <SubType>Form</SubType>
     </Compile>

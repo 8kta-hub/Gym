@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Gym.C;
-using Gym.V.frmHijos;
+using Gym.M.Entidades;
 
 
 namespace Gym.V.frmHijos.Clientes
@@ -16,9 +16,35 @@ namespace Gym.V.frmHijos.Clientes
     public partial class frm_Clientes_Nuevo : Form
     {
         ControladorClientes controlador = new ControladorClientes();
+        private Cliente ClienteActual;
+        private bool NuevoCl;
+        
+        // 2 constructores para usar el mismo frm modal tanto para agregar o editar clientes
         public frm_Clientes_Nuevo()
         {
             InitializeComponent();
+            NuevoCl = true;
+        }
+
+        public frm_Clientes_Nuevo(Cliente cliente)
+        {
+            InitializeComponent();
+            NuevoCl = false;
+            ClienteActual = cliente;
+        }
+
+        private void frm_Clientes_Nuevo_Load(object sender, EventArgs e)
+        {
+            if (NuevoCl)
+            {
+                chk_Activo.Checked = true;
+                chk_Activo.Enabled = false;
+            }
+            else 
+            {
+                chk_Activo.Enabled = true;
+                CargarDatosEnControles(ClienteActual);
+            }
         }
 
         private void btn_Guardar_ClientesNuevo_Click(object sender, EventArgs e)
@@ -31,11 +57,12 @@ namespace Gym.V.frmHijos.Clientes
                 string dni = txt_DNI_ClientesNuevo.Text;
                 string telefono = txt_Telefono_ClientesNuevo.Text;
                 string email = txt_Email_ClientesNuevo.Text;
+                bool activo = chk_Activo.Checked;
                 DateTime fechaNac = dtp_FechaNacimiento_ClientesNuevo.Value;
 
                 bool resultado = controlador.InsertClientes(
                     codCliente, nombre, apellido,
-                    dni, telefono, email, fechaNac
+                    dni, telefono, email, activo, fechaNac
                 );
 
                 if (resultado)
@@ -54,16 +81,16 @@ namespace Gym.V.frmHijos.Clientes
             }
         }
 
-        private void LimpiarCampos()
+        private void CargarDatosEnControles(Cliente cliente)
         {
-            txt_Codigo_ClientesNuevo.Clear();
-            txt_Nombre_ClientesNuevo.Clear();
-            txt_Apellido_ClientesNuevo.Clear();
-            txt_DNI_ClientesNuevo.Clear();
-            txt_Telefono_ClientesNuevo.Clear();
-            txt_Email_ClientesNuevo.Clear();
-            chk_Activo.Checked = false;
-            dtp_FechaNacimiento_ClientesNuevo.Value = DateTime.Now;
+            txt_Codigo_ClientesNuevo.Text = cliente.CodCliente.ToString();
+            txt_Nombre_ClientesNuevo.Text = cliente.Nombre;
+            txt_Apellido_ClientesNuevo.Text = cliente.Apellido;
+            txt_DNI_ClientesNuevo.Text = cliente.Dni;
+            txt_Telefono_ClientesNuevo.Text = cliente.Telefono;
+            txt_Email_ClientesNuevo.Text = cliente.Email;
+            chk_Activo.Checked = cliente.Activo;
+            dtp_FechaNacimiento_ClientesNuevo.Value = cliente.FechaNac;
         }
 
     }

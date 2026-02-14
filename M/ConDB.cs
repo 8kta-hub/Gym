@@ -21,6 +21,7 @@ namespace Gym.M
             {
                 cnn.Open();
                 SqlCommand command = new SqlCommand(consulta, cnn);
+
                 SqlDataReader lector = command.ExecuteReader();
                 DataTable dt = new DataTable();
                 dt.Load(lector);

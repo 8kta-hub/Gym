@@ -31,8 +31,6 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frm_Clientes));
             this.txt_Buscar_Clientes = new System.Windows.Forms.TextBox();
             this.btn_Eliminar_Clientes = new System.Windows.Forms.Button();
-            this.btn_Habilitar_Clientes = new System.Windows.Forms.Button();
-            this.btn_Deshabilitar_Clientes = new System.Windows.Forms.Button();
             this.btn_Modificar_Clientes = new System.Windows.Forms.Button();
             this.btn_Nuevo_Clientes = new System.Windows.Forms.Button();
             this.dgv_Clientes = new System.Windows.Forms.DataGridView();
@@ -42,46 +40,28 @@
             this.btn_VerTodo_Clientes = new System.Windows.Forms.Button();
             this.btn_Membresias_Clientes = new System.Windows.Forms.Button();
             this.btn_ExportarExcel_Clientes = new System.Windows.Forms.Button();
+            this.cbx_FiltroCliente = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_Clientes)).BeginInit();
             this.SuspendLayout();
             // 
             // txt_Buscar_Clientes
             // 
+            this.txt_Buscar_Clientes.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_Buscar_Clientes.Location = new System.Drawing.Point(8, 69);
-            this.txt_Buscar_Clientes.Multiline = true;
             this.txt_Buscar_Clientes.Name = "txt_Buscar_Clientes";
-            this.txt_Buscar_Clientes.Size = new System.Drawing.Size(553, 25);
+            this.txt_Buscar_Clientes.Size = new System.Drawing.Size(369, 24);
             this.txt_Buscar_Clientes.TabIndex = 31;
             // 
             // btn_Eliminar_Clientes
             // 
             this.btn_Eliminar_Clientes.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_Eliminar_Clientes.Location = new System.Drawing.Point(344, 46);
+            this.btn_Eliminar_Clientes.Location = new System.Drawing.Point(160, 45);
             this.btn_Eliminar_Clientes.Name = "btn_Eliminar_Clientes";
             this.btn_Eliminar_Clientes.Size = new System.Drawing.Size(75, 23);
             this.btn_Eliminar_Clientes.TabIndex = 29;
             this.btn_Eliminar_Clientes.Text = "Eliminar";
             this.btn_Eliminar_Clientes.UseVisualStyleBackColor = true;
-            // 
-            // btn_Habilitar_Clientes
-            // 
-            this.btn_Habilitar_Clientes.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_Habilitar_Clientes.Location = new System.Drawing.Point(160, 45);
-            this.btn_Habilitar_Clientes.Name = "btn_Habilitar_Clientes";
-            this.btn_Habilitar_Clientes.Size = new System.Drawing.Size(75, 23);
-            this.btn_Habilitar_Clientes.TabIndex = 28;
-            this.btn_Habilitar_Clientes.Text = "Habilitar";
-            this.btn_Habilitar_Clientes.UseVisualStyleBackColor = true;
-            // 
-            // btn_Deshabilitar_Clientes
-            // 
-            this.btn_Deshabilitar_Clientes.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_Deshabilitar_Clientes.Location = new System.Drawing.Point(241, 45);
-            this.btn_Deshabilitar_Clientes.Name = "btn_Deshabilitar_Clientes";
-            this.btn_Deshabilitar_Clientes.Size = new System.Drawing.Size(97, 23);
-            this.btn_Deshabilitar_Clientes.TabIndex = 27;
-            this.btn_Deshabilitar_Clientes.Text = "deshabilitar";
-            this.btn_Deshabilitar_Clientes.UseVisualStyleBackColor = true;
+            this.btn_Eliminar_Clientes.Click += new System.EventHandler(this.btn_Eliminar_Clientes_Click);
             // 
             // btn_Modificar_Clientes
             // 
@@ -107,6 +87,8 @@
             // 
             // dgv_Clientes
             // 
+            this.dgv_Clientes.AllowUserToResizeColumns = false;
+            this.dgv_Clientes.AllowUserToResizeRows = false;
             this.dgv_Clientes.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
@@ -115,6 +97,7 @@
             this.dgv_Clientes.Name = "dgv_Clientes";
             this.dgv_Clientes.Size = new System.Drawing.Size(1011, 259);
             this.dgv_Clientes.TabIndex = 24;
+            this.dgv_Clientes.DataBindingComplete += new System.Windows.Forms.DataGridViewBindingCompleteEventHandler(this.dgv_Clientes_DataBindingComplete);
             // 
             // label2
             // 
@@ -131,7 +114,7 @@
             this.lbl_resultadosCantidad_Clientes.AutoSize = true;
             this.lbl_resultadosCantidad_Clientes.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_resultadosCantidad_Clientes.ForeColor = System.Drawing.SystemColors.MenuHighlight;
-            this.lbl_resultadosCantidad_Clientes.Location = new System.Drawing.Point(725, 74);
+            this.lbl_resultadosCantidad_Clientes.Location = new System.Drawing.Point(947, 76);
             this.lbl_resultadosCantidad_Clientes.Name = "lbl_resultadosCantidad_Clientes";
             this.lbl_resultadosCantidad_Clientes.Size = new System.Drawing.Size(56, 16);
             this.lbl_resultadosCantidad_Clientes.TabIndex = 32;
@@ -140,7 +123,7 @@
             // btn_VerUltimos_Clientes
             // 
             this.btn_VerUltimos_Clientes.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_VerUltimos_Clientes.Location = new System.Drawing.Point(571, 69);
+            this.btn_VerUltimos_Clientes.Location = new System.Drawing.Point(793, 71);
             this.btn_VerUltimos_Clientes.Name = "btn_VerUltimos_Clientes";
             this.btn_VerUltimos_Clientes.Size = new System.Drawing.Size(77, 25);
             this.btn_VerUltimos_Clientes.TabIndex = 33;
@@ -150,7 +133,7 @@
             // btn_VerTodo_Clientes
             // 
             this.btn_VerTodo_Clientes.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_VerTodo_Clientes.Location = new System.Drawing.Point(654, 69);
+            this.btn_VerTodo_Clientes.Location = new System.Drawing.Point(876, 71);
             this.btn_VerTodo_Clientes.Name = "btn_VerTodo_Clientes";
             this.btn_VerTodo_Clientes.Size = new System.Drawing.Size(65, 25);
             this.btn_VerTodo_Clientes.TabIndex = 34;
@@ -160,7 +143,7 @@
             // btn_Membresias_Clientes
             // 
             this.btn_Membresias_Clientes.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_Membresias_Clientes.Location = new System.Drawing.Point(425, 45);
+            this.btn_Membresias_Clientes.Location = new System.Drawing.Point(241, 45);
             this.btn_Membresias_Clientes.Name = "btn_Membresias_Clientes";
             this.btn_Membresias_Clientes.Size = new System.Drawing.Size(97, 23);
             this.btn_Membresias_Clientes.TabIndex = 35;
@@ -172,17 +155,27 @@
             // 
             this.btn_ExportarExcel_Clientes.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btn_ExportarExcel_Clientes.BackgroundImage")));
             this.btn_ExportarExcel_Clientes.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btn_ExportarExcel_Clientes.Location = new System.Drawing.Point(528, 36);
+            this.btn_ExportarExcel_Clientes.Location = new System.Drawing.Point(344, 36);
             this.btn_ExportarExcel_Clientes.Name = "btn_ExportarExcel_Clientes";
             this.btn_ExportarExcel_Clientes.Size = new System.Drawing.Size(33, 32);
             this.btn_ExportarExcel_Clientes.TabIndex = 45;
             this.btn_ExportarExcel_Clientes.UseVisualStyleBackColor = true;
+            // 
+            // cbx_FiltroCliente
+            // 
+            this.cbx_FiltroCliente.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbx_FiltroCliente.FormattingEnabled = true;
+            this.cbx_FiltroCliente.Location = new System.Drawing.Point(383, 71);
+            this.cbx_FiltroCliente.Name = "cbx_FiltroCliente";
+            this.cbx_FiltroCliente.Size = new System.Drawing.Size(121, 21);
+            this.cbx_FiltroCliente.TabIndex = 46;
             // 
             // frm_Clientes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1028, 366);
+            this.Controls.Add(this.cbx_FiltroCliente);
             this.Controls.Add(this.btn_ExportarExcel_Clientes);
             this.Controls.Add(this.btn_Membresias_Clientes);
             this.Controls.Add(this.btn_VerTodo_Clientes);
@@ -190,8 +183,6 @@
             this.Controls.Add(this.lbl_resultadosCantidad_Clientes);
             this.Controls.Add(this.txt_Buscar_Clientes);
             this.Controls.Add(this.btn_Eliminar_Clientes);
-            this.Controls.Add(this.btn_Habilitar_Clientes);
-            this.Controls.Add(this.btn_Deshabilitar_Clientes);
             this.Controls.Add(this.btn_Modificar_Clientes);
             this.Controls.Add(this.btn_Nuevo_Clientes);
             this.Controls.Add(this.dgv_Clientes);
@@ -208,8 +199,6 @@
 
         private System.Windows.Forms.TextBox txt_Buscar_Clientes;
         private System.Windows.Forms.Button btn_Eliminar_Clientes;
-        private System.Windows.Forms.Button btn_Habilitar_Clientes;
-        private System.Windows.Forms.Button btn_Deshabilitar_Clientes;
         private System.Windows.Forms.Button btn_Modificar_Clientes;
         private System.Windows.Forms.Button btn_Nuevo_Clientes;
         private System.Windows.Forms.DataGridView dgv_Clientes;
@@ -219,5 +208,6 @@
         private System.Windows.Forms.Button btn_VerTodo_Clientes;
         private System.Windows.Forms.Button btn_Membresias_Clientes;
         private System.Windows.Forms.Button btn_ExportarExcel_Clientes;
+        private System.Windows.Forms.ComboBox cbx_FiltroCliente;
     }
 }
