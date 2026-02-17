@@ -73,6 +73,39 @@ namespace Gym.V.frmHijos.Clientes
             }
         }
 
+        private void btn_Eliminar_Clientes_Click(object sender, EventArgs e)
+        {
+            Cliente cliente = CargarClienteSeleccionado();
+
+            if (cliente == null)
+            {
+                MessageBox.Show("Seleccione un cliente");
+                return;
+            }
+
+            DialogResult confirmacion = MessageBox.Show(
+                "¿Desea Eliminar este cliente?",
+                "Confirmar",
+                MessageBoxButtons.YesNo,
+                MessageBoxIcon.Question
+            );
+
+            if (confirmacion == DialogResult.Yes)
+            {
+                bool resultado = controlador.DeleteClientes(cliente.IdCliente);
+
+                if (resultado)
+                {
+                    MessageBox.Show("Cliente Eliminado correctamente");
+                    CargarClientes();
+                }
+                else
+                {
+                    MessageBox.Show("No se pudo eliminar el cliente");
+                }
+            }
+        }
+
         private Cliente CargarClienteSeleccionado()
         {
             if (dgv_Clientes.SelectedRows.Count == 0)
@@ -95,6 +128,7 @@ namespace Gym.V.frmHijos.Clientes
 
             return cliente;
         }
+
         private void CargarClientes()
         {
             controlador.ListarClientes(dgv_Clientes);
@@ -110,40 +144,6 @@ namespace Gym.V.frmHijos.Clientes
         private void dgv_Clientes_DataBindingComplete(object sender, DataGridViewBindingCompleteEventArgs e)
         {
             dgv_Clientes.ClearSelection();
-
-        }
-
-        private void btn_Eliminar_Clientes_Click(object sender, EventArgs e)
-        {
-            Cliente cliente = CargarClienteSeleccionado();
-
-            if (cliente == null)
-            {
-                MessageBox.Show("Seleccione un cliente");
-                return;
-            }
-
-            DialogResult confirmacion = MessageBox.Show(
-                "¿Desea deshabilitar este cliente?",
-                "Confirmar",
-                MessageBoxButtons.YesNo,
-                MessageBoxIcon.Question
-            );
-
-            if (confirmacion == DialogResult.Yes)
-            {
-                bool resultado = controlador.DeleteClientes(cliente.IdCliente);
-
-                if (resultado)
-                {
-                    MessageBox.Show("Cliente deshabilitado correctamente");
-                    CargarClientes();
-                }
-                else
-                {
-                    MessageBox.Show("No se pudo deshabilitar el cliente");
-                }
-            }
         }
     }
 }
