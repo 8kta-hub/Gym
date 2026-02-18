@@ -65,5 +65,18 @@ namespace Gym.C
 
 
         }
+
+        public bool DeleteUsuarios(int idUsuario)
+        {
+            string consulta = "UPDATE Usuarios SET Activo = 0 WHERE id_usuario = @idUsuario";
+
+            SqlParameter[] parametros =
+            {
+            new SqlParameter("@idUsuario", idUsuario)
+            };
+
+            int filas = conexion.EjecutarComando(consulta, parametros);
+            return filas > 0;
+        }
     }
 }

@@ -104,6 +104,7 @@
             this.dgv_Usuarios.Name = "dgv_Usuarios";
             this.dgv_Usuarios.Size = new System.Drawing.Size(1004, 251);
             this.dgv_Usuarios.TabIndex = 13;
+            this.dgv_Usuarios.DataBindingComplete += new System.Windows.Forms.DataGridViewBindingCompleteEventHandler(this.dgv_Usuarios_DataBindingComplete);
             // 
             // label2
             // 
