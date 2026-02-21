@@ -44,14 +44,13 @@
             this.label9 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.txt_Usuario_UsuariosNuevo = new System.Windows.Forms.TextBox();
-            this.txt_Contraseña_UsuariosNuevo = new System.Windows.Forms.TextBox();
+            this.txt_Contrasena_UsuariosNuevo = new System.Windows.Forms.TextBox();
             this.txt_Descripcion_UsuariosNuevo = new System.Windows.Forms.TextBox();
             this.txt_Apellido_UsuariosNuevo = new System.Windows.Forms.TextBox();
-            this.nud_HorarioEntrada_UsuariosNuevo = new System.Windows.Forms.NumericUpDown();
-            this.nud_HorarioSalida_UsuariosNuevo = new System.Windows.Forms.NumericUpDown();
             this.cmb_Rol_UsuariosNuevo = new System.Windows.Forms.ComboBox();
-            ((System.ComponentModel.ISupportInitialize)(this.nud_HorarioEntrada_UsuariosNuevo)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nud_HorarioSalida_UsuariosNuevo)).BeginInit();
+            this.cmb_HorarioInicio_UsuariosNuevo = new System.Windows.Forms.ComboBox();
+            this.cmb_HorarioFin_UsuariosNuevo = new System.Windows.Forms.ComboBox();
+            this.chk_Activo_UsuariosNuevo = new System.Windows.Forms.CheckBox();
             this.SuspendLayout();
             // 
             // button1
@@ -63,6 +62,7 @@
             this.button1.TabIndex = 26;
             this.button1.Text = "Guardar";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.btn_Guardar_UsuariosNuevo_Click);
             // 
             // txt_Nombre_UsuariosNuevo
             // 
@@ -199,12 +199,12 @@
             this.txt_Usuario_UsuariosNuevo.Size = new System.Drawing.Size(233, 20);
             this.txt_Usuario_UsuariosNuevo.TabIndex = 34;
             // 
-            // txt_Contraseña_UsuariosNuevo
+            // txt_Contrasena_UsuariosNuevo
             // 
-            this.txt_Contraseña_UsuariosNuevo.Location = new System.Drawing.Point(146, 223);
-            this.txt_Contraseña_UsuariosNuevo.Name = "txt_Contraseña_UsuariosNuevo";
-            this.txt_Contraseña_UsuariosNuevo.Size = new System.Drawing.Size(233, 20);
-            this.txt_Contraseña_UsuariosNuevo.TabIndex = 33;
+            this.txt_Contrasena_UsuariosNuevo.Location = new System.Drawing.Point(146, 223);
+            this.txt_Contrasena_UsuariosNuevo.Name = "txt_Contrasena_UsuariosNuevo";
+            this.txt_Contrasena_UsuariosNuevo.Size = new System.Drawing.Size(233, 20);
+            this.txt_Contrasena_UsuariosNuevo.TabIndex = 33;
             // 
             // txt_Descripcion_UsuariosNuevo
             // 
@@ -221,20 +221,6 @@
             this.txt_Apellido_UsuariosNuevo.Size = new System.Drawing.Size(233, 20);
             this.txt_Apellido_UsuariosNuevo.TabIndex = 37;
             // 
-            // nud_HorarioEntrada_UsuariosNuevo
-            // 
-            this.nud_HorarioEntrada_UsuariosNuevo.Location = new System.Drawing.Point(146, 288);
-            this.nud_HorarioEntrada_UsuariosNuevo.Name = "nud_HorarioEntrada_UsuariosNuevo";
-            this.nud_HorarioEntrada_UsuariosNuevo.Size = new System.Drawing.Size(109, 20);
-            this.nud_HorarioEntrada_UsuariosNuevo.TabIndex = 39;
-            // 
-            // nud_HorarioSalida_UsuariosNuevo
-            // 
-            this.nud_HorarioSalida_UsuariosNuevo.Location = new System.Drawing.Point(270, 288);
-            this.nud_HorarioSalida_UsuariosNuevo.Name = "nud_HorarioSalida_UsuariosNuevo";
-            this.nud_HorarioSalida_UsuariosNuevo.Size = new System.Drawing.Size(109, 20);
-            this.nud_HorarioSalida_UsuariosNuevo.TabIndex = 40;
-            // 
             // cmb_Rol_UsuariosNuevo
             // 
             this.cmb_Rol_UsuariosNuevo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
@@ -244,14 +230,43 @@
             this.cmb_Rol_UsuariosNuevo.Size = new System.Drawing.Size(233, 21);
             this.cmb_Rol_UsuariosNuevo.TabIndex = 41;
             // 
+            // cmb_HorarioInicio_UsuariosNuevo
+            // 
+            this.cmb_HorarioInicio_UsuariosNuevo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmb_HorarioInicio_UsuariosNuevo.FormattingEnabled = true;
+            this.cmb_HorarioInicio_UsuariosNuevo.Location = new System.Drawing.Point(146, 287);
+            this.cmb_HorarioInicio_UsuariosNuevo.Name = "cmb_HorarioInicio_UsuariosNuevo";
+            this.cmb_HorarioInicio_UsuariosNuevo.Size = new System.Drawing.Size(111, 21);
+            this.cmb_HorarioInicio_UsuariosNuevo.TabIndex = 42;
+            // 
+            // cmb_HorarioFin_UsuariosNuevo
+            // 
+            this.cmb_HorarioFin_UsuariosNuevo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmb_HorarioFin_UsuariosNuevo.FormattingEnabled = true;
+            this.cmb_HorarioFin_UsuariosNuevo.Location = new System.Drawing.Point(268, 287);
+            this.cmb_HorarioFin_UsuariosNuevo.Name = "cmb_HorarioFin_UsuariosNuevo";
+            this.cmb_HorarioFin_UsuariosNuevo.Size = new System.Drawing.Size(111, 21);
+            this.cmb_HorarioFin_UsuariosNuevo.TabIndex = 43;
+            // 
+            // chk_Activo_UsuariosNuevo
+            // 
+            this.chk_Activo_UsuariosNuevo.AutoSize = true;
+            this.chk_Activo_UsuariosNuevo.Location = new System.Drawing.Point(15, 375);
+            this.chk_Activo_UsuariosNuevo.Name = "chk_Activo_UsuariosNuevo";
+            this.chk_Activo_UsuariosNuevo.Size = new System.Drawing.Size(95, 17);
+            this.chk_Activo_UsuariosNuevo.TabIndex = 44;
+            this.chk_Activo_UsuariosNuevo.Text = "Usuario Activo";
+            this.chk_Activo_UsuariosNuevo.UseVisualStyleBackColor = true;
+            // 
             // frm_Usuarios_Nuevo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(402, 437);
+            this.Controls.Add(this.chk_Activo_UsuariosNuevo);
+            this.Controls.Add(this.cmb_HorarioFin_UsuariosNuevo);
+            this.Controls.Add(this.cmb_HorarioInicio_UsuariosNuevo);
             this.Controls.Add(this.cmb_Rol_UsuariosNuevo);
-            this.Controls.Add(this.nud_HorarioSalida_UsuariosNuevo);
-            this.Controls.Add(this.nud_HorarioEntrada_UsuariosNuevo);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.label8);
@@ -265,7 +280,7 @@
             this.Controls.Add(this.txt_Descripcion_UsuariosNuevo);
             this.Controls.Add(this.txt_Apellido_UsuariosNuevo);
             this.Controls.Add(this.txt_Usuario_UsuariosNuevo);
-            this.Controls.Add(this.txt_Contraseña_UsuariosNuevo);
+            this.Controls.Add(this.txt_Contrasena_UsuariosNuevo);
             this.Controls.Add(this.txt_Telefono_UsuariosNuevo);
             this.Controls.Add(this.txt_Email_UsuariosNuevo);
             this.Controls.Add(this.button1);
@@ -279,8 +294,6 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Datos del usuario";
             this.Load += new System.EventHandler(this.frm_Usuarios_Nuevo_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.nud_HorarioEntrada_UsuariosNuevo)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nud_HorarioSalida_UsuariosNuevo)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -304,11 +317,12 @@
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.TextBox txt_Usuario_UsuariosNuevo;
-        private System.Windows.Forms.TextBox txt_Contraseña_UsuariosNuevo;
+        private System.Windows.Forms.TextBox txt_Contrasena_UsuariosNuevo;
         private System.Windows.Forms.TextBox txt_Descripcion_UsuariosNuevo;
         private System.Windows.Forms.TextBox txt_Apellido_UsuariosNuevo;
-        private System.Windows.Forms.NumericUpDown nud_HorarioEntrada_UsuariosNuevo;
-        private System.Windows.Forms.NumericUpDown nud_HorarioSalida_UsuariosNuevo;
         private System.Windows.Forms.ComboBox cmb_Rol_UsuariosNuevo;
+        private System.Windows.Forms.ComboBox cmb_HorarioInicio_UsuariosNuevo;
+        private System.Windows.Forms.ComboBox cmb_HorarioFin_UsuariosNuevo;
+        private System.Windows.Forms.CheckBox chk_Activo_UsuariosNuevo;
     }
 }

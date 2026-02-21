@@ -66,8 +66,17 @@
     <Compile Include="C\ControladorVentas.cs" />
     <Compile Include="M\ConDB.cs" />
     <Compile Include="M\Entidades\Ent_Cliente.cs" />
+    <Compile Include="M\Entidades\Ent_Compra.cs" />
     <Compile Include="M\Entidades\Ent_Concepto.cs" />
+    <Compile Include="M\Entidades\Ent_CorteCaja.cs" />
     <Compile Include="M\Entidades\Ent_Membresia.cs" />
+    <Compile Include="M\Entidades\Ent_MovimientoCaja.cs" />
+    <Compile Include="M\Entidades\Ent_Operacion.cs" />
+    <Compile Include="M\Entidades\Ent_Pago.cs" />
+    <Compile Include="M\Entidades\Ent_Producto.cs" />
+    <Compile Include="M\Entidades\Ent_Proveedor.cs" />
+    <Compile Include="M\Entidades\Ent_Rol.cs" />
+    <Compile Include="M\Entidades\Ent_Usuario.cs" />
     <Compile Include="V\Configuracion\frm_Configuracion.cs">
       <SubType>Form</SubType>
     </Compile>

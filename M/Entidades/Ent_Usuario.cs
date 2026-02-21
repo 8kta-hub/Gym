@@ -6,18 +6,20 @@ using System.Threading.Tasks;
 
 namespace Gym.M.Entidades
 {
-    public class EntUsuario
+    public class Usuario
     {
         public int IdUsuario { get; set; }
         public string Nombre { get; set; }
         public string Apellido { get; set; }
-        public string DNI { get; set; }
+        public string Dni { get; set; }
         public string Telefono { get; set; }
         public string Email { get; set; }
-        public string NomUsuario { get; set; }
-        public byte[] Contraseña { get; set; }
+        public string NombreUsuario { get; set; }
+        public byte[] Contrasena { get; set; }
+        public TimeSpan HorarioInicio { get; set; }
+        public TimeSpan HorarioFin { get; set; }
         public string Descripcion { get; set; }
-        public string Estado { get; set; }
+        public bool Activo { get; set; }
         public byte[] Foto { get; set; }
     }
 }

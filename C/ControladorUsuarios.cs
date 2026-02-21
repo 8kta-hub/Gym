@@ -1,11 +1,7 @@
 ﻿using Gym.M;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
 using System.Data.SqlClient;
+using System.Windows.Forms;
 
 namespace Gym.C
 {
@@ -17,62 +13,121 @@ namespace Gym.C
         {
             string consulta = @"
                 SELECT 
+                    id_usuario,
                     nombre,
                     apellido,
                     dni,
                     telefono,
                     email,
                     usuario,
+                    horario_inicio,
+                    horario_fin,
                     descripcion,
-                    estado
-                FROM Usuarios
-            ";
-
+                    activo
+                FROM Usuarios";
             conexion.CargarTabla(consulta, dgv);
         }
 
-        public bool InsertarUsuario(string nombre, string apellido, string dni, 
-                                    string telefono, string email, string usuario, string contrasena,
-                                    int idRol, DateTime horarioInicio,
-                                    DateTime horarioFin, string descripcion)
+        public bool InsertarUsuario(string nombre, string apellido, string dni,
+                                    string telefono, string email, string usuario,
+                                    string contrasena, int idRol, TimeSpan horarioInicio,
+                                    TimeSpan horarioFin, string descripcion)
         {
-            string comando = 
-                @"Insert Into Usuarios (nombre, apellido, dni, telefono, email, usuario, contrasena, descripcion) 
-                Values (@nombre, @apellido, @dni, @telefono, @email, @usuario, @contrasena, @descripcion)
+            string consulta = @"
+                INSERT INTO Usuarios 
+                    (nombre, apellido, dni, telefono, email, usuario, contrasena,
+                     horario_inicio, horario_fin, descripcion, activo)
+                VALUES 
+                    (@nombre, @apellido, @dni, @telefono, @email, @usuario,
+                     HASHBYTES('SHA2_256', @contrasena),
+                     @horarioInicio, @horarioFin, @descripcion, 1);
 
-                Declare @id_usuario int = Scope_Identity();
+                DECLARE @id_usuario INT = SCOPE_IDENTITY();
 
-                Insert Into Usuario_Rol (id_usuario, id_rol)
-                Values (@id_usuario, @id_rol)
-                ";
+                INSERT INTO Usuario_Rol (id_usuario, id_rol)
+                VALUES (@id_usuario, @idRol)";
 
             SqlParameter[] parametros =
             {
-                new SqlParameter("@nombre", nombre),
-                new SqlParameter("@apellido", apellido),
-                new SqlParameter("@dni", dni),
-                new SqlParameter("@telefono", telefono),
-                new SqlParameter("@email", email),
-                new SqlParameter("@usuario", usuario),
-                new SqlParameter("@contrasena", contrasena),
-                new SqlParameter("@descripcion", descripcion),
-                new SqlParameter("@id_rol", idRol)
+                new SqlParameter("@nombre",        nombre),
+                new SqlParameter("@apellido",      apellido),
+                new SqlParameter("@dni",           dni),
+                new SqlParameter("@telefono",      telefono),
+                new SqlParameter("@email",         email),
+                new SqlParameter("@usuario",       usuario),
+                new SqlParameter("@contrasena",    contrasena),
+                new SqlParameter("@horarioInicio", horarioInicio),
+                new SqlParameter("@horarioFin",    horarioFin),
+                new SqlParameter("@descripcion",   descripcion),
+                new SqlParameter("@idRol",         idRol)
             };
 
-            int filas = conexion.EjecutarComando(comando, parametros);
-
+            int filas = conexion.EjecutarComando(consulta, parametros);
             return filas > 0;
-
-
         }
 
-        public bool DeleteUsuarios(int idUsuario)
+        public bool UpdateUsuario(int idUsuario, string nombre, string apellido, string dni,
+                                  string telefono, string email, string usuario,
+                                  TimeSpan horarioInicio, TimeSpan horarioFin,
+                                  string descripcion, bool activo)
         {
-            string consulta = "UPDATE Usuarios SET Activo = 0 WHERE id_usuario = @idUsuario";
+            string consulta = @"
+                UPDATE Usuarios SET
+                    nombre         = @nombre,
+                    apellido       = @apellido,
+                    dni            = @dni,
+                    telefono       = @telefono,
+                    email          = @email,
+                    usuario        = @usuario,
+                    horario_inicio = @horarioInicio,
+                    horario_fin    = @horarioFin,
+                    descripcion    = @descripcion,
+                    activo         = @activo
+                WHERE id_usuario = @idUsuario";
 
             SqlParameter[] parametros =
             {
-            new SqlParameter("@idUsuario", idUsuario)
+                new SqlParameter("@nombre",        nombre),
+                new SqlParameter("@apellido",      apellido),
+                new SqlParameter("@dni",           dni),
+                new SqlParameter("@telefono",      telefono),
+                new SqlParameter("@email",         email),
+                new SqlParameter("@usuario",       usuario),
+                new SqlParameter("@horarioInicio", horarioInicio),
+                new SqlParameter("@horarioFin",    horarioFin),
+                new SqlParameter("@descripcion",   descripcion),
+                new SqlParameter("@activo",        activo),
+                new SqlParameter("@idUsuario",     idUsuario)
+            };
+
+            int filas = conexion.EjecutarComando(consulta, parametros);
+            return filas > 0;
+        }
+
+        public bool UpdateContrasena(int idUsuario, string nuevaContrasena)
+        {
+            string consulta = @"
+                UPDATE Usuarios 
+                SET contrasena = HASHBYTES('SHA2_256', @contrasena)
+                WHERE id_usuario = @idUsuario";
+
+            SqlParameter[] parametros =
+            {
+                new SqlParameter("@contrasena", nuevaContrasena),
+                new SqlParameter("@idUsuario",  idUsuario)
+            };
+
+            int filas = conexion.EjecutarComando(consulta, parametros);
+            return filas > 0;
+        }
+
+        public bool DeleteUsuario(int idUsuario)
+        {
+            string consulta = "UPDATE Usuarios SET activo = 0 WHERE id_usuario = @idUsuario";
+
+            SqlParameter[] parametros =
+            {
+                new SqlParameter("@idUsuario", idUsuario)
             };
 
             int filas = conexion.EjecutarComando(consulta, parametros);

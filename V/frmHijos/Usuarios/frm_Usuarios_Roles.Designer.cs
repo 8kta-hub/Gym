@@ -51,6 +51,7 @@
             this.cmb_Nombre_UsuariosRoles.Name = "cmb_Nombre_UsuariosRoles";
             this.cmb_Nombre_UsuariosRoles.Size = new System.Drawing.Size(121, 21);
             this.cmb_Nombre_UsuariosRoles.TabIndex = 1;
+            this.cmb_Nombre_UsuariosRoles.SelectedIndexChanged += new System.EventHandler(this.cmb_Nombre_UsuariosRoles_SelectedIndexChanged);
             // 
             // label1
             // 
@@ -81,6 +82,7 @@
             this.btn_Guardar_UsuariosRoles.TabIndex = 14;
             this.btn_Guardar_UsuariosRoles.Text = "Guardar";
             this.btn_Guardar_UsuariosRoles.UseVisualStyleBackColor = true;
+            this.btn_Guardar_UsuariosRoles.Click += new System.EventHandler(this.btn_Guardar_UsuariosRoles_Click);
             // 
             // frm_Usuarios_Roles
             // 
@@ -96,6 +98,7 @@
             this.ShowIcon = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Roles de usuarios";
+            this.Load += new System.EventHandler(this.frm_Usuarios_Roles_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
