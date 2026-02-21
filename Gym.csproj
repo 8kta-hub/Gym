@@ -67,6 +67,7 @@
     <Compile Include="M\ConDB.cs" />
     <Compile Include="M\Entidades\Ent_Cliente.cs" />
     <Compile Include="M\Entidades\Ent_Concepto.cs" />
+    <Compile Include="M\Entidades\Ent_Membresia.cs" />
     <Compile Include="V\Configuracion\frm_Configuracion.cs">
       <SubType>Form</SubType>
     </Compile>

@@ -29,6 +29,20 @@ namespace Gym.M
             }
         }
 
+        // Método SELECT con parámetros
+        public void CargarTabla(string consulta, DataGridView dgv, SqlParameter[] parametros)
+        {
+            using (SqlConnection cnn = new SqlConnection(strcnn))
+            {
+                cnn.Open();
+                SqlCommand command = new SqlCommand(consulta, cnn);
+                command.Parameters.AddRange(parametros);
+                SqlDataReader lector = command.ExecuteReader();
+                DataTable dt = new DataTable();
+                dt.Load(lector);
+                dgv.DataSource = dt;
+            }
+        }
 
         //Método INSERT, UPDATE, DELETE
         public int EjecutarComando(string consulta, SqlParameter[] parametros = null)

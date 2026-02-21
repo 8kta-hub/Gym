@@ -34,12 +34,10 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.nud_HorarioInicial_MembresiasHorario = new System.Windows.Forms.NumericUpDown();
-            this.nud_HorarioFinal_MembresiasHorario = new System.Windows.Forms.NumericUpDown();
             this.cmb_Dia_MembresiasHorario = new System.Windows.Forms.ComboBox();
+            this.cmb_HorarioInicial_MembresiasHorario = new System.Windows.Forms.ComboBox();
+            this.cmb_HorarioFinal_MembresiasHorario = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_MembresiasHorario)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nud_HorarioInicial_MembresiasHorario)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nud_HorarioFinal_MembresiasHorario)).BeginInit();
             this.SuspendLayout();
             // 
             // dgv_MembresiasHorario
@@ -49,6 +47,7 @@
             this.dgv_MembresiasHorario.Name = "dgv_MembresiasHorario";
             this.dgv_MembresiasHorario.Size = new System.Drawing.Size(315, 206);
             this.dgv_MembresiasHorario.TabIndex = 0;
+            this.dgv_MembresiasHorario.DataBindingComplete += new System.Windows.Forms.DataGridViewBindingCompleteEventHandler(this.dgv_MembresiasHorario_DataBindingComplete);
             // 
             // btn_Agregar_MembresiasHorario
             // 
@@ -59,6 +58,7 @@
             this.btn_Agregar_MembresiasHorario.TabIndex = 1;
             this.btn_Agregar_MembresiasHorario.Text = "Agregar";
             this.btn_Agregar_MembresiasHorario.UseVisualStyleBackColor = true;
+            this.btn_Agregar_MembresiasHorario.Click += new System.EventHandler(this.btn_Agregar_MembresiasHorario_Click);
             // 
             // btn_Eliminar_MembresiasHorario
             // 
@@ -69,6 +69,7 @@
             this.btn_Eliminar_MembresiasHorario.TabIndex = 2;
             this.btn_Eliminar_MembresiasHorario.Text = "Eliminar";
             this.btn_Eliminar_MembresiasHorario.UseVisualStyleBackColor = true;
+            this.btn_Eliminar_MembresiasHorario.Click += new System.EventHandler(this.btn_Eliminar_MembresiasHorario_Click);
             // 
             // label1
             // 
@@ -100,20 +101,6 @@
             this.label3.TabIndex = 5;
             this.label3.Text = "Horario Final";
             // 
-            // nud_HorarioInicial_MembresiasHorario
-            // 
-            this.nud_HorarioInicial_MembresiasHorario.Location = new System.Drawing.Point(118, 44);
-            this.nud_HorarioInicial_MembresiasHorario.Name = "nud_HorarioInicial_MembresiasHorario";
-            this.nud_HorarioInicial_MembresiasHorario.Size = new System.Drawing.Size(159, 20);
-            this.nud_HorarioInicial_MembresiasHorario.TabIndex = 6;
-            // 
-            // nud_HorarioFinal_MembresiasHorario
-            // 
-            this.nud_HorarioFinal_MembresiasHorario.Location = new System.Drawing.Point(118, 73);
-            this.nud_HorarioFinal_MembresiasHorario.Name = "nud_HorarioFinal_MembresiasHorario";
-            this.nud_HorarioFinal_MembresiasHorario.Size = new System.Drawing.Size(159, 20);
-            this.nud_HorarioFinal_MembresiasHorario.TabIndex = 7;
-            // 
             // cmb_Dia_MembresiasHorario
             // 
             this.cmb_Dia_MembresiasHorario.FormattingEnabled = true;
@@ -122,14 +109,30 @@
             this.cmb_Dia_MembresiasHorario.Size = new System.Drawing.Size(160, 21);
             this.cmb_Dia_MembresiasHorario.TabIndex = 9;
             // 
+            // cmb_HorarioInicial_MembresiasHorario
+            // 
+            this.cmb_HorarioInicial_MembresiasHorario.FormattingEnabled = true;
+            this.cmb_HorarioInicial_MembresiasHorario.Location = new System.Drawing.Point(117, 43);
+            this.cmb_HorarioInicial_MembresiasHorario.Name = "cmb_HorarioInicial_MembresiasHorario";
+            this.cmb_HorarioInicial_MembresiasHorario.Size = new System.Drawing.Size(160, 21);
+            this.cmb_HorarioInicial_MembresiasHorario.TabIndex = 10;
+            // 
+            // cmb_HorarioFinal_MembresiasHorario
+            // 
+            this.cmb_HorarioFinal_MembresiasHorario.FormattingEnabled = true;
+            this.cmb_HorarioFinal_MembresiasHorario.Location = new System.Drawing.Point(117, 70);
+            this.cmb_HorarioFinal_MembresiasHorario.Name = "cmb_HorarioFinal_MembresiasHorario";
+            this.cmb_HorarioFinal_MembresiasHorario.Size = new System.Drawing.Size(160, 21);
+            this.cmb_HorarioFinal_MembresiasHorario.TabIndex = 11;
+            // 
             // frm_Membresias_Horarios
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(349, 358);
+            this.Controls.Add(this.cmb_HorarioFinal_MembresiasHorario);
+            this.Controls.Add(this.cmb_HorarioInicial_MembresiasHorario);
             this.Controls.Add(this.cmb_Dia_MembresiasHorario);
-            this.Controls.Add(this.nud_HorarioFinal_MembresiasHorario);
-            this.Controls.Add(this.nud_HorarioInicial_MembresiasHorario);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
@@ -142,9 +145,8 @@
             this.Name = "frm_Membresias_Horarios";
             this.ShowIcon = false;
             this.Text = "Horarios de membresias";
+            this.Load += new System.EventHandler(this.frm_Membresias_Horarios_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgv_MembresiasHorario)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nud_HorarioInicial_MembresiasHorario)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nud_HorarioFinal_MembresiasHorario)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -158,8 +160,8 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.NumericUpDown nud_HorarioInicial_MembresiasHorario;
-        private System.Windows.Forms.NumericUpDown nud_HorarioFinal_MembresiasHorario;
         private System.Windows.Forms.ComboBox cmb_Dia_MembresiasHorario;
+        private System.Windows.Forms.ComboBox cmb_HorarioInicial_MembresiasHorario;
+        private System.Windows.Forms.ComboBox cmb_HorarioFinal_MembresiasHorario;
     }
 }

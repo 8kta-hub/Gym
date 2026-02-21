@@ -33,8 +33,6 @@
             this.dgv_Membresias = new System.Windows.Forms.DataGridView();
             this.btn_Nuevo_Membresias = new System.Windows.Forms.Button();
             this.btn_Modificar_Membresias = new System.Windows.Forms.Button();
-            this.btn_Habilitar_Membresias = new System.Windows.Forms.Button();
-            this.btn_Deshabilitar_Membresias = new System.Windows.Forms.Button();
             this.btn_Eliminar_Membresias = new System.Windows.Forms.Button();
             this.btn_Horarios_Membresias = new System.Windows.Forms.Button();
             this.btn_ExportarExcel_Membresia = new System.Windows.Forms.Button();
@@ -84,40 +82,21 @@
             this.btn_Modificar_Membresias.UseVisualStyleBackColor = true;
             this.btn_Modificar_Membresias.Click += new System.EventHandler(this.btn_Modificar_Membresias_Click);
             // 
-            // btn_Habilitar_Membresias
-            // 
-            this.btn_Habilitar_Membresias.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_Habilitar_Membresias.Location = new System.Drawing.Point(162, 50);
-            this.btn_Habilitar_Membresias.Name = "btn_Habilitar_Membresias";
-            this.btn_Habilitar_Membresias.Size = new System.Drawing.Size(75, 23);
-            this.btn_Habilitar_Membresias.TabIndex = 8;
-            this.btn_Habilitar_Membresias.Text = "Habilitar";
-            this.btn_Habilitar_Membresias.UseVisualStyleBackColor = true;
-            // 
-            // btn_Deshabilitar_Membresias
-            // 
-            this.btn_Deshabilitar_Membresias.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_Deshabilitar_Membresias.Location = new System.Drawing.Point(243, 50);
-            this.btn_Deshabilitar_Membresias.Name = "btn_Deshabilitar_Membresias";
-            this.btn_Deshabilitar_Membresias.Size = new System.Drawing.Size(97, 23);
-            this.btn_Deshabilitar_Membresias.TabIndex = 7;
-            this.btn_Deshabilitar_Membresias.Text = "deshabilitar";
-            this.btn_Deshabilitar_Membresias.UseVisualStyleBackColor = true;
-            // 
             // btn_Eliminar_Membresias
             // 
             this.btn_Eliminar_Membresias.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_Eliminar_Membresias.Location = new System.Drawing.Point(346, 51);
+            this.btn_Eliminar_Membresias.Location = new System.Drawing.Point(162, 50);
             this.btn_Eliminar_Membresias.Name = "btn_Eliminar_Membresias";
             this.btn_Eliminar_Membresias.Size = new System.Drawing.Size(75, 23);
             this.btn_Eliminar_Membresias.TabIndex = 9;
             this.btn_Eliminar_Membresias.Text = "Eliminar";
             this.btn_Eliminar_Membresias.UseVisualStyleBackColor = true;
+            this.btn_Eliminar_Membresias.Click += new System.EventHandler(this.btn_Eliminar_Membresias_Click);
             // 
             // btn_Horarios_Membresias
             // 
             this.btn_Horarios_Membresias.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_Horarios_Membresias.Location = new System.Drawing.Point(427, 51);
+            this.btn_Horarios_Membresias.Location = new System.Drawing.Point(243, 50);
             this.btn_Horarios_Membresias.Name = "btn_Horarios_Membresias";
             this.btn_Horarios_Membresias.Size = new System.Drawing.Size(75, 23);
             this.btn_Horarios_Membresias.TabIndex = 11;
@@ -129,7 +108,7 @@
             // 
             this.btn_ExportarExcel_Membresia.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btn_ExportarExcel_Membresia.BackgroundImage")));
             this.btn_ExportarExcel_Membresia.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btn_ExportarExcel_Membresia.Location = new System.Drawing.Point(508, 42);
+            this.btn_ExportarExcel_Membresia.Location = new System.Drawing.Point(324, 41);
             this.btn_ExportarExcel_Membresia.Name = "btn_ExportarExcel_Membresia";
             this.btn_ExportarExcel_Membresia.Size = new System.Drawing.Size(33, 32);
             this.btn_ExportarExcel_Membresia.TabIndex = 39;
@@ -143,8 +122,6 @@
             this.Controls.Add(this.btn_ExportarExcel_Membresia);
             this.Controls.Add(this.btn_Horarios_Membresias);
             this.Controls.Add(this.btn_Eliminar_Membresias);
-            this.Controls.Add(this.btn_Habilitar_Membresias);
-            this.Controls.Add(this.btn_Deshabilitar_Membresias);
             this.Controls.Add(this.btn_Modificar_Membresias);
             this.Controls.Add(this.btn_Nuevo_Membresias);
             this.Controls.Add(this.dgv_Membresias);
@@ -164,8 +141,6 @@
         private System.Windows.Forms.DataGridView dgv_Membresias;
         private System.Windows.Forms.Button btn_Nuevo_Membresias;
         private System.Windows.Forms.Button btn_Modificar_Membresias;
-        private System.Windows.Forms.Button btn_Habilitar_Membresias;
-        private System.Windows.Forms.Button btn_Deshabilitar_Membresias;
         private System.Windows.Forms.Button btn_Eliminar_Membresias;
         private System.Windows.Forms.Button btn_Horarios_Membresias;
         private System.Windows.Forms.Button btn_ExportarExcel_Membresia;

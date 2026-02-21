@@ -35,14 +35,13 @@
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.cmb_Meses_MembresiasNuevo = new System.Windows.Forms.ComboBox();
-            this.nud_Dias_MembresiasNuevo = new System.Windows.Forms.NumericUpDown();
-            this.nud_Semanas_MembresiasNuevo = new System.Windows.Forms.NumericUpDown();
             this.txt_Precio_MembresiasNuevo = new System.Windows.Forms.TextBox();
             this.txt_Nombre_MembresiasNuevo = new System.Windows.Forms.TextBox();
             this.cmb_Tipo_MembresiasNuevo = new System.Windows.Forms.ComboBox();
             this.btn_Guardar_MembresiasNuevo = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.nud_Dias_MembresiasNuevo)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nud_Semanas_MembresiasNuevo)).BeginInit();
+            this.cmb_Semanas_MembresiasNuevo = new System.Windows.Forms.ComboBox();
+            this.cmb_Dias_MembresiasNuevo = new System.Windows.Forms.ComboBox();
+            this.chk_MembresiaActivo = new System.Windows.Forms.CheckBox();
             this.SuspendLayout();
             // 
             // label1
@@ -54,7 +53,6 @@
             this.label1.Size = new System.Drawing.Size(56, 16);
             this.label1.TabIndex = 0;
             this.label1.Text = "Nombre";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // label2
             // 
@@ -65,7 +63,6 @@
             this.label2.Size = new System.Drawing.Size(46, 16);
             this.label2.TabIndex = 1;
             this.label2.Text = "Precio";
-            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // label3
             // 
@@ -76,7 +73,6 @@
             this.label3.Size = new System.Drawing.Size(35, 16);
             this.label3.TabIndex = 2;
             this.label3.Text = "Tipo";
-            this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
             // label4
             // 
@@ -87,7 +83,6 @@
             this.label4.Size = new System.Drawing.Size(48, 16);
             this.label4.TabIndex = 3;
             this.label4.Text = "Meses";
-            this.label4.Click += new System.EventHandler(this.label4_Click);
             // 
             // label5
             // 
@@ -98,7 +93,6 @@
             this.label5.Size = new System.Drawing.Size(35, 16);
             this.label5.TabIndex = 5;
             this.label5.Text = "Días";
-            this.label5.Click += new System.EventHandler(this.label5_Click);
             // 
             // label6
             // 
@@ -109,29 +103,15 @@
             this.label6.Size = new System.Drawing.Size(65, 16);
             this.label6.TabIndex = 4;
             this.label6.Text = "Semanas";
-            this.label6.Click += new System.EventHandler(this.label6_Click);
             // 
             // cmb_Meses_MembresiasNuevo
             // 
+            this.cmb_Meses_MembresiasNuevo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmb_Meses_MembresiasNuevo.FormattingEnabled = true;
             this.cmb_Meses_MembresiasNuevo.Location = new System.Drawing.Point(113, 161);
             this.cmb_Meses_MembresiasNuevo.Name = "cmb_Meses_MembresiasNuevo";
             this.cmb_Meses_MembresiasNuevo.Size = new System.Drawing.Size(153, 21);
             this.cmb_Meses_MembresiasNuevo.TabIndex = 7;
-            // 
-            // nud_Dias_MembresiasNuevo
-            // 
-            this.nud_Dias_MembresiasNuevo.Location = new System.Drawing.Point(113, 250);
-            this.nud_Dias_MembresiasNuevo.Name = "nud_Dias_MembresiasNuevo";
-            this.nud_Dias_MembresiasNuevo.Size = new System.Drawing.Size(152, 20);
-            this.nud_Dias_MembresiasNuevo.TabIndex = 8;
-            // 
-            // nud_Semanas_MembresiasNuevo
-            // 
-            this.nud_Semanas_MembresiasNuevo.Location = new System.Drawing.Point(113, 206);
-            this.nud_Semanas_MembresiasNuevo.Name = "nud_Semanas_MembresiasNuevo";
-            this.nud_Semanas_MembresiasNuevo.Size = new System.Drawing.Size(152, 20);
-            this.nud_Semanas_MembresiasNuevo.TabIndex = 9;
             // 
             // txt_Precio_MembresiasNuevo
             // 
@@ -149,6 +129,7 @@
             // 
             // cmb_Tipo_MembresiasNuevo
             // 
+            this.cmb_Tipo_MembresiasNuevo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmb_Tipo_MembresiasNuevo.FormattingEnabled = true;
             this.cmb_Tipo_MembresiasNuevo.Location = new System.Drawing.Point(112, 117);
             this.cmb_Tipo_MembresiasNuevo.Name = "cmb_Tipo_MembresiasNuevo";
@@ -164,18 +145,48 @@
             this.btn_Guardar_MembresiasNuevo.TabIndex = 13;
             this.btn_Guardar_MembresiasNuevo.Text = "Guardar";
             this.btn_Guardar_MembresiasNuevo.UseVisualStyleBackColor = true;
+            this.btn_Guardar_MembresiasNuevo.Click += new System.EventHandler(this.btn_Guardar_MembresiasNuevo_Click);
+            // 
+            // cmb_Semanas_MembresiasNuevo
+            // 
+            this.cmb_Semanas_MembresiasNuevo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmb_Semanas_MembresiasNuevo.FormattingEnabled = true;
+            this.cmb_Semanas_MembresiasNuevo.Location = new System.Drawing.Point(112, 205);
+            this.cmb_Semanas_MembresiasNuevo.Name = "cmb_Semanas_MembresiasNuevo";
+            this.cmb_Semanas_MembresiasNuevo.Size = new System.Drawing.Size(153, 21);
+            this.cmb_Semanas_MembresiasNuevo.TabIndex = 14;
+            // 
+            // cmb_Dias_MembresiasNuevo
+            // 
+            this.cmb_Dias_MembresiasNuevo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmb_Dias_MembresiasNuevo.FormattingEnabled = true;
+            this.cmb_Dias_MembresiasNuevo.Location = new System.Drawing.Point(112, 249);
+            this.cmb_Dias_MembresiasNuevo.Name = "cmb_Dias_MembresiasNuevo";
+            this.cmb_Dias_MembresiasNuevo.Size = new System.Drawing.Size(153, 21);
+            this.cmb_Dias_MembresiasNuevo.TabIndex = 15;
+            // 
+            // chk_MembresiaActivo
+            // 
+            this.chk_MembresiaActivo.AutoSize = true;
+            this.chk_MembresiaActivo.Location = new System.Drawing.Point(15, 292);
+            this.chk_MembresiaActivo.Name = "chk_MembresiaActivo";
+            this.chk_MembresiaActivo.Size = new System.Drawing.Size(110, 17);
+            this.chk_MembresiaActivo.TabIndex = 16;
+            this.chk_MembresiaActivo.Text = "Membresia Activa";
+            this.chk_MembresiaActivo.UseVisualStyleBackColor = true;
             // 
             // frm_Membresias_Nuevo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(293, 322);
+            this.Controls.Add(this.chk_MembresiaActivo);
+            this.Controls.Add(this.cmb_Dias_MembresiasNuevo);
+            this.Controls.Add(this.cmb_Semanas_MembresiasNuevo);
             this.Controls.Add(this.btn_Guardar_MembresiasNuevo);
             this.Controls.Add(this.cmb_Tipo_MembresiasNuevo);
             this.Controls.Add(this.txt_Nombre_MembresiasNuevo);
             this.Controls.Add(this.txt_Precio_MembresiasNuevo);
-            this.Controls.Add(this.nud_Semanas_MembresiasNuevo);
-            this.Controls.Add(this.nud_Dias_MembresiasNuevo);
             this.Controls.Add(this.cmb_Meses_MembresiasNuevo);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label6);
@@ -190,8 +201,7 @@
             this.ShowIcon = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Datos de la Membresía";
-            ((System.ComponentModel.ISupportInitialize)(this.nud_Dias_MembresiasNuevo)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nud_Semanas_MembresiasNuevo)).EndInit();
+            this.Load += new System.EventHandler(this.frm_Membresias_Nuevo_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -206,11 +216,12 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.ComboBox cmb_Meses_MembresiasNuevo;
-        private System.Windows.Forms.NumericUpDown nud_Dias_MembresiasNuevo;
-        private System.Windows.Forms.NumericUpDown nud_Semanas_MembresiasNuevo;
         private System.Windows.Forms.TextBox txt_Precio_MembresiasNuevo;
         private System.Windows.Forms.TextBox txt_Nombre_MembresiasNuevo;
         private System.Windows.Forms.ComboBox cmb_Tipo_MembresiasNuevo;
         private System.Windows.Forms.Button btn_Guardar_MembresiasNuevo;
+        private System.Windows.Forms.ComboBox cmb_Semanas_MembresiasNuevo;
+        private System.Windows.Forms.ComboBox cmb_Dias_MembresiasNuevo;
+        private System.Windows.Forms.CheckBox chk_MembresiaActivo;
     }
 }
