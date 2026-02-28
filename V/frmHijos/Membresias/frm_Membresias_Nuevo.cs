@@ -31,8 +31,8 @@ namespace Gym.V.frmHijos
             cmb_Tipo_MembresiasNuevo.Items.Add("Semanal");
             cmb_Tipo_MembresiasNuevo.Items.Add("Diario");
 
-            // Meses (1 a 24)
-            for (int i = 1; i <= 24; i++)
+            // Meses (1 a 12)
+            for (int i = 1; i <= 12; i++)
                 cmb_Meses_MembresiasNuevo.Items.Add(i);
 
             // Semanas (1 a 52)
@@ -181,13 +181,13 @@ namespace Gym.V.frmHijos
 
                 if (NuevoMem)
                 {
-                    resultado = controlador.InsertMembresia(nombre, precio, tipo, cantidadMsd, fechaVec, true);
+                    resultado = controlador.InsertMembresia(nombre, precio, tipo, cantidadMsd,  true);
                 }
                 else
                 {
                     resultado = controlador.UpdateMembresia(
                         membresiaActual.IdMembresia,
-                        nombre, precio, tipo, cantidadMsd, fechaVec, chk_MembresiaActivo.Checked
+                        nombre, precio, tipo, cantidadMsd,chk_MembresiaActivo.Checked
                     );
                 }
 

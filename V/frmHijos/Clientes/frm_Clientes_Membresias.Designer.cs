@@ -365,6 +365,7 @@
             this.Name = "frm_Clientes_Membresias";
             this.ShowIcon = false;
             this.Text = "Membresias de clientes";
+            this.Load += new System.EventHandler(this.frm_Clientes_Membresias_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pcb_FotoPerfil_ClientesMembresias)).EndInit();

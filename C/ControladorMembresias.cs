@@ -22,8 +22,6 @@ namespace Gym.C
                     precio,
                     tipo,
                     cantidad_msd,
-                    fecha_creacion,
-                    fecha_vec,
                     activo
                 FROM Membresias";
             conexion.CargarTabla(consulta, dgv);
@@ -47,20 +45,19 @@ namespace Gym.C
         }
 
         public bool InsertMembresia(string nombre, decimal precio, string tipo,
-                                    int cantidadMsd, DateTime fechaVec, bool activo)
+                                    int cantidadMsd, bool activo)
         {
             string consulta = @"
                 INSERT INTO Membresias
-                    (nombre, precio, tipo, cantidad_msd, fecha_creacion, fecha_vec, activo)
+                    (nombre, precio, tipo, cantidad_msd, activo)
                 VALUES
-                    (@nombre, @precio, @tipo, @cantidadMsd, GETDATE(), @fechaVec, @activo)";
+                    (@nombre, @precio, @tipo, @cantidadMsd, @activo)";
             SqlParameter[] parametros =
             {
                 new SqlParameter("@nombre",      nombre),
                 new SqlParameter("@precio",      precio),
                 new SqlParameter("@tipo",        tipo),
                 new SqlParameter("@cantidadMsd", cantidadMsd),
-                new SqlParameter("@fechaVec",    fechaVec),
                 new SqlParameter("@activo",      activo)
             };
             int filas = conexion.EjecutarComando(consulta, parametros);
@@ -87,7 +84,7 @@ namespace Gym.C
         }
 
         public bool UpdateMembresia(int idMembresia, string nombre, decimal precio,
-                                    string tipo, int cantidadMsd, DateTime fechaVec, bool activo)
+                                    string tipo, int cantidadMsd, bool activo)
         {
             string consulta = @"
                 UPDATE Membresias SET
@@ -95,7 +92,6 @@ namespace Gym.C
                     precio       = @precio,
                     tipo         = @tipo,
                     cantidad_msd = @cantidadMsd,
-                    fecha_vec    = @fechaVec,
                     activo       = @activo
                 WHERE id_membresias = @idMembresia";
             SqlParameter[] parametros =
@@ -104,7 +100,6 @@ namespace Gym.C
                 new SqlParameter("@precio",       precio),
                 new SqlParameter("@tipo",         tipo),
                 new SqlParameter("@cantidadMsd",  cantidadMsd),
-                new SqlParameter("@fechaVec",     fechaVec),
                 new SqlParameter("@activo",       activo),
                 new SqlParameter("@idMembresia",  idMembresia)
             };

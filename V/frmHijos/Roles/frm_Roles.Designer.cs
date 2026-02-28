@@ -30,13 +30,13 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frm_Roles));
             this.btn_Eliminar_Roles = new System.Windows.Forms.Button();
-            this.btn_Habilitar_Roles = new System.Windows.Forms.Button();
-            this.btn_Deshabilitar_Roles = new System.Windows.Forms.Button();
             this.btn_Modificar_Roles = new System.Windows.Forms.Button();
             this.btn_Nuevo_Roles = new System.Windows.Forms.Button();
             this.dgv_Roles = new System.Windows.Forms.DataGridView();
             this.label2 = new System.Windows.Forms.Label();
             this.btn_ExportarExcel_Roles = new System.Windows.Forms.Button();
+            this.btn_Deshabilitar_Roles = new System.Windows.Forms.Button();
+            this.btn_Habilitar_Roles = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_Roles)).BeginInit();
             this.SuspendLayout();
             // 
@@ -49,26 +49,6 @@
             this.btn_Eliminar_Roles.TabIndex = 30;
             this.btn_Eliminar_Roles.Text = "Eliminar";
             this.btn_Eliminar_Roles.UseVisualStyleBackColor = true;
-            // 
-            // btn_Habilitar_Roles
-            // 
-            this.btn_Habilitar_Roles.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_Habilitar_Roles.Location = new System.Drawing.Point(164, 50);
-            this.btn_Habilitar_Roles.Name = "btn_Habilitar_Roles";
-            this.btn_Habilitar_Roles.Size = new System.Drawing.Size(75, 23);
-            this.btn_Habilitar_Roles.TabIndex = 29;
-            this.btn_Habilitar_Roles.Text = "Habilitar";
-            this.btn_Habilitar_Roles.UseVisualStyleBackColor = true;
-            // 
-            // btn_Deshabilitar_Roles
-            // 
-            this.btn_Deshabilitar_Roles.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_Deshabilitar_Roles.Location = new System.Drawing.Point(245, 50);
-            this.btn_Deshabilitar_Roles.Name = "btn_Deshabilitar_Roles";
-            this.btn_Deshabilitar_Roles.Size = new System.Drawing.Size(97, 23);
-            this.btn_Deshabilitar_Roles.TabIndex = 28;
-            this.btn_Deshabilitar_Roles.Text = "deshabilitar";
-            this.btn_Deshabilitar_Roles.UseVisualStyleBackColor = true;
             // 
             // btn_Modificar_Roles
             // 
@@ -123,6 +103,26 @@
             this.btn_ExportarExcel_Roles.TabIndex = 38;
             this.btn_ExportarExcel_Roles.UseVisualStyleBackColor = true;
             // 
+            // btn_Deshabilitar_Roles
+            // 
+            this.btn_Deshabilitar_Roles.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Deshabilitar_Roles.Location = new System.Drawing.Point(245, 50);
+            this.btn_Deshabilitar_Roles.Name = "btn_Deshabilitar_Roles";
+            this.btn_Deshabilitar_Roles.Size = new System.Drawing.Size(97, 23);
+            this.btn_Deshabilitar_Roles.TabIndex = 28;
+            this.btn_Deshabilitar_Roles.Text = "deshabilitar";
+            this.btn_Deshabilitar_Roles.UseVisualStyleBackColor = true;
+            // 
+            // btn_Habilitar_Roles
+            // 
+            this.btn_Habilitar_Roles.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Habilitar_Roles.Location = new System.Drawing.Point(164, 50);
+            this.btn_Habilitar_Roles.Name = "btn_Habilitar_Roles";
+            this.btn_Habilitar_Roles.Size = new System.Drawing.Size(75, 23);
+            this.btn_Habilitar_Roles.TabIndex = 29;
+            this.btn_Habilitar_Roles.Text = "Habilitar";
+            this.btn_Habilitar_Roles.UseVisualStyleBackColor = true;
+            // 
             // frm_Roles
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -149,12 +149,12 @@
 
         #endregion
         private System.Windows.Forms.Button btn_Eliminar_Roles;
-        private System.Windows.Forms.Button btn_Habilitar_Roles;
-        private System.Windows.Forms.Button btn_Deshabilitar_Roles;
         private System.Windows.Forms.Button btn_Modificar_Roles;
         private System.Windows.Forms.Button btn_Nuevo_Roles;
         private System.Windows.Forms.DataGridView dgv_Roles;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button btn_ExportarExcel_Roles;
+        private System.Windows.Forms.Button btn_Deshabilitar_Roles;
+        private System.Windows.Forms.Button btn_Habilitar_Roles;
     }
 }

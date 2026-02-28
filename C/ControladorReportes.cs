@@ -33,7 +33,6 @@ namespace Gym.C
                     c.nombre as Nombre,
                     c.apellido,
                     m.fecha_creacion,
-                    m.fecha_vec,
                     m.activo,
                     m.precio
                 FROM Membresias m
@@ -51,7 +50,6 @@ namespace Gym.C
                     c.cod_cliente as Clave,
                     c.nombre,
                     c.apellido,
-                    m.fecha_vec,
                     c.activo
                 From Clientes c
                 Join Cliente_Membresias cm on c.id_cliente = cm.id_cliente
