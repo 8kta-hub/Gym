@@ -1,11 +1,13 @@
 ﻿using Gym.M;
 using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Gym.M.Entidades;
 
 namespace Gym.C
 {
@@ -22,6 +24,7 @@ namespace Gym.C
                     precio,
                     tipo,
                     cantidad_msd,
+                    fecha_creacion,
                     activo
                 FROM Membresias";
             conexion.CargarTabla(consulta, dgv);
@@ -44,14 +47,40 @@ namespace Gym.C
             conexion.CargarTabla(consulta, dgv, parametros);
         }
 
+        public List<Membresia> ObtenerMembresiasActivas()
+        {
+            var lista = new List<Membresia>();
+
+            string consulta = @"
+                SELECT id_membresias, nombre , precio , tipo , cantidad_msd
+                FROM Membresias
+                WHERE activo = 1";
+
+            DataTable dt = conexion.ObtenerTabla(consulta);
+
+            foreach (DataRow fila in dt.Rows)
+            {
+                lista.Add(new Membresia
+                {
+                    IdMembresia = Convert.ToInt32(fila["id_membresias"]),
+                    Nombre = fila["nombre"].ToString(),
+                    Precio = Convert.ToDecimal(fila["precio"]),
+                    Tipo = fila["tipo"].ToString(),
+                    CantidadMsd = Convert.ToInt32(fila["cantidad_msd"])
+                });
+            }
+            
+            return lista;
+        }
+
         public bool InsertMembresia(string nombre, decimal precio, string tipo,
                                     int cantidadMsd, bool activo)
         {
             string consulta = @"
                 INSERT INTO Membresias
-                    (nombre, precio, tipo, cantidad_msd, activo)
+                    (nombre, precio, tipo, cantidad_msd, fecha_creacion, activo)
                 VALUES
-                    (@nombre, @precio, @tipo, @cantidadMsd, @activo)";
+                    (@nombre, @precio, @tipo, @cantidadMsd, GETDATE(), @activo)";
             SqlParameter[] parametros =
             {
                 new SqlParameter("@nombre",      nombre),
