@@ -1,100 +1,125 @@
-﻿using Gym.V.frmHijos.Compras;
+﻿using Gym.C;
+using Gym.M.Entidades;
 using Gym.V.FuncionesV;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
-using Gym.M.Entidades;
-using Gym.C;
 
 namespace Gym.V.frmHijos.Clientes
 {
     public partial class frm_Clientes_Membresias : Form
     {
-        private ControladorClientes controlCliente = new ControladorClientes();
-        private ControladorMembresias controlMembresia = new ControladorMembresias();
+        private ControladorClientes controladorClientes = new ControladorClientes();
+        private ControladorMembresias controladorMembresias = new ControladorMembresias();
         private Cliente clienteActual;
+
         public frm_Clientes_Membresias(Cliente cliente)
         {
             InitializeComponent();
             clienteActual = cliente;
         }
+
         private void frm_Clientes_Membresias_Load(object sender, EventArgs e)
         {
-            CargarDatosCliente(clienteActual);
-            CargarComboMembreisas();
+            CargarDatosCliente();
+            CargarComboMembresias();
+            CargarFiltro();
             CargarMembresiasDelCliente();
         }
-       
-        private void CargarDatosCliente(Cliente cliente)
+
+        private void CargarDatosCliente()
         {
-            lbl_Nombre_ClientesMembresias.Text = cliente.Nombre;
-            lbl_Apellido_ClientesMembresias.Text = cliente.Apellido;
-            lbl_DNI_ClientesMembresias.Text = cliente.Dni;
-            lbl_Telefono_ClientesMembresias.Text = cliente.Telefono;
+            lbl_Nombre_ClientesMembresias.Text = clienteActual.Nombre;
+            lbl_Apellido_ClientesMembresias.Text = clienteActual.Apellido;
+            lbl_Telefono_ClientesMembresias.Text = clienteActual.Telefono;
+            lbl_DNI_ClientesMembresias.Text = clienteActual.Dni;
         }
 
-        private void CargarComboMembreisas()
+        private void CargarComboMembresias()
         {
-            var lista = controlMembresia.ObtenerMembresiasActivas();
-
-            cmb_Membresia_ClientesMembresias.DisplayMember = "Nombre"; //propiedad que muestra el combo al usuario
-
-            cmb_Membresia_ClientesMembresias.ValueMember = "IdMembresia"; //propiedad usa el código internamente como valor
-
-            cmb_Membresia_ClientesMembresias.DataSource = lista; //conecta la lista al combo
-
+            var lista = controladorMembresias.ObtenerMembresiasActivas();
+            cmb_Membresia_ClientesMembresias.DisplayMember = "Nombre";
+            cmb_Membresia_ClientesMembresias.ValueMember = "IdMembresia";
+            cmb_Membresia_ClientesMembresias.DataSource = lista;
             cmb_Membresia_ClientesMembresias.SelectedIndex = -1;
-
-            LimpiarLabelMembresia();
+            LimpiarLabelsMembresia();
         }
 
-        private void CargarMembresiasDelCliente()
+        private void CargarFiltro()
         {
-            controlCliente.ListarMembresiasDeCliente(
-                clienteActual.IdCliente, dgv_ClientesMembresias);
-
-            //oculta columnas sensibles pero importantes para identificar 
-            if (dgv_ClientesMembresias.Columns.Contains("id_cliente_membresias"))
-                dgv_ClientesMembresias.Columns["id_cliente_membresias"].Visible = false;
-            if (dgv_ClientesMembresias.Columns.Contains("id_cliente"))
-                dgv_ClientesMembresias.Columns["id_cliente"].Visible = false;
-            if (dgv_ClientesMembresias.Columns.Contains("id_membresias"))
-                dgv_ClientesMembresias.Columns["id_membresias"].Visible = false;
+            cbx_filtro_ClientesMembresias.Items.Add("Activo");
+            cbx_filtro_ClientesMembresias.Items.Add("Pendiente de pago");
+            cbx_filtro_ClientesMembresias.Items.Add("Inactivo");
+            cbx_filtro_ClientesMembresias.Items.Add("Todas");
+            cbx_filtro_ClientesMembresias.SelectedIndex = 0; // Activo por defecto
         }
+
+        private void cbx_filtro_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            CargarMembresiasDelCliente();
+        }
+
+        private void cmb_Membresia_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (cmb_Membresia_ClientesMembresias.SelectedItem is Membresia m)
+            {
+                lbl_Precio_ClientesMembresias.Text = "$" + m.Precio.ToString("N2");
+
+                int meses = 0, semanas = 0, dias = 0;
+                switch (m.Tipo)
+                {
+                    case "Mensual": meses = m.CantidadMsd / 30; break;
+                    case "Semanal": semanas = m.CantidadMsd / 7; break;
+                    case "Diario": dias = m.CantidadMsd; break;
+                }
+
+                lbl_Meses_ClientesMembresias.Text = meses > 0 ? meses.ToString() : "-";
+                lbl_Semanas_ClientesMembresias.Text = semanas > 0 ? semanas.ToString() : "-";
+                lbl_Dias_ClientesMembresias.Text = dias > 0 ? dias.ToString() : "-";
+            }
+            else
+            {
+                LimpiarLabelsMembresia();
+            }
+        }
+
+        private void LimpiarLabelsMembresia()
+        {
+            lbl_Precio_ClientesMembresias.Text = "$$$$$$";
+            lbl_Meses_ClientesMembresias.Text = "######";
+            lbl_Semanas_ClientesMembresias.Text = "######";
+            lbl_Dias_ClientesMembresias.Text = "######";
+        }
+
 
         private void btn_Agregar_ClientesMembresias_Click(object sender, EventArgs e)
         {
-
             if (cmb_Membresia_ClientesMembresias.SelectedItem == null)
             {
                 MessageBox.Show("Seleccione una membresía", "Validación",
                     MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                return; 
+                return;
             }
 
-            // SelectedItem es object, se convierte a Membresia
             var membresia = (Membresia)cmb_Membresia_ClientesMembresias.SelectedItem;
 
-            DateTime inicio = dtp_FechaInicio_ClientesMembresias.Value.Date;
-
-            bool resultado = controlCliente.InsertClienteMembresia(
-                clienteActual.IdCliente, // A quién asignar
-                membresia.IdMembresia,   // Qué membresía
-                membresia.Precio,        // Precio congelado al momento de contratar
-                inicio                   // Fecha de inicio elegida por el usuario
+            bool resultado = controladorClientes.InsertClienteMembresia(
+                clienteActual.IdCliente,
+                membresia.IdMembresia,
+                membresia.Precio
             );
 
             if (resultado)
             {
-                MessageBox.Show("Membresía agregada correctamente", "Éxito",
+                MessageBox.Show("Membresía agregada, pendiente de pago", "Éxito",
                     MessageBoxButtons.OK, MessageBoxIcon.Information);
-                CargarMembresiasDelCliente(); 
+
+                // Resetear el combo después de agregar
+                cmb_Membresia_ClientesMembresias.SelectedIndex = -1;
+                LimpiarLabelsMembresia();
+
+                // Mostrar pendientes para que el usuario la vea
+                cbx_filtro_ClientesMembresias.SelectedItem = "Pendiente de pago";
+                CargarMembresiasDelCliente();
             }
             else
             {
@@ -105,37 +130,86 @@ namespace Gym.V.frmHijos.Clientes
 
         private void btn_Pagar_ClientesMembresias_Click(object sender, EventArgs e)
         {
-            frm_Clientes_Membresias_Pago frm = new frm_Clientes_Membresias_Pago();
-            Funciones.abrirFormModal(frm, this);
+            if (dgv_ClientesMembresias.SelectedRows.Count == 0)
+            {
+                MessageBox.Show("Seleccione una membresía del listado para pagar",
+                    "Validación", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
+            var fila = dgv_ClientesMembresias.SelectedRows[0];
+            string estado = fila.Cells["Estado"].Value.ToString();
+
+            // Solo se pueden pagar membresías pendientes o inactivas
+            if (estado != "Pendiente de pago" && estado != "Inactivo")
+            {
+                MessageBox.Show("Solo se pueden pagar membresías pendientes o inactivas",
+                    "Validación", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
+            int idClienteMembresia = Convert.ToInt32(fila.Cells["id_cliente_membresias"].Value);
+            int idMembresia = Convert.ToInt32(fila.Cells["id_membresias"].Value);
+
+            var membresia = controladorMembresias.ObtenerMembresiaPorId(idMembresia);
+
+            if (membresia == null)
+            {
+                MessageBox.Show("No se pudo obtener la membresía", "Error",
+                    MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
+            frm_Clientes_Membresias_Pago frmPago = new frm_Clientes_Membresias_Pago(
+                clienteActual,
+                membresia,
+                idClienteMembresia
+            );
+
+            DialogResult resultado = Funciones.abrirFormModal(frmPago, this);
+
+            if (resultado == DialogResult.OK)
+            {
+                cbx_filtro_ClientesMembresias.SelectedIndex = 0; // volver a Activo
+                CargarMembresiasDelCliente();
+            }
         }
 
         private void btn_Eliminar_ClientesMembresias_Click(object sender, EventArgs e)
         {
-            // Validación: debe haber una fila seleccionada en el grid
             if (dgv_ClientesMembresias.SelectedRows.Count == 0)
             {
                 MessageBox.Show("Seleccione una membresía a eliminar");
                 return;
             }
 
-            // Confirmación para evitar eliminaciones accidentales
+            string estado = dgv_ClientesMembresias.SelectedRows[0].Cells["Estado"].Value.ToString();
+
+            // Una membresía pagada no se puede eliminar
+            if (estado == "Activo")
+            {
+                MessageBox.Show("No se puede eliminar una membresía activa y paga",
+                    "Validación", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
             var confirmacion = MessageBox.Show(
                 "¿Desea eliminar esta membresía del cliente?",
                 "Confirmar", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
 
             if (confirmacion == DialogResult.Yes)
             {
-                // Obtiene el ID de la fila en Cliente_Membresias
-                // La columna está oculta en el grid pero sigue siendo accesible desde el código
                 int idClienteMembresia = Convert.ToInt32(
                     dgv_ClientesMembresias.SelectedRows[0].Cells["id_cliente_membresias"].Value);
 
-                bool resultado = controlCliente.DeleteClienteMembresia(idClienteMembresia);
+                bool resultado = controladorClientes.DeleteClienteMembresia(idClienteMembresia);
 
                 if (resultado)
                 {
                     MessageBox.Show("Membresía eliminada correctamente");
-                    CargarMembresiasDelCliente(); // Refresca el grid
+                    cmb_Membresia_ClientesMembresias.SelectedIndex = -1;
+                    LimpiarLabelsMembresia();
+                    CargarMembresiasDelCliente();
                 }
                 else
                 {
@@ -144,43 +218,24 @@ namespace Gym.V.frmHijos.Clientes
             }
         }
 
-        private void cmb_Membresia_ClientesMembresias_SelectedIndexChanged(object sender, EventArgs e)
+        private void CargarMembresiasDelCliente()
         {
-            if (cmb_Membresia_ClientesMembresias.SelectedItem is Membresia m) // "is Membresia m" verifica que haya algo seleccionado y lo convierte a Membresia
-            {
-                // Muestra el precio con formato de dos decimales
-                lbl_Precio_ClientesMembresias.Text = "$" + m.Precio.ToString("N2");
+            string filtro = cbx_filtro_ClientesMembresias.SelectedItem?.ToString() ?? "Activo";
 
-                // Convierte cantidad_msd a unidad correcta según el tipo
-                int meses = 0,
-                    semanas = 0,
-                    dias = 0;
+            controladorClientes.ListarMembresiasDeCliente(
+                clienteActual.IdCliente, dgv_ClientesMembresias, filtro);
 
-                switch (m.Tipo)
-                {
-                    case "Mensual": meses = m.CantidadMsd / 30; break;
-                    case "Semanal": semanas = m.CantidadMsd / 7; break;
-                    case "Diario": dias = m.CantidadMsd; break;
-                }
+            dgv_ClientesMembresias.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            dgv_ClientesMembresias.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+            dgv_ClientesMembresias.MultiSelect = false;
+            dgv_ClientesMembresias.ReadOnly = true;
 
-                // Muestra el valor correspondiente o "-" si no aplica a ese tipo
-                lbl_Meses_ClientesMembresias.Text = meses > 0 ? meses.ToString() : "-";
-                lbl_Semanas_ClientesMembresias.Text = semanas > 0 ? semanas.ToString() : "-";
-                lbl_Dias_ClientesMembresias.Text = dias > 0 ? dias.ToString() : "-";
-            }
-
-            else 
-            {
-                LimpiarLabelMembresia();
-            }
-        }
-
-        private void LimpiarLabelMembresia()
-        {
-            lbl_Precio_ClientesMembresias.Text = "$$$$$$";
-            lbl_Meses_ClientesMembresias.Text = "######";
-            lbl_Semanas_ClientesMembresias.Text = "######";
-            lbl_Dias_ClientesMembresias.Text = "######";
+            if (dgv_ClientesMembresias.Columns.Contains("id_cliente_membresias"))
+                dgv_ClientesMembresias.Columns["id_cliente_membresias"].Visible = false;
+            if (dgv_ClientesMembresias.Columns.Contains("id_cliente"))
+                dgv_ClientesMembresias.Columns["id_cliente"].Visible = false;
+            if (dgv_ClientesMembresias.Columns.Contains("id_membresias"))
+                dgv_ClientesMembresias.Columns["id_membresias"].Visible = false;
         }
     }
 }

@@ -73,6 +73,33 @@ namespace Gym.C
             return lista;
         }
 
+        // Devuelve un objeto Membresia por su ID
+        // Lo usa frm_Clientes_Membresias para pasar la membresía al form de pago
+        public Membresia ObtenerMembresiaPorId(int idMembresia)
+        {
+            string consulta = @"
+        SELECT id_membresias, nombre, precio, tipo, cantidad_msd 
+        FROM Membresias 
+        WHERE id_membresias = @idMembresia";
+
+            SqlParameter[] parametros =
+            {
+        new SqlParameter("@idMembresia", idMembresia)
+    };
+
+            DataTable dt = conexion.ObtenerTabla(consulta, parametros);
+
+            if (dt.Rows.Count == 0) return null;
+
+            return new Membresia
+            {
+                IdMembresia = Convert.ToInt32(dt.Rows[0]["id_membresias"]),
+                Nombre = dt.Rows[0]["nombre"].ToString(),
+                Precio = Convert.ToDecimal(dt.Rows[0]["precio"]),
+                Tipo = dt.Rows[0]["tipo"].ToString(),
+                CantidadMsd = Convert.ToInt32(dt.Rows[0]["cantidad_msd"])
+            };
+        }
         public bool InsertMembresia(string nombre, decimal precio, string tipo,
                                     int cantidadMsd, bool activo)
         {
