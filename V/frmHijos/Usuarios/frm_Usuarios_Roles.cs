@@ -21,7 +21,7 @@ namespace Gym.V.frmHijos.Usuarios
 
         private void CargarRoles()
         {
-            DataTable roles = controlador.ObtenerRoles();
+            DataTable roles = controlador.ObtenerRolesParaCombo();
 
             cmb_Nombre_UsuariosRoles.DataSource = roles;
             cmb_Nombre_UsuariosRoles.DisplayMember = "nombre";

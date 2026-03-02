@@ -32,8 +32,6 @@
             this.label1 = new System.Windows.Forms.Label();
             this.btn_Nuevo_Productos = new System.Windows.Forms.Button();
             this.btn_Modificar_Productos = new System.Windows.Forms.Button();
-            this.btn_Deshabilitar_Productos = new System.Windows.Forms.Button();
-            this.btn_Habilitar_Productos = new System.Windows.Forms.Button();
             this.btn_Eliminar_Productos = new System.Windows.Forms.Button();
             this.dgv_Productos = new System.Windows.Forms.DataGridView();
             this.btn_ExportarExcel_Productos = new System.Windows.Forms.Button();
@@ -72,30 +70,10 @@
             this.btn_Modificar_Productos.UseVisualStyleBackColor = true;
             this.btn_Modificar_Productos.Click += new System.EventHandler(this.btn_Modificar_Productos_Click);
             // 
-            // btn_Deshabilitar_Productos
-            // 
-            this.btn_Deshabilitar_Productos.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_Deshabilitar_Productos.Location = new System.Drawing.Point(165, 50);
-            this.btn_Deshabilitar_Productos.Name = "btn_Deshabilitar_Productos";
-            this.btn_Deshabilitar_Productos.Size = new System.Drawing.Size(97, 23);
-            this.btn_Deshabilitar_Productos.TabIndex = 3;
-            this.btn_Deshabilitar_Productos.Text = "Deshabilitar";
-            this.btn_Deshabilitar_Productos.UseVisualStyleBackColor = true;
-            // 
-            // btn_Habilitar_Productos
-            // 
-            this.btn_Habilitar_Productos.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_Habilitar_Productos.Location = new System.Drawing.Point(268, 50);
-            this.btn_Habilitar_Productos.Name = "btn_Habilitar_Productos";
-            this.btn_Habilitar_Productos.Size = new System.Drawing.Size(75, 23);
-            this.btn_Habilitar_Productos.TabIndex = 4;
-            this.btn_Habilitar_Productos.Text = "Habilitar";
-            this.btn_Habilitar_Productos.UseVisualStyleBackColor = true;
-            // 
             // btn_Eliminar_Productos
             // 
             this.btn_Eliminar_Productos.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_Eliminar_Productos.Location = new System.Drawing.Point(349, 50);
+            this.btn_Eliminar_Productos.Location = new System.Drawing.Point(165, 50);
             this.btn_Eliminar_Productos.Name = "btn_Eliminar_Productos";
             this.btn_Eliminar_Productos.Size = new System.Drawing.Size(75, 23);
             this.btn_Eliminar_Productos.TabIndex = 5;
@@ -112,12 +90,13 @@
             this.dgv_Productos.Name = "dgv_Productos";
             this.dgv_Productos.Size = new System.Drawing.Size(1004, 280);
             this.dgv_Productos.TabIndex = 7;
+            this.dgv_Productos.DataBindingComplete += new System.Windows.Forms.DataGridViewBindingCompleteEventHandler(this.dgv_Productos_DataBindingComplete);
             // 
             // btn_ExportarExcel_Productos
             // 
             this.btn_ExportarExcel_Productos.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btn_ExportarExcel_Productos.BackgroundImage")));
             this.btn_ExportarExcel_Productos.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btn_ExportarExcel_Productos.Location = new System.Drawing.Point(430, 41);
+            this.btn_ExportarExcel_Productos.Location = new System.Drawing.Point(246, 41);
             this.btn_ExportarExcel_Productos.Name = "btn_ExportarExcel_Productos";
             this.btn_ExportarExcel_Productos.Size = new System.Drawing.Size(33, 32);
             this.btn_ExportarExcel_Productos.TabIndex = 38;
@@ -131,8 +110,6 @@
             this.Controls.Add(this.btn_ExportarExcel_Productos);
             this.Controls.Add(this.dgv_Productos);
             this.Controls.Add(this.btn_Eliminar_Productos);
-            this.Controls.Add(this.btn_Habilitar_Productos);
-            this.Controls.Add(this.btn_Deshabilitar_Productos);
             this.Controls.Add(this.btn_Modificar_Productos);
             this.Controls.Add(this.btn_Nuevo_Productos);
             this.Controls.Add(this.label1);
@@ -150,8 +127,6 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btn_Nuevo_Productos;
         private System.Windows.Forms.Button btn_Modificar_Productos;
-        private System.Windows.Forms.Button btn_Deshabilitar_Productos;
-        private System.Windows.Forms.Button btn_Habilitar_Productos;
         private System.Windows.Forms.Button btn_Eliminar_Productos;
         private System.Windows.Forms.DataGridView dgv_Productos;
         private System.Windows.Forms.Button btn_ExportarExcel_Productos;

@@ -29,12 +29,14 @@
         private void InitializeComponent()
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.btn_Guardar_Productos = new System.Windows.Forms.Button();
-            this.txt_Precio_Productos = new System.Windows.Forms.TextBox();
-            this.txt_Costo_Productos = new System.Windows.Forms.TextBox();
-            this.txt_Descripcion_Productos = new System.Windows.Forms.TextBox();
-            this.txt_Nombre_Productos = new System.Windows.Forms.TextBox();
-            this.txt_Codigo_Productos = new System.Windows.Forms.TextBox();
+            this.txt_Stock_ProductosNuevo = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.btn_Guardar_ProductosNuevo = new System.Windows.Forms.Button();
+            this.txt_Precio_ProductosNuevo = new System.Windows.Forms.TextBox();
+            this.txt_Costo_ProductosNuevo = new System.Windows.Forms.TextBox();
+            this.txt_Descripcion_ProductosNuevo = new System.Windows.Forms.TextBox();
+            this.txt_Nombre_ProductosNuevo = new System.Windows.Forms.TextBox();
+            this.txt_Codigo_ProductosNuevo = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -45,12 +47,14 @@
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.btn_Guardar_Productos);
-            this.groupBox1.Controls.Add(this.txt_Precio_Productos);
-            this.groupBox1.Controls.Add(this.txt_Costo_Productos);
-            this.groupBox1.Controls.Add(this.txt_Descripcion_Productos);
-            this.groupBox1.Controls.Add(this.txt_Nombre_Productos);
-            this.groupBox1.Controls.Add(this.txt_Codigo_Productos);
+            this.groupBox1.Controls.Add(this.txt_Stock_ProductosNuevo);
+            this.groupBox1.Controls.Add(this.label2);
+            this.groupBox1.Controls.Add(this.btn_Guardar_ProductosNuevo);
+            this.groupBox1.Controls.Add(this.txt_Precio_ProductosNuevo);
+            this.groupBox1.Controls.Add(this.txt_Costo_ProductosNuevo);
+            this.groupBox1.Controls.Add(this.txt_Descripcion_ProductosNuevo);
+            this.groupBox1.Controls.Add(this.txt_Nombre_ProductosNuevo);
+            this.groupBox1.Controls.Add(this.txt_Codigo_ProductosNuevo);
             this.groupBox1.Controls.Add(this.label5);
             this.groupBox1.Controls.Add(this.label4);
             this.groupBox1.Controls.Add(this.label3);
@@ -64,50 +68,68 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Datos del producto";
             // 
-            // btn_Guardar_Productos
+            // txt_Stock_ProductosNuevo
             // 
-            this.btn_Guardar_Productos.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_Guardar_Productos.Location = new System.Drawing.Point(143, 298);
-            this.btn_Guardar_Productos.Name = "btn_Guardar_Productos";
-            this.btn_Guardar_Productos.Size = new System.Drawing.Size(75, 27);
-            this.btn_Guardar_Productos.TabIndex = 21;
-            this.btn_Guardar_Productos.Text = "Guardar";
-            this.btn_Guardar_Productos.UseVisualStyleBackColor = true;
+            this.txt_Stock_ProductosNuevo.Location = new System.Drawing.Point(143, 129);
+            this.txt_Stock_ProductosNuevo.Name = "txt_Stock_ProductosNuevo";
+            this.txt_Stock_ProductosNuevo.Size = new System.Drawing.Size(131, 21);
+            this.txt_Stock_ProductosNuevo.TabIndex = 23;
             // 
-            // txt_Precio_Productos
+            // label2
             // 
-            this.txt_Precio_Productos.Location = new System.Drawing.Point(143, 216);
-            this.txt_Precio_Productos.Name = "txt_Precio_Productos";
-            this.txt_Precio_Productos.Size = new System.Drawing.Size(131, 21);
-            this.txt_Precio_Productos.TabIndex = 20;
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(19, 134);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(41, 16);
+            this.label2.TabIndex = 22;
+            this.label2.Text = "Stock";
             // 
-            // txt_Costo_Productos
+            // btn_Guardar_ProductosNuevo
             // 
-            this.txt_Costo_Productos.Location = new System.Drawing.Point(143, 172);
-            this.txt_Costo_Productos.Name = "txt_Costo_Productos";
-            this.txt_Costo_Productos.Size = new System.Drawing.Size(131, 21);
-            this.txt_Costo_Productos.TabIndex = 19;
+            this.btn_Guardar_ProductosNuevo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Guardar_ProductosNuevo.Location = new System.Drawing.Point(143, 298);
+            this.btn_Guardar_ProductosNuevo.Name = "btn_Guardar_ProductosNuevo";
+            this.btn_Guardar_ProductosNuevo.Size = new System.Drawing.Size(75, 27);
+            this.btn_Guardar_ProductosNuevo.TabIndex = 21;
+            this.btn_Guardar_ProductosNuevo.Text = "Guardar";
+            this.btn_Guardar_ProductosNuevo.UseVisualStyleBackColor = true;
+            this.btn_Guardar_ProductosNuevo.Click += new System.EventHandler(this.btn_Guardar_ProductosNuevo_Click);
             // 
-            // txt_Descripcion_Productos
+            // txt_Precio_ProductosNuevo
             // 
-            this.txt_Descripcion_Productos.Location = new System.Drawing.Point(143, 128);
-            this.txt_Descripcion_Productos.Name = "txt_Descripcion_Productos";
-            this.txt_Descripcion_Productos.Size = new System.Drawing.Size(201, 21);
-            this.txt_Descripcion_Productos.TabIndex = 18;
+            this.txt_Precio_ProductosNuevo.Location = new System.Drawing.Point(143, 216);
+            this.txt_Precio_ProductosNuevo.Name = "txt_Precio_ProductosNuevo";
+            this.txt_Precio_ProductosNuevo.Size = new System.Drawing.Size(131, 21);
+            this.txt_Precio_ProductosNuevo.TabIndex = 20;
             // 
-            // txt_Nombre_Productos
+            // txt_Costo_ProductosNuevo
             // 
-            this.txt_Nombre_Productos.Location = new System.Drawing.Point(143, 84);
-            this.txt_Nombre_Productos.Name = "txt_Nombre_Productos";
-            this.txt_Nombre_Productos.Size = new System.Drawing.Size(201, 21);
-            this.txt_Nombre_Productos.TabIndex = 17;
+            this.txt_Costo_ProductosNuevo.Location = new System.Drawing.Point(143, 172);
+            this.txt_Costo_ProductosNuevo.Name = "txt_Costo_ProductosNuevo";
+            this.txt_Costo_ProductosNuevo.Size = new System.Drawing.Size(131, 21);
+            this.txt_Costo_ProductosNuevo.TabIndex = 19;
             // 
-            // txt_Codigo_Productos
+            // txt_Descripcion_ProductosNuevo
             // 
-            this.txt_Codigo_Productos.Location = new System.Drawing.Point(143, 44);
-            this.txt_Codigo_Productos.Name = "txt_Codigo_Productos";
-            this.txt_Codigo_Productos.Size = new System.Drawing.Size(201, 21);
-            this.txt_Codigo_Productos.TabIndex = 16;
+            this.txt_Descripcion_ProductosNuevo.Location = new System.Drawing.Point(143, 255);
+            this.txt_Descripcion_ProductosNuevo.Name = "txt_Descripcion_ProductosNuevo";
+            this.txt_Descripcion_ProductosNuevo.Size = new System.Drawing.Size(201, 21);
+            this.txt_Descripcion_ProductosNuevo.TabIndex = 18;
+            // 
+            // txt_Nombre_ProductosNuevo
+            // 
+            this.txt_Nombre_ProductosNuevo.Location = new System.Drawing.Point(143, 84);
+            this.txt_Nombre_ProductosNuevo.Name = "txt_Nombre_ProductosNuevo";
+            this.txt_Nombre_ProductosNuevo.Size = new System.Drawing.Size(201, 21);
+            this.txt_Nombre_ProductosNuevo.TabIndex = 17;
+            // 
+            // txt_Codigo_ProductosNuevo
+            // 
+            this.txt_Codigo_ProductosNuevo.Location = new System.Drawing.Point(143, 44);
+            this.txt_Codigo_ProductosNuevo.Name = "txt_Codigo_ProductosNuevo";
+            this.txt_Codigo_ProductosNuevo.Size = new System.Drawing.Size(201, 21);
+            this.txt_Codigo_ProductosNuevo.TabIndex = 16;
             // 
             // label5
             // 
@@ -133,7 +155,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(19, 132);
+            this.label3.Location = new System.Drawing.Point(19, 259);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(79, 16);
             this.label3.TabIndex = 13;
@@ -170,6 +192,7 @@
             this.MinimizeBox = false;
             this.Name = "frm_Productos_Nuevo";
             this.ShowIcon = false;
+            this.Load += new System.EventHandler(this.frm_Productos_Nuevo_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
@@ -179,16 +202,18 @@
         #endregion
 
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.Button btn_Guardar_Productos;
-        private System.Windows.Forms.TextBox txt_Precio_Productos;
-        private System.Windows.Forms.TextBox txt_Costo_Productos;
-        private System.Windows.Forms.TextBox txt_Descripcion_Productos;
-        private System.Windows.Forms.TextBox txt_Nombre_Productos;
-        private System.Windows.Forms.TextBox txt_Codigo_Productos;
+        private System.Windows.Forms.Button btn_Guardar_ProductosNuevo;
+        private System.Windows.Forms.TextBox txt_Precio_ProductosNuevo;
+        private System.Windows.Forms.TextBox txt_Costo_ProductosNuevo;
+        private System.Windows.Forms.TextBox txt_Descripcion_ProductosNuevo;
+        private System.Windows.Forms.TextBox txt_Nombre_ProductosNuevo;
+        private System.Windows.Forms.TextBox txt_Codigo_ProductosNuevo;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label Nombre;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.TextBox txt_Stock_ProductosNuevo;
+        private System.Windows.Forms.Label label2;
     }
 }

@@ -39,7 +39,7 @@ namespace Gym.V.frmHijos.Usuarios
             cmb_HorarioFin_UsuariosNuevo.SelectedIndex = 0;
 
             // Cargar roles en el combo
-            DataTable roles = controladorRoles.ObtenerRoles();
+            DataTable roles = controladorRoles.ObtenerRolesParaCombo();
             cmb_Rol_UsuariosNuevo.DataSource = roles;
             cmb_Rol_UsuariosNuevo.DisplayMember = "nombre";
             cmb_Rol_UsuariosNuevo.ValueMember = "id_rol";
