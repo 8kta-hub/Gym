@@ -42,11 +42,13 @@
             this.label3 = new System.Windows.Forms.Label();
             this.Nombre = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.chk_ProductoActivo = new System.Windows.Forms.CheckBox();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.chk_ProductoActivo);
             this.groupBox1.Controls.Add(this.txt_Stock_ProductosNuevo);
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.btn_Guardar_ProductosNuevo);
@@ -63,7 +65,7 @@
             this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.Location = new System.Drawing.Point(12, 12);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(367, 331);
+            this.groupBox1.Size = new System.Drawing.Size(367, 365);
             this.groupBox1.TabIndex = 11;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Datos del producto";
@@ -88,7 +90,7 @@
             // btn_Guardar_ProductosNuevo
             // 
             this.btn_Guardar_ProductosNuevo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_Guardar_ProductosNuevo.Location = new System.Drawing.Point(143, 298);
+            this.btn_Guardar_ProductosNuevo.Location = new System.Drawing.Point(152, 332);
             this.btn_Guardar_ProductosNuevo.Name = "btn_Guardar_ProductosNuevo";
             this.btn_Guardar_ProductosNuevo.Size = new System.Drawing.Size(75, 27);
             this.btn_Guardar_ProductosNuevo.TabIndex = 21;
@@ -181,11 +183,21 @@
             this.label1.TabIndex = 11;
             this.label1.Text = "Codigo";
             // 
+            // chk_ProductoActivo
+            // 
+            this.chk_ProductoActivo.AutoSize = true;
+            this.chk_ProductoActivo.Location = new System.Drawing.Point(22, 301);
+            this.chk_ProductoActivo.Name = "chk_ProductoActivo";
+            this.chk_ProductoActivo.Size = new System.Drawing.Size(109, 19);
+            this.chk_ProductoActivo.TabIndex = 24;
+            this.chk_ProductoActivo.Text = "Producto Activo";
+            this.chk_ProductoActivo.UseVisualStyleBackColor = true;
+            // 
             // frm_Productos_Nuevo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(391, 357);
+            this.ClientSize = new System.Drawing.Size(391, 389);
             this.Controls.Add(this.groupBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MaximizeBox = false;
@@ -215,5 +227,6 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox txt_Stock_ProductosNuevo;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.CheckBox chk_ProductoActivo;
     }
 }

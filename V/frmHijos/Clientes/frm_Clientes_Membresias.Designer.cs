@@ -39,8 +39,6 @@
             this.label1 = new System.Windows.Forms.Label();
             this.pcb_FotoPerfil_ClientesMembresias = new System.Windows.Forms.PictureBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.dtp_FechaInicio_ClientesMembresias = new System.Windows.Forms.DateTimePicker();
-            this.label18 = new System.Windows.Forms.Label();
             this.label17 = new System.Windows.Forms.Label();
             this.lbl_Dias_ClientesMembresias = new System.Windows.Forms.Label();
             this.cmb_Membresia_ClientesMembresias = new System.Windows.Forms.ComboBox();
@@ -174,8 +172,6 @@
             // 
             // groupBox2
             // 
-            this.groupBox2.Controls.Add(this.dtp_FechaInicio_ClientesMembresias);
-            this.groupBox2.Controls.Add(this.label18);
             this.groupBox2.Controls.Add(this.label17);
             this.groupBox2.Controls.Add(this.lbl_Dias_ClientesMembresias);
             this.groupBox2.Controls.Add(this.cmb_Membresia_ClientesMembresias);
@@ -196,23 +192,6 @@
             this.groupBox2.TabIndex = 1;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "MEMBRESIAS";
-            // 
-            // dtp_FechaInicio_ClientesMembresias
-            // 
-            this.dtp_FechaInicio_ClientesMembresias.Location = new System.Drawing.Point(306, 22);
-            this.dtp_FechaInicio_ClientesMembresias.Name = "dtp_FechaInicio_ClientesMembresias";
-            this.dtp_FechaInicio_ClientesMembresias.Size = new System.Drawing.Size(218, 21);
-            this.dtp_FechaInicio_ClientesMembresias.TabIndex = 74;
-            // 
-            // label18
-            // 
-            this.label18.AutoSize = true;
-            this.label18.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label18.Location = new System.Drawing.Point(233, 27);
-            this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(67, 16);
-            this.label18.TabIndex = 73;
-            this.label18.Text = "Comienza";
             // 
             // label17
             // 
@@ -279,7 +258,7 @@
             // 
             this.btn_Agregar_ClientesMembresias.BackColor = System.Drawing.Color.Transparent;
             this.btn_Agregar_ClientesMembresias.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_Agregar_ClientesMembresias.Location = new System.Drawing.Point(368, 64);
+            this.btn_Agregar_ClientesMembresias.Location = new System.Drawing.Point(368, 63);
             this.btn_Agregar_ClientesMembresias.Name = "btn_Agregar_ClientesMembresias";
             this.btn_Agregar_ClientesMembresias.Size = new System.Drawing.Size(156, 23);
             this.btn_Agregar_ClientesMembresias.TabIndex = 5;
@@ -423,8 +402,6 @@
         private System.Windows.Forms.Label label16;
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.Label label15;
-        private System.Windows.Forms.Label label18;
-        private System.Windows.Forms.DateTimePicker dtp_FechaInicio_ClientesMembresias;
         private System.Windows.Forms.ComboBox cbx_filtro_ClientesMembresias;
     }
 }

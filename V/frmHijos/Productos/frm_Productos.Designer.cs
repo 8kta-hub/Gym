@@ -34,6 +34,8 @@
             this.btn_Modificar_Productos = new System.Windows.Forms.Button();
             this.btn_Eliminar_Productos = new System.Windows.Forms.Button();
             this.dgv_Productos = new System.Windows.Forms.DataGridView();
+            this.cbm_FiltroProducto = new System.Windows.Forms.ComboBox();
+            this.button1 = new System.Windows.Forms.Button();
             this.btn_ExportarExcel_Productos = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_Productos)).BeginInit();
             this.SuspendLayout();
@@ -92,11 +94,30 @@
             this.dgv_Productos.TabIndex = 7;
             this.dgv_Productos.DataBindingComplete += new System.Windows.Forms.DataGridViewBindingCompleteEventHandler(this.dgv_Productos_DataBindingComplete);
             // 
+            // cbm_FiltroProducto
+            // 
+            this.cbm_FiltroProducto.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbm_FiltroProducto.FormattingEnabled = true;
+            this.cbm_FiltroProducto.Location = new System.Drawing.Point(402, 50);
+            this.cbm_FiltroProducto.Name = "cbm_FiltroProducto";
+            this.cbm_FiltroProducto.Size = new System.Drawing.Size(121, 21);
+            this.cbm_FiltroProducto.TabIndex = 40;
+            // 
+            // button1
+            // 
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.Location = new System.Drawing.Point(246, 50);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(107, 23);
+            this.button1.TabIndex = 41;
+            this.button1.Text = "Proveedores";
+            this.button1.UseVisualStyleBackColor = true;
+            // 
             // btn_ExportarExcel_Productos
             // 
             this.btn_ExportarExcel_Productos.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btn_ExportarExcel_Productos.BackgroundImage")));
             this.btn_ExportarExcel_Productos.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btn_ExportarExcel_Productos.Location = new System.Drawing.Point(246, 41);
+            this.btn_ExportarExcel_Productos.Location = new System.Drawing.Point(359, 41);
             this.btn_ExportarExcel_Productos.Name = "btn_ExportarExcel_Productos";
             this.btn_ExportarExcel_Productos.Size = new System.Drawing.Size(33, 32);
             this.btn_ExportarExcel_Productos.TabIndex = 38;
@@ -107,6 +128,8 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1028, 366);
+            this.Controls.Add(this.button1);
+            this.Controls.Add(this.cbm_FiltroProducto);
             this.Controls.Add(this.btn_ExportarExcel_Productos);
             this.Controls.Add(this.dgv_Productos);
             this.Controls.Add(this.btn_Eliminar_Productos);
@@ -130,5 +153,7 @@
         private System.Windows.Forms.Button btn_Eliminar_Productos;
         private System.Windows.Forms.DataGridView dgv_Productos;
         private System.Windows.Forms.Button btn_ExportarExcel_Productos;
+        private System.Windows.Forms.ComboBox cbm_FiltroProducto;
+        private System.Windows.Forms.Button button1;
     }
 }

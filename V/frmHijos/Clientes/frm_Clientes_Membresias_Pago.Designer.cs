@@ -39,12 +39,10 @@
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.btn_Agregar__ClientesMembresiasPagos = new System.Windows.Forms.Button();
             this.cmb_TipoDePago_ClientesMembresiasPagos = new System.Windows.Forms.ComboBox();
-            this.txt_Folio_ClientesMembresiasPagos = new System.Windows.Forms.TextBox();
             this.txt_Importe_ClientesMembresiasPagos = new System.Windows.Forms.TextBox();
             this.txt_Observacion_ClientesMembresiasPagos = new System.Windows.Forms.TextBox();
             this.label15 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
-            this.label12 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
             this.dgv__ClientesMembresiasPagos = new System.Windows.Forms.DataGridView();
             this.btn_Reimprimir_ClientesMembresiasPagos = new System.Windows.Forms.Button();
@@ -146,12 +144,10 @@
             // 
             this.groupBox2.Controls.Add(this.btn_Agregar__ClientesMembresiasPagos);
             this.groupBox2.Controls.Add(this.cmb_TipoDePago_ClientesMembresiasPagos);
-            this.groupBox2.Controls.Add(this.txt_Folio_ClientesMembresiasPagos);
             this.groupBox2.Controls.Add(this.txt_Importe_ClientesMembresiasPagos);
             this.groupBox2.Controls.Add(this.txt_Observacion_ClientesMembresiasPagos);
             this.groupBox2.Controls.Add(this.label15);
             this.groupBox2.Controls.Add(this.label13);
-            this.groupBox2.Controls.Add(this.label12);
             this.groupBox2.Controls.Add(this.label11);
             this.groupBox2.Location = new System.Drawing.Point(12, 143);
             this.groupBox2.Name = "groupBox2";
@@ -162,7 +158,7 @@
             // btn_Agregar__ClientesMembresiasPagos
             // 
             this.btn_Agregar__ClientesMembresiasPagos.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_Agregar__ClientesMembresiasPagos.Location = new System.Drawing.Point(482, 145);
+            this.btn_Agregar__ClientesMembresiasPagos.Location = new System.Drawing.Point(480, 145);
             this.btn_Agregar__ClientesMembresiasPagos.Name = "btn_Agregar__ClientesMembresiasPagos";
             this.btn_Agregar__ClientesMembresiasPagos.Size = new System.Drawing.Size(104, 28);
             this.btn_Agregar__ClientesMembresiasPagos.TabIndex = 7;
@@ -174,19 +170,10 @@
             // 
             this.cmb_TipoDePago_ClientesMembresiasPagos.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmb_TipoDePago_ClientesMembresiasPagos.FormattingEnabled = true;
-            this.cmb_TipoDePago_ClientesMembresiasPagos.Location = new System.Drawing.Point(107, 76);
+            this.cmb_TipoDePago_ClientesMembresiasPagos.Location = new System.Drawing.Point(106, 64);
             this.cmb_TipoDePago_ClientesMembresiasPagos.Name = "cmb_TipoDePago_ClientesMembresiasPagos";
             this.cmb_TipoDePago_ClientesMembresiasPagos.Size = new System.Drawing.Size(114, 21);
             this.cmb_TipoDePago_ClientesMembresiasPagos.TabIndex = 80;
-            // 
-            // txt_Folio_ClientesMembresiasPagos
-            // 
-            this.txt_Folio_ClientesMembresiasPagos.Location = new System.Drawing.Point(107, 47);
-            this.txt_Folio_ClientesMembresiasPagos.Name = "txt_Folio_ClientesMembresiasPagos";
-            this.txt_Folio_ClientesMembresiasPagos.ReadOnly = true;
-            this.txt_Folio_ClientesMembresiasPagos.Size = new System.Drawing.Size(114, 20);
-            this.txt_Folio_ClientesMembresiasPagos.TabIndex = 79;
-            this.txt_Folio_ClientesMembresiasPagos.Text = "Se generará al pagar";
             // 
             // txt_Importe_ClientesMembresiasPagos
             // 
@@ -208,7 +195,7 @@
             // 
             this.label15.AutoSize = true;
             this.label15.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label15.Location = new System.Drawing.Point(10, 108);
+            this.label15.Location = new System.Drawing.Point(10, 107);
             this.label15.Name = "label15";
             this.label15.Size = new System.Drawing.Size(84, 16);
             this.label15.TabIndex = 75;
@@ -224,21 +211,11 @@
             this.label13.TabIndex = 69;
             this.label13.Text = "Importe";
             // 
-            // label12
-            // 
-            this.label12.AutoSize = true;
-            this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.Location = new System.Drawing.Point(10, 52);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(37, 16);
-            this.label12.TabIndex = 70;
-            this.label12.Text = "Folio";
-            // 
             // label11
             // 
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.Location = new System.Drawing.Point(10, 81);
+            this.label11.Location = new System.Drawing.Point(10, 65);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(89, 16);
             this.label11.TabIndex = 71;
@@ -313,12 +290,10 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label lbl_EstadoMembresia_ClientesMembresiasPagos;
         private System.Windows.Forms.ComboBox cmb_TipoDePago_ClientesMembresiasPagos;
-        private System.Windows.Forms.TextBox txt_Folio_ClientesMembresiasPagos;
         private System.Windows.Forms.TextBox txt_Importe_ClientesMembresiasPagos;
         private System.Windows.Forms.TextBox txt_Observacion_ClientesMembresiasPagos;
         private System.Windows.Forms.Label label15;
         private System.Windows.Forms.Label label13;
-        private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Button btn_Agregar__ClientesMembresiasPagos;
         private System.Windows.Forms.Button btn_Reimprimir_ClientesMembresiasPagos;

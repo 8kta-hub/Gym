@@ -12,7 +12,6 @@ namespace Gym.V.frmHijos.Clientes
 
         private Cliente clienteActual;
         private Membresia membresiaActual;
-        private DateTime fechaInicio;
         private int idClienteMembresia; // para actualizar fechas al confirmar el pago
 
         public frm_Clientes_Membresias_Pago(Cliente cliente, Membresia membresia, int idClienteMembresia)
@@ -27,9 +26,14 @@ namespace Gym.V.frmHijos.Clientes
         {
             // fecha de inicio = hoy, porque se paga en este momento
             DateTime inicio = DateTime.Today;
-            DateTime vencimiento = inicio.AddDays(membresiaActual.CantidadMsd);
 
-            lbl_Total_ClientesMembresiasPagos.Text = "$" + membresiaActual.Precio.ToString("N2");
+            lbl_Precio_ClientesMembresiasPagos.Text = "$" + membresiaActual.Precio.ToString("N2");
+
+
+            lbl_Total_ClientesMembresiasPagos.Text = "-";
+            lbl_Total_ClientesMembresiasPagos.Visible = false;
+            label3.Visible = false; 
+
             lbl_Fecha_ClientesMembresiasPagos.Text = inicio.ToString("dd/MM/yyyy");
             lbl_EstadoMembresia_ClientesMembresiasPagos.Text = "Pendiente de pago";
             lbl_EstadoMembresia_ClientesMembresiasPagos.ForeColor = System.Drawing.Color.OrangeRed;
@@ -45,7 +49,7 @@ namespace Gym.V.frmHijos.Clientes
             CargarHistorialPagos();
         }
 
-        // ── BOTÓN AGREGAR PAGO ────────────────────────────────────────────────
+
         // Ejecuta los 3 pasos: operación → pago → asignación membresía
         private void btn_Agregar_Click(object sender, EventArgs e)
         {
@@ -107,9 +111,8 @@ namespace Gym.V.frmHijos.Clientes
                     return;
                 }
 
-                // Obtener el folio generado por SQL y mostrarlo
+                // Obtener el folio 
                 string folio = controladorVentas.ObtenerFolio(idOperacion);
-                txt_Folio_ClientesMembresiasPagos.Text = folio;
 
                 // Actualizar estado de la membresía en el label
                 lbl_EstadoMembresia_ClientesMembresiasPagos.Text = "Pagado";
@@ -121,6 +124,11 @@ namespace Gym.V.frmHijos.Clientes
                 MessageBox.Show(
                     $"Pago registrado correctamente\nFolio: {folio}",
                     "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                // Mostrar el total una vez confirmado el pago
+                lbl_Total_ClientesMembresiasPagos.Text = "$" + txt_Importe_ClientesMembresiasPagos.Text;
+                lbl_Total_ClientesMembresiasPagos.Visible = true;
+                label3.Visible = true;
 
                 // Refrescar el historial con el pago recién agregado
                 CargarHistorialPagos();

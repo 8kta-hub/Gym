@@ -102,6 +102,7 @@ namespace Gym.V.frmHijos.Clientes
 
             var membresia = (Membresia)cmb_Membresia_ClientesMembresias.SelectedItem;
 
+            // Ya no se pasa fecha, se calcula al momento del pago
             bool resultado = controladorClientes.InsertClienteMembresia(
                 clienteActual.IdCliente,
                 membresia.IdMembresia,
@@ -113,11 +114,8 @@ namespace Gym.V.frmHijos.Clientes
                 MessageBox.Show("Membresía agregada, pendiente de pago", "Éxito",
                     MessageBoxButtons.OK, MessageBoxIcon.Information);
 
-                // Resetear el combo después de agregar
                 cmb_Membresia_ClientesMembresias.SelectedIndex = -1;
                 LimpiarLabelsMembresia();
-
-                // Mostrar pendientes para que el usuario la vea
                 cbx_filtro_ClientesMembresias.SelectedItem = "Pendiente de pago";
                 CargarMembresiasDelCliente();
             }
