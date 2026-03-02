@@ -63,7 +63,15 @@ namespace Gym.V.frmHijos.Clientes
 
         private void btn_Membresias_Clientes_Click(object sender, EventArgs e)
         {
-            frm_Clientes_Membresias frm = new frm_Clientes_Membresias();
+            Cliente cliente = CargarClienteSeleccionado();
+
+            if (cliente == null)
+            {
+                MessageBox.Show("Seleccione un cliente");
+                return;
+            }
+
+            frm_Clientes_Membresias frm = new frm_Clientes_Membresias(cliente);
 
             DialogResult resultado = Funciones.abrirFormModal(frm, this);
 

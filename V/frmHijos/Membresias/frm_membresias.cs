@@ -114,8 +114,6 @@ namespace Gym.V.frmHijos
                 Precio = Convert.ToDecimal(fila.Cells["precio"].Value),
                 Tipo = fila.Cells["tipo"].Value.ToString(),
                 CantidadMsd = Convert.ToInt32(fila.Cells["cantidad_msd"].Value),
-                FechaCreacion = Convert.ToDateTime(fila.Cells["fecha_creacion"].Value),
-                FechaVec = Convert.ToDateTime(fila.Cells["fecha_vec"].Value),
                 Activo = Convert.ToBoolean(fila.Cells["activo"].Value)
             };
 

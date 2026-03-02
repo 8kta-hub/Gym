@@ -251,8 +251,8 @@
             // txt_Clave_Registro
             // 
             this.txt_Clave_Registro.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.txt_Clave_Registro.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_Clave_Registro.Location = new System.Drawing.Point(121, 378);
-            this.txt_Clave_Registro.Multiline = true;
             this.txt_Clave_Registro.Name = "txt_Clave_Registro";
             this.txt_Clave_Registro.Size = new System.Drawing.Size(312, 31);
             this.txt_Clave_Registro.TabIndex = 14;

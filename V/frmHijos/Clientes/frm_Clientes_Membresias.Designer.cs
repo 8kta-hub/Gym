@@ -235,11 +235,13 @@
             // 
             // cmb_Membresia_ClientesMembresias
             // 
+            this.cmb_Membresia_ClientesMembresias.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmb_Membresia_ClientesMembresias.FormattingEnabled = true;
             this.cmb_Membresia_ClientesMembresias.Location = new System.Drawing.Point(96, 20);
             this.cmb_Membresia_ClientesMembresias.Name = "cmb_Membresia_ClientesMembresias";
             this.cmb_Membresia_ClientesMembresias.Size = new System.Drawing.Size(122, 23);
             this.cmb_Membresia_ClientesMembresias.TabIndex = 6;
+            this.cmb_Membresia_ClientesMembresias.SelectedIndexChanged += new System.EventHandler(this.cmb_Membresia_ClientesMembresias_SelectedIndexChanged);
             // 
             // lbl_Semanas_ClientesMembresias
             // 
@@ -260,6 +262,7 @@
             this.btn_Eliminar_ClientesMembresias.TabIndex = 4;
             this.btn_Eliminar_ClientesMembresias.Text = "Eliminar Membresia";
             this.btn_Eliminar_ClientesMembresias.UseVisualStyleBackColor = true;
+            this.btn_Eliminar_ClientesMembresias.Click += new System.EventHandler(this.btn_Eliminar_ClientesMembresias_Click);
             // 
             // lbl_Meses_ClientesMembresias
             // 
@@ -281,6 +284,7 @@
             this.btn_Agregar_ClientesMembresias.TabIndex = 5;
             this.btn_Agregar_ClientesMembresias.Text = " Agregar Membresia";
             this.btn_Agregar_ClientesMembresias.UseVisualStyleBackColor = false;
+            this.btn_Agregar_ClientesMembresias.Click += new System.EventHandler(this.btn_Agregar_ClientesMembresias_Click);
             // 
             // lbl_Precio_ClientesMembresias
             // 
@@ -329,9 +333,9 @@
             this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label14.Location = new System.Drawing.Point(15, 144);
             this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(58, 16);
+            this.label14.Size = new System.Drawing.Size(65, 16);
             this.label14.TabIndex = 65;
-            this.label14.Text = "Semana";
+            this.label14.Text = "Semanas";
             // 
             // label15
             // 
@@ -345,9 +349,13 @@
             // 
             // dgv_ClientesMembresias
             // 
+            this.dgv_ClientesMembresias.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgv_ClientesMembresias.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgv_ClientesMembresias.Location = new System.Drawing.Point(12, 405);
+            this.dgv_ClientesMembresias.MultiSelect = false;
             this.dgv_ClientesMembresias.Name = "dgv_ClientesMembresias";
+            this.dgv_ClientesMembresias.ReadOnly = true;
+            this.dgv_ClientesMembresias.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgv_ClientesMembresias.Size = new System.Drawing.Size(539, 160);
             this.dgv_ClientesMembresias.TabIndex = 2;
             // 
@@ -365,6 +373,7 @@
             this.Name = "frm_Clientes_Membresias";
             this.ShowIcon = false;
             this.Text = "Membresias de clientes";
+            this.Load += new System.EventHandler(this.frm_Clientes_Membresias_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pcb_FotoPerfil_ClientesMembresias)).EndInit();

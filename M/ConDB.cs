@@ -44,6 +44,25 @@ namespace Gym.M
             }
         }
 
+        // Método SELECT que devuelve un DataTable en vez de llenар un DataGridView
+        // Se usa cuando el destino de los datos no es un grid sino un combo u otra estructura
+        public DataTable ObtenerTabla(string consulta, SqlParameter[] parametros = null)
+        {
+            using (SqlConnection cnn = new SqlConnection(strcnn))
+            {
+                cnn.Open();
+                SqlCommand command = new SqlCommand(consulta, cnn);
+
+                if (parametros != null)
+                    command.Parameters.AddRange(parametros);
+
+                SqlDataReader lector = command.ExecuteReader();
+                DataTable dt = new DataTable();
+                dt.Load(lector);
+                return dt;
+            }
+        }
+
         //Método INSERT, UPDATE, DELETE
         public int EjecutarComando(string consulta, SqlParameter[] parametros = null)
         {

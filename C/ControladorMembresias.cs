@@ -1,11 +1,13 @@
 ﻿using Gym.M;
 using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Gym.M.Entidades;
 
 namespace Gym.C
 {
@@ -23,7 +25,6 @@ namespace Gym.C
                     tipo,
                     cantidad_msd,
                     fecha_creacion,
-                    fecha_vec,
                     activo
                 FROM Membresias";
             conexion.CargarTabla(consulta, dgv);
@@ -46,21 +47,46 @@ namespace Gym.C
             conexion.CargarTabla(consulta, dgv, parametros);
         }
 
+        public List<Membresia> ObtenerMembresiasActivas()
+        {
+            var lista = new List<Membresia>();
+
+            string consulta = @"
+                SELECT id_membresias, nombre , precio , tipo , cantidad_msd
+                FROM Membresias
+                WHERE activo = 1";
+
+            DataTable dt = conexion.ObtenerTabla(consulta);
+
+            foreach (DataRow fila in dt.Rows)
+            {
+                lista.Add(new Membresia
+                {
+                    IdMembresia = Convert.ToInt32(fila["id_membresias"]),
+                    Nombre = fila["nombre"].ToString(),
+                    Precio = Convert.ToDecimal(fila["precio"]),
+                    Tipo = fila["tipo"].ToString(),
+                    CantidadMsd = Convert.ToInt32(fila["cantidad_msd"])
+                });
+            }
+            
+            return lista;
+        }
+
         public bool InsertMembresia(string nombre, decimal precio, string tipo,
-                                    int cantidadMsd, DateTime fechaVec, bool activo)
+                                    int cantidadMsd, bool activo)
         {
             string consulta = @"
                 INSERT INTO Membresias
-                    (nombre, precio, tipo, cantidad_msd, fecha_creacion, fecha_vec, activo)
+                    (nombre, precio, tipo, cantidad_msd, fecha_creacion, activo)
                 VALUES
-                    (@nombre, @precio, @tipo, @cantidadMsd, GETDATE(), @fechaVec, @activo)";
+                    (@nombre, @precio, @tipo, @cantidadMsd, GETDATE(), @activo)";
             SqlParameter[] parametros =
             {
                 new SqlParameter("@nombre",      nombre),
                 new SqlParameter("@precio",      precio),
                 new SqlParameter("@tipo",        tipo),
                 new SqlParameter("@cantidadMsd", cantidadMsd),
-                new SqlParameter("@fechaVec",    fechaVec),
                 new SqlParameter("@activo",      activo)
             };
             int filas = conexion.EjecutarComando(consulta, parametros);
@@ -87,7 +113,7 @@ namespace Gym.C
         }
 
         public bool UpdateMembresia(int idMembresia, string nombre, decimal precio,
-                                    string tipo, int cantidadMsd, DateTime fechaVec, bool activo)
+                                    string tipo, int cantidadMsd, bool activo)
         {
             string consulta = @"
                 UPDATE Membresias SET
@@ -95,7 +121,6 @@ namespace Gym.C
                     precio       = @precio,
                     tipo         = @tipo,
                     cantidad_msd = @cantidadMsd,
-                    fecha_vec    = @fechaVec,
                     activo       = @activo
                 WHERE id_membresias = @idMembresia";
             SqlParameter[] parametros =
@@ -104,7 +129,6 @@ namespace Gym.C
                 new SqlParameter("@precio",       precio),
                 new SqlParameter("@tipo",         tipo),
                 new SqlParameter("@cantidadMsd",  cantidadMsd),
-                new SqlParameter("@fechaVec",     fechaVec),
                 new SqlParameter("@activo",       activo),
                 new SqlParameter("@idMembresia",  idMembresia)
             };

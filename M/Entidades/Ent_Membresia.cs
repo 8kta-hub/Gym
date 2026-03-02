@@ -14,7 +14,6 @@ namespace Gym.M.Entidades
         public string Tipo { get; set; }
         public int CantidadMsd { get; set; }
         public DateTime FechaCreacion { get; set; }
-        public DateTime FechaVec { get; set; }
         public bool Activo { get; set; }
 
         // Relación con horarios

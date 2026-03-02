@@ -54,9 +54,13 @@
             this.dgv_Membresias.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.dgv_Membresias.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgv_Membresias.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgv_Membresias.Location = new System.Drawing.Point(12, 79);
+            this.dgv_Membresias.MultiSelect = false;
             this.dgv_Membresias.Name = "dgv_Membresias";
+            this.dgv_Membresias.ReadOnly = true;
+            this.dgv_Membresias.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgv_Membresias.Size = new System.Drawing.Size(1004, 280);
             this.dgv_Membresias.TabIndex = 4;
             // 
