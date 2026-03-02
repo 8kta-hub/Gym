@@ -24,7 +24,7 @@ namespace Gym.C
                     pr.costo,
                     pr.precio_venta,
                     pr.descripcion,
-                    pr.estado,
+                    pr.activo,
                     pr.fecha_creacion
                 FROM Productos pr
                 INNER JOIN Proveedores p ON pr.id_proveedor = p.id_proveedor

@@ -11,8 +11,8 @@ namespace Gym.M
 {
     public class ConDB
     {
-        //public static string strcnn = "Data Source = DESKTOP-2UJD34U\\SQLEXPRESS; Initial Catalog = Gimnasio; Integrated Security = True;";
-        public static string strcnn = "Data Source = localhost\\SQLEXPRESS; Initial Catalog = Gimnasio; Integrated Security = True;";
+        public static string strcnn = "Data Source = DESKTOP-2UJD34U\\SQLEXPRESS; Initial Catalog = Gimnasio; Integrated Security = True;";
+        //public static string strcnn = "Data Source = localhost\\SQLEXPRESS; Initial Catalog = Gimnasio; Integrated Security = True;";
 
         //Método SELECT
         public void CargarTabla(string consulta, DataGridView dgv)
@@ -60,6 +60,21 @@ namespace Gym.M
                 DataTable dt = new DataTable();
                 dt.Load(lector);
                 return dt;
+            }
+        }
+
+        //Trae unicamente un valor
+        public object ObtenerValor(string consulta, SqlParameter[] parametros = null)
+        {
+            using (SqlConnection cnn = new SqlConnection(strcnn))
+            {
+                cnn.Open();
+                SqlCommand command = new SqlCommand(consulta, cnn);
+
+                if (parametros != null)
+                    command.Parameters.AddRange(parametros);
+
+                return command.ExecuteScalar();
             }
         }
 

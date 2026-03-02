@@ -121,7 +121,7 @@
   <data name="btn_ExportarExcel_Reporte_Movimientos.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAgAAAAIACAYAAAD0eNT6AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
-        vQAADr0BR/uQrQAAPOlJREFUeF7tnQmYZFV593ug+1YxbG644hZR0bi1Cl1Vt6vucm51TwS/fK0To8YQ
+        vAAADrwBlbxySQAAPOlJREFUeF7tnQmYZFV593ug+1YxbG644hZR0bi1Cl1Vt6vucm51TwS/fK0To8YQ
         F1DxQ6CqbrNoO5hoTGJCYtyT6Jd8cYuKJjFGxagxxCUuEdwFNxSJLILIpgPM43fucNSZmpfprerUuef+
         fs/ze8ITp7vPe8655/1Xd9W9UwAbQSl1F6XiJykVvSZJ4q+qLP45Ijqs6lzYbDYPMZcwAMDaiaLo4LQb
         /Z4+TD4aJ9Ft+xwwiOi6/7q0tHSAuaQBAPZP0k26aRq9VTf9G4UDBRFLZJrGrzOXNgDAvqysrGxJsuip
@@ -387,7 +387,7 @@
   <data name="btn_ExportarExcel_Reporte_Ventas.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAgAAAAIACAYAAAD0eNT6AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
-        vQAADr0BR/uQrQAAPOlJREFUeF7tnQmYZFV593ug+1YxbG644hZR0bi1Cl1Vt6vucm51TwS/fK0To8YQ
+        vAAADrwBlbxySQAAPOlJREFUeF7tnQmYZFV593ug+1YxbG644hZR0bi1Cl1Vt6vucm51TwS/fK0To8YQ
         F1DxQ6CqbrNoO5hoTGJCYtyT6Jd8cYuKJjFGxagxxCUuEdwFNxSJLILIpgPM43fucNSZmpfprerUuef+
         fs/ze8ITp7vPe8655/1Xd9W9UwAbQSl1F6XiJykVvSZJ4q+qLP45Ijqs6lzYbDYPMZcwAMDaiaLo4LQb
         /Z4+TD4aJ9Ft+xwwiOi6/7q0tHSAuaQBAPZP0k26aRq9VTf9G4UDBRFLZJrGrzOXNgDAvqysrGxJsuip
@@ -653,7 +653,7 @@
   <data name="btn_ExportarExcel_Reporte_Visitias.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAgAAAAIACAYAAAD0eNT6AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
-        vgAADr4B6kKxwAAAPOlJREFUeF7tnQmYZFV593ug+1YxbG644hZR0bi1Cl1Vt6vucm51TwS/fK0To8YQ
+        vAAADrwBlbxySQAAPOlJREFUeF7tnQmYZFV593ug+1YxbG644hZR0bi1Cl1Vt6vucm51TwS/fK0To8YQ
         F1DxQ6CqbrNoO5hoTGJCYtyT6Jd8cYuKJjFGxagxxCUuEdwFNxSJLILIpgPM43fucNSZmpfprerUuef+
         fs/ze8ITp7vPe8655/1Xd9W9UwAbQSl1F6XiJykVvSZJ4q+qLP45Ijqs6lzYbDYPMZcwAMDaiaLo4LQb
         /Z4+TD4aJ9Ft+xwwiOi6/7q0tHSAuaQBAPZP0k26aRq9VTf9G4UDBRFLZJrGrzOXNgDAvqysrGxJsuip
@@ -919,7 +919,7 @@
   <data name="btn_ExportarExcel_Reporte_Registro.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAgAAAAIACAYAAAD0eNT6AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
-        vQAADr0BR/uQrQAAPOlJREFUeF7tnQmYZFV593ug+1YxbG644hZR0bi1Cl1Vt6vucm51TwS/fK0To8YQ
+        vAAADrwBlbxySQAAPOlJREFUeF7tnQmYZFV593ug+1YxbG644hZR0bi1Cl1Vt6vucm51TwS/fK0To8YQ
         F1DxQ6CqbrNoO5hoTGJCYtyT6Jd8cYuKJjFGxagxxCUuEdwFNxSJLILIpgPM43fucNSZmpfprerUuef+
         fs/ze8ITp7vPe8655/1Xd9W9UwAbQSl1F6XiJykVvSZJ4q+qLP45Ijqs6lzYbDYPMZcwAMDaiaLo4LQb
         /Z4+TD4aJ9Ft+xwwiOi6/7q0tHSAuaQBAPZP0k26aRq9VTf9G4UDBRFLZJrGrzOXNgDAvqysrGxJsuip
@@ -1185,7 +1185,7 @@
   <data name="btn_ExportarExcel_Reporte_Clientes.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAgAAAAIACAYAAAD0eNT6AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
-        vQAADr0BR/uQrQAAPOlJREFUeF7tnQmYZFV593ug+1YxbG644hZR0bi1Cl1Vt6vucm51TwS/fK0To8YQ
+        vAAADrwBlbxySQAAPOlJREFUeF7tnQmYZFV593ug+1YxbG644hZR0bi1Cl1Vt6vucm51TwS/fK0To8YQ
         F1DxQ6CqbrNoO5hoTGJCYtyT6Jd8cYuKJjFGxagxxCUuEdwFNxSJLILIpgPM43fucNSZmpfprerUuef+
         fs/ze8ITp7vPe8655/1Xd9W9UwAbQSl1F6XiJykVvSZJ4q+qLP45Ijqs6lzYbDYPMZcwAMDaiaLo4LQb
         /Z4+TD4aJ9Ft+xwwiOi6/7q0tHSAuaQBAPZP0k26aRq9VTf9G4UDBRFLZJrGrzOXNgDAvqysrGxJsuip
@@ -1451,7 +1451,7 @@
   <data name="btn_ExportarExcel_Reporte_Membresias.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAgAAAAIACAYAAAD0eNT6AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
-        vQAADr0BR/uQrQAAPOlJREFUeF7tnQmYZFV593ug+1YxbG644hZR0bi1Cl1Vt6vucm51TwS/fK0To8YQ
+        vAAADrwBlbxySQAAPOlJREFUeF7tnQmYZFV593ug+1YxbG644hZR0bi1Cl1Vt6vucm51TwS/fK0To8YQ
         F1DxQ6CqbrNoO5hoTGJCYtyT6Jd8cYuKJjFGxagxxCUuEdwFNxSJLILIpgPM43fucNSZmpfprerUuef+
         fs/ze8ITp7vPe8655/1Xd9W9UwAbQSl1F6XiJykVvSZJ4q+qLP45Ijqs6lzYbDYPMZcwAMDaiaLo4LQb
         /Z4+TD4aJ9Ft+xwwiOi6/7q0tHSAuaQBAPZP0k26aRq9VTf9G4UDBRFLZJrGrzOXNgDAvqysrGxJsuip
@@ -1717,7 +1717,7 @@
   <data name="btn_ExportarExcel_Reporte_Inventario.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAgAAAAIACAYAAAD0eNT6AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
-        vQAADr0BR/uQrQAAPOlJREFUeF7tnQmYZFV593ug+1YxbG644hZR0bi1Cl1Vt6vucm51TwS/fK0To8YQ
+        vAAADrwBlbxySQAAPOlJREFUeF7tnQmYZFV593ug+1YxbG644hZR0bi1Cl1Vt6vucm51TwS/fK0To8YQ
         F1DxQ6CqbrNoO5hoTGJCYtyT6Jd8cYuKJjFGxagxxCUuEdwFNxSJLILIpgPM43fucNSZmpfprerUuef+
         fs/ze8ITp7vPe8655/1Xd9W9UwAbQSl1F6XiJykVvSZJ4q+qLP45Ijqs6lzYbDYPMZcwAMDaiaLo4LQb
         /Z4+TD4aJ9Ft+xwwiOi6/7q0tHSAuaQBAPZP0k26aRq9VTf9G4UDBRFLZJrGrzOXNgDAvqysrGxJsuip
