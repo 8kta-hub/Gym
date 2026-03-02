@@ -55,6 +55,7 @@
             this.label14 = new System.Windows.Forms.Label();
             this.label15 = new System.Windows.Forms.Label();
             this.dgv_ClientesMembresias = new System.Windows.Forms.DataGridView();
+            this.cbx_filtro_ClientesMembresias = new System.Windows.Forms.ComboBox();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pcb_FotoPerfil_ClientesMembresias)).BeginInit();
             this.groupBox2.SuspendLayout();
@@ -191,7 +192,7 @@
             this.groupBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox2.Location = new System.Drawing.Point(12, 187);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(539, 209);
+            this.groupBox2.Size = new System.Drawing.Size(539, 238);
             this.groupBox2.TabIndex = 1;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "MEMBRESIAS";
@@ -241,7 +242,7 @@
             this.cmb_Membresia_ClientesMembresias.Name = "cmb_Membresia_ClientesMembresias";
             this.cmb_Membresia_ClientesMembresias.Size = new System.Drawing.Size(122, 23);
             this.cmb_Membresia_ClientesMembresias.TabIndex = 6;
-            this.cmb_Membresia_ClientesMembresias.SelectedIndexChanged += new System.EventHandler(this.cmb_Membresia_ClientesMembresias_SelectedIndexChanged);
+            this.cmb_Membresia_ClientesMembresias.SelectedIndexChanged += new System.EventHandler(this.cmb_Membresia_SelectedIndexChanged);
             // 
             // lbl_Semanas_ClientesMembresias
             // 
@@ -256,7 +257,7 @@
             // btn_Eliminar_ClientesMembresias
             // 
             this.btn_Eliminar_ClientesMembresias.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_Eliminar_ClientesMembresias.Location = new System.Drawing.Point(368, 174);
+            this.btn_Eliminar_ClientesMembresias.Location = new System.Drawing.Point(359, 206);
             this.btn_Eliminar_ClientesMembresias.Name = "btn_Eliminar_ClientesMembresias";
             this.btn_Eliminar_ClientesMembresias.Size = new System.Drawing.Size(165, 23);
             this.btn_Eliminar_ClientesMembresias.TabIndex = 4;
@@ -278,7 +279,7 @@
             // 
             this.btn_Agregar_ClientesMembresias.BackColor = System.Drawing.Color.Transparent;
             this.btn_Agregar_ClientesMembresias.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_Agregar_ClientesMembresias.Location = new System.Drawing.Point(368, 63);
+            this.btn_Agregar_ClientesMembresias.Location = new System.Drawing.Point(368, 64);
             this.btn_Agregar_ClientesMembresias.Name = "btn_Agregar_ClientesMembresias";
             this.btn_Agregar_ClientesMembresias.Size = new System.Drawing.Size(156, 23);
             this.btn_Agregar_ClientesMembresias.TabIndex = 5;
@@ -299,7 +300,7 @@
             // btn_Pagar_ClientesMembresias
             // 
             this.btn_Pagar_ClientesMembresias.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_Pagar_ClientesMembresias.Location = new System.Drawing.Point(220, 174);
+            this.btn_Pagar_ClientesMembresias.Location = new System.Drawing.Point(211, 206);
             this.btn_Pagar_ClientesMembresias.Name = "btn_Pagar_ClientesMembresias";
             this.btn_Pagar_ClientesMembresias.Size = new System.Drawing.Size(142, 23);
             this.btn_Pagar_ClientesMembresias.TabIndex = 3;
@@ -351,19 +352,30 @@
             // 
             this.dgv_ClientesMembresias.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgv_ClientesMembresias.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgv_ClientesMembresias.Location = new System.Drawing.Point(12, 405);
+            this.dgv_ClientesMembresias.Location = new System.Drawing.Point(12, 460);
             this.dgv_ClientesMembresias.MultiSelect = false;
             this.dgv_ClientesMembresias.Name = "dgv_ClientesMembresias";
             this.dgv_ClientesMembresias.ReadOnly = true;
             this.dgv_ClientesMembresias.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgv_ClientesMembresias.Size = new System.Drawing.Size(539, 160);
+            this.dgv_ClientesMembresias.Size = new System.Drawing.Size(539, 157);
             this.dgv_ClientesMembresias.TabIndex = 2;
+            // 
+            // cbx_filtro_ClientesMembresias
+            // 
+            this.cbx_filtro_ClientesMembresias.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbx_filtro_ClientesMembresias.FormattingEnabled = true;
+            this.cbx_filtro_ClientesMembresias.Location = new System.Drawing.Point(430, 433);
+            this.cbx_filtro_ClientesMembresias.Name = "cbx_filtro_ClientesMembresias";
+            this.cbx_filtro_ClientesMembresias.Size = new System.Drawing.Size(121, 21);
+            this.cbx_filtro_ClientesMembresias.TabIndex = 3;
+            this.cbx_filtro_ClientesMembresias.SelectedIndexChanged += new System.EventHandler(this.cbx_filtro_SelectedIndexChanged);
             // 
             // frm_Clientes_Membresias
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(563, 574);
+            this.ClientSize = new System.Drawing.Size(563, 629);
+            this.Controls.Add(this.cbx_filtro_ClientesMembresias);
             this.Controls.Add(this.dgv_ClientesMembresias);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
@@ -413,5 +425,6 @@
         private System.Windows.Forms.Label label15;
         private System.Windows.Forms.Label label18;
         private System.Windows.Forms.DateTimePicker dtp_FechaInicio_ClientesMembresias;
+        private System.Windows.Forms.ComboBox cbx_filtro_ClientesMembresias;
     }
 }

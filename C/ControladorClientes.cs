@@ -103,65 +103,75 @@ namespace Gym.C
 
         //------------------------------------------------MEMBRESIA CLIENTE--------------------------------------------------
 
-        // Trae las membresías asignadas a UN cliente específico
-        // JOIN con Membresias para obtener nombre, tipo y días en lugar de solo IDs
-        public void ListarMembresiasDeCliente(int idCliente, DataGridView dgv)
+        public void ListarMembresiasDeCliente(int idCliente, DataGridView dgv, string filtro = "Activo")
         {
-            string consulta = @"
+            string whereFiltro = filtro == "Todas"
+                ? ""
+                : "AND cm.estado = @filtro";
+
+            string consulta = $@"
                 SELECT 
-                    cm.id_cliente_membresias,            
-                    cm.id_cliente,                       
-                    cm.id_membresias,                    
-                    m.nombre             AS Membresía,   
-                    cm.precio_congelado  AS Precio,      
-                    m.tipo               AS Tipo,        
-                    cm.fecha_inicio      AS Inicio,      
-                    cm.fecha_vencimiento AS Vencimiento, 
-                    cm.estado                            
+                    cm.id_cliente_membresias,
+                    cm.id_cliente,
+                    cm.id_membresias,
+                    m.nombre             AS Membresía,
+                    cm.precio_congelado  AS Precio,
+                    m.tipo               AS Tipo,
+                    cm.fecha_inicio      AS Inicio,
+                    cm.fecha_vencimiento AS Vencimiento,
+                    cm.estado            AS Estado
                 FROM Cliente_Membresias cm
                 INNER JOIN Membresias m ON cm.id_membresias = m.id_membresias
-                WHERE cm.id_cliente = @idCliente";
+                WHERE cm.id_cliente = @idCliente
+                {whereFiltro}";
 
-            SqlParameter[] parametros =
-            {
-                new SqlParameter("@idCliente", idCliente)
-            };
+            SqlParameter[] parametros = filtro == "Todas"
+                ? new SqlParameter[] { new SqlParameter("@idCliente", idCliente) }
+                : new SqlParameter[]
+                {
+                    new SqlParameter("@idCliente", idCliente),
+                    new SqlParameter("@filtro",    filtro)
+                };
 
             conexion.CargarTabla(consulta, dgv, parametros);
         }
 
-        public bool InsertClienteMembresia(int idCliente, int idMembresia,
-                                    decimal precioCongelado, DateTime fechaInicio)
+        public bool InsertClienteMembresia(int idCliente, int idMembresia, decimal precioCongelado)
         {
-            // Busca cantidad_msd para calcular la fecha de vencimiento
-            // Ahora usa ConDB en vez de abrir conexión manualmente
-            string consultaDias = "SELECT cantidad_msd FROM Membresias WHERE id_membresias = @idMembresia";
-            SqlParameter[] paramDias =
-            {
-                new SqlParameter("@idMembresia", idMembresia)
-            };
-
-            DataTable dt = conexion.ObtenerTabla(consultaDias, paramDias);
-            int dias = Convert.ToInt32(dt.Rows[0]["cantidad_msd"]);
-            // dt.Rows[0] accede a la primera (y única) fila del resultado
-
-            // Calcula la fecha de vencimiento sumando los días a la fecha de inicio
-            DateTime fechaVencimiento = fechaInicio.AddDays(dias);
-
             string consulta = @"
                 INSERT INTO Cliente_Membresias
                     (id_cliente, id_membresias, precio_congelado, fecha_inicio, fecha_vencimiento, estado)
                 VALUES
-                    (@idCliente, @idMembresia, @precio, @fechaInicio, @fechaVencimiento, 'Activo')";
+                    (@idCliente, @idMembresia, @precio, '1900-01-01', '1900-01-01', 'Pendiente de pago')";
 
             SqlParameter[] parametros =
             {
-                new SqlParameter("@idCliente",        idCliente),
-                new SqlParameter("@idMembresia",      idMembresia),
-                new SqlParameter("@precio",           precioCongelado),
-                new SqlParameter("@fechaInicio",      fechaInicio),
-                new SqlParameter("@fechaVencimiento", fechaVencimiento)
+                new SqlParameter("@idCliente",   idCliente),
+                new SqlParameter("@idMembresia", idMembresia),
+                new SqlParameter("@precio",      precioCongelado)
             };
+
+            return conexion.EjecutarComando(consulta, parametros) > 0;
+        }
+
+        // Se llama al confirmar el pago para actualizar fechas y estado
+        public bool ConfirmarPagoMembresia(int idClienteMembresia, DateTime fechaInicio, int cantidadMsd)
+        {
+            DateTime fechaVencimiento = fechaInicio.AddDays(cantidadMsd);
+
+            string consulta = @"
+                UPDATE Cliente_Membresias SET
+                    fecha_inicio      = @fechaInicio,
+                    fecha_vencimiento = @fechaVencimiento,
+                    estado            = 'Activo'
+                WHERE id_cliente_membresias = @id";
+
+            SqlParameter[] parametros =
+            {
+                new SqlParameter("@fechaInicio",      fechaInicio),
+                new SqlParameter("@fechaVencimiento", fechaVencimiento),
+                new SqlParameter("@id",               idClienteMembresia)
+             };
 
             return conexion.EjecutarComando(consulta, parametros) > 0;
         }

@@ -39,7 +39,7 @@ namespace Gym.C
         public bool InsertProducto(int codigo, string nombre, int stock, decimal costo, decimal precioVenta, string descripcion, bool activo)
         {
             string sql = @"INSERT INTO Productos (codigo, nombre, stock, costo, precio_venta, descripcion, activo)
-                           VALUES (@codigo, @nombre, @stock, @costo, @precio_venta, @descripcion, @activo)";
+                           VALUES (@codigo, @nombre, @stock, @costo, @precio_venta, @descripcion, @activo, @fecha_creacion)";
 
             SqlParameter[] parametros =
             {

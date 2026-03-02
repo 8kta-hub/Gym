@@ -66,7 +66,7 @@
             this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.Location = new System.Drawing.Point(12, 12);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(380, 125);
+            this.groupBox1.Size = new System.Drawing.Size(586, 125);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "DATOS DE LA MEMBRESIA";
@@ -76,7 +76,7 @@
             this.lbl_EstadoMembresia_ClientesMembresiasPagos.AutoSize = true;
             this.lbl_EstadoMembresia_ClientesMembresiasPagos.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_EstadoMembresia_ClientesMembresiasPagos.ForeColor = System.Drawing.Color.ForestGreen;
-            this.lbl_EstadoMembresia_ClientesMembresiasPagos.Location = new System.Drawing.Point(271, 53);
+            this.lbl_EstadoMembresia_ClientesMembresiasPagos.Location = new System.Drawing.Point(405, 53);
             this.lbl_EstadoMembresia_ClientesMembresiasPagos.Name = "lbl_EstadoMembresia_ClientesMembresiasPagos";
             this.lbl_EstadoMembresia_ClientesMembresiasPagos.Size = new System.Drawing.Size(69, 20);
             this.lbl_EstadoMembresia_ClientesMembresiasPagos.TabIndex = 68;
@@ -155,22 +155,24 @@
             this.groupBox2.Controls.Add(this.label11);
             this.groupBox2.Location = new System.Drawing.Point(12, 143);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(380, 189);
+            this.groupBox2.Size = new System.Drawing.Size(592, 184);
             this.groupBox2.TabIndex = 1;
             this.groupBox2.TabStop = false;
             // 
             // btn_Agregar__ClientesMembresiasPagos
             // 
             this.btn_Agregar__ClientesMembresiasPagos.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_Agregar__ClientesMembresiasPagos.Location = new System.Drawing.Point(261, 155);
+            this.btn_Agregar__ClientesMembresiasPagos.Location = new System.Drawing.Point(482, 145);
             this.btn_Agregar__ClientesMembresiasPagos.Name = "btn_Agregar__ClientesMembresiasPagos";
             this.btn_Agregar__ClientesMembresiasPagos.Size = new System.Drawing.Size(104, 28);
             this.btn_Agregar__ClientesMembresiasPagos.TabIndex = 7;
             this.btn_Agregar__ClientesMembresiasPagos.Text = "Agregar Pago";
             this.btn_Agregar__ClientesMembresiasPagos.UseVisualStyleBackColor = true;
+            this.btn_Agregar__ClientesMembresiasPagos.Click += new System.EventHandler(this.btn_Agregar_Click);
             // 
             // cmb_TipoDePago_ClientesMembresiasPagos
             // 
+            this.cmb_TipoDePago_ClientesMembresiasPagos.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmb_TipoDePago_ClientesMembresiasPagos.FormattingEnabled = true;
             this.cmb_TipoDePago_ClientesMembresiasPagos.Location = new System.Drawing.Point(107, 76);
             this.cmb_TipoDePago_ClientesMembresiasPagos.Name = "cmb_TipoDePago_ClientesMembresiasPagos";
@@ -181,14 +183,17 @@
             // 
             this.txt_Folio_ClientesMembresiasPagos.Location = new System.Drawing.Point(107, 47);
             this.txt_Folio_ClientesMembresiasPagos.Name = "txt_Folio_ClientesMembresiasPagos";
-            this.txt_Folio_ClientesMembresiasPagos.Size = new System.Drawing.Size(93, 20);
+            this.txt_Folio_ClientesMembresiasPagos.ReadOnly = true;
+            this.txt_Folio_ClientesMembresiasPagos.Size = new System.Drawing.Size(114, 20);
             this.txt_Folio_ClientesMembresiasPagos.TabIndex = 79;
+            this.txt_Folio_ClientesMembresiasPagos.Text = "Se generará al pagar";
             // 
             // txt_Importe_ClientesMembresiasPagos
             // 
             this.txt_Importe_ClientesMembresiasPagos.Location = new System.Drawing.Point(106, 21);
             this.txt_Importe_ClientesMembresiasPagos.Name = "txt_Importe_ClientesMembresiasPagos";
-            this.txt_Importe_ClientesMembresiasPagos.Size = new System.Drawing.Size(93, 20);
+            this.txt_Importe_ClientesMembresiasPagos.ReadOnly = true;
+            this.txt_Importe_ClientesMembresiasPagos.Size = new System.Drawing.Size(114, 20);
             this.txt_Importe_ClientesMembresiasPagos.TabIndex = 78;
             // 
             // txt_Observacion_ClientesMembresiasPagos
@@ -196,7 +201,7 @@
             this.txt_Observacion_ClientesMembresiasPagos.Location = new System.Drawing.Point(107, 108);
             this.txt_Observacion_ClientesMembresiasPagos.Multiline = true;
             this.txt_Observacion_ClientesMembresiasPagos.Name = "txt_Observacion_ClientesMembresiasPagos";
-            this.txt_Observacion_ClientesMembresiasPagos.Size = new System.Drawing.Size(258, 41);
+            this.txt_Observacion_ClientesMembresiasPagos.Size = new System.Drawing.Size(293, 65);
             this.txt_Observacion_ClientesMembresiasPagos.TabIndex = 77;
             // 
             // label15
@@ -242,36 +247,38 @@
             // dgv__ClientesMembresiasPagos
             // 
             this.dgv__ClientesMembresiasPagos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgv__ClientesMembresiasPagos.Location = new System.Drawing.Point(12, 385);
+            this.dgv__ClientesMembresiasPagos.Location = new System.Drawing.Point(12, 378);
             this.dgv__ClientesMembresiasPagos.Name = "dgv__ClientesMembresiasPagos";
-            this.dgv__ClientesMembresiasPagos.Size = new System.Drawing.Size(380, 191);
+            this.dgv__ClientesMembresiasPagos.Size = new System.Drawing.Size(592, 198);
             this.dgv__ClientesMembresiasPagos.TabIndex = 2;
             // 
             // btn_Reimprimir_ClientesMembresiasPagos
             // 
             this.btn_Reimprimir_ClientesMembresiasPagos.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_Reimprimir_ClientesMembresiasPagos.Location = new System.Drawing.Point(167, 351);
+            this.btn_Reimprimir_ClientesMembresiasPagos.Location = new System.Drawing.Point(395, 344);
             this.btn_Reimprimir_ClientesMembresiasPagos.Name = "btn_Reimprimir_ClientesMembresiasPagos";
             this.btn_Reimprimir_ClientesMembresiasPagos.Size = new System.Drawing.Size(91, 28);
             this.btn_Reimprimir_ClientesMembresiasPagos.TabIndex = 81;
             this.btn_Reimprimir_ClientesMembresiasPagos.Text = "Reimprimir";
             this.btn_Reimprimir_ClientesMembresiasPagos.UseVisualStyleBackColor = true;
+            this.btn_Reimprimir_ClientesMembresiasPagos.Click += new System.EventHandler(this.btn_Reimprimir_Click);
             // 
             // btn_Eliminar_ClientesMembresiasPagos
             // 
             this.btn_Eliminar_ClientesMembresiasPagos.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_Eliminar_ClientesMembresiasPagos.Location = new System.Drawing.Point(264, 351);
+            this.btn_Eliminar_ClientesMembresiasPagos.Location = new System.Drawing.Point(492, 344);
             this.btn_Eliminar_ClientesMembresiasPagos.Name = "btn_Eliminar_ClientesMembresiasPagos";
             this.btn_Eliminar_ClientesMembresiasPagos.Size = new System.Drawing.Size(113, 28);
             this.btn_Eliminar_ClientesMembresiasPagos.TabIndex = 82;
             this.btn_Eliminar_ClientesMembresiasPagos.Text = "Eliminar Pago";
             this.btn_Eliminar_ClientesMembresiasPagos.UseVisualStyleBackColor = true;
+            this.btn_Eliminar_ClientesMembresiasPagos.Click += new System.EventHandler(this.btn_Eliminar_Click);
             // 
             // frm_Clientes_Membresias_Pago
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(404, 588);
+            this.ClientSize = new System.Drawing.Size(616, 588);
             this.Controls.Add(this.btn_Eliminar_ClientesMembresiasPagos);
             this.Controls.Add(this.btn_Reimprimir_ClientesMembresiasPagos);
             this.Controls.Add(this.dgv__ClientesMembresiasPagos);
@@ -283,6 +290,7 @@
             this.Name = "frm_Clientes_Membresias_Pago";
             this.ShowIcon = false;
             this.Text = "Pago de la Membresia";
+            this.Load += new System.EventHandler(this.frm_Clientes_Membresias_Pago_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.groupBox2.ResumeLayout(false);
