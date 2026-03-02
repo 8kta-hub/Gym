@@ -40,7 +40,7 @@ namespace Gym.V.frmHijos.Productos
             else
             {
                 this.Text = "Modificar Producto";
-                CargarDatosEnControles(procutoActual);
+                CargarDatosEnControles(productoActual);
             }
         }
 

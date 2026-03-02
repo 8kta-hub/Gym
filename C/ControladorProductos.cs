@@ -49,8 +49,7 @@ namespace Gym.C
                 new SqlParameter("@costo", costo),
                 new SqlParameter("@precio_venta", precioVenta),
                 new SqlParameter("@descripcion", descripcion),
-                new SqlParameter("@activo", activo),
-                new SqlParameter("@fecha_creacion", fechaCreacion)
+                new SqlParameter("@activo", activo)
             };
 
             int filas = conexion.EjecutarComando(sql, parametros);
