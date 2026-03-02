@@ -24,7 +24,7 @@ namespace Gym.V.frmHijos.Clientes
 
         private void frm_Clientes_Membresias_Pago_Load(object sender, EventArgs e)
         {
-            // fecha de inicio = hoy, porque se paga en este momento
+            // fecha de inicio es de hoy porque se paga en este momento
             DateTime inicio = DateTime.Today;
 
             lbl_Precio_ClientesMembresiasPagos.Text = "$" + membresiaActual.Precio.ToString("N2");
@@ -38,13 +38,14 @@ namespace Gym.V.frmHijos.Clientes
             lbl_EstadoMembresia_ClientesMembresiasPagos.Text = "Pendiente de pago";
             lbl_EstadoMembresia_ClientesMembresiasPagos.ForeColor = System.Drawing.Color.OrangeRed;
 
-            txt_Importe_ClientesMembresiasPagos.Text = membresiaActual.Precio.ToString("N2");
+            lbl_Vuelto_ClientesMembresiasPagos.Visible = false;
+            label5.Visible = false;
 
             cmb_TipoDePago_ClientesMembresiasPagos.Items.Add("Efectivo");
             cmb_TipoDePago_ClientesMembresiasPagos.Items.Add("Tarjeta de débito");
             cmb_TipoDePago_ClientesMembresiasPagos.Items.Add("Tarjeta de crédito");
             cmb_TipoDePago_ClientesMembresiasPagos.Items.Add("Transferencia");
-            cmb_TipoDePago_ClientesMembresiasPagos.SelectedIndex = 0;
+            cmb_TipoDePago_ClientesMembresiasPagos.SelectedIndex = -1;
 
             CargarHistorialPagos();
         }
@@ -55,6 +56,7 @@ namespace Gym.V.frmHijos.Clientes
         {
             try
             {
+                // Validación: método de pago seleccionado
                 if (cmb_TipoDePago_ClientesMembresiasPagos.SelectedItem == null)
                 {
                     MessageBox.Show("Seleccione un tipo de pago", "Validación",
@@ -62,15 +64,40 @@ namespace Gym.V.frmHijos.Clientes
                     return;
                 }
 
+                // Validación: importe debe ser un número válido
+                if (!decimal.TryParse(txt_Importe_ClientesMembresiasPagos.Text, out decimal importe))
+                {
+                    MessageBox.Show("El importe ingresado no es válido", "Validación",
+                        MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return;
+                }
+
+                // Validación: importe debe ser mayor o igual al precio
+                if (importe < membresiaActual.Precio)
+                {
+                    MessageBox.Show(
+                        $"El importe debe ser mayor o igual al precio de la membresía (${membresiaActual.Precio:N2})",
+                        "Validación", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return;
+                }
+
                 string metodo = cmb_TipoDePago_ClientesMembresiasPagos.SelectedItem.ToString();
                 string observacion = txt_Observacion_ClientesMembresiasPagos.Text.Trim();
                 decimal total = membresiaActual.Precio;
+                decimal vuelto = metodo == "Efectivo" ? importe - total : 0;
 
-                // Paso 1: crear la operación, el folio lo genera SQL automáticamente
-                int idOperacion = controladorVentas.InsertOperacion(
-                    clienteActual.IdCliente,
-                    total
-                );
+                // Confirmación antes de procesar
+                string mensajeConfirmacion = metodo == "Efectivo"
+                    ? $"Membresía: {membresiaActual.Nombre}\nTotal: ${total:N2}\nImporte recibido: ${importe:N2}\nVuelto: ${vuelto:N2}\nMétodo: {metodo}\n\n¿Confirmar pago?"
+                    : $"Membresía: {membresiaActual.Nombre}\nTotal: ${total:N2}\nMétodo: {metodo}\n\n¿Confirmar pago?";
+
+                var confirmacion = MessageBox.Show(mensajeConfirmacion, "Confirmar pago",
+                    MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
+                if (confirmacion != DialogResult.Yes) return;
+
+                // Paso 1: crear la operación
+                int idOperacion = controladorVentas.InsertOperacion(clienteActual.IdCliente, total);
 
                 if (idOperacion <= 0)
                 {
@@ -79,9 +106,8 @@ namespace Gym.V.frmHijos.Clientes
                     return;
                 }
 
-                // Paso 2: registrar el pago con método y observación
-                bool pagoOk = controladorVentas.InsertPago(
-                    idOperacion, total, metodo, observacion);
+                // Paso 2: registrar el pago
+                bool pagoOk = controladorVentas.InsertPago(idOperacion, total, metodo, observacion);
 
                 if (!pagoOk)
                 {
@@ -90,12 +116,9 @@ namespace Gym.V.frmHijos.Clientes
                     return;
                 }
 
-                // Paso 3: actualizar fechas y estado de la membresía a Activo
+                // Paso 3: confirmar membresía con fechas y estado Activo
                 bool membresiaOk = controladorClientes.ConfirmarPagoMembresia(
-                    idClienteMembresia,
-                    DateTime.Today,
-                    membresiaActual.CantidadMsd
-                );
+                    idClienteMembresia, DateTime.Today, membresiaActual.CantidadMsd);
 
                 if (!membresiaOk)
                 {
@@ -104,33 +127,30 @@ namespace Gym.V.frmHijos.Clientes
                     return;
                 }
 
-                if (!membresiaOk)
-                {
-                    MessageBox.Show("No se pudo asignar la membresía", "Error",
-                        MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    return;
-                }
-
-                // Obtener el folio 
+                // Obtener folio y mostrar resultados
                 string folio = controladorVentas.ObtenerFolio(idOperacion);
 
-                // Actualizar estado de la membresía en el label
-                lbl_EstadoMembresia_ClientesMembresiasPagos.Text = "Pagado";
-                lbl_EstadoMembresia_ClientesMembresiasPagos.ForeColor = System.Drawing.Color.ForestGreen;
-
-                // Deshabilitar el botón para evitar doble pago
-                btn_Agregar__ClientesMembresiasPagos.Enabled = false;
-
-                MessageBox.Show(
-                    $"Pago registrado correctamente\nFolio: {folio}",
-                    "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
-
-                // Mostrar el total una vez confirmado el pago
-                lbl_Total_ClientesMembresiasPagos.Text = "$" + txt_Importe_ClientesMembresiasPagos.Text;
+                // Mostrar total y vuelto si aplica
+                lbl_Total_ClientesMembresiasPagos.Text = "$" + total.ToString("N2");
                 lbl_Total_ClientesMembresiasPagos.Visible = true;
                 label3.Visible = true;
 
-                // Refrescar el historial con el pago recién agregado
+                if (metodo == "Efectivo")
+                {
+                    // Si no hay vuelto muestra $0.00 en vez de ocultar o mostrar guión
+                    lbl_Vuelto_ClientesMembresiasPagos.Text = "$" + vuelto.ToString("N2");
+                    lbl_Vuelto_ClientesMembresiasPagos.Visible = true;
+                    label5.Visible = true;
+                }
+
+                lbl_EstadoMembresia_ClientesMembresiasPagos.Text = "Pagado";
+                lbl_EstadoMembresia_ClientesMembresiasPagos.ForeColor = System.Drawing.Color.ForestGreen;
+
+                btn_Agregar__ClientesMembresiasPagos.Enabled = false;
+
+                MessageBox.Show($"Pago registrado correctamente\nFolio: {folio}",
+                    "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
                 CargarHistorialPagos();
             }
             catch (Exception ex)
@@ -140,11 +160,10 @@ namespace Gym.V.frmHijos.Clientes
             }
         }
 
-        // ── BOTÓN ELIMINAR PAGO ───────────────────────────────────────────────
-        // Anula el pago seleccionado en el grid (baja lógica)
         private void btn_Eliminar_Click(object sender, EventArgs e)
         {
-            if (dgv__ClientesMembresiasPagos.SelectedRows.Count == 0)
+            if (dgv__ClientesMembresiasPagos.SelectedRows.Count == 0 ||
+                dgv__ClientesMembresiasPagos.SelectedRows[0].Cells["id_pago"].Value == null)
             {
                 MessageBox.Show("Seleccione un pago a eliminar");
                 return;
@@ -173,11 +192,10 @@ namespace Gym.V.frmHijos.Clientes
             }
         }
 
-        // ── BOTÓN REIMPRIMIR ──────────────────────────────────────────────────
-        // Muestra el folio del pago seleccionado en el grid
         private void btn_Reimprimir_Click(object sender, EventArgs e)
         {
-            if (dgv__ClientesMembresiasPagos.SelectedRows.Count == 0)
+            if (dgv__ClientesMembresiasPagos.SelectedRows.Count == 0 ||
+                dgv__ClientesMembresiasPagos.SelectedRows[0].Cells["folio"].Value == null)
             {
                 MessageBox.Show("Seleccione un pago para reimprimir");
                 return;
@@ -192,8 +210,6 @@ namespace Gym.V.frmHijos.Clientes
                 "Reimprimir", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
-        // ── CARGAR HISTORIAL DE PAGOS ─────────────────────────────────────────
-        // Muestra todos los pagos del cliente en el dgv
         private void CargarHistorialPagos()
         {
             // Usa idClienteMembresia en lugar de idCliente
@@ -210,5 +226,40 @@ namespace Gym.V.frmHijos.Clientes
             if (dgv__ClientesMembresiasPagos.Columns.Contains("id_operacion"))
                 dgv__ClientesMembresiasPagos.Columns["id_operacion"].Visible = false;
         }
+
+        private void txt_Importe_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            // Solo permite números, una coma decimal y backspace
+            if (!char.IsDigit(e.KeyChar) && e.KeyChar != ',' && e.KeyChar != (char)Keys.Back)
+                e.Handled = true; // bloquea cualquier otra tecla
+        }
+
+        private void txt_Importe_TextChanged(object sender, EventArgs e)
+        {
+            // Solo calcula pero NO muestra el vuelto todavía
+            // El vuelto aparece recién después de confirmar el pago
+            if (cmb_TipoDePago_ClientesMembresiasPagos.SelectedItem?.ToString() != "Efectivo")
+                return;
+
+            if (decimal.TryParse(txt_Importe_ClientesMembresiasPagos.Text, out decimal importe))
+            {
+                decimal vuelto = importe - membresiaActual.Precio;
+                lbl_Vuelto_ClientesMembresiasPagos.Text = vuelto >= 0
+                    ? "$" + vuelto.ToString("N2")
+                    : "Importe insuficiente";
+            }
+        }
+
+        private void cmb_TipoDePago_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            // Solo oculta si cambia a un método que no es Efectivo
+            // Nunca muestra el vuelto, eso lo hace únicamente el botón Agregar
+            if (cmb_TipoDePago_ClientesMembresiasPagos.SelectedItem?.ToString() != "Efectivo")
+            {
+                lbl_Vuelto_ClientesMembresiasPagos.Visible = false;
+                label5.Visible = false;
+            }
+        }
+
     }
 }

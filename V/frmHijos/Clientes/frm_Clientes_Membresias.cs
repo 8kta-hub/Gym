@@ -128,7 +128,9 @@ namespace Gym.V.frmHijos.Clientes
 
         private void btn_Pagar_ClientesMembresias_Click(object sender, EventArgs e)
         {
-            if (dgv_ClientesMembresias.SelectedRows.Count == 0)
+
+            if (dgv_ClientesMembresias.SelectedRows.Count == 0 ||
+                dgv_ClientesMembresias.SelectedRows[0].Cells["id_cliente_membresias"].Value == null)
             {
                 MessageBox.Show("Seleccione una membresía del listado para pagar",
                     "Validación", MessageBoxButtons.OK, MessageBoxIcon.Warning);
@@ -175,7 +177,8 @@ namespace Gym.V.frmHijos.Clientes
 
         private void btn_Eliminar_ClientesMembresias_Click(object sender, EventArgs e)
         {
-            if (dgv_ClientesMembresias.SelectedRows.Count == 0)
+            if (dgv_ClientesMembresias.SelectedRows.Count == 0 ||
+                dgv_ClientesMembresias.SelectedRows[0].Cells["id_cliente_membresias"].Value == null)
             {
                 MessageBox.Show("Seleccione una membresía a eliminar");
                 return;
