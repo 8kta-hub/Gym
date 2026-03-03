@@ -28,7 +28,7 @@ namespace Gym.C
                     pr.costo,
                     pr.precio_venta,
                     pr.descripcion,
-                    pr.activo,
+                    pr.estado,
                     pr.fecha_creacion
                 FROM Productos pr
                 INNER JOIN Proveedores p ON pr.id_proveedor = p.id_proveedor
@@ -37,13 +37,102 @@ namespace Gym.C
             conexion.CargarTabla(consulta, dgv);
         }
 
+        
+
+        // ─────────────────────────────────────────
+        // INSERT
+        // ─────────────────────────────────────────
+        public bool InsertProducto(int idProveedor, int codigo, string nombre, int stock, decimal costo, decimal precioVenta, string descripcion)
+        {
+            string sql = @"INSERT INTO Productos (id_proveedor, codigo, nombre, stock, costo, precio_venta, descripcion)
+                           VALUES (@id_proveedor, @codigo, @nombre, @stock, @costo, @precio_venta, @descripcion)";
+
+            SqlParameter[] parametros =
+            {
+                new SqlParameter("@id_proveedor", idProveedor),
+                new SqlParameter("@codigo", codigo),
+                new SqlParameter("@nombre",  nombre),
+                new SqlParameter("@stock", stock),
+                new SqlParameter("@costo", costo),
+                new SqlParameter("@precio_venta", precioVenta),
+                new SqlParameter("@descripcion", descripcion)
+            };
+
+            int filas = conexion.EjecutarComando(sql, parametros);
+            return filas > 0;
+        }
+
+        // ─────────────────────────────────────────
+        // UPDATE
+        // ─────────────────────────────────────────
+        public bool UpdateProducto(int id_producto, int idProveedor, int codigo, string nombre, int stock, decimal costo, decimal precioVenta, string descripcion, string estado)
+        {
+            string sql = @"UPDATE Productos
+                           SET    id_proveedor = @id_proveedor,
+                                  codigo  = @codigo,
+                                  nombre  = @nombre,
+                                  stock = @stock,
+                                  costo = @costo,
+                                  precio_venta = @precio_venta,
+                                  descripcion = @descripcion,
+                                  estado = @estado
+                           WHERE  id_producto  = @id_producto";
+
+            SqlParameter[] parametros =
+            {
+                new SqlParameter("@id_proveedor", idProveedor),
+                new SqlParameter("@codigo", codigo),
+                new SqlParameter("@nombre",  nombre),
+                new SqlParameter("@stock", stock),
+                new SqlParameter("@costo", costo),
+                new SqlParameter("@precio_venta", precioVenta),
+                new SqlParameter("@descripcion", descripcion),
+                new SqlParameter("@estado", estado),
+                new SqlParameter("@id_producto",  id_producto)
+            };
+
+            int filas = conexion.EjecutarComando(sql, parametros);
+            return filas > 0;
+        }
+
+        // ─────────────────────────────────────────
+        // DELETE LÓGICO
+        // ─────────────────────────────────────────
+        public bool DeleteProducto(int id_producto)
+        {
+            string sql = "UPDATE Productos SET estado = 'Inactivo' WHERE id_producto = @id_producto";
+
+            SqlParameter[] parametros =
+            {
+                new SqlParameter("@id_producto", id_producto)
+            };
+
+            int filas = conexion.EjecutarComando(sql, parametros);
+            return filas > 0;
+        }
+
+       public void CargarProveedoresEnCombo(ComboBox cmb)
+        {
+            string consulta = @"
+            SELECT id_proveedor, nombre
+            FROM Proveedores
+            WHERE activo = 1";
+
+            DataTable dt = conexion.ObtenerTabla(consulta);
+
+            cmb.DataSource = dt;
+            cmb.DisplayMember = "nombre";      // Lo que se muestra
+            cmb.ValueMember = "id_proveedor";  // Lo que se guarda
+            cmb.SelectedIndex = -1;
+        }
+
         public List<Producto> ObtenerProductosActivos()
         {
             string consulta = @"
-        SELECT id_producto, codigo, nombre, costo, precio_venta
-        FROM Productos
-        WHERE activo = 1
-        ORDER BY nombre";
+            SELECT id_producto, codigo, nombre, costo, precio_venta
+            FROM Productos
+            WHERE estado = 'Activo'
+            ORDER BY nombre";
 
             DataTable dt = conexion.ObtenerTabla(consulta);
             var lista = new List<Producto>();
@@ -61,92 +150,6 @@ namespace Gym.C
             }
 
             return lista;
-        }
-
-        // ─────────────────────────────────────────
-        // INSERT
-        // ─────────────────────────────────────────
-        public bool InsertProducto(int idProveedor, int codigo, string nombre, int stock, decimal costo, decimal precioVenta, string descripcion, bool activo)
-        {
-            string sql = @"INSERT INTO Productos (id_proveedor, codigo, nombre, stock, costo, precio_venta, descripcion, activo)
-                           VALUES (@id_proveedor, @codigo, @nombre, @stock, @costo, @precio_venta, @descripcion, @activo)";
-
-            SqlParameter[] parametros =
-            {
-                new SqlParameter("@id_proveedor", idProveedor),
-                new SqlParameter("@codigo", codigo),
-                new SqlParameter("@nombre",  nombre),
-                new SqlParameter("@stock", stock),
-                new SqlParameter("@costo", costo),
-                new SqlParameter("@precio_venta", precioVenta),
-                new SqlParameter("@descripcion", descripcion),
-                new SqlParameter("@activo", activo)
-            };
-
-            int filas = conexion.EjecutarComando(sql, parametros);
-            return filas > 0;
-        }
-
-        // ─────────────────────────────────────────
-        // UPDATE
-        // ─────────────────────────────────────────
-        public bool UpdateProducto(int id_producto, int idProveedor, int codigo, string nombre, int stock, decimal costo, decimal precioVenta, string descripcion)
-        {
-            string sql = @"UPDATE Productos
-                           SET    id_proveedor = @id_proveedor,
-                                  codigo  = @codigo,
-                                  nombre  = @nombre,
-                                  stock = @stock,
-                                  costo = @costo,
-                                  precio_venta = @precio_venta,
-                                  descripcion = @descripcion
-                           WHERE  id_producto  = @id_producto";
-
-            SqlParameter[] parametros =
-            {
-                new SqlParameter("@id_proveedor", idProveedor),
-                new SqlParameter("@codigo", codigo),
-                new SqlParameter("@nombre",  nombre),
-                new SqlParameter("@stock", stock),
-                new SqlParameter("@costo", costo),
-                new SqlParameter("@precio_venta", precioVenta),
-                new SqlParameter("@descripcion", descripcion),
-                new SqlParameter("@id_producto",  id_producto)
-            };
-
-            int filas = conexion.EjecutarComando(sql, parametros);
-            return filas > 0;
-        }
-
-        // ─────────────────────────────────────────
-        // DELETE LÓGICO
-        // ─────────────────────────────────────────
-        public bool DeleteProducto(int id_producto)
-        {
-            string sql = "UPDATE Productos SET activo = 0 WHERE id_producto = @id_producto";
-
-            SqlParameter[] parametros =
-            {
-                new SqlParameter("@id_producto", id_producto)
-            };
-
-            int filas = conexion.EjecutarComando(sql, parametros);
-            return filas > 0;
-        }
-
-        public void CargarProveedoresEnCombo(ComboBox cmb)
-        {
-            string consulta = @"
-            SELECT id_proveedor, nombre
-            FROM Proveedores
-            WHERE activo = 1";
-
-            DataTable dt = conexion.ObtenerTabla(consulta);
-
-            cmb.DataSource = dt;
-            cmb.DisplayMember = "nombre";      // Lo que se muestra
-            cmb.ValueMember = "id_proveedor";  // Lo que se guarda
-            cmb.SelectedIndex = -1;
         }
     }
 }

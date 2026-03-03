@@ -17,6 +17,5 @@ namespace Gym.M.Entidades
         public decimal PrecioVenta { get; set; }
         public string Descripcion { get; set; }
         public string Estado { get; set; }
-        public DateTime FechaCreacion { get; set; }
     }
 }

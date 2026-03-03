@@ -52,6 +52,13 @@ namespace Gym.V.frmHijos.Productos
         {
             try
             {
+                if (cmb_Proveedor_ProductosNuevo.SelectedValue == null)
+                {
+                    MessageBox.Show("Debe seleccionar un proveedor");
+                    cmb_Proveedor_ProductosNuevo.Focus();
+                    return;
+                }
+
                 if (string.IsNullOrWhiteSpace(txt_Codigo_ProductosNuevo.Text))
                 {
                     MessageBox.Show("Debe ingresar un codigo para el producto");
@@ -101,17 +108,25 @@ namespace Gym.V.frmHijos.Productos
                 decimal costo = Convert.ToDecimal(txt_Costo_ProductosNuevo.Text.Trim());
                 decimal precioVenta = Convert.ToDecimal(txt_Precio_ProductosNuevo.Text.Trim());
                 string descripcion = txt_Descripcion_ProductosNuevo.Text.Trim();
-                bool activo = true;
+                string estado;
+                if(chk_ProductoActivo.Checked == true)
+                {
+                    estado = "Activo";
+                }
+                else
+                {
+                    estado = "Inactivo";
+                }
                 bool resultado;
 
                 if (_esAlta)
                 {
-                    resultado = controlador.InsertProducto(idProveedor, codigo, nombre, stock, costo, precioVenta, descripcion, activo);
+                    resultado = controlador.InsertProducto(idProveedor, codigo, nombre, stock, costo, precioVenta, descripcion);
                 }
                 else
                 {
                     // UPDATE
-                    resultado = controlador.UpdateProducto(productoActual.IdProducto, idProveedor, codigo, nombre, stock, costo, precioVenta, descripcion);
+                    resultado = controlador.UpdateProducto(productoActual.IdProducto, idProveedor, codigo, nombre, stock, costo, precioVenta, descripcion, estado);
                 }
 
                 if (resultado)
@@ -144,6 +159,14 @@ namespace Gym.V.frmHijos.Productos
             txt_Costo_ProductosNuevo.Text = producto.Costo.ToString();
             txt_Precio_ProductosNuevo.Text = producto.PrecioVenta.ToString();
             txt_Descripcion_ProductosNuevo.Text = producto.Descripcion;
+            if(producto.Estado == "Activo" || producto.Estado == "Sin stock")
+            {
+                chk_ProductoActivo.Checked = true;
+            }
+            else
+            {
+                chk_ProductoActivo.Checked = false;
+            }
         }
     }
 }

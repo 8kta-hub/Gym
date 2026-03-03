@@ -148,7 +148,8 @@ namespace Gym.V.frmHijos.Productos
                 Stock = Convert.ToInt32(fila.Cells["stock"].Value),
                 Costo = Convert.ToDecimal(fila.Cells["costo"].Value),
                 PrecioVenta = Convert.ToDecimal(fila.Cells["precio_venta"].Value),
-                Descripcion = fila.Cells["descripcion"].Value?.ToString() ?? ""
+                Descripcion = fila.Cells["descripcion"].Value?.ToString() ?? "",
+                Estado = fila.Cells["estado"].Value?.ToString() ?? ""
             };
         }
 
