@@ -117,6 +117,10 @@ namespace Gym.V.frmHijos.Productos
                 {
                     estado = "Inactivo";
                 }
+                if (stock == 0 && estado == "Activo")
+                {
+                    estado = "Sin stock";
+                }
                 bool resultado;
 
                 if (_esAlta)

@@ -23,7 +23,7 @@ namespace Gym.C
                     costo,
                     precio_venta,
                     stock,
-                    activo
+                    estado
                 FROM Productos";
 
             conexion.CargarTabla(consulta, dgv);
@@ -37,11 +37,11 @@ namespace Gym.C
                     costo,
                     precio_venta,
                     stock,
-                    activo
+                    estado
                 FROM Productos
                 WHERE (@estado = 'Todos' 
-                OR (@estado = 'Activo' AND activo = 1)
-                OR (@estado = 'Inactivo' AND activo = 0))";
+                OR (@estado = 'Activo' AND estado = 'Activo')
+                OR (@estado = 'Inactivo' AND estado = 'Inactivo'))";
 
             SqlParameter[] parametros =
             {
