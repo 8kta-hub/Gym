@@ -72,6 +72,111 @@ namespace Gym.V.frmHijos
             AplicarEstadoSegunTipo(cmb_Tipo_MembresiasNuevo.Text);
         }
 
+        private void btn_Guardar_MembresiasNuevo_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                // Validaciones
+                if (string.IsNullOrWhiteSpace(txt_Nombre_MembresiasNuevo.Text))
+                {
+                    MessageBox.Show("Debe ingresar un nombre");
+                    txt_Nombre_MembresiasNuevo.Focus();
+                    return;
+                }
+                if (string.IsNullOrWhiteSpace(txt_Precio_MembresiasNuevo.Text))
+                {
+                    MessageBox.Show("Debe ingresar un precio");
+                    txt_Precio_MembresiasNuevo.Focus();
+                    return;
+                }
+                if (!decimal.TryParse(txt_Precio_MembresiasNuevo.Text, out decimal precio) || precio <= 0)
+                {
+                    MessageBox.Show("El precio debe ser un número válido mayor a 0");
+                    txt_Precio_MembresiasNuevo.Focus();
+                    return;
+                }
+                if (string.IsNullOrWhiteSpace(cmb_Tipo_MembresiasNuevo.Text))
+                {
+                    MessageBox.Show("Debe seleccionar un tipo");
+                    cmb_Tipo_MembresiasNuevo.Focus();
+                    return;
+                }
+
+                int cantidadMsd = 0;
+                string tipo = cmb_Tipo_MembresiasNuevo.Text;
+
+                switch (tipo)
+                {
+                    case "Mensual":
+                        if (cmb_Meses_MembresiasNuevo.SelectedItem == null)
+                        {
+                            MessageBox.Show("Debe seleccionar la cantidad de meses");
+                            cmb_Meses_MembresiasNuevo.Focus();
+                            return;
+                        }
+                        cantidadMsd = (int)cmb_Meses_MembresiasNuevo.SelectedItem * 30;
+                        break;
+                    case "Semanal":
+                        if (cmb_Semanas_MembresiasNuevo.SelectedItem == null)
+                        {
+                            MessageBox.Show("Debe seleccionar la cantidad de semanas");
+                            cmb_Semanas_MembresiasNuevo.Focus();
+                            return;
+                        }
+                        cantidadMsd = (int)cmb_Semanas_MembresiasNuevo.SelectedItem * 7;
+                        break;
+                    case "Diario":
+                        if (cmb_Dias_MembresiasNuevo.SelectedItem == null)
+                        {
+                            MessageBox.Show("Debe seleccionar la cantidad de días");
+                            cmb_Dias_MembresiasNuevo.Focus();
+                            return;
+                        }
+                        cantidadMsd = (int)cmb_Dias_MembresiasNuevo.SelectedItem;
+                        break;
+                }
+
+                string nombre = txt_Nombre_MembresiasNuevo.Text.Trim();
+                bool resultado;
+
+                if (NuevoMem)
+                {
+                    resultado = controlador.InsertMembresia(nombre, precio, tipo, cantidadMsd, true);
+                }
+                else
+                {
+                    // UPDATE
+                    DialogResult confirmacion = MessageBox.Show(
+                        "¿Desea guardar los cambios en la membresía?",
+                        "Confirmar modificación",
+                        MessageBoxButtons.YesNo,
+                        MessageBoxIcon.Question
+                    );
+
+                    if (confirmacion != DialogResult.Yes) return;
+
+                    resultado = controlador.UpdateMembresia(
+                        membresiaActual.IdMembresia,
+                        nombre, precio, tipo, cantidadMsd, chk_MembresiaActivo.Checked
+                    );
+                }
+
+                if (resultado)
+                {
+                    MessageBox.Show("Membresía guardada correctamente");
+                    this.DialogResult = DialogResult.OK;
+                }
+                else
+                {
+                    MessageBox.Show("No se pudo guardar la membresía");
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error: " + ex.Message);
+            }
+        }
+
         private void AplicarEstadoSegunTipo(string tipo)
         {
             DesactivarTodosLosControlesDuracion();
@@ -103,108 +208,6 @@ namespace Gym.V.frmHijos
             cmb_Semanas_MembresiasNuevo.SelectedIndex = -1;
             cmb_Dias_MembresiasNuevo.Enabled = false;
             cmb_Dias_MembresiasNuevo.SelectedIndex = -1;
-        }
-
-        private void btn_Guardar_MembresiasNuevo_Click(object sender, EventArgs e)
-        {
-            try
-            {
-                // Validaciones
-                if (string.IsNullOrWhiteSpace(txt_Nombre_MembresiasNuevo.Text))
-                {
-                    MessageBox.Show("Debe ingresar un nombre");
-                    txt_Nombre_MembresiasNuevo.Focus();
-                    return;
-                }
-
-                if (string.IsNullOrWhiteSpace(txt_Precio_MembresiasNuevo.Text))
-                {
-                    MessageBox.Show("Debe ingresar un precio");
-                    txt_Precio_MembresiasNuevo.Focus();
-                    return;
-                }
-
-                if (!decimal.TryParse(txt_Precio_MembresiasNuevo.Text, out decimal precio) || precio <= 0)
-                {
-                    MessageBox.Show("El precio debe ser un número válido mayor a 0");
-                    txt_Precio_MembresiasNuevo.Focus();
-                    return;
-                }
-
-                if (string.IsNullOrWhiteSpace(cmb_Tipo_MembresiasNuevo.Text))
-                {
-                    MessageBox.Show("Debe seleccionar un tipo");
-                    cmb_Tipo_MembresiasNuevo.Focus();
-                    return;
-                }
-
-                // Calcular cantidad_msd según el tipo activo
-                int cantidadMsd = 0;
-                string tipo = cmb_Tipo_MembresiasNuevo.Text;
-
-                switch (tipo)
-                {
-                    case "Mensual":
-                        if (cmb_Meses_MembresiasNuevo.SelectedItem == null)
-                        {
-                            MessageBox.Show("Debe seleccionar la cantidad de meses");
-                            cmb_Meses_MembresiasNuevo.Focus();
-                            return;
-                        }
-                        cantidadMsd = (int)cmb_Meses_MembresiasNuevo.SelectedItem * 30;
-                        break;
-
-                    case "Semanal":
-                        if (cmb_Semanas_MembresiasNuevo.SelectedItem == null)
-                        {
-                            MessageBox.Show("Debe seleccionar la cantidad de semanas");
-                            cmb_Semanas_MembresiasNuevo.Focus();
-                            return;
-                        }
-                        cantidadMsd = (int)cmb_Semanas_MembresiasNuevo.SelectedItem * 7;
-                        break;
-
-                    case "Diario":
-                        if (cmb_Dias_MembresiasNuevo.SelectedItem == null)
-                        {
-                            MessageBox.Show("Debe seleccionar la cantidad de días");
-                            cmb_Dias_MembresiasNuevo.Focus();
-                            return;
-                        }
-                        cantidadMsd = (int)cmb_Dias_MembresiasNuevo.SelectedItem;
-                        break;
-                }
-
-                string nombre = txt_Nombre_MembresiasNuevo.Text.Trim();
-                DateTime fechaVec = DateTime.Now.AddDays(cantidadMsd);
-                bool resultado;
-
-                if (NuevoMem)
-                {
-                    resultado = controlador.InsertMembresia(nombre, precio, tipo, cantidadMsd,  true);
-                }
-                else
-                {
-                    resultado = controlador.UpdateMembresia(
-                        membresiaActual.IdMembresia,
-                        nombre, precio, tipo, cantidadMsd,chk_MembresiaActivo.Checked
-                    );
-                }
-
-                if (resultado)
-                {
-                    MessageBox.Show("Membresía guardada correctamente");
-                    this.DialogResult = DialogResult.OK;
-                }
-                else
-                {
-                    MessageBox.Show("No se pudo guardar la membresía");
-                }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Error: " + ex.Message);
-            }
         }
 
         private void CargarDatosEnControles(Membresia membresia)

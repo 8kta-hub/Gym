@@ -1,4 +1,5 @@
 ﻿using Gym.M;
+using Gym.M.Entidades;
 using System;
 using System.Collections.Generic;
 using System.Data;
@@ -34,6 +35,32 @@ namespace Gym.C
             ";
 
             conexion.CargarTabla(consulta, dgv);
+        }
+
+        public List<Producto> ObtenerProductosActivos()
+        {
+            string consulta = @"
+        SELECT id_producto, codigo, nombre, costo, precio_venta
+        FROM Productos
+        WHERE activo = 1
+        ORDER BY nombre";
+
+            DataTable dt = conexion.ObtenerTabla(consulta);
+            var lista = new List<Producto>();
+
+            foreach (DataRow fila in dt.Rows)
+            {
+                lista.Add(new Producto
+                {
+                    IdProducto = Convert.ToInt32(fila["id_producto"]),
+                    Codigo = Convert.ToInt32(fila["codigo"]),
+                    Nombre = fila["nombre"].ToString(),
+                    Costo = Convert.ToDecimal(fila["costo"]),
+                    PrecioVenta = Convert.ToDecimal(fila["precio_venta"])
+                });
+            }
+
+            return lista;
         }
 
         // ─────────────────────────────────────────
