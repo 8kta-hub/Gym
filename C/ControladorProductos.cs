@@ -1,6 +1,7 @@
 ﻿using Gym.M;
 using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
@@ -17,9 +18,11 @@ namespace Gym.C
         {
             string consulta = @"
                 SELECT 
+                    p.id_proveedor,
                     p.nombre AS Proveedor,
+                    pr.id_producto,
                     pr.codigo,
-                    pr.nombre,
+                    pr.nombre AS ProductoNombre,
                     pr.stock,
                     pr.costo,
                     pr.precio_venta,
@@ -36,13 +39,14 @@ namespace Gym.C
         // ─────────────────────────────────────────
         // INSERT
         // ─────────────────────────────────────────
-        public bool InsertProducto(int codigo, string nombre, int stock, decimal costo, decimal precioVenta, string descripcion, bool activo)
+        public bool InsertProducto(int idProveedor, int codigo, string nombre, int stock, decimal costo, decimal precioVenta, string descripcion, bool activo)
         {
-            string sql = @"INSERT INTO Productos (codigo, nombre, stock, costo, precio_venta, descripcion, activo)
-                           VALUES (@codigo, @nombre, @stock, @costo, @precio_venta, @descripcion, @activo, @fecha_creacion)";
+            string sql = @"INSERT INTO Productos (id_proveedor, codigo, nombre, stock, costo, precio_venta, descripcion, activo)
+                           VALUES (@id_proveedor, @codigo, @nombre, @stock, @costo, @precio_venta, @descripcion, @activo)";
 
             SqlParameter[] parametros =
             {
+                new SqlParameter("@id_proveedor", idProveedor),
                 new SqlParameter("@codigo", codigo),
                 new SqlParameter("@nombre",  nombre),
                 new SqlParameter("@stock", stock),
@@ -59,10 +63,11 @@ namespace Gym.C
         // ─────────────────────────────────────────
         // UPDATE
         // ─────────────────────────────────────────
-        public bool UpdateProducto(int id_producto, int codigo, string nombre, int stock, decimal costo, decimal precioVenta, string descripcion)
+        public bool UpdateProducto(int id_producto, int idProveedor, int codigo, string nombre, int stock, decimal costo, decimal precioVenta, string descripcion)
         {
             string sql = @"UPDATE Productos
-                           SET    codigo  = @codigo,
+                           SET    id_proveedor = @id_proveedor,
+                                  codigo  = @codigo,
                                   nombre  = @nombre,
                                   stock = @stock,
                                   costo = @costo,
@@ -72,6 +77,7 @@ namespace Gym.C
 
             SqlParameter[] parametros =
             {
+                new SqlParameter("@id_proveedor", idProveedor),
                 new SqlParameter("@codigo", codigo),
                 new SqlParameter("@nombre",  nombre),
                 new SqlParameter("@stock", stock),
@@ -90,7 +96,7 @@ namespace Gym.C
         // ─────────────────────────────────────────
         public bool DeleteProducto(int id_producto)
         {
-            string sql = "UPDATE Producto SET activo = 0 WHERE id_producto = @id_producto";
+            string sql = "UPDATE Productos SET activo = 0 WHERE id_producto = @id_producto";
 
             SqlParameter[] parametros =
             {
@@ -99,6 +105,21 @@ namespace Gym.C
 
             int filas = conexion.EjecutarComando(sql, parametros);
             return filas > 0;
+        }
+
+        public void CargarProveedoresEnCombo(ComboBox cmb)
+        {
+            string consulta = @"
+            SELECT id_proveedor, nombre
+            FROM Proveedores
+            WHERE activo = 1";
+
+            DataTable dt = conexion.ObtenerTabla(consulta);
+
+            cmb.DataSource = dt;
+            cmb.DisplayMember = "nombre";      // Lo que se muestra
+            cmb.ValueMember = "id_proveedor";  // Lo que se guarda
+            cmb.SelectedIndex = -1;
         }
     }
 }

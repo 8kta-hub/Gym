@@ -30,6 +30,8 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frm_Reportes));
             this.tabPage8 = new System.Windows.Forms.TabPage();
+            this.label20 = new System.Windows.Forms.Label();
+            this.label21 = new System.Windows.Forms.Label();
             this.btn_ExportarExcel_Reporte_Movimientos = new System.Windows.Forms.Button();
             this.cmb_Tipo_ReportesMovimientos = new System.Windows.Forms.ComboBox();
             this.label2 = new System.Windows.Forms.Label();
@@ -39,6 +41,8 @@
             this.dtp_FechaFinal_ReportesMovimientos = new System.Windows.Forms.DateTimePicker();
             this.dtp_FechaInicial_ReportesMovimientos = new System.Windows.Forms.DateTimePicker();
             this.tabPage6 = new System.Windows.Forms.TabPage();
+            this.label17 = new System.Windows.Forms.Label();
+            this.label18 = new System.Windows.Forms.Label();
             this.btn_ExportarExcel_Reporte_Ventas = new System.Windows.Forms.Button();
             this.dgv_ReportesVentas = new System.Windows.Forms.DataGridView();
             this.lbl_Total_ReportesVentas = new System.Windows.Forms.Label();
@@ -48,6 +52,8 @@
             this.dtp_FechaFinal_ReportesVentas = new System.Windows.Forms.DateTimePicker();
             this.dtp_FechaInicial_ReportesVentas = new System.Windows.Forms.DateTimePicker();
             this.tabPage5 = new System.Windows.Forms.TabPage();
+            this.label14 = new System.Windows.Forms.Label();
+            this.label15 = new System.Windows.Forms.Label();
             this.dgv_ReportesVisitas = new System.Windows.Forms.DataGridView();
             this.lbl_Total_ReportesVisitas = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
@@ -57,6 +63,8 @@
             this.dtp_FechaFinal_ReportesVisitas = new System.Windows.Forms.DateTimePicker();
             this.dtp_FechaInicial_ReportesVisitas = new System.Windows.Forms.DateTimePicker();
             this.tabPage4 = new System.Windows.Forms.TabPage();
+            this.label8 = new System.Windows.Forms.Label();
+            this.label10 = new System.Windows.Forms.Label();
             this.btn_ExportarExcel_Reporte_Registro = new System.Windows.Forms.Button();
             this.dgv_ReportesRegistro = new System.Windows.Forms.DataGridView();
             this.label16 = new System.Windows.Forms.Label();
@@ -84,14 +92,6 @@
             this.dgv_ReportesInventario = new System.Windows.Forms.DataGridView();
             this.label19 = new System.Windows.Forms.Label();
             this.tbc_Reportes = new System.Windows.Forms.TabControl();
-            this.label8 = new System.Windows.Forms.Label();
-            this.label10 = new System.Windows.Forms.Label();
-            this.label14 = new System.Windows.Forms.Label();
-            this.label15 = new System.Windows.Forms.Label();
-            this.label17 = new System.Windows.Forms.Label();
-            this.label18 = new System.Windows.Forms.Label();
-            this.label20 = new System.Windows.Forms.Label();
-            this.label21 = new System.Windows.Forms.Label();
             this.tabPage8.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_ReportesMovimientos)).BeginInit();
             this.tabPage6.SuspendLayout();
@@ -129,6 +129,24 @@
             this.tabPage8.Text = "Movimientos";
             this.tabPage8.UseVisualStyleBackColor = true;
             // 
+            // label20
+            // 
+            this.label20.AutoSize = true;
+            this.label20.Location = new System.Drawing.Point(156, 3);
+            this.label20.Name = "label20";
+            this.label20.Size = new System.Drawing.Size(35, 13);
+            this.label20.TabIndex = 47;
+            this.label20.Text = "Hasta";
+            // 
+            // label21
+            // 
+            this.label21.AutoSize = true;
+            this.label21.Location = new System.Drawing.Point(6, 3);
+            this.label21.Name = "label21";
+            this.label21.Size = new System.Drawing.Size(38, 13);
+            this.label21.TabIndex = 46;
+            this.label21.Text = "Desde";
+            // 
             // btn_ExportarExcel_Reporte_Movimientos
             // 
             this.btn_ExportarExcel_Reporte_Movimientos.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btn_ExportarExcel_Reporte_Movimientos.BackgroundImage")));
@@ -141,11 +159,13 @@
             // 
             // cmb_Tipo_ReportesMovimientos
             // 
+            this.cmb_Tipo_ReportesMovimientos.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmb_Tipo_ReportesMovimientos.FormattingEnabled = true;
             this.cmb_Tipo_ReportesMovimientos.Location = new System.Drawing.Point(320, 15);
             this.cmb_Tipo_ReportesMovimientos.Name = "cmb_Tipo_ReportesMovimientos";
             this.cmb_Tipo_ReportesMovimientos.Size = new System.Drawing.Size(104, 21);
             this.cmb_Tipo_ReportesMovimientos.TabIndex = 43;
+            this.cmb_Tipo_ReportesMovimientos.SelectedIndexChanged += new System.EventHandler(this.cmb_Tipo_ReportesMovimientos_SelectedIndexChanged);
             // 
             // label2
             // 
@@ -187,6 +207,7 @@
             this.btn_Buscar_ReportesMovimientos.TabIndex = 35;
             this.btn_Buscar_ReportesMovimientos.Text = "Buscar";
             this.btn_Buscar_ReportesMovimientos.UseVisualStyleBackColor = true;
+            this.btn_Buscar_ReportesMovimientos.Click += new System.EventHandler(this.btn_Buscar_ReportesMovimientos_Click);
             // 
             // dtp_FechaFinal_ReportesMovimientos
             // 
@@ -201,6 +222,7 @@
             this.dtp_FechaInicial_ReportesMovimientos.Name = "dtp_FechaInicial_ReportesMovimientos";
             this.dtp_FechaInicial_ReportesMovimientos.Size = new System.Drawing.Size(102, 20);
             this.dtp_FechaInicial_ReportesMovimientos.TabIndex = 33;
+            this.dtp_FechaInicial_ReportesMovimientos.ValueChanged += new System.EventHandler(this.dtp_FechaInicial_ReportesMovimientos_ValueChanged);
             // 
             // tabPage6
             // 
@@ -221,6 +243,24 @@
             this.tabPage6.TabIndex = 5;
             this.tabPage6.Text = "Ventas";
             this.tabPage6.UseVisualStyleBackColor = true;
+            // 
+            // label17
+            // 
+            this.label17.AutoSize = true;
+            this.label17.Location = new System.Drawing.Point(158, 5);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(35, 13);
+            this.label17.TabIndex = 45;
+            this.label17.Text = "Hasta";
+            // 
+            // label18
+            // 
+            this.label18.AutoSize = true;
+            this.label18.Location = new System.Drawing.Point(8, 5);
+            this.label18.Name = "label18";
+            this.label18.Size = new System.Drawing.Size(38, 13);
+            this.label18.TabIndex = 44;
+            this.label18.Text = "Desde";
             // 
             // btn_ExportarExcel_Reporte_Ventas
             // 
@@ -282,6 +322,7 @@
             this.btn_Buscar_ReportesVentas.TabIndex = 27;
             this.btn_Buscar_ReportesVentas.Text = "Buscar";
             this.btn_Buscar_ReportesVentas.UseVisualStyleBackColor = true;
+            this.btn_Buscar_ReportesVentas.Click += new System.EventHandler(this.btn_Buscar_ReportesVentas_Click);
             // 
             // dtp_FechaFinal_ReportesVentas
             // 
@@ -296,6 +337,7 @@
             this.dtp_FechaInicial_ReportesVentas.Name = "dtp_FechaInicial_ReportesVentas";
             this.dtp_FechaInicial_ReportesVentas.Size = new System.Drawing.Size(102, 20);
             this.dtp_FechaInicial_ReportesVentas.TabIndex = 25;
+            this.dtp_FechaInicial_ReportesVentas.ValueChanged += new System.EventHandler(this.dtp_FechaInicial_ReportesVentas_ValueChanged);
             // 
             // tabPage5
             // 
@@ -316,6 +358,24 @@
             this.tabPage5.TabIndex = 4;
             this.tabPage5.Text = "Visitas";
             this.tabPage5.UseVisualStyleBackColor = true;
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Location = new System.Drawing.Point(155, 5);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(35, 13);
+            this.label14.TabIndex = 43;
+            this.label14.Text = "Hasta";
+            // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.Location = new System.Drawing.Point(5, 5);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(38, 13);
+            this.label15.TabIndex = 42;
+            this.label15.Text = "Desde";
             // 
             // dgv_ReportesVisitas
             // 
@@ -377,6 +437,7 @@
             this.btn_Buscar_ReportesVisitas.TabIndex = 17;
             this.btn_Buscar_ReportesVisitas.Text = "Buscar";
             this.btn_Buscar_ReportesVisitas.UseVisualStyleBackColor = true;
+            this.btn_Buscar_ReportesVisitas.Click += new System.EventHandler(this.btn_Buscar_ReportesVisitas_Click);
             // 
             // dtp_FechaFinal_ReportesVisitas
             // 
@@ -391,6 +452,7 @@
             this.dtp_FechaInicial_ReportesVisitas.Name = "dtp_FechaInicial_ReportesVisitas";
             this.dtp_FechaInicial_ReportesVisitas.Size = new System.Drawing.Size(102, 20);
             this.dtp_FechaInicial_ReportesVisitas.TabIndex = 13;
+            this.dtp_FechaInicial_ReportesVisitas.ValueChanged += new System.EventHandler(this.dtp_FechaInicial_ReportesVisitas_ValueChanged);
             // 
             // tabPage4
             // 
@@ -409,6 +471,24 @@
             this.tabPage4.TabIndex = 3;
             this.tabPage4.Text = "Registro";
             this.tabPage4.UseVisualStyleBackColor = true;
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(157, 5);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(35, 13);
+            this.label8.TabIndex = 41;
+            this.label8.Text = "Hasta";
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Location = new System.Drawing.Point(7, 5);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(38, 13);
+            this.label10.TabIndex = 40;
+            this.label10.Text = "Desde";
             // 
             // btn_ExportarExcel_Reporte_Registro
             // 
@@ -450,6 +530,7 @@
             this.btn_Buscar_ReportesRegistro.TabIndex = 27;
             this.btn_Buscar_ReportesRegistro.Text = "Buscar";
             this.btn_Buscar_ReportesRegistro.UseVisualStyleBackColor = true;
+            this.btn_Buscar_ReportesRegistro.Click += new System.EventHandler(this.btn_Buscar_ReportesRegistro_Click);
             // 
             // dtp_FechaFinal_ReportesRegistro
             // 
@@ -464,6 +545,7 @@
             this.dtp_FechaInicial_ReportesRegistro.Name = "dtp_FechaInicial_ReportesRegistro";
             this.dtp_FechaInicial_ReportesRegistro.Size = new System.Drawing.Size(102, 20);
             this.dtp_FechaInicial_ReportesRegistro.TabIndex = 25;
+            this.dtp_FechaInicial_ReportesRegistro.ValueChanged += new System.EventHandler(this.dtp_FechaInicial_ReportesRegistro_ValueChanged);
             // 
             // tabPage3
             // 
@@ -641,11 +723,13 @@
             // 
             // cmb_Filtro_ReportesInventario
             // 
+            this.cmb_Filtro_ReportesInventario.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmb_Filtro_ReportesInventario.FormattingEnabled = true;
             this.cmb_Filtro_ReportesInventario.Location = new System.Drawing.Point(11, 42);
             this.cmb_Filtro_ReportesInventario.Name = "cmb_Filtro_ReportesInventario";
             this.cmb_Filtro_ReportesInventario.Size = new System.Drawing.Size(189, 23);
             this.cmb_Filtro_ReportesInventario.TabIndex = 41;
+            this.cmb_Filtro_ReportesInventario.SelectedIndexChanged += new System.EventHandler(this.cmb_Filtro_ReportesInventario_SelectedIndexChanged);
             // 
             // btn_ExportarExcel_Reporte_Inventario
             // 
@@ -693,78 +777,6 @@
             this.tbc_Reportes.SelectedIndex = 0;
             this.tbc_Reportes.Size = new System.Drawing.Size(1028, 366);
             this.tbc_Reportes.TabIndex = 0;
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(157, 5);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(35, 13);
-            this.label8.TabIndex = 41;
-            this.label8.Text = "Hasta";
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(7, 5);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(38, 13);
-            this.label10.TabIndex = 40;
-            this.label10.Text = "Desde";
-            // 
-            // label14
-            // 
-            this.label14.AutoSize = true;
-            this.label14.Location = new System.Drawing.Point(155, 5);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(35, 13);
-            this.label14.TabIndex = 43;
-            this.label14.Text = "Hasta";
-            // 
-            // label15
-            // 
-            this.label15.AutoSize = true;
-            this.label15.Location = new System.Drawing.Point(5, 5);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(38, 13);
-            this.label15.TabIndex = 42;
-            this.label15.Text = "Desde";
-            // 
-            // label17
-            // 
-            this.label17.AutoSize = true;
-            this.label17.Location = new System.Drawing.Point(158, 5);
-            this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(35, 13);
-            this.label17.TabIndex = 45;
-            this.label17.Text = "Hasta";
-            // 
-            // label18
-            // 
-            this.label18.AutoSize = true;
-            this.label18.Location = new System.Drawing.Point(8, 5);
-            this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(38, 13);
-            this.label18.TabIndex = 44;
-            this.label18.Text = "Desde";
-            // 
-            // label20
-            // 
-            this.label20.AutoSize = true;
-            this.label20.Location = new System.Drawing.Point(156, 3);
-            this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(35, 13);
-            this.label20.TabIndex = 47;
-            this.label20.Text = "Hasta";
-            // 
-            // label21
-            // 
-            this.label21.AutoSize = true;
-            this.label21.Location = new System.Drawing.Point(6, 3);
-            this.label21.Name = "label21";
-            this.label21.Size = new System.Drawing.Size(38, 13);
-            this.label21.TabIndex = 46;
-            this.label21.Text = "Desde";
             // 
             // frm_Reportes
             // 

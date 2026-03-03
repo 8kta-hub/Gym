@@ -141,9 +141,10 @@ namespace Gym.V.frmHijos.Productos
 
             return new Producto
             {
+                IdProveedor = Convert.ToInt32(fila.Cells["id_proveedor"].Value),
                 IdProducto = Convert.ToInt32(fila.Cells["id_producto"].Value),
                 Codigo = Convert.ToInt32(fila.Cells["codigo"].Value),
-                Nombre = fila.Cells["nombre"].Value?.ToString() ?? "",
+                Nombre = fila.Cells["ProductoNombre"].Value?.ToString() ?? "",
                 Stock = Convert.ToInt32(fila.Cells["stock"].Value),
                 Costo = Convert.ToDecimal(fila.Cells["costo"].Value),
                 PrecioVenta = Convert.ToDecimal(fila.Cells["precio_venta"].Value),
@@ -163,11 +164,6 @@ namespace Gym.V.frmHijos.Productos
         private void dgv_Productos_DataBindingComplete(object sender, DataGridViewBindingCompleteEventArgs e)
         {
             dgv_Productos.ClearSelection();
-        }
-
-        private void btn_Proveedor_Productos_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }

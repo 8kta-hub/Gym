@@ -36,10 +36,14 @@ namespace Gym.V.frmHijos.Productos
             if (_esAlta)
             {
                 this.Text = "Nuevo Producto";
+                chk_ProductoActivo.Checked = true;
+                chk_ProductoActivo.Enabled = false;
+                controlador.CargarProveedoresEnCombo(cmb_Proveedor_ProductosNuevo);
             }
             else
             {
                 this.Text = "Modificar Producto";
+                controlador.CargarProveedoresEnCombo(cmb_Proveedor_ProductosNuevo);
                 CargarDatosEnControles(productoActual);
             }
         }
@@ -90,6 +94,7 @@ namespace Gym.V.frmHijos.Productos
                     return;
                 }
 
+                int idProveedor = Convert.ToInt32(cmb_Proveedor_ProductosNuevo.SelectedValue);
                 int codigo = Convert.ToInt32(txt_Codigo_ProductosNuevo.Text.Trim());
                 string nombre = txt_Nombre_ProductosNuevo.Text.Trim();
                 int stock = Convert.ToInt32(txt_Stock_ProductosNuevo.Text.Trim());
@@ -101,12 +106,12 @@ namespace Gym.V.frmHijos.Productos
 
                 if (_esAlta)
                 {
-                    resultado = controlador.InsertProducto(codigo, nombre, stock, costo, precioVenta, descripcion, activo);
+                    resultado = controlador.InsertProducto(idProveedor, codigo, nombre, stock, costo, precioVenta, descripcion, activo);
                 }
                 else
                 {
                     // UPDATE
-                    resultado = controlador.UpdateProducto(productoActual.IdProducto, codigo, nombre, stock, costo, precioVenta, descripcion);
+                    resultado = controlador.UpdateProducto(productoActual.IdProducto, idProveedor, codigo, nombre, stock, costo, precioVenta, descripcion);
                 }
 
                 if (resultado)
@@ -132,6 +137,7 @@ namespace Gym.V.frmHijos.Productos
 
         private void CargarDatosEnControles(Producto producto)
         {
+            cmb_Proveedor_ProductosNuevo.SelectedValue = producto.IdProveedor.ToString();
             txt_Codigo_ProductosNuevo.Text = producto.Codigo.ToString();
             txt_Nombre_ProductosNuevo.Text = producto.Nombre;
             txt_Stock_ProductosNuevo.Text = producto.Stock.ToString();
