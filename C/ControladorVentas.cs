@@ -18,13 +18,15 @@ namespace Gym.C
                     o.folio,
                     c.nombre + ' ' + c.apellido AS Cliente,
                     u.nombre + ' ' + u.apellido AS Usuario,
+                    p.nombre AS Producto,
                     o.fecha,
                     o.total,
                     o.tipo,
                     o.estado
                 FROM Operaciones o
                 INNER JOIN Clientes c ON o.id_cliente = c.id_cliente
-                INNER JOIN Usuarios u ON o.id_usuario = u.id_usuario";
+                INNER JOIN Usuarios u ON o.id_usuario = u.id_usuario
+                INNER JOIN Productos p ON o.id_producto = p.id_producto";
 
             conexion.CargarTabla(consulta, dgv);
         }

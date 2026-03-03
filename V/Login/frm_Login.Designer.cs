@@ -28,26 +28,27 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.btn_Login_Acceder = new System.Windows.Forms.Button();
+            this.btn_Acceder_Login = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.txt_Login_Contraseña = new System.Windows.Forms.TextBox();
-            this.txt_login_Usuari = new System.Windows.Forms.TextBox();
+            this.txt_Contraseña_Login = new System.Windows.Forms.TextBox();
+            this.txt_Usuario_Login = new System.Windows.Forms.TextBox();
             this.lbl_OlvidarContraseña_Login = new System.Windows.Forms.Label();
             this.btn_MostrarContraseña_Login = new System.Windows.Forms.Button();
             this.pic_GimLogo_Login = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pic_GimLogo_Login)).BeginInit();
             this.SuspendLayout();
             // 
-            // btn_Login_Acceder
+            // btn_Acceder_Login
             // 
-            this.btn_Login_Acceder.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_Login_Acceder.Location = new System.Drawing.Point(216, 376);
-            this.btn_Login_Acceder.Name = "btn_Login_Acceder";
-            this.btn_Login_Acceder.Size = new System.Drawing.Size(75, 23);
-            this.btn_Login_Acceder.TabIndex = 0;
-            this.btn_Login_Acceder.Text = "Acceder";
-            this.btn_Login_Acceder.UseVisualStyleBackColor = true;
+            this.btn_Acceder_Login.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Acceder_Login.Location = new System.Drawing.Point(216, 376);
+            this.btn_Acceder_Login.Name = "btn_Acceder_Login";
+            this.btn_Acceder_Login.Size = new System.Drawing.Size(75, 23);
+            this.btn_Acceder_Login.TabIndex = 0;
+            this.btn_Acceder_Login.Text = "Acceder";
+            this.btn_Acceder_Login.UseVisualStyleBackColor = true;
+            this.btn_Acceder_Login.Click += new System.EventHandler(this.btn_Acceder_Login_Click);
             // 
             // label1
             // 
@@ -69,22 +70,22 @@
             this.label2.TabIndex = 3;
             this.label2.Text = "Usuario";
             // 
-            // txt_Login_Contraseña
+            // txt_Contraseña_Login
             // 
-            this.txt_Login_Contraseña.Location = new System.Drawing.Point(154, 303);
-            this.txt_Login_Contraseña.Multiline = true;
-            this.txt_Login_Contraseña.Name = "txt_Login_Contraseña";
-            this.txt_Login_Contraseña.PasswordChar = '*';
-            this.txt_Login_Contraseña.Size = new System.Drawing.Size(199, 29);
-            this.txt_Login_Contraseña.TabIndex = 4;
+            this.txt_Contraseña_Login.Location = new System.Drawing.Point(154, 303);
+            this.txt_Contraseña_Login.Multiline = true;
+            this.txt_Contraseña_Login.Name = "txt_Contraseña_Login";
+            this.txt_Contraseña_Login.PasswordChar = '*';
+            this.txt_Contraseña_Login.Size = new System.Drawing.Size(199, 29);
+            this.txt_Contraseña_Login.TabIndex = 4;
             // 
-            // txt_login_Usuari
+            // txt_Usuario_Login
             // 
-            this.txt_login_Usuari.Location = new System.Drawing.Point(154, 227);
-            this.txt_login_Usuari.Multiline = true;
-            this.txt_login_Usuari.Name = "txt_login_Usuari";
-            this.txt_login_Usuari.Size = new System.Drawing.Size(199, 29);
-            this.txt_login_Usuari.TabIndex = 5;
+            this.txt_Usuario_Login.Location = new System.Drawing.Point(154, 227);
+            this.txt_Usuario_Login.Multiline = true;
+            this.txt_Usuario_Login.Name = "txt_Usuario_Login";
+            this.txt_Usuario_Login.Size = new System.Drawing.Size(199, 29);
+            this.txt_Usuario_Login.TabIndex = 5;
             // 
             // lbl_OlvidarContraseña_Login
             // 
@@ -124,15 +125,16 @@
             this.ClientSize = new System.Drawing.Size(510, 411);
             this.Controls.Add(this.pic_GimLogo_Login);
             this.Controls.Add(this.lbl_OlvidarContraseña_Login);
-            this.Controls.Add(this.txt_login_Usuari);
-            this.Controls.Add(this.txt_Login_Contraseña);
+            this.Controls.Add(this.txt_Usuario_Login);
+            this.Controls.Add(this.txt_Contraseña_Login);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btn_MostrarContraseña_Login);
-            this.Controls.Add(this.btn_Login_Acceder);
+            this.Controls.Add(this.btn_Acceder_Login);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MaximizeBox = false;
             this.Name = "frm_Login";
+            this.Load += new System.EventHandler(this.frm_Login_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pic_GimLogo_Login)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -141,12 +143,12 @@
 
         #endregion
 
-        private System.Windows.Forms.Button btn_Login_Acceder;
+        private System.Windows.Forms.Button btn_Acceder_Login;
         private System.Windows.Forms.Button btn_MostrarContraseña_Login;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox txt_Login_Contraseña;
-        private System.Windows.Forms.TextBox txt_login_Usuari;
+        private System.Windows.Forms.TextBox txt_Contraseña_Login;
+        private System.Windows.Forms.TextBox txt_Usuario_Login;
         private System.Windows.Forms.Label lbl_OlvidarContraseña_Login;
         private System.Windows.Forms.PictureBox pic_GimLogo_Login;
     }
