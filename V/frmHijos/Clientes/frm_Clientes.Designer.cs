@@ -51,6 +51,7 @@
             this.txt_Buscar_Clientes.Name = "txt_Buscar_Clientes";
             this.txt_Buscar_Clientes.Size = new System.Drawing.Size(369, 24);
             this.txt_Buscar_Clientes.TabIndex = 31;
+            this.txt_Buscar_Clientes.TextChanged += new System.EventHandler(this.txt_Buscar_Clientes_TextChanged);
             // 
             // btn_Eliminar_Clientes
             // 
@@ -92,12 +93,15 @@
             this.dgv_Clientes.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.dgv_Clientes.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgv_Clientes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgv_Clientes.Location = new System.Drawing.Point(8, 100);
+            this.dgv_Clientes.MultiSelect = false;
             this.dgv_Clientes.Name = "dgv_Clientes";
+            this.dgv_Clientes.ReadOnly = true;
+            this.dgv_Clientes.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgv_Clientes.Size = new System.Drawing.Size(1011, 259);
             this.dgv_Clientes.TabIndex = 24;
-            this.dgv_Clientes.DataBindingComplete += new System.Windows.Forms.DataGridViewBindingCompleteEventHandler(this.dgv_Clientes_DataBindingComplete);
             // 
             // label2
             // 
@@ -112,6 +116,7 @@
             // lbl_resultadosCantidad_Clientes
             // 
             this.lbl_resultadosCantidad_Clientes.AutoSize = true;
+            this.lbl_resultadosCantidad_Clientes.Enabled = false;
             this.lbl_resultadosCantidad_Clientes.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_resultadosCantidad_Clientes.ForeColor = System.Drawing.SystemColors.MenuHighlight;
             this.lbl_resultadosCantidad_Clientes.Location = new System.Drawing.Point(947, 76);
@@ -119,9 +124,11 @@
             this.lbl_resultadosCantidad_Clientes.Size = new System.Drawing.Size(56, 16);
             this.lbl_resultadosCantidad_Clientes.TabIndex = 32;
             this.lbl_resultadosCantidad_Clientes.Text = "#######";
+            this.lbl_resultadosCantidad_Clientes.Visible = false;
             // 
             // btn_VerUltimos_Clientes
             // 
+            this.btn_VerUltimos_Clientes.Enabled = false;
             this.btn_VerUltimos_Clientes.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_VerUltimos_Clientes.Location = new System.Drawing.Point(793, 71);
             this.btn_VerUltimos_Clientes.Name = "btn_VerUltimos_Clientes";
@@ -129,9 +136,11 @@
             this.btn_VerUltimos_Clientes.TabIndex = 33;
             this.btn_VerUltimos_Clientes.Text = "Ver ultimos";
             this.btn_VerUltimos_Clientes.UseVisualStyleBackColor = true;
+            this.btn_VerUltimos_Clientes.Visible = false;
             // 
             // btn_VerTodo_Clientes
             // 
+            this.btn_VerTodo_Clientes.Enabled = false;
             this.btn_VerTodo_Clientes.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_VerTodo_Clientes.Location = new System.Drawing.Point(876, 71);
             this.btn_VerTodo_Clientes.Name = "btn_VerTodo_Clientes";
@@ -139,6 +148,7 @@
             this.btn_VerTodo_Clientes.TabIndex = 34;
             this.btn_VerTodo_Clientes.Text = "Ver todo";
             this.btn_VerTodo_Clientes.UseVisualStyleBackColor = true;
+            this.btn_VerTodo_Clientes.Visible = false;
             // 
             // btn_Membresias_Clientes
             // 
@@ -169,6 +179,7 @@
             this.cbx_FiltroCliente.Name = "cbx_FiltroCliente";
             this.cbx_FiltroCliente.Size = new System.Drawing.Size(121, 21);
             this.cbx_FiltroCliente.TabIndex = 46;
+            this.cbx_FiltroCliente.SelectedIndexChanged += new System.EventHandler(this.cbx_FiltroCliente_SelectedIndexChanged);
             // 
             // frm_Clientes
             // 

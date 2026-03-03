@@ -29,6 +29,8 @@
         private void InitializeComponent()
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.lbl_Vuelto_ClientesMembresiasPagos = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
             this.lbl_EstadoMembresia_ClientesMembresiasPagos = new System.Windows.Forms.Label();
             this.lbl_Total_ClientesMembresiasPagos = new System.Windows.Forms.Label();
             this.lbl_Precio_ClientesMembresiasPagos = new System.Windows.Forms.Label();
@@ -47,8 +49,6 @@
             this.dgv__ClientesMembresiasPagos = new System.Windows.Forms.DataGridView();
             this.btn_Reimprimir_ClientesMembresiasPagos = new System.Windows.Forms.Button();
             this.btn_Eliminar_ClientesMembresiasPagos = new System.Windows.Forms.Button();
-            this.lbl_Vuelto_ClientesMembresiasPagos = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv__ClientesMembresiasPagos)).BeginInit();
@@ -72,6 +72,26 @@
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "DATOS DE LA MEMBRESIA";
+            // 
+            // lbl_Vuelto_ClientesMembresiasPagos
+            // 
+            this.lbl_Vuelto_ClientesMembresiasPagos.AutoSize = true;
+            this.lbl_Vuelto_ClientesMembresiasPagos.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_Vuelto_ClientesMembresiasPagos.Location = new System.Drawing.Point(128, 114);
+            this.lbl_Vuelto_ClientesMembresiasPagos.Name = "lbl_Vuelto_ClientesMembresiasPagos";
+            this.lbl_Vuelto_ClientesMembresiasPagos.Size = new System.Drawing.Size(62, 18);
+            this.lbl_Vuelto_ClientesMembresiasPagos.TabIndex = 70;
+            this.lbl_Vuelto_ClientesMembresiasPagos.Text = "$$$$$$";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(9, 114);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(45, 16);
+            this.label5.TabIndex = 69;
+            this.label5.Text = "Vuelto";
             // 
             // lbl_EstadoMembresia_ClientesMembresiasPagos
             // 
@@ -184,6 +204,7 @@
             // 
             this.txt_Importe_ClientesMembresiasPagos.Location = new System.Drawing.Point(106, 19);
             this.txt_Importe_ClientesMembresiasPagos.Name = "txt_Importe_ClientesMembresiasPagos";
+            this.txt_Importe_ClientesMembresiasPagos.ReadOnly = true;
             this.txt_Importe_ClientesMembresiasPagos.Size = new System.Drawing.Size(114, 20);
             this.txt_Importe_ClientesMembresiasPagos.TabIndex = 78;
             this.txt_Importe_ClientesMembresiasPagos.TextChanged += new System.EventHandler(this.txt_Importe_TextChanged);
@@ -255,26 +276,6 @@
             this.btn_Eliminar_ClientesMembresiasPagos.Text = "Eliminar Pago";
             this.btn_Eliminar_ClientesMembresiasPagos.UseVisualStyleBackColor = true;
             this.btn_Eliminar_ClientesMembresiasPagos.Click += new System.EventHandler(this.btn_Eliminar_Click);
-            // 
-            // lbl_Vuelto_ClientesMembresiasPagos
-            // 
-            this.lbl_Vuelto_ClientesMembresiasPagos.AutoSize = true;
-            this.lbl_Vuelto_ClientesMembresiasPagos.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_Vuelto_ClientesMembresiasPagos.Location = new System.Drawing.Point(128, 114);
-            this.lbl_Vuelto_ClientesMembresiasPagos.Name = "lbl_Vuelto_ClientesMembresiasPagos";
-            this.lbl_Vuelto_ClientesMembresiasPagos.Size = new System.Drawing.Size(62, 18);
-            this.lbl_Vuelto_ClientesMembresiasPagos.TabIndex = 70;
-            this.lbl_Vuelto_ClientesMembresiasPagos.Text = "$$$$$$";
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(9, 114);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(45, 16);
-            this.label5.TabIndex = 69;
-            this.label5.Text = "Vuelto";
             // 
             // frm_Clientes_Membresias_Pago
             // 

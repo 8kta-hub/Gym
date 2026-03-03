@@ -1,14 +1,7 @@
 ﻿using Gym.C;
-using Gym.V.frmHijos.Usuarios;
 using Gym.V.FuncionesV;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using Gym.M.Entidades;
 
@@ -21,12 +14,13 @@ namespace Gym.V.frmHijos.Clientes
         public frm_Clientes()
         {
             InitializeComponent();
-            this.Load += frm_Clientes_Load;
         }
 
         private void frm_Clientes_Load(object sender, EventArgs e)
         {
+
             CargarClientes();
+            CargarFiltro();
         }
 
         private void btn_Nuevo_Clientes_Click(object sender, EventArgs e)
@@ -36,9 +30,7 @@ namespace Gym.V.frmHijos.Clientes
             DialogResult resultado = Funciones.abrirFormModal(frm, this);
 
             if (resultado == DialogResult.OK)
-            {
                 CargarClientes();
-            }
         }
 
         private void btn_Modificar_Clientes_Click(object sender, EventArgs e)
@@ -56,9 +48,7 @@ namespace Gym.V.frmHijos.Clientes
             DialogResult resultado = Funciones.abrirFormModal(frm, this);
 
             if (resultado == DialogResult.OK)
-            {
                 CargarClientes();
-            }
         }
 
         private void btn_Membresias_Clientes_Click(object sender, EventArgs e)
@@ -76,9 +66,7 @@ namespace Gym.V.frmHijos.Clientes
             DialogResult resultado = Funciones.abrirFormModal(frm, this);
 
             if (resultado == DialogResult.OK)
-            {
                 CargarClientes();
-            }
         }
 
         private void btn_Eliminar_Clientes_Click(object sender, EventArgs e)
@@ -92,11 +80,8 @@ namespace Gym.V.frmHijos.Clientes
             }
 
             DialogResult confirmacion = MessageBox.Show(
-                "¿Desea Eliminar este cliente?",
-                "Confirmar",
-                MessageBoxButtons.YesNo,
-                MessageBoxIcon.Question
-            );
+                "¿Desea eliminar este cliente?",
+                "Confirmar", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
 
             if (confirmacion == DialogResult.Yes)
             {
@@ -104,7 +89,7 @@ namespace Gym.V.frmHijos.Clientes
 
                 if (resultado)
                 {
-                    MessageBox.Show("Cliente Eliminado correctamente");
+                    MessageBox.Show("Cliente eliminado correctamente");
                     CargarClientes();
                 }
                 else
@@ -114,14 +99,26 @@ namespace Gym.V.frmHijos.Clientes
             }
         }
 
+        private void txt_Buscar_Clientes_TextChanged(object sender, EventArgs e)
+        {
+            CargarClientes();
+        }
+
+        private void cbx_FiltroCliente_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            CargarClientes();
+        }
+
+        // Devuelve null si no hay fila seleccionada o si la celda está vacía
         private Cliente CargarClienteSeleccionado()
         {
-            if (dgv_Clientes.SelectedRows.Count == 0)
+            if (dgv_Clientes.SelectedRows.Count == 0 ||
+                dgv_Clientes.SelectedRows[0].Cells["id_cliente"].Value == null)
                 return null;
 
             DataGridViewRow fila = dgv_Clientes.SelectedRows[0];
 
-            Cliente cliente = new Cliente
+            return new Cliente
             {
                 IdCliente = Convert.ToInt32(fila.Cells["id_cliente"].Value),
                 CodCliente = Convert.ToInt32(fila.Cells["cod_cliente"].Value),
@@ -133,25 +130,28 @@ namespace Gym.V.frmHijos.Clientes
                 Activo = Convert.ToBoolean(fila.Cells["activo"].Value),
                 FechaNac = Convert.ToDateTime(fila.Cells["fecha_nac"].Value)
             };
+        }
 
-            return cliente;
+        private void CargarFiltro()
+        {
+            cbx_FiltroCliente.Items.Add("Activo");
+            cbx_FiltroCliente.Items.Add("Deudor");
+            cbx_FiltroCliente.Items.Add("Inactivo");
+            cbx_FiltroCliente.Items.Add("Todos");
+            cbx_FiltroCliente.SelectedIndex = 0; // Activo por defecto
         }
 
         private void CargarClientes()
         {
-            controlador.ListarClientes(dgv_Clientes);
+            string busqueda = txt_Buscar_Clientes.Text.Trim();
+            string filtro = cbx_FiltroCliente.SelectedItem?.ToString() ?? "Activo";
 
-            dgv_Clientes.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
-            dgv_Clientes.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
-            dgv_Clientes.MultiSelect = false;
-            dgv_Clientes.ReadOnly = true;
+            controlador.ListarClientes(dgv_Clientes, busqueda, filtro);
 
             dgv_Clientes.Columns["id_cliente"].Visible = false;
-        }
-
-        private void dgv_Clientes_DataBindingComplete(object sender, DataGridViewBindingCompleteEventArgs e)
-        {
             dgv_Clientes.ClearSelection();
+
+            //lbl_resultadosCantidad_Clientes.Text = dgv_Clientes.Rows.Count + " resultados";
         }
     }
 }

@@ -26,6 +26,8 @@ namespace Gym.V.frmHijos.Clientes
         {
             // fecha de inicio es de hoy porque se paga en este momento
             DateTime inicio = DateTime.Today;
+            CargarTiposDePago();
+            CargarHistorialPagos();
 
             lbl_Precio_ClientesMembresiasPagos.Text = "$" + membresiaActual.Precio.ToString("N2");
 
@@ -41,13 +43,6 @@ namespace Gym.V.frmHijos.Clientes
             lbl_Vuelto_ClientesMembresiasPagos.Visible = false;
             label5.Visible = false;
 
-            cmb_TipoDePago_ClientesMembresiasPagos.Items.Add("Efectivo");
-            cmb_TipoDePago_ClientesMembresiasPagos.Items.Add("Tarjeta de débito");
-            cmb_TipoDePago_ClientesMembresiasPagos.Items.Add("Tarjeta de crédito");
-            cmb_TipoDePago_ClientesMembresiasPagos.Items.Add("Transferencia");
-            cmb_TipoDePago_ClientesMembresiasPagos.SelectedIndex = -1;
-
-            CargarHistorialPagos();
         }
 
 
@@ -210,6 +205,15 @@ namespace Gym.V.frmHijos.Clientes
                 "Reimprimir", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
+        private void CargarTiposDePago()
+        {
+            cmb_TipoDePago_ClientesMembresiasPagos.Items.Add("Efectivo");
+            cmb_TipoDePago_ClientesMembresiasPagos.Items.Add("Tarjeta de débito");
+            cmb_TipoDePago_ClientesMembresiasPagos.Items.Add("Tarjeta de crédito");
+            cmb_TipoDePago_ClientesMembresiasPagos.Items.Add("Transferencia");
+            cmb_TipoDePago_ClientesMembresiasPagos.SelectedIndex = -1;
+        }
+
         private void CargarHistorialPagos()
         {
             // Usa idClienteMembresia en lugar de idCliente
@@ -252,12 +256,21 @@ namespace Gym.V.frmHijos.Clientes
 
         private void cmb_TipoDePago_SelectedIndexChanged(object sender, EventArgs e)
         {
-            // Solo oculta si cambia a un método que no es Efectivo
-            // Nunca muestra el vuelto, eso lo hace únicamente el botón Agregar
             if (cmb_TipoDePago_ClientesMembresiasPagos.SelectedItem?.ToString() != "Efectivo")
             {
+                // Otros métodos: importe fijo, no editable
+                txt_Importe_ClientesMembresiasPagos.Text = membresiaActual.Precio.ToString("N2");
+                txt_Importe_ClientesMembresiasPagos.ReadOnly = true;
+
+                // Ocultar vuelto porque no aplica
                 lbl_Vuelto_ClientesMembresiasPagos.Visible = false;
                 label5.Visible = false;
+            }
+            else
+            {
+                // Efectivo: importe editable para ingresar lo que entrega el cliente
+                txt_Importe_ClientesMembresiasPagos.ReadOnly = false;
+                txt_Importe_ClientesMembresiasPagos.Focus();
             }
         }
 

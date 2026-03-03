@@ -48,6 +48,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.pcb_FotoPerfil_ClientesNuevo = new System.Windows.Forms.PictureBox();
+            this.btn_EliminarFoto_ClientesNuevo = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pcb_FotoPerfil_ClientesNuevo)).BeginInit();
             this.SuspendLayout();
@@ -256,11 +257,22 @@
             this.pcb_FotoPerfil_ClientesNuevo.TabIndex = 39;
             this.pcb_FotoPerfil_ClientesNuevo.TabStop = false;
             // 
+            // btn_EliminarFoto_ClientesNuevo
+            // 
+            this.btn_EliminarFoto_ClientesNuevo.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_EliminarFoto_ClientesNuevo.Location = new System.Drawing.Point(419, 210);
+            this.btn_EliminarFoto_ClientesNuevo.Name = "btn_EliminarFoto_ClientesNuevo";
+            this.btn_EliminarFoto_ClientesNuevo.Size = new System.Drawing.Size(97, 23);
+            this.btn_EliminarFoto_ClientesNuevo.TabIndex = 47;
+            this.btn_EliminarFoto_ClientesNuevo.Text = "Eliminar foto";
+            this.btn_EliminarFoto_ClientesNuevo.UseVisualStyleBackColor = true;
+            // 
             // frm_Clientes_Nuevo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(563, 380);
+            this.Controls.Add(this.btn_EliminarFoto_ClientesNuevo);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.pcb_FotoPerfil_ClientesNuevo);
             this.Controls.Add(this.btn_TomarFoto_ClientesNuevo);
@@ -300,5 +312,6 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.CheckBox chk_Activo;
+        private System.Windows.Forms.Button btn_EliminarFoto_ClientesNuevo;
     }
 }

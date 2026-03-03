@@ -11,22 +11,60 @@ namespace Gym.C
     {
         private ConDB conexion = new ConDB();
 
-        public void ListarClientes(DataGridView dgv)
+        public void ListarClientes(DataGridView dgv, string busqueda = "", string filtro = "Activo")
         {
-            string consulta = @"
-                SELECT 
-                    id_cliente,
-                    cod_cliente,
-                    nombre,
-                    apellido,
-                    dni,
-                    telefono,
-                    email,
-                    fecha_nac,
-                    activo
-                FROM Clientes";
+            string whereFiltro;
 
-            conexion.CargarTabla(consulta, dgv);
+            if (filtro == "Activo")
+                whereFiltro = "AND c.activo = 1";
+
+            else if (filtro == "Inactivo")
+                whereFiltro = "AND c.activo = 0";
+
+            else if (filtro == "Deudor")
+                whereFiltro = @"AND EXISTS (
+                            SELECT 1 FROM Cliente_Membresias cm 
+                            WHERE cm.id_cliente = c.id_cliente 
+                            AND cm.estado = 'Pendiente de pago')";
+
+            else
+                whereFiltro = ""; // Todos
+
+            string whereBusqueda = string.IsNullOrWhiteSpace(busqueda)
+                ? ""
+                : @"AND (
+                c.nombre     LIKE @busqueda OR
+                c.apellido   LIKE @busqueda OR
+                c.dni        LIKE @busqueda OR
+                CAST(c.cod_cliente AS VARCHAR) LIKE @busqueda OR
+                c.telefono   LIKE @busqueda
+                )";
+
+            string consulta = $@"
+                SELECT 
+                    c.id_cliente,
+                    c.cod_cliente,
+                    c.nombre,
+                    c.apellido,
+                    c.dni,
+                    c.telefono,
+                    c.email,
+                    c.activo,
+                    c.fecha_nac
+                FROM Clientes c
+                WHERE 1 = 1
+                {whereFiltro}
+                {whereBusqueda}
+                ORDER BY c.apellido, c.nombre";
+
+            SqlParameter[] parametros = string.IsNullOrWhiteSpace(busqueda)
+                ? new SqlParameter[0]
+                : new SqlParameter[]
+                {
+            new SqlParameter("@busqueda", "%" + busqueda + "%")
+                };
+
+            conexion.CargarTabla(consulta, dgv, parametros);
         }
 
         public bool InsertClientes(int codCliente, string nombre,
@@ -174,6 +212,23 @@ namespace Gym.C
              };
 
             return conexion.EjecutarComando(consulta, parametros) > 0;
+        }
+
+        public void ActualizarMembresiasVencidas(int idCliente)
+        {
+            string consulta = @"
+                UPDATE Cliente_Membresias 
+                SET estado = 'Inactivo'
+                WHERE id_cliente = @idCliente
+                AND estado = 'Activo' 
+                AND fecha_vencimiento < CAST(GETDATE() AS DATE)";
+
+            SqlParameter[] parametros =
+            {
+                new SqlParameter("@idCliente", idCliente)
+            };
+
+            conexion.EjecutarComando(consulta, parametros);
         }
 
         // Marca como Inactiva la membresía de un cliente (baja lógica)

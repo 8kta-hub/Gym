@@ -20,76 +20,13 @@ namespace Gym.V.frmHijos.Clientes
 
         private void frm_Clientes_Membresias_Load(object sender, EventArgs e)
         {
+            controladorClientes.ActualizarMembresiasVencidas(clienteActual.IdCliente);
+
             CargarDatosCliente();
             CargarComboMembresias();
             CargarFiltro();
             CargarMembresiasDelCliente();
         }
-
-        private void CargarDatosCliente()
-        {
-            lbl_Nombre_ClientesMembresias.Text = clienteActual.Nombre;
-            lbl_Apellido_ClientesMembresias.Text = clienteActual.Apellido;
-            lbl_Telefono_ClientesMembresias.Text = clienteActual.Telefono;
-            lbl_DNI_ClientesMembresias.Text = clienteActual.Dni;
-        }
-
-        private void CargarComboMembresias()
-        {
-            var lista = controladorMembresias.ObtenerMembresiasActivas();
-            cmb_Membresia_ClientesMembresias.DisplayMember = "Nombre";
-            cmb_Membresia_ClientesMembresias.ValueMember = "IdMembresia";
-            cmb_Membresia_ClientesMembresias.DataSource = lista;
-            cmb_Membresia_ClientesMembresias.SelectedIndex = -1;
-            LimpiarLabelsMembresia();
-        }
-
-        private void CargarFiltro()
-        {
-            cbx_filtro_ClientesMembresias.Items.Add("Activo");
-            cbx_filtro_ClientesMembresias.Items.Add("Pendiente de pago");
-            cbx_filtro_ClientesMembresias.Items.Add("Inactivo");
-            cbx_filtro_ClientesMembresias.Items.Add("Todas");
-            cbx_filtro_ClientesMembresias.SelectedIndex = 0; // Activo por defecto
-        }
-
-        private void cbx_filtro_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            CargarMembresiasDelCliente();
-        }
-
-        private void cmb_Membresia_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            if (cmb_Membresia_ClientesMembresias.SelectedItem is Membresia m)
-            {
-                lbl_Precio_ClientesMembresias.Text = "$" + m.Precio.ToString("N2");
-
-                int meses = 0, semanas = 0, dias = 0;
-                switch (m.Tipo)
-                {
-                    case "Mensual": meses = m.CantidadMsd / 30; break;
-                    case "Semanal": semanas = m.CantidadMsd / 7; break;
-                    case "Diario": dias = m.CantidadMsd; break;
-                }
-
-                lbl_Meses_ClientesMembresias.Text = meses > 0 ? meses.ToString() : "-";
-                lbl_Semanas_ClientesMembresias.Text = semanas > 0 ? semanas.ToString() : "-";
-                lbl_Dias_ClientesMembresias.Text = dias > 0 ? dias.ToString() : "-";
-            }
-            else
-            {
-                LimpiarLabelsMembresia();
-            }
-        }
-
-        private void LimpiarLabelsMembresia()
-        {
-            lbl_Precio_ClientesMembresias.Text = "$$$$$$";
-            lbl_Meses_ClientesMembresias.Text = "######";
-            lbl_Semanas_ClientesMembresias.Text = "######";
-            lbl_Dias_ClientesMembresias.Text = "######";
-        }
-
 
         private void btn_Agregar_ClientesMembresias_Click(object sender, EventArgs e)
         {
@@ -166,13 +103,13 @@ namespace Gym.V.frmHijos.Clientes
                 idClienteMembresia
             );
 
-            DialogResult resultado = Funciones.abrirFormModal(frmPago, this);
+            // Refresca siempre al cerrar, sin importar si se pagó o canceló
+            Funciones.abrirFormModal(frmPago, this);
 
-            if (resultado == DialogResult.OK)
-            {
-                cbx_filtro_ClientesMembresias.SelectedIndex = 0; // volver a Activo
-                CargarMembresiasDelCliente();
-            }
+            // Actualiza membresías vencidas y recarga el grid
+            controladorClientes.ActualizarMembresiasVencidas(clienteActual.IdCliente);
+            cbx_filtro_ClientesMembresias.SelectedIndex = 0;
+            CargarMembresiasDelCliente();
         }
 
         private void btn_Eliminar_ClientesMembresias_Click(object sender, EventArgs e)
@@ -217,6 +154,70 @@ namespace Gym.V.frmHijos.Clientes
                     MessageBox.Show("No se pudo eliminar la membresía");
                 }
             }
+        }
+
+        private void CargarDatosCliente()
+        {
+            lbl_Nombre_ClientesMembresias.Text = clienteActual.Nombre;
+            lbl_Apellido_ClientesMembresias.Text = clienteActual.Apellido;
+            lbl_Telefono_ClientesMembresias.Text = clienteActual.Telefono;
+            lbl_DNI_ClientesMembresias.Text = clienteActual.Dni;
+        }
+
+        private void CargarComboMembresias()
+        {
+            var lista = controladorMembresias.ObtenerMembresiasActivas();
+            cmb_Membresia_ClientesMembresias.DisplayMember = "Nombre";
+            cmb_Membresia_ClientesMembresias.ValueMember = "IdMembresia";
+            cmb_Membresia_ClientesMembresias.DataSource = lista;
+            cmb_Membresia_ClientesMembresias.SelectedIndex = -1;
+            LimpiarLabelsMembresia();
+        }
+
+        private void CargarFiltro()
+        {
+            cbx_filtro_ClientesMembresias.Items.Add("Activo");
+            cbx_filtro_ClientesMembresias.Items.Add("Pendiente de pago");
+            cbx_filtro_ClientesMembresias.Items.Add("Inactivo");
+            cbx_filtro_ClientesMembresias.Items.Add("Todas");
+            cbx_filtro_ClientesMembresias.SelectedIndex = 0; // Activo por defecto
+        }
+
+        private void cbx_filtro_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            CargarMembresiasDelCliente();
+        }
+
+        private void cmb_Membresia_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (cmb_Membresia_ClientesMembresias.SelectedItem is Membresia m)
+            {
+                lbl_Precio_ClientesMembresias.Text = "$" + m.Precio.ToString("N2");
+
+                int meses = 0, semanas = 0, dias = 0;
+                switch (m.Tipo)
+                {
+                    case "Mensual": meses = m.CantidadMsd / 30; break;
+                    case "Semanal": semanas = m.CantidadMsd / 7; break;
+                    case "Diario": dias = m.CantidadMsd; break;
+                }
+
+                lbl_Meses_ClientesMembresias.Text = meses > 0 ? meses.ToString() : "-";
+                lbl_Semanas_ClientesMembresias.Text = semanas > 0 ? semanas.ToString() : "-";
+                lbl_Dias_ClientesMembresias.Text = dias > 0 ? dias.ToString() : "-";
+            }
+            else
+            {
+                LimpiarLabelsMembresia();
+            }
+        }
+
+        private void LimpiarLabelsMembresia()
+        {
+            lbl_Precio_ClientesMembresias.Text = "$$$$$$";
+            lbl_Meses_ClientesMembresias.Text = "######";
+            lbl_Semanas_ClientesMembresias.Text = "######";
+            lbl_Dias_ClientesMembresias.Text = "######";
         }
 
         private void CargarMembresiasDelCliente()

@@ -342,10 +342,11 @@
             // cbx_filtro_ClientesMembresias
             // 
             this.cbx_filtro_ClientesMembresias.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbx_filtro_ClientesMembresias.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbx_filtro_ClientesMembresias.FormattingEnabled = true;
-            this.cbx_filtro_ClientesMembresias.Location = new System.Drawing.Point(430, 433);
+            this.cbx_filtro_ClientesMembresias.Location = new System.Drawing.Point(410, 433);
             this.cbx_filtro_ClientesMembresias.Name = "cbx_filtro_ClientesMembresias";
-            this.cbx_filtro_ClientesMembresias.Size = new System.Drawing.Size(121, 21);
+            this.cbx_filtro_ClientesMembresias.Size = new System.Drawing.Size(141, 23);
             this.cbx_filtro_ClientesMembresias.TabIndex = 3;
             this.cbx_filtro_ClientesMembresias.SelectedIndexChanged += new System.EventHandler(this.cbx_filtro_SelectedIndexChanged);
             // 
