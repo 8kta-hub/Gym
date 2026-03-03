@@ -68,6 +68,8 @@
             this.dgv_ReportesClientes = new System.Windows.Forms.DataGridView();
             this.label7 = new System.Windows.Forms.Label();
             this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
             this.btn_ExportarExcel_Reporte_Membresias = new System.Windows.Forms.Button();
             this.dgv_ReportesMembresias = new System.Windows.Forms.DataGridView();
             this.lbl_Total_ReportesMembresias = new System.Windows.Forms.Label();
@@ -77,10 +79,19 @@
             this.dtp_FechaFinal_ReportesMembresias = new System.Windows.Forms.DateTimePicker();
             this.dtp_FechaInicial_ReportesMembresias = new System.Windows.Forms.DateTimePicker();
             this.tbp_Inventario = new System.Windows.Forms.TabPage();
+            this.cmb_Filtro_ReportesInventario = new System.Windows.Forms.ComboBox();
             this.btn_ExportarExcel_Reporte_Inventario = new System.Windows.Forms.Button();
             this.dgv_ReportesInventario = new System.Windows.Forms.DataGridView();
             this.label19 = new System.Windows.Forms.Label();
             this.tbc_Reportes = new System.Windows.Forms.TabControl();
+            this.label8 = new System.Windows.Forms.Label();
+            this.label10 = new System.Windows.Forms.Label();
+            this.label14 = new System.Windows.Forms.Label();
+            this.label15 = new System.Windows.Forms.Label();
+            this.label17 = new System.Windows.Forms.Label();
+            this.label18 = new System.Windows.Forms.Label();
+            this.label20 = new System.Windows.Forms.Label();
+            this.label21 = new System.Windows.Forms.Label();
             this.tabPage8.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_ReportesMovimientos)).BeginInit();
             this.tabPage6.SuspendLayout();
@@ -100,6 +111,8 @@
             // 
             // tabPage8
             // 
+            this.tabPage8.Controls.Add(this.label20);
+            this.tabPage8.Controls.Add(this.label21);
             this.tabPage8.Controls.Add(this.btn_ExportarExcel_Reporte_Movimientos);
             this.tabPage8.Controls.Add(this.cmb_Tipo_ReportesMovimientos);
             this.tabPage8.Controls.Add(this.label2);
@@ -120,7 +133,7 @@
             // 
             this.btn_ExportarExcel_Reporte_Movimientos.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btn_ExportarExcel_Reporte_Movimientos.BackgroundImage")));
             this.btn_ExportarExcel_Reporte_Movimientos.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btn_ExportarExcel_Reporte_Movimientos.Location = new System.Drawing.Point(682, 4);
+            this.btn_ExportarExcel_Reporte_Movimientos.Location = new System.Drawing.Point(523, 8);
             this.btn_ExportarExcel_Reporte_Movimientos.Name = "btn_ExportarExcel_Reporte_Movimientos";
             this.btn_ExportarExcel_Reporte_Movimientos.Size = new System.Drawing.Size(33, 32);
             this.btn_ExportarExcel_Reporte_Movimientos.TabIndex = 44;
@@ -129,7 +142,7 @@
             // cmb_Tipo_ReportesMovimientos
             // 
             this.cmb_Tipo_ReportesMovimientos.FormattingEnabled = true;
-            this.cmb_Tipo_ReportesMovimientos.Location = new System.Drawing.Point(490, 13);
+            this.cmb_Tipo_ReportesMovimientos.Location = new System.Drawing.Point(320, 15);
             this.cmb_Tipo_ReportesMovimientos.Name = "cmb_Tipo_ReportesMovimientos";
             this.cmb_Tipo_ReportesMovimientos.Size = new System.Drawing.Size(104, 21);
             this.cmb_Tipo_ReportesMovimientos.TabIndex = 43;
@@ -138,7 +151,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(449, 18);
+            this.label2.Location = new System.Drawing.Point(279, 20);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(35, 16);
             this.label2.TabIndex = 42;
@@ -168,7 +181,7 @@
             // btn_Buscar_ReportesMovimientos
             // 
             this.btn_Buscar_ReportesMovimientos.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_Buscar_ReportesMovimientos.Location = new System.Drawing.Point(612, 13);
+            this.btn_Buscar_ReportesMovimientos.Location = new System.Drawing.Point(453, 13);
             this.btn_Buscar_ReportesMovimientos.Name = "btn_Buscar_ReportesMovimientos";
             this.btn_Buscar_ReportesMovimientos.Size = new System.Drawing.Size(64, 23);
             this.btn_Buscar_ReportesMovimientos.TabIndex = 35;
@@ -177,20 +190,22 @@
             // 
             // dtp_FechaFinal_ReportesMovimientos
             // 
-            this.dtp_FechaFinal_ReportesMovimientos.Location = new System.Drawing.Point(239, 16);
+            this.dtp_FechaFinal_ReportesMovimientos.Location = new System.Drawing.Point(159, 16);
             this.dtp_FechaFinal_ReportesMovimientos.Name = "dtp_FechaFinal_ReportesMovimientos";
-            this.dtp_FechaFinal_ReportesMovimientos.Size = new System.Drawing.Size(200, 20);
+            this.dtp_FechaFinal_ReportesMovimientos.Size = new System.Drawing.Size(102, 20);
             this.dtp_FechaFinal_ReportesMovimientos.TabIndex = 34;
             // 
             // dtp_FechaInicial_ReportesMovimientos
             // 
             this.dtp_FechaInicial_ReportesMovimientos.Location = new System.Drawing.Point(9, 16);
             this.dtp_FechaInicial_ReportesMovimientos.Name = "dtp_FechaInicial_ReportesMovimientos";
-            this.dtp_FechaInicial_ReportesMovimientos.Size = new System.Drawing.Size(200, 20);
+            this.dtp_FechaInicial_ReportesMovimientos.Size = new System.Drawing.Size(102, 20);
             this.dtp_FechaInicial_ReportesMovimientos.TabIndex = 33;
             // 
             // tabPage6
             // 
+            this.tabPage6.Controls.Add(this.label17);
+            this.tabPage6.Controls.Add(this.label18);
             this.tabPage6.Controls.Add(this.btn_ExportarExcel_Reporte_Ventas);
             this.tabPage6.Controls.Add(this.dgv_ReportesVentas);
             this.tabPage6.Controls.Add(this.lbl_Total_ReportesVentas);
@@ -211,7 +226,7 @@
             // 
             this.btn_ExportarExcel_Reporte_Ventas.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btn_ExportarExcel_Reporte_Ventas.BackgroundImage")));
             this.btn_ExportarExcel_Reporte_Ventas.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btn_ExportarExcel_Reporte_Ventas.Location = new System.Drawing.Point(525, 9);
+            this.btn_ExportarExcel_Reporte_Ventas.Location = new System.Drawing.Point(345, 9);
             this.btn_ExportarExcel_Reporte_Ventas.Name = "btn_ExportarExcel_Reporte_Ventas";
             this.btn_ExportarExcel_Reporte_Ventas.Size = new System.Drawing.Size(33, 32);
             this.btn_ExportarExcel_Reporte_Ventas.TabIndex = 33;
@@ -261,7 +276,7 @@
             // btn_Buscar_ReportesVentas
             // 
             this.btn_Buscar_ReportesVentas.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_Buscar_ReportesVentas.Location = new System.Drawing.Point(455, 18);
+            this.btn_Buscar_ReportesVentas.Location = new System.Drawing.Point(275, 18);
             this.btn_Buscar_ReportesVentas.Name = "btn_Buscar_ReportesVentas";
             this.btn_Buscar_ReportesVentas.Size = new System.Drawing.Size(64, 23);
             this.btn_Buscar_ReportesVentas.TabIndex = 27;
@@ -270,20 +285,22 @@
             // 
             // dtp_FechaFinal_ReportesVentas
             // 
-            this.dtp_FechaFinal_ReportesVentas.Location = new System.Drawing.Point(238, 21);
+            this.dtp_FechaFinal_ReportesVentas.Location = new System.Drawing.Point(161, 21);
             this.dtp_FechaFinal_ReportesVentas.Name = "dtp_FechaFinal_ReportesVentas";
-            this.dtp_FechaFinal_ReportesVentas.Size = new System.Drawing.Size(200, 20);
+            this.dtp_FechaFinal_ReportesVentas.Size = new System.Drawing.Size(102, 20);
             this.dtp_FechaFinal_ReportesVentas.TabIndex = 26;
             // 
             // dtp_FechaInicial_ReportesVentas
             // 
             this.dtp_FechaInicial_ReportesVentas.Location = new System.Drawing.Point(8, 21);
             this.dtp_FechaInicial_ReportesVentas.Name = "dtp_FechaInicial_ReportesVentas";
-            this.dtp_FechaInicial_ReportesVentas.Size = new System.Drawing.Size(200, 20);
+            this.dtp_FechaInicial_ReportesVentas.Size = new System.Drawing.Size(102, 20);
             this.dtp_FechaInicial_ReportesVentas.TabIndex = 25;
             // 
             // tabPage5
             // 
+            this.tabPage5.Controls.Add(this.label14);
+            this.tabPage5.Controls.Add(this.label15);
             this.tabPage5.Controls.Add(this.dgv_ReportesVisitas);
             this.tabPage5.Controls.Add(this.lbl_Total_ReportesVisitas);
             this.tabPage5.Controls.Add(this.label11);
@@ -345,7 +362,7 @@
             // 
             this.btn_ExportarExcel_Reporte_Visitias.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btn_ExportarExcel_Reporte_Visitias.BackgroundImage")));
             this.btn_ExportarExcel_Reporte_Visitias.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btn_ExportarExcel_Reporte_Visitias.Location = new System.Drawing.Point(523, 9);
+            this.btn_ExportarExcel_Reporte_Visitias.Location = new System.Drawing.Point(353, 9);
             this.btn_ExportarExcel_Reporte_Visitias.Name = "btn_ExportarExcel_Reporte_Visitias";
             this.btn_ExportarExcel_Reporte_Visitias.Size = new System.Drawing.Size(33, 32);
             this.btn_ExportarExcel_Reporte_Visitias.TabIndex = 18;
@@ -354,7 +371,7 @@
             // btn_Buscar_ReportesVisitas
             // 
             this.btn_Buscar_ReportesVisitas.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_Buscar_ReportesVisitas.Location = new System.Drawing.Point(453, 18);
+            this.btn_Buscar_ReportesVisitas.Location = new System.Drawing.Point(283, 18);
             this.btn_Buscar_ReportesVisitas.Name = "btn_Buscar_ReportesVisitas";
             this.btn_Buscar_ReportesVisitas.Size = new System.Drawing.Size(64, 23);
             this.btn_Buscar_ReportesVisitas.TabIndex = 17;
@@ -363,20 +380,22 @@
             // 
             // dtp_FechaFinal_ReportesVisitas
             // 
-            this.dtp_FechaFinal_ReportesVisitas.Location = new System.Drawing.Point(236, 21);
+            this.dtp_FechaFinal_ReportesVisitas.Location = new System.Drawing.Point(158, 21);
             this.dtp_FechaFinal_ReportesVisitas.Name = "dtp_FechaFinal_ReportesVisitas";
-            this.dtp_FechaFinal_ReportesVisitas.Size = new System.Drawing.Size(200, 20);
+            this.dtp_FechaFinal_ReportesVisitas.Size = new System.Drawing.Size(102, 20);
             this.dtp_FechaFinal_ReportesVisitas.TabIndex = 14;
             // 
             // dtp_FechaInicial_ReportesVisitas
             // 
             this.dtp_FechaInicial_ReportesVisitas.Location = new System.Drawing.Point(6, 21);
             this.dtp_FechaInicial_ReportesVisitas.Name = "dtp_FechaInicial_ReportesVisitas";
-            this.dtp_FechaInicial_ReportesVisitas.Size = new System.Drawing.Size(200, 20);
+            this.dtp_FechaInicial_ReportesVisitas.Size = new System.Drawing.Size(102, 20);
             this.dtp_FechaInicial_ReportesVisitas.TabIndex = 13;
             // 
             // tabPage4
             // 
+            this.tabPage4.Controls.Add(this.label8);
+            this.tabPage4.Controls.Add(this.label10);
             this.tabPage4.Controls.Add(this.btn_ExportarExcel_Reporte_Registro);
             this.tabPage4.Controls.Add(this.dgv_ReportesRegistro);
             this.tabPage4.Controls.Add(this.label16);
@@ -395,7 +414,7 @@
             // 
             this.btn_ExportarExcel_Reporte_Registro.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btn_ExportarExcel_Reporte_Registro.BackgroundImage")));
             this.btn_ExportarExcel_Reporte_Registro.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btn_ExportarExcel_Reporte_Registro.Location = new System.Drawing.Point(525, 10);
+            this.btn_ExportarExcel_Reporte_Registro.Location = new System.Drawing.Point(360, 10);
             this.btn_ExportarExcel_Reporte_Registro.Name = "btn_ExportarExcel_Reporte_Registro";
             this.btn_ExportarExcel_Reporte_Registro.Size = new System.Drawing.Size(33, 32);
             this.btn_ExportarExcel_Reporte_Registro.TabIndex = 33;
@@ -425,7 +444,7 @@
             // btn_Buscar_ReportesRegistro
             // 
             this.btn_Buscar_ReportesRegistro.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_Buscar_ReportesRegistro.Location = new System.Drawing.Point(455, 19);
+            this.btn_Buscar_ReportesRegistro.Location = new System.Drawing.Point(290, 18);
             this.btn_Buscar_ReportesRegistro.Name = "btn_Buscar_ReportesRegistro";
             this.btn_Buscar_ReportesRegistro.Size = new System.Drawing.Size(64, 23);
             this.btn_Buscar_ReportesRegistro.TabIndex = 27;
@@ -434,16 +453,16 @@
             // 
             // dtp_FechaFinal_ReportesRegistro
             // 
-            this.dtp_FechaFinal_ReportesRegistro.Location = new System.Drawing.Point(238, 21);
+            this.dtp_FechaFinal_ReportesRegistro.Location = new System.Drawing.Point(160, 22);
             this.dtp_FechaFinal_ReportesRegistro.Name = "dtp_FechaFinal_ReportesRegistro";
-            this.dtp_FechaFinal_ReportesRegistro.Size = new System.Drawing.Size(200, 20);
+            this.dtp_FechaFinal_ReportesRegistro.Size = new System.Drawing.Size(102, 20);
             this.dtp_FechaFinal_ReportesRegistro.TabIndex = 26;
             // 
             // dtp_FechaInicial_ReportesRegistro
             // 
             this.dtp_FechaInicial_ReportesRegistro.Location = new System.Drawing.Point(8, 21);
             this.dtp_FechaInicial_ReportesRegistro.Name = "dtp_FechaInicial_ReportesRegistro";
-            this.dtp_FechaInicial_ReportesRegistro.Size = new System.Drawing.Size(200, 20);
+            this.dtp_FechaInicial_ReportesRegistro.Size = new System.Drawing.Size(102, 20);
             this.dtp_FechaInicial_ReportesRegistro.TabIndex = 25;
             // 
             // tabPage3
@@ -492,6 +511,8 @@
             // 
             // tabPage2
             // 
+            this.tabPage2.Controls.Add(this.label5);
+            this.tabPage2.Controls.Add(this.label3);
             this.tabPage2.Controls.Add(this.btn_ExportarExcel_Reporte_Membresias);
             this.tabPage2.Controls.Add(this.dgv_ReportesMembresias);
             this.tabPage2.Controls.Add(this.lbl_Total_ReportesMembresias);
@@ -508,11 +529,29 @@
             this.tabPage2.Text = "Membresias";
             this.tabPage2.UseVisualStyleBackColor = true;
             // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(158, 3);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(35, 13);
+            this.label5.TabIndex = 39;
+            this.label5.Text = "Hasta";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(8, 3);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(38, 13);
+            this.label3.TabIndex = 38;
+            this.label3.Text = "Desde";
+            // 
             // btn_ExportarExcel_Reporte_Membresias
             // 
             this.btn_ExportarExcel_Reporte_Membresias.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btn_ExportarExcel_Reporte_Membresias.BackgroundImage")));
             this.btn_ExportarExcel_Reporte_Membresias.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btn_ExportarExcel_Reporte_Membresias.Location = new System.Drawing.Point(543, 7);
+            this.btn_ExportarExcel_Reporte_Membresias.Location = new System.Drawing.Point(350, 6);
             this.btn_ExportarExcel_Reporte_Membresias.Name = "btn_ExportarExcel_Reporte_Membresias";
             this.btn_ExportarExcel_Reporte_Membresias.Size = new System.Drawing.Size(33, 32);
             this.btn_ExportarExcel_Reporte_Membresias.TabIndex = 37;
@@ -562,29 +601,32 @@
             // btn_Buscar_ReportesMembresias
             // 
             this.btn_Buscar_ReportesMembresias.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_Buscar_ReportesMembresias.Location = new System.Drawing.Point(473, 16);
+            this.btn_Buscar_ReportesMembresias.Location = new System.Drawing.Point(280, 15);
             this.btn_Buscar_ReportesMembresias.Name = "btn_Buscar_ReportesMembresias";
             this.btn_Buscar_ReportesMembresias.Size = new System.Drawing.Size(64, 23);
             this.btn_Buscar_ReportesMembresias.TabIndex = 29;
             this.btn_Buscar_ReportesMembresias.Text = "Buscar";
             this.btn_Buscar_ReportesMembresias.UseVisualStyleBackColor = true;
+            this.btn_Buscar_ReportesMembresias.Click += new System.EventHandler(this.btn_Buscar_ReportesMembresias_Click);
             // 
             // dtp_FechaFinal_ReportesMembresias
             // 
-            this.dtp_FechaFinal_ReportesMembresias.Location = new System.Drawing.Point(241, 19);
+            this.dtp_FechaFinal_ReportesMembresias.Location = new System.Drawing.Point(161, 19);
             this.dtp_FechaFinal_ReportesMembresias.Name = "dtp_FechaFinal_ReportesMembresias";
-            this.dtp_FechaFinal_ReportesMembresias.Size = new System.Drawing.Size(200, 20);
+            this.dtp_FechaFinal_ReportesMembresias.Size = new System.Drawing.Size(102, 20);
             this.dtp_FechaFinal_ReportesMembresias.TabIndex = 26;
             // 
             // dtp_FechaInicial_ReportesMembresias
             // 
             this.dtp_FechaInicial_ReportesMembresias.Location = new System.Drawing.Point(11, 19);
             this.dtp_FechaInicial_ReportesMembresias.Name = "dtp_FechaInicial_ReportesMembresias";
-            this.dtp_FechaInicial_ReportesMembresias.Size = new System.Drawing.Size(200, 20);
+            this.dtp_FechaInicial_ReportesMembresias.Size = new System.Drawing.Size(102, 20);
             this.dtp_FechaInicial_ReportesMembresias.TabIndex = 25;
+            this.dtp_FechaInicial_ReportesMembresias.ValueChanged += new System.EventHandler(this.dtp_FechaInicial_ReportesMembresias_ValueChanged);
             // 
             // tbp_Inventario
             // 
+            this.tbp_Inventario.Controls.Add(this.cmb_Filtro_ReportesInventario);
             this.tbp_Inventario.Controls.Add(this.btn_ExportarExcel_Reporte_Inventario);
             this.tbp_Inventario.Controls.Add(this.dgv_ReportesInventario);
             this.tbp_Inventario.Controls.Add(this.label19);
@@ -597,11 +639,19 @@
             this.tbp_Inventario.Text = "Inventario";
             this.tbp_Inventario.UseVisualStyleBackColor = true;
             // 
+            // cmb_Filtro_ReportesInventario
+            // 
+            this.cmb_Filtro_ReportesInventario.FormattingEnabled = true;
+            this.cmb_Filtro_ReportesInventario.Location = new System.Drawing.Point(11, 42);
+            this.cmb_Filtro_ReportesInventario.Name = "cmb_Filtro_ReportesInventario";
+            this.cmb_Filtro_ReportesInventario.Size = new System.Drawing.Size(189, 23);
+            this.cmb_Filtro_ReportesInventario.TabIndex = 41;
+            // 
             // btn_ExportarExcel_Reporte_Inventario
             // 
             this.btn_ExportarExcel_Reporte_Inventario.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btn_ExportarExcel_Reporte_Inventario.BackgroundImage")));
             this.btn_ExportarExcel_Reporte_Inventario.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btn_ExportarExcel_Reporte_Inventario.Location = new System.Drawing.Point(206, 9);
+            this.btn_ExportarExcel_Reporte_Inventario.Location = new System.Drawing.Point(206, 36);
             this.btn_ExportarExcel_Reporte_Inventario.Name = "btn_ExportarExcel_Reporte_Inventario";
             this.btn_ExportarExcel_Reporte_Inventario.Size = new System.Drawing.Size(33, 32);
             this.btn_ExportarExcel_Reporte_Inventario.TabIndex = 40;
@@ -613,9 +663,9 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dgv_ReportesInventario.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgv_ReportesInventario.Location = new System.Drawing.Point(8, 41);
+            this.dgv_ReportesInventario.Location = new System.Drawing.Point(8, 71);
             this.dgv_ReportesInventario.Name = "dgv_ReportesInventario";
-            this.dgv_ReportesInventario.Size = new System.Drawing.Size(1004, 291);
+            this.dgv_ReportesInventario.Size = new System.Drawing.Size(1004, 261);
             this.dgv_ReportesInventario.TabIndex = 39;
             // 
             // label19
@@ -643,6 +693,78 @@
             this.tbc_Reportes.SelectedIndex = 0;
             this.tbc_Reportes.Size = new System.Drawing.Size(1028, 366);
             this.tbc_Reportes.TabIndex = 0;
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(157, 5);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(35, 13);
+            this.label8.TabIndex = 41;
+            this.label8.Text = "Hasta";
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Location = new System.Drawing.Point(7, 5);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(38, 13);
+            this.label10.TabIndex = 40;
+            this.label10.Text = "Desde";
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Location = new System.Drawing.Point(155, 5);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(35, 13);
+            this.label14.TabIndex = 43;
+            this.label14.Text = "Hasta";
+            // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.Location = new System.Drawing.Point(5, 5);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(38, 13);
+            this.label15.TabIndex = 42;
+            this.label15.Text = "Desde";
+            // 
+            // label17
+            // 
+            this.label17.AutoSize = true;
+            this.label17.Location = new System.Drawing.Point(158, 5);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(35, 13);
+            this.label17.TabIndex = 45;
+            this.label17.Text = "Hasta";
+            // 
+            // label18
+            // 
+            this.label18.AutoSize = true;
+            this.label18.Location = new System.Drawing.Point(8, 5);
+            this.label18.Name = "label18";
+            this.label18.Size = new System.Drawing.Size(38, 13);
+            this.label18.TabIndex = 44;
+            this.label18.Text = "Desde";
+            // 
+            // label20
+            // 
+            this.label20.AutoSize = true;
+            this.label20.Location = new System.Drawing.Point(156, 3);
+            this.label20.Name = "label20";
+            this.label20.Size = new System.Drawing.Size(35, 13);
+            this.label20.TabIndex = 47;
+            this.label20.Text = "Hasta";
+            // 
+            // label21
+            // 
+            this.label21.AutoSize = true;
+            this.label21.Location = new System.Drawing.Point(6, 3);
+            this.label21.Name = "label21";
+            this.label21.Size = new System.Drawing.Size(38, 13);
+            this.label21.TabIndex = 46;
+            this.label21.Text = "Desde";
             // 
             // frm_Reportes
             // 
@@ -733,5 +855,16 @@
         private System.Windows.Forms.Button btn_ExportarExcel_Reporte_Clientes;
         private System.Windows.Forms.Button btn_ExportarExcel_Reporte_Membresias;
         private System.Windows.Forms.Button btn_ExportarExcel_Reporte_Inventario;
+        private System.Windows.Forms.ComboBox cmb_Filtro_ReportesInventario;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Label label20;
+        private System.Windows.Forms.Label label21;
+        private System.Windows.Forms.Label label17;
+        private System.Windows.Forms.Label label18;
+        private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.Label label15;
     }
 }

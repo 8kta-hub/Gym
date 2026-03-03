@@ -164,5 +164,10 @@ namespace Gym.V.frmHijos.Productos
         {
             dgv_Productos.ClearSelection();
         }
+
+        private void btn_Proveedor_Productos_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

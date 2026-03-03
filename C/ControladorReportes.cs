@@ -5,6 +5,9 @@ using System.Text;
 using System.Threading.Tasks;
 using Gym.M;
 using System.Windows.Forms;
+using System.Data.SqlClient;
+using System.Security.Cryptography;
+using System.Security.Policy;
 
 namespace Gym.C
 {
@@ -32,7 +35,7 @@ namespace Gym.C
                     m.nombre as Membresia_Nombre,
                     c.nombre as Nombre,
                     c.apellido,
-                    m.fecha_creacion,
+                    cm.fecha_inicio,
                     m.activo,
                     m.precio
                 FROM Membresias m
@@ -40,6 +43,69 @@ namespace Gym.C
                 Join Clientes c on cm.id_cliente = c.id_cliente";
 
             conexion.CargarTabla(consulta, dgv);
+        }
+
+        public void BuscarMembresiasPorFechas(DateTime fechaInicial, DateTime fechaFinal ,DataGridView dgv)
+        {
+            string consulta = @"
+                SELECT 
+                    m.nombre as Membresia_Nombre,
+                    c.nombre as Nombre,
+                    c.apellido,
+                    cm.fecha_inicio,
+                    m.activo,
+                    m.precio
+                FROM Membresias m
+                Join Cliente_Membresias cm on m.id_membresias = cm.id_membresias
+                Join Clientes c on cm.id_cliente = c.id_cliente
+                WHERE fecha_inicio >= @fechaInicial AND fecha_inicio < @fechaFinal";
+
+            SqlParameter[] parametros =
+            {
+                new SqlParameter("@fechaInicial", fechaInicial),
+                new SqlParameter("@fechaFinal", fechaFinal)
+            }; 
+
+            
+
+            conexion.CargarTabla(consulta, dgv, parametros);
+        }
+
+        public decimal CargarTotalPrecioMembresias()
+        {
+            string consulta = @"
+                SELECT SUM(m.precio) 
+                FROM Membresias m
+                JOIN Cliente_Membresias cm ON m.id_membresias = cm.id_membresias";
+
+            object resultado = conexion.ObtenerValor(consulta);
+
+            if (resultado != null && resultado != DBNull.Value)
+                return Convert.ToDecimal(resultado);
+
+            return 0;
+        }
+
+        public decimal CargarTotalPrecioMembresiasPorFecha(DateTime fechaInicial, DateTime fechaFinal)
+        {
+            string consulta = @"
+                SELECT SUM(m.precio) 
+                FROM Membresias m
+                JOIN Cliente_Membresias cm ON m.id_membresias = cm.id_membresias
+                WHERE cm.fecha_inicio >= @fechaInicial AND cm.fecha_inicio < @fechaFinal";
+
+            SqlParameter[] parametros =
+            {
+                new SqlParameter("@fechaInicial", fechaInicial),
+                new SqlParameter("@fechaFinal", fechaFinal)
+            };
+
+            object resultado = conexion.ObtenerValor(consulta, parametros);
+
+            if (resultado != null && resultado != DBNull.Value)
+                return Convert.ToDecimal(resultado);
+
+            return 0;
         }
 
         public void ListarReportesClientes(DataGridView dgv)
