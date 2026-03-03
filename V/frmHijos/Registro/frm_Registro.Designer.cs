@@ -256,6 +256,7 @@
             this.txt_Clave_Registro.Name = "txt_Clave_Registro";
             this.txt_Clave_Registro.Size = new System.Drawing.Size(312, 31);
             this.txt_Clave_Registro.TabIndex = 14;
+            this.txt_Clave_Registro.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_Clave_Registro_KeyPress);
             // 
             // label2
             // 
@@ -293,6 +294,7 @@
             this.Name = "frm_Registro";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Registro";
+            this.Load += new System.EventHandler(this.frm_Registro_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.panel3.ResumeLayout(false);

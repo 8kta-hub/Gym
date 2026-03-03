@@ -61,6 +61,7 @@
     <Compile Include="C\ControladorMovimientos.cs" />
     <Compile Include="C\ControladorProductos.cs" />
     <Compile Include="C\ControladorProveedores.cs" />
+    <Compile Include="C\ControladorRegistro.cs" />
     <Compile Include="C\ControladorReportes.cs" />
     <Compile Include="C\ControladorRoles.cs" />
     <Compile Include="C\ControladorUsuarios.cs" />
@@ -285,10 +286,10 @@
     <Compile Include="V\Login\frm_RecuperarPass.Designer.cs">
       <DependentUpon>frm_RecuperarPass.cs</DependentUpon>
     </Compile>
-    <Compile Include="V\Registro\frm_Registro.cs">
+    <Compile Include="V\frmHijos\Registro\frm_Registro.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="V\Registro\frm_Registro.Designer.cs">
+    <Compile Include="V\frmHijos\Registro\frm_Registro.Designer.cs">
       <DependentUpon>frm_Registro.cs</DependentUpon>
     </Compile>
     <EmbeddedResource Include="V\Configuracion\frm_Configuracion.resx">
@@ -403,7 +404,7 @@
     <EmbeddedResource Include="V\Login\frm_RecuperarPass.resx">
       <DependentUpon>frm_RecuperarPass.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="V\Registro\frm_Registro.resx">
+    <EmbeddedResource Include="V\frmHijos\Registro\frm_Registro.resx">
       <DependentUpon>frm_Registro.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
