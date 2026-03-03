@@ -35,6 +35,8 @@
             this.cmb_TipoPago_ComprasNuevo = new System.Windows.Forms.ComboBox();
             this.btn_RealizarCompra_ComprasNuevo = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.btn_Limpiar_ComprasNuevo = new System.Windows.Forms.Button();
+            this.btn_Eliminar_ComprasNuevo = new System.Windows.Forms.Button();
             this.cmb_Proveedor_ComprasNuevo = new System.Windows.Forms.ComboBox();
             this.label7 = new System.Windows.Forms.Label();
             this.lbl_Precio_ComprasNuevo = new System.Windows.Forms.Label();
@@ -48,8 +50,6 @@
             this.label2 = new System.Windows.Forms.Label();
             this.txt_Codigo_ComprasNuevo = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.btn_Eliminar_ComprasNuevo = new System.Windows.Forms.Button();
-            this.btn_Limpiar_ComprasNuevo = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_ComprasNuevo)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
@@ -98,6 +98,7 @@
             // 
             // cmb_TipoPago_ComprasNuevo
             // 
+            this.cmb_TipoPago_ComprasNuevo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmb_TipoPago_ComprasNuevo.FormattingEnabled = true;
             this.cmb_TipoPago_ComprasNuevo.Location = new System.Drawing.Point(521, 442);
             this.cmb_TipoPago_ComprasNuevo.Name = "cmb_TipoPago_ComprasNuevo";
@@ -139,20 +140,43 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = " ";
             // 
+            // btn_Limpiar_ComprasNuevo
+            // 
+            this.btn_Limpiar_ComprasNuevo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Limpiar_ComprasNuevo.Location = new System.Drawing.Point(663, 108);
+            this.btn_Limpiar_ComprasNuevo.Name = "btn_Limpiar_ComprasNuevo";
+            this.btn_Limpiar_ComprasNuevo.Size = new System.Drawing.Size(107, 27);
+            this.btn_Limpiar_ComprasNuevo.TabIndex = 26;
+            this.btn_Limpiar_ComprasNuevo.Text = "Limpiar todo";
+            this.btn_Limpiar_ComprasNuevo.UseVisualStyleBackColor = true;
+            this.btn_Limpiar_ComprasNuevo.Click += new System.EventHandler(this.btn_Limpiar_ComprasNuevo_Click);
+            // 
+            // btn_Eliminar_ComprasNuevo
+            // 
+            this.btn_Eliminar_ComprasNuevo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Eliminar_ComprasNuevo.Location = new System.Drawing.Point(526, 108);
+            this.btn_Eliminar_ComprasNuevo.Name = "btn_Eliminar_ComprasNuevo";
+            this.btn_Eliminar_ComprasNuevo.Size = new System.Drawing.Size(131, 27);
+            this.btn_Eliminar_ComprasNuevo.TabIndex = 25;
+            this.btn_Eliminar_ComprasNuevo.Text = "Eliminar compra";
+            this.btn_Eliminar_ComprasNuevo.UseVisualStyleBackColor = true;
+            this.btn_Eliminar_ComprasNuevo.Click += new System.EventHandler(this.btn_Eliminar_ComprasNuevo_Click);
+            // 
             // cmb_Proveedor_ComprasNuevo
             // 
             this.cmb_Proveedor_ComprasNuevo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmb_Proveedor_ComprasNuevo.FormattingEnabled = true;
-            this.cmb_Proveedor_ComprasNuevo.Location = new System.Drawing.Point(92, 112);
+            this.cmb_Proveedor_ComprasNuevo.Location = new System.Drawing.Point(95, 19);
             this.cmb_Proveedor_ComprasNuevo.Name = "cmb_Proveedor_ComprasNuevo";
             this.cmb_Proveedor_ComprasNuevo.Size = new System.Drawing.Size(233, 21);
             this.cmb_Proveedor_ComprasNuevo.TabIndex = 24;
+            this.cmb_Proveedor_ComprasNuevo.SelectedIndexChanged += new System.EventHandler(this.cmb_Proveedor_ComprasNuevo_SelectedIndexChanged);
             // 
             // label7
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(13, 115);
+            this.label7.Location = new System.Drawing.Point(16, 22);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(71, 16);
             this.label7.TabIndex = 23;
@@ -211,7 +235,7 @@
             // 
             // txt_Cantidad_ComprasNuevo
             // 
-            this.txt_Cantidad_ComprasNuevo.Location = new System.Drawing.Point(92, 81);
+            this.txt_Cantidad_ComprasNuevo.Location = new System.Drawing.Point(95, 110);
             this.txt_Cantidad_ComprasNuevo.Name = "txt_Cantidad_ComprasNuevo";
             this.txt_Cantidad_ComprasNuevo.Size = new System.Drawing.Size(145, 20);
             this.txt_Cantidad_ComprasNuevo.TabIndex = 17;
@@ -220,7 +244,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(13, 82);
+            this.label3.Location = new System.Drawing.Point(16, 111);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(61, 16);
             this.label3.TabIndex = 16;
@@ -230,7 +254,7 @@
             // 
             this.cmb_Producto_ComprasNuevo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmb_Producto_ComprasNuevo.FormattingEnabled = true;
-            this.cmb_Producto_ComprasNuevo.Location = new System.Drawing.Point(92, 50);
+            this.cmb_Producto_ComprasNuevo.Location = new System.Drawing.Point(95, 50);
             this.cmb_Producto_ComprasNuevo.Name = "cmb_Producto_ComprasNuevo";
             this.cmb_Producto_ComprasNuevo.Size = new System.Drawing.Size(233, 21);
             this.cmb_Producto_ComprasNuevo.TabIndex = 15;
@@ -240,7 +264,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(13, 53);
+            this.label2.Location = new System.Drawing.Point(16, 53);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(61, 16);
             this.label2.TabIndex = 14;
@@ -248,41 +272,21 @@
             // 
             // txt_Codigo_ComprasNuevo
             // 
-            this.txt_Codigo_ComprasNuevo.Location = new System.Drawing.Point(92, 20);
+            this.txt_Codigo_ComprasNuevo.Location = new System.Drawing.Point(95, 77);
             this.txt_Codigo_ComprasNuevo.Name = "txt_Codigo_ComprasNuevo";
+            this.txt_Codigo_ComprasNuevo.ReadOnly = true;
             this.txt_Codigo_ComprasNuevo.Size = new System.Drawing.Size(145, 20);
             this.txt_Codigo_ComprasNuevo.TabIndex = 13;
-            this.txt_Codigo_ComprasNuevo.TextChanged += new System.EventHandler(this.txt_Codigo_ComprasNuevo_TextChanged);
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(13, 24);
+            this.label1.Location = new System.Drawing.Point(16, 81);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(51, 16);
             this.label1.TabIndex = 12;
             this.label1.Text = "Codigo";
-            // 
-            // btn_Eliminar_ComprasNuevo
-            // 
-            this.btn_Eliminar_ComprasNuevo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_Eliminar_ComprasNuevo.Location = new System.Drawing.Point(526, 108);
-            this.btn_Eliminar_ComprasNuevo.Name = "btn_Eliminar_ComprasNuevo";
-            this.btn_Eliminar_ComprasNuevo.Size = new System.Drawing.Size(131, 27);
-            this.btn_Eliminar_ComprasNuevo.TabIndex = 25;
-            this.btn_Eliminar_ComprasNuevo.Text = "Eliminar compra";
-            this.btn_Eliminar_ComprasNuevo.UseVisualStyleBackColor = true;
-            // 
-            // btn_Limpiar_ComprasNuevo
-            // 
-            this.btn_Limpiar_ComprasNuevo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_Limpiar_ComprasNuevo.Location = new System.Drawing.Point(663, 108);
-            this.btn_Limpiar_ComprasNuevo.Name = "btn_Limpiar_ComprasNuevo";
-            this.btn_Limpiar_ComprasNuevo.Size = new System.Drawing.Size(107, 27);
-            this.btn_Limpiar_ComprasNuevo.TabIndex = 26;
-            this.btn_Limpiar_ComprasNuevo.Text = "Limpiar todo";
-            this.btn_Limpiar_ComprasNuevo.UseVisualStyleBackColor = true;
             // 
             // frm_Compras_Nuevo
             // 
