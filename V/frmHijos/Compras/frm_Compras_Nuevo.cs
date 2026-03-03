@@ -30,49 +30,6 @@ namespace Gym.V.frmHijos.Compras
             ActualizarTotal();
         }
 
-        // ── EVENTOS ──────────────────────────────────────────
-
-        // PUNTO 1: al seleccionar producto desde combo, se autocompleta el código
-        private void cmb_Producto_ComprasNuevo_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            if (cmb_Producto_ComprasNuevo.SelectedItem is Producto p)
-            {
-                txt_Codigo_ComprasNuevo.Text = p.Codigo.ToString();
-                lbl_Costo_ComprasNuevo.Text = "$" + p.Costo.ToString("N2");
-                lbl_Precio_ComprasNuevo.Text = "$" + p.PrecioVenta.ToString("N2");
-            }
-            else
-            {
-                txt_Codigo_ComprasNuevo.Text = string.Empty;
-                lbl_Costo_ComprasNuevo.Text = "####";
-                lbl_Precio_ComprasNuevo.Text = "####";
-            }
-        }
-
-        // Al tipear código, busca el producto y selecciona en el combo
-        private void txt_Codigo_ComprasNuevo_TextChanged(object sender, EventArgs e)
-        {
-            if (string.IsNullOrWhiteSpace(txt_Codigo_ComprasNuevo.Text)) return;
-
-            if (int.TryParse(txt_Codigo_ComprasNuevo.Text, out int codigo))
-            {
-                foreach (var p in productos)
-                {
-                    if (p.Codigo == codigo)
-                    {
-                        // Desuscribir para no crear loop con SelectedIndexChanged
-                        cmb_Producto_ComprasNuevo.SelectedIndexChanged -= cmb_Producto_ComprasNuevo_SelectedIndexChanged;
-                        cmb_Producto_ComprasNuevo.SelectedItem = p;
-                        cmb_Producto_ComprasNuevo.SelectedIndexChanged += cmb_Producto_ComprasNuevo_SelectedIndexChanged;
-
-                        lbl_Costo_ComprasNuevo.Text = "$" + p.Costo.ToString("N2");
-                        lbl_Precio_ComprasNuevo.Text = "$" + p.PrecioVenta.ToString("N2");
-                        break;
-                    }
-                }
-            }
-        }
-
         private void btn_Agregar_ComprasNuevo_Click(object sender, EventArgs e)
         {
             if (cmb_Producto_ComprasNuevo.SelectedItem == null)
@@ -142,7 +99,6 @@ namespace Gym.V.frmHijos.Compras
             LimpiarCamposProducto();
         }
 
-        // PUNTO 5: elimina la fila seleccionada del DGV
         private void btn_Eliminar_ComprasNuevo_Click(object sender, EventArgs e)
         {
             if (dgv_ComprasNuevo.SelectedRows.Count == 0 ||
@@ -174,7 +130,6 @@ namespace Gym.V.frmHijos.Compras
             ActualizarTotal();
         }
 
-        // PUNTO 5: limpia toda la tabla
         private void btn_Limpiar_ComprasNuevo_Click(object sender, EventArgs e)
         {
             if (tablaItems.Rows.Count == 0)
@@ -258,7 +213,58 @@ namespace Gym.V.frmHijos.Compras
             }
         }
 
-        // ── HELPERS ──────────────────────────────────────────
+        private void cmb_Producto_ComprasNuevo_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (cmb_Producto_ComprasNuevo.SelectedItem is Producto p)
+            {
+                txt_Codigo_ComprasNuevo.Text = p.Codigo.ToString();
+                lbl_Costo_ComprasNuevo.Text = "$" + p.Costo.ToString("N2");
+                lbl_Precio_ComprasNuevo.Text = "$" + p.PrecioVenta.ToString("N2");
+
+                // Filtrar el combo de proveedores al proveedor del producto
+                var listaProveedores = cmb_Proveedor_ComprasNuevo.DataSource as List<Proveedor>;
+                if (listaProveedores != null)
+                {
+                    cmb_Proveedor_ComprasNuevo.SelectedIndexChanged -= cmb_Proveedor_ComprasNuevo_SelectedIndexChanged;
+                    var proveedorDelProducto = listaProveedores.Find(x => x.IdProveedor == p.IdProveedor);
+                    if (proveedorDelProducto != null)
+                        cmb_Proveedor_ComprasNuevo.SelectedItem = proveedorDelProducto;
+                    cmb_Proveedor_ComprasNuevo.SelectedIndexChanged += cmb_Proveedor_ComprasNuevo_SelectedIndexChanged;
+                }
+            }
+            else
+            {
+                txt_Codigo_ComprasNuevo.Text = string.Empty;
+                lbl_Costo_ComprasNuevo.Text = "####";
+                lbl_Precio_ComprasNuevo.Text = "####";
+            }
+        }
+
+        private void cmb_Proveedor_ComprasNuevo_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (cmb_Proveedor_ComprasNuevo.SelectedItem is Proveedor p)
+            {
+                var filtrados = productos.FindAll(x => x.IdProveedor == p.IdProveedor);
+                cmb_Producto_ComprasNuevo.SelectedIndexChanged -= cmb_Producto_ComprasNuevo_SelectedIndexChanged;
+                cmb_Producto_ComprasNuevo.DataSource = filtrados;
+                cmb_Producto_ComprasNuevo.DisplayMember = "Nombre";
+                cmb_Producto_ComprasNuevo.ValueMember = "IdProducto";
+                cmb_Producto_ComprasNuevo.SelectedIndex = -1;
+                cmb_Producto_ComprasNuevo.SelectedIndexChanged += cmb_Producto_ComprasNuevo_SelectedIndexChanged;
+            }
+            else
+            {
+                // Sin proveedor seleccionado → muestra todos los productos
+                cmb_Producto_ComprasNuevo.SelectedIndexChanged -= cmb_Producto_ComprasNuevo_SelectedIndexChanged;
+                cmb_Producto_ComprasNuevo.DataSource = productos;
+                cmb_Producto_ComprasNuevo.DisplayMember = "Nombre";
+                cmb_Producto_ComprasNuevo.ValueMember = "IdProducto";
+                cmb_Producto_ComprasNuevo.SelectedIndex = -1;
+                cmb_Producto_ComprasNuevo.SelectedIndexChanged += cmb_Producto_ComprasNuevo_SelectedIndexChanged;
+            }
+
+            LimpiarCamposProducto();
+        }
 
         private void InicializarTablaItems()
         {
@@ -279,19 +285,31 @@ namespace Gym.V.frmHijos.Compras
         private void CargarProveedores()
         {
             var lista = controladorProveedores.ObtenerProveedoresActivos();
+
+            // Desuscribir para que asignar DataSource no dispare el evento
+            cmb_Proveedor_ComprasNuevo.SelectedIndexChanged -= cmb_Proveedor_ComprasNuevo_SelectedIndexChanged;
+
             cmb_Proveedor_ComprasNuevo.DisplayMember = "Nombre";
             cmb_Proveedor_ComprasNuevo.ValueMember = "IdProveedor";
             cmb_Proveedor_ComprasNuevo.DataSource = lista;
             cmb_Proveedor_ComprasNuevo.SelectedIndex = -1;
+
+            // Volver a suscribir
+            cmb_Proveedor_ComprasNuevo.SelectedIndexChanged += cmb_Proveedor_ComprasNuevo_SelectedIndexChanged;
         }
 
         private void CargarProductos()
         {
             productos = controladorProductos.ObtenerProductosActivos();
+
+            cmb_Producto_ComprasNuevo.SelectedIndexChanged -= cmb_Producto_ComprasNuevo_SelectedIndexChanged;
+
             cmb_Producto_ComprasNuevo.DisplayMember = "Nombre";
             cmb_Producto_ComprasNuevo.ValueMember = "IdProducto";
             cmb_Producto_ComprasNuevo.DataSource = productos;
             cmb_Producto_ComprasNuevo.SelectedIndex = -1;
+
+            cmb_Producto_ComprasNuevo.SelectedIndexChanged += cmb_Producto_ComprasNuevo_SelectedIndexChanged;
         }
 
         private void CargarTiposPago()
@@ -319,5 +337,7 @@ namespace Gym.V.frmHijos.Compras
             lbl_Precio_ComprasNuevo.Text = "####";
             txt_Cantidad_ComprasNuevo.Focus();
         }
+
+        
     }
 }

@@ -129,10 +129,10 @@ namespace Gym.C
         public List<Producto> ObtenerProductosActivos()
         {
             string consulta = @"
-            SELECT id_producto, codigo, nombre, costo, precio_venta
-            FROM Productos
-            WHERE estado = 'Activo'
-            ORDER BY nombre";
+                SELECT id_producto, id_proveedor, codigo, nombre, costo, precio_venta
+                FROM Productos
+                WHERE estado = 'Activo'
+                ORDER BY nombre";
 
             DataTable dt = conexion.ObtenerTabla(consulta);
             var lista = new List<Producto>();
@@ -142,6 +142,7 @@ namespace Gym.C
                 lista.Add(new Producto
                 {
                     IdProducto = Convert.ToInt32(fila["id_producto"]),
+                    IdProveedor = Convert.ToInt32(fila["id_proveedor"]), // antes faltaba
                     Codigo = Convert.ToInt32(fila["codigo"]),
                     Nombre = fila["nombre"].ToString(),
                     Costo = Convert.ToDecimal(fila["costo"]),
