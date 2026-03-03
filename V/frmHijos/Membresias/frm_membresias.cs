@@ -102,7 +102,8 @@ namespace Gym.V.frmHijos
 
         private Membresia CargarMembresiaSeleccionada()
         {
-            if (dgv_Membresias.SelectedRows.Count == 0)
+            if (dgv_Membresias.SelectedRows.Count == 0 ||
+                dgv_Membresias.SelectedRows[0].Cells["id_membresias"].Value == null)
                 return null;
 
             DataGridViewRow fila = dgv_Membresias.SelectedRows[0];

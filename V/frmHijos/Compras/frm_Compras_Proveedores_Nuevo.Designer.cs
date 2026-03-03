@@ -1,6 +1,6 @@
-﻿namespace Gym.V.frmHijos.Productos
+﻿namespace Gym.V.frmHijos.Compras
 {
-    partial class frm_Productos_Proveedores_Nuevo
+    partial class frm_Compras_Proveedores_Nuevo
     {
         /// <summary>
         /// Required designer variable.
@@ -59,6 +59,8 @@
             this.btn_Guardar_ProveedorNuevo.TabIndex = 27;
             this.btn_Guardar_ProveedorNuevo.Text = "Guardar";
             this.btn_Guardar_ProveedorNuevo.UseVisualStyleBackColor = true;
+            this.btn_Guardar_ProveedorNuevo.TextChanged += new System.EventHandler(this.btn_Guardar_ProveedorNuevo_Click);
+            this.btn_Guardar_ProveedorNuevo.Click += new System.EventHandler(this.btn_Guardar_ProveedorNuevo_Click);
             // 
             // txt_Nombre_ProveedorNuevo
             // 
@@ -128,7 +130,7 @@
             this.txt_Email_ProveedorNuevo.Size = new System.Drawing.Size(152, 20);
             this.txt_Email_ProveedorNuevo.TabIndex = 32;
             // 
-            // frm_Productos_Proveedores_Nuevo
+            // frm_Compras_Proveedores_Nuevo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -146,7 +148,8 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
-            this.Name = "frm_Productos_Proveedores_Nuevo";
+            this.Name = "frm_Compras_Proveedores_Nuevo";
+            this.Load += new System.EventHandler(this.frm_Compras_Proveedores_Nuevo_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

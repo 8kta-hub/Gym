@@ -149,6 +149,15 @@ namespace Gym.V.frmHijos.Clientes
                 else
                 {
                     // UPDATE
+                    DialogResult confirmacion = MessageBox.Show(
+                        "¿Desea guardar los cambios en el cliente?",
+                        "Confirmar modificación",
+                        MessageBoxButtons.YesNo,
+                        MessageBoxIcon.Question
+                    );
+
+                    if (confirmacion != DialogResult.Yes) return;
+
                     resultado = controlador.UpdateClientes(
                         ClienteActual.IdCliente,
                         codCliente, nombre, apellido,

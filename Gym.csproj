@@ -60,6 +60,7 @@
     <Compile Include="C\ControladorMembresiasHorarios.cs" />
     <Compile Include="C\ControladorMovimientos.cs" />
     <Compile Include="C\ControladorProductos.cs" />
+    <Compile Include="C\ControladorProveedores.cs" />
     <Compile Include="C\ControladorReportes.cs" />
     <Compile Include="C\ControladorRoles.cs" />
     <Compile Include="C\ControladorUsuarios.cs" />
@@ -197,17 +198,17 @@
     <Compile Include="V\frmHijos\Productos\frm_Productos_Nuevo.Designer.cs">
       <DependentUpon>frm_Productos_Nuevo.cs</DependentUpon>
     </Compile>
-    <Compile Include="V\frmHijos\Productos\frm_Productos_Proveedores.cs">
+    <Compile Include="V\frmHijos\Compras\frm_Compras_Proveedores.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="V\frmHijos\Productos\frm_Productos_Proveedores.Designer.cs">
-      <DependentUpon>frm_Productos_Proveedores.cs</DependentUpon>
+    <Compile Include="V\frmHijos\Compras\frm_Compras_Proveedores.Designer.cs">
+      <DependentUpon>frm_Compras_Proveedores.cs</DependentUpon>
     </Compile>
-    <Compile Include="V\frmHijos\Productos\frm_Productos_Proveedores_Nuevo.cs">
+    <Compile Include="V\frmHijos\Compras\frm_Compras_Proveedores_Nuevo.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="V\frmHijos\Productos\frm_Productos_Proveedores_Nuevo.Designer.cs">
-      <DependentUpon>frm_Productos_Proveedores_Nuevo.cs</DependentUpon>
+    <Compile Include="V\frmHijos\Compras\frm_Compras_Proveedores_Nuevo.Designer.cs">
+      <DependentUpon>frm_Compras_Proveedores_Nuevo.cs</DependentUpon>
     </Compile>
     <Compile Include="V\frmHijos\Reporte\frm_Reportes.cs">
       <SubType>Form</SubType>
@@ -350,11 +351,11 @@
     <EmbeddedResource Include="V\frmHijos\Productos\frm_Productos_Nuevo.resx">
       <DependentUpon>frm_Productos_Nuevo.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="V\frmHijos\Productos\frm_Productos_Proveedores.resx">
-      <DependentUpon>frm_Productos_Proveedores.cs</DependentUpon>
+    <EmbeddedResource Include="V\frmHijos\Compras\frm_Compras_Proveedores.resx">
+      <DependentUpon>frm_Compras_Proveedores.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="V\frmHijos\Productos\frm_Productos_Proveedores_Nuevo.resx">
-      <DependentUpon>frm_Productos_Proveedores_Nuevo.cs</DependentUpon>
+    <EmbeddedResource Include="V\frmHijos\Compras\frm_Compras_Proveedores_Nuevo.resx">
+      <DependentUpon>frm_Compras_Proveedores_Nuevo.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="V\frmHijos\Reporte\frm_Reportes.resx">
       <DependentUpon>frm_Reportes.cs</DependentUpon>
