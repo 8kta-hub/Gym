@@ -37,6 +37,7 @@
             this.txt_Buscar_Usuarios = new System.Windows.Forms.TextBox();
             this.btn_Roles_Usuarios = new System.Windows.Forms.Button();
             this.btn_ExportarExcel_Usuarios = new System.Windows.Forms.Button();
+            this.cmb_FiltroUsuarios = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_Usuarios)).BeginInit();
             this.SuspendLayout();
             // 
@@ -78,9 +79,13 @@
             this.dgv_Usuarios.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.dgv_Usuarios.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgv_Usuarios.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgv_Usuarios.Location = new System.Drawing.Point(12, 105);
+            this.dgv_Usuarios.MultiSelect = false;
             this.dgv_Usuarios.Name = "dgv_Usuarios";
+            this.dgv_Usuarios.ReadOnly = true;
+            this.dgv_Usuarios.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgv_Usuarios.Size = new System.Drawing.Size(1004, 251);
             this.dgv_Usuarios.TabIndex = 13;
             this.dgv_Usuarios.DataBindingComplete += new System.Windows.Forms.DataGridViewBindingCompleteEventHandler(this.dgv_Usuarios_DataBindingComplete);
@@ -101,6 +106,7 @@
             this.txt_Buscar_Usuarios.Name = "txt_Buscar_Usuarios";
             this.txt_Buscar_Usuarios.Size = new System.Drawing.Size(338, 20);
             this.txt_Buscar_Usuarios.TabIndex = 22;
+            this.txt_Buscar_Usuarios.TextChanged += new System.EventHandler(this.txt_Buscar_Usuarios_TextChanged);
             // 
             // btn_Roles_Usuarios
             // 
@@ -125,11 +131,22 @@
             this.btn_ExportarExcel_Usuarios.UseVisualStyleBackColor = true;
             this.btn_ExportarExcel_Usuarios.Visible = false;
             // 
+            // cmb_FiltroUsuarios
+            // 
+            this.cmb_FiltroUsuarios.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmb_FiltroUsuarios.FormattingEnabled = true;
+            this.cmb_FiltroUsuarios.Location = new System.Drawing.Point(356, 79);
+            this.cmb_FiltroUsuarios.Name = "cmb_FiltroUsuarios";
+            this.cmb_FiltroUsuarios.Size = new System.Drawing.Size(121, 21);
+            this.cmb_FiltroUsuarios.TabIndex = 39;
+            this.cmb_FiltroUsuarios.SelectedIndexChanged += new System.EventHandler(this.cmb_FiltroUsuarios_SelectedIndexChanged);
+            // 
             // frm_Usuarios
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1028, 366);
+            this.Controls.Add(this.cmb_FiltroUsuarios);
             this.Controls.Add(this.btn_ExportarExcel_Usuarios);
             this.Controls.Add(this.btn_Roles_Usuarios);
             this.Controls.Add(this.txt_Buscar_Usuarios);
@@ -159,5 +176,6 @@
         private System.Windows.Forms.TextBox txt_Buscar_Usuarios;
         private System.Windows.Forms.Button btn_Roles_Usuarios;
         private System.Windows.Forms.Button btn_ExportarExcel_Usuarios;
+        private System.Windows.Forms.ComboBox cmb_FiltroUsuarios;
     }
 }

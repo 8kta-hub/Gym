@@ -24,7 +24,7 @@ namespace Gym.V.frmHijos.Registro
             txt_Clave_Registro.KeyPress += txt_Clave_Registro_KeyPress;
 
             timerLimpiar = new System.Windows.Forms.Timer();
-            timerLimpiar.Interval = 10000;
+            timerLimpiar.Interval = 5000;
             timerLimpiar.Tick += (s, ev) =>
             {
                 timerLimpiar.Stop();

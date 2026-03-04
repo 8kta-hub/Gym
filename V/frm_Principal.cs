@@ -5,7 +5,6 @@ using Gym.V.frmHijos;
 using Gym.V.frmHijos.Clientes;
 using Gym.V.frmHijos.Compras;
 using Gym.V.frmHijos.Conceptos;
-using Gym.V.frmHijos.Corte;
 using Gym.V.frmHijos.Movimientos;
 using Gym.V.frmHijos.Productos;
 using Gym.V.frmHijos.Registro;
@@ -89,12 +88,6 @@ namespace Gym
         {
             frm_Ventas Ventas = new frm_Ventas();
             Funciones.abrirForm(Ventas, pnl_base);
-        }
-
-        private void btn_Corte_Click(object sender, EventArgs e)
-        {
-            frm_Corte Corte = new frm_Corte();
-            Funciones.abrirForm(Corte, pnl_base);
         }
 
         private void btn_Movimientos_Click(object sender, EventArgs e)

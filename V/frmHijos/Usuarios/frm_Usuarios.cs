@@ -9,7 +9,7 @@ namespace Gym.V.frmHijos
 {
     public partial class frm_Usuarios : Form
     {
-        ControladorUsuarios controlador = new ControladorUsuarios();
+        private ControladorUsuarios controlador = new ControladorUsuarios();
 
         public frm_Usuarios()
         {
@@ -18,6 +18,7 @@ namespace Gym.V.frmHijos
 
         private void frm_Usuarios_Load(object sender, EventArgs e)
         {
+            CargarFiltro();
             CargarUsuarios();
         }
 
@@ -35,7 +36,8 @@ namespace Gym.V.frmHijos
 
             if (usuario == null)
             {
-                MessageBox.Show("Seleccione un usuario");
+                MessageBox.Show("Seleccione un usuario.", "Validación",
+                    MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
 
@@ -51,7 +53,8 @@ namespace Gym.V.frmHijos
 
             if (usuario == null)
             {
-                MessageBox.Show("Seleccione un usuario");
+                MessageBox.Show("Seleccione un usuario.", "Validación",
+                    MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
 
@@ -59,8 +62,7 @@ namespace Gym.V.frmHijos
                 "¿Desea deshabilitar este usuario?",
                 "Confirmar",
                 MessageBoxButtons.YesNo,
-                MessageBoxIcon.Question
-            );
+                MessageBoxIcon.Question);
 
             if (confirmacion == DialogResult.Yes)
             {
@@ -68,12 +70,13 @@ namespace Gym.V.frmHijos
 
                 if (resultado)
                 {
-                    MessageBox.Show("Usuario deshabilitado correctamente");
+                    MessageBox.Show("Usuario deshabilitado correctamente.");
                     CargarUsuarios();
                 }
                 else
                 {
-                    MessageBox.Show("No se pudo deshabilitar el usuario");
+                    MessageBox.Show("No se pudo deshabilitar el usuario.", "Error",
+                        MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
         }
@@ -86,12 +89,13 @@ namespace Gym.V.frmHijos
 
         private Usuario CargarUsuarioSeleccionado()
         {
-            if (dgv_Usuarios.SelectedRows.Count == 0)
+            if (dgv_Usuarios.SelectedRows.Count == 0 ||
+                dgv_Usuarios.SelectedRows[0].Cells["id_usuario"].Value == null)
                 return null;
 
             DataGridViewRow fila = dgv_Usuarios.SelectedRows[0];
 
-            Usuario usuario = new Usuario
+            return new Usuario
             {
                 IdUsuario = Convert.ToInt32(fila.Cells["id_usuario"].Value),
                 Nombre = fila.Cells["nombre"].Value.ToString(),
@@ -105,25 +109,40 @@ namespace Gym.V.frmHijos
                 HorarioInicio = (TimeSpan)fila.Cells["horario_inicio"].Value,
                 HorarioFin = (TimeSpan)fila.Cells["horario_fin"].Value
             };
+        }
 
-            return usuario;
+        private void CargarFiltro()
+        {
+            cmb_FiltroUsuarios.Items.Add("Todos");
+            cmb_FiltroUsuarios.Items.Add("Activo");
+            cmb_FiltroUsuarios.Items.Add("Inactivo");
+            cmb_FiltroUsuarios.SelectedIndex = 0;
         }
 
         private void CargarUsuarios()
         {
-            controlador.ListarUsuarios(dgv_Usuarios);
+            string busqueda = txt_Buscar_Usuarios.Text.Trim();
+            string filtro = cmb_FiltroUsuarios.SelectedItem?.ToString() ?? "Todos";
 
-            dgv_Usuarios.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
-            dgv_Usuarios.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
-            dgv_Usuarios.MultiSelect = false;
-            dgv_Usuarios.ReadOnly = true;
+            controlador.ListarUsuarios(dgv_Usuarios, busqueda, filtro);
 
-            dgv_Usuarios.Columns["id_usuario"].Visible = false;
+            if (dgv_Usuarios.Columns.Contains("id_usuario"))
+                dgv_Usuarios.Columns["id_usuario"].Visible = false;
         }
 
         private void dgv_Usuarios_DataBindingComplete(object sender, DataGridViewBindingCompleteEventArgs e)
         {
             dgv_Usuarios.ClearSelection();
+        }
+
+        private void txt_Buscar_Usuarios_TextChanged(object sender, EventArgs e)
+        {
+            CargarUsuarios();
+        }
+
+        private void cmb_FiltroUsuarios_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            CargarUsuarios();
         }
     }
 }

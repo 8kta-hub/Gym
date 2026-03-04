@@ -9,10 +9,14 @@ namespace Gym.C
     {
         private ConDB conexion = new ConDB();
 
-        public void ListarUsuarios(DataGridView dgv)
+        public void ListarUsuarios(DataGridView dgv, string busqueda = "", string filtro = "Todos")
         {
-            string consulta = @"
-                SELECT 
+            string whereFiltro = filtro == "Activo" ? "AND activo = 1"
+                               : filtro == "Inactivo" ? "AND activo = 0"
+                               : "";
+
+            string consulta = $@"
+                SELECT
                     id_usuario,
                     nombre,
                     apellido,
@@ -24,8 +28,23 @@ namespace Gym.C
                     horario_fin,
                     descripcion,
                     activo
-                FROM Usuarios";
-            conexion.CargarTabla(consulta, dgv);
+                FROM Usuarios
+                WHERE (
+                    nombre   LIKE @busqueda OR
+                    apellido LIKE @busqueda OR
+                    dni      LIKE @busqueda OR
+                    usuario  LIKE @busqueda OR
+                    email    LIKE @busqueda
+                )
+                {whereFiltro}
+                ORDER BY apellido, nombre";
+
+            SqlParameter[] parametros =
+            {
+                new SqlParameter("@busqueda", "%" + busqueda + "%")
+            };
+
+            conexion.CargarTabla(consulta, dgv, parametros);
         }
 
         public bool InsertarUsuario(string nombre, string apellido, string dni,

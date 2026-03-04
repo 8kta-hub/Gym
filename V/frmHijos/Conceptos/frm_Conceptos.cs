@@ -2,7 +2,6 @@
 using Gym.M;
 using Gym.M.Entidades;
 using Gym.V.frmHijos.Clientes;
-using Gym.V.frmHijos.Corte;
 using Gym.V.FuncionesV;
 using System;
 using System.Collections.Generic;
