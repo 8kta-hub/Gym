@@ -10,6 +10,8 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Gym.C;
+using Gym.M.Entidades;
+using Gym.V.frmHijos.Compras;
 
 namespace Gym.V.frmHijos.Ventas
 {
@@ -23,19 +25,92 @@ namespace Gym.V.frmHijos.Ventas
 
         private void frm_Ventas_Load(object sender, EventArgs e)
         {
+            ConfigurarRangoFechas(dtp_FechaInicial_Ventas, dtp_FechaFinal_Ventas);
             CargarVentas();
         }
 
         private void btn_Nuevo_Ventas_Click(object sender, EventArgs e)
         {
             frm_Ventas_Nuevo frm = new frm_Ventas_Nuevo();
-            Funciones.abrirFormModal(frm, this);
+            DialogResult resultado = Funciones.abrirFormModal(frm, this);
+
+            if (resultado == DialogResult.OK)
+                CargarVentas();
         }
 
         private void btn_Detalle_Ventas_Click(object sender, EventArgs e)
         {
-            frm_Ventas_Detalle VentasDetalle = new frm_Ventas_Detalle();
-            Funciones.abrirFormModal(VentasDetalle, this);
+            Operacion seleccionado = CargarVentaSeleccionada();
+
+            if (seleccionado == null)
+            {
+                MessageBox.Show("Seleccione una venta.", "Validación",
+                    MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
+            frm_Ventas_Detalle frm = new frm_Ventas_Detalle(seleccionado);
+            Funciones.abrirFormModal(frm, this);
+        }
+
+        private void btn_Eliminar_Ventas_Click(object sender, EventArgs e)
+        {
+            Operacion seleccionado = CargarVentaSeleccionada();
+
+            if (seleccionado == null)
+            {
+                MessageBox.Show("Seleccione una venta.", "Validación",
+                    MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
+            if (seleccionado.Estado == "Cancelada")
+            {
+                MessageBox.Show("La venta ya está cancelada.", "Validación",
+                    MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
+            DialogResult confirmacion = MessageBox.Show(
+                "¿Desea cancelar esta venta?",
+                "Confirmar",
+                MessageBoxButtons.YesNo,
+                MessageBoxIcon.Question);
+
+            if (confirmacion == DialogResult.Yes)
+            {
+                bool resultado = controlador.DeleteVenta(seleccionado.IdOperacion);
+
+                if (resultado)
+                {
+                    MessageBox.Show("Venta cancelada correctamente.");
+                    CargarVentas();
+                }
+                else
+                {
+                    MessageBox.Show("No se pudo cancelar la venta.", "Error",
+                        MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+        }
+
+        private Operacion CargarVentaSeleccionada()
+        {
+            if (dgv_Ventas.SelectedRows.Count == 0 ||
+                dgv_Ventas.SelectedRows[0].Cells["id_operacion"].Value == null)
+                return null;
+
+            var fila = dgv_Ventas.SelectedRows[0];
+
+            return new Operacion
+            {
+                IdOperacion = Convert.ToInt32(fila.Cells["id_operacion"].Value),
+                NombreCliente = fila.Cells["Cliente"].Value.ToString(),
+                NombreUsuario = fila.Cells["Usuario"].Value.ToString(),
+                Fecha = Convert.ToDateTime(fila.Cells["fecha"].Value),
+                Total = Convert.ToDecimal(fila.Cells["total"].Value),
+                Estado = fila.Cells["estado"].Value.ToString()
+            };
         }
 
         private void CargarVentas()
@@ -46,5 +121,24 @@ namespace Gym.V.frmHijos.Ventas
             dgv_Ventas.MultiSelect = false;
             dgv_Ventas.ReadOnly = true;
         }
+
+        private void dgv_Ventas_DataBindingComplete(object sender, DataGridViewBindingCompleteEventArgs e)
+        {
+            dgv_Ventas.ClearSelection();
+        }
+
+        private void ConfigurarRangoFechas(DateTimePicker dtpInicial, DateTimePicker dtpFinal)
+        {
+            dtpInicial.Format = DateTimePickerFormat.Short;
+            dtpFinal.Format = DateTimePickerFormat.Short;
+
+            dtpInicial.MaxDate = DateTime.Today;
+            dtpFinal.MaxDate = DateTime.Today;
+
+            dtpFinal.Value = DateTime.Today;
+            dtpInicial.Value = DateTime.Today.AddDays(-7);
+        }
+
+        
     }
 }

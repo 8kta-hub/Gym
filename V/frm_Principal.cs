@@ -126,5 +126,10 @@ namespace Gym
             frm_Configuracion Config = new frm_Configuracion();
             Funciones.abrirForm(Config,pnl_base);
         }
+
+        private void frm_Principal_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }

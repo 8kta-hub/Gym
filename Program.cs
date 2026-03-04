@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Gym.V;
 
 namespace Gym
 {
@@ -16,7 +17,7 @@ namespace Gym
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new frm_Principal());
+            Application.Run(new frm_Login());
         }
     }
 }

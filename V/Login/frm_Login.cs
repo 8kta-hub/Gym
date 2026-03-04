@@ -48,7 +48,7 @@ namespace Gym.V
                     return;
                 }
 
-                if (string.IsNullOrWhiteSpace(txt_Contraseña_Login.Text) || txt_Contraseña_Login.Text.Length <= 16)
+                if (string.IsNullOrWhiteSpace(txt_Contraseña_Login.Text) || txt_Contraseña_Login.Text.Length >= 16)
                 {
                     MessageBox.Show(
                         "Por favor, asegúrese que la contraseña esté completa y no sea mayor a 16 caracteres.",
@@ -60,7 +60,7 @@ namespace Gym.V
 
                 string usuarioIngresado = txt_Usuario_Login.Text.Trim();
                 string contraseñaIngresada = txt_Contraseña_Login.Text;
-                string contraseñaHasheada = controlador.GenerarHash(contraseñaIngresada);
+                byte [] contraseñaHasheada = controlador.GenerarHash(contraseñaIngresada);
 
                 bool loginCorrecto = controlador.ConfirmarUsuarioContraseña(usuarioIngresado, contraseñaHasheada);
 
@@ -96,6 +96,7 @@ namespace Gym.V
         {
             frm_RecuperarPass frmNuevo = new frm_RecuperarPass();
             Funciones.abrirFormModal(frmNuevo,this);
+            LimpiarCamposLogin();
         }
 
         private void btn_MostrarContraseña_Login_Click(object sender, EventArgs e)
@@ -112,6 +113,13 @@ namespace Gym.V
                 txt_Contraseña_Login.PasswordChar = '*';
                 btn_MostrarContraseña_Login.BackgroundImage = Gym.Properties.Resources.show;
             }
+        }
+
+        private void LimpiarCamposLogin()
+        {
+            txt_Usuario_Login.Clear();
+            txt_Contraseña_Login.Clear();
+            txt_Usuario_Login.Focus();
         }
     }
 }

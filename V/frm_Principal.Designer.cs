@@ -426,6 +426,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "frm_Principal";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.frm_Principal_FormClosed);
             this.Load += new System.EventHandler(this.Principal_Load);
             this.pnl_botones.ResumeLayout(false);
             this.pnl_botones.PerformLayout();

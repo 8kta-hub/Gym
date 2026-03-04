@@ -37,6 +37,7 @@
             this.label3 = new System.Windows.Forms.Label();
             this.txt_Documento_RecuperarPass = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
+            this.btn_MostrarContraseña_RecuperarPass = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // txt_Usuario_RecuperarPass
@@ -127,11 +128,23 @@
             this.label4.TabIndex = 19;
             this.label4.Text = "Documento";
             // 
+            // btn_MostrarContraseña_RecuperarPass
+            // 
+            this.btn_MostrarContraseña_RecuperarPass.BackgroundImage = global::Gym.Properties.Resources.show;
+            this.btn_MostrarContraseña_RecuperarPass.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btn_MostrarContraseña_RecuperarPass.Location = new System.Drawing.Point(357, 242);
+            this.btn_MostrarContraseña_RecuperarPass.Name = "btn_MostrarContraseña_RecuperarPass";
+            this.btn_MostrarContraseña_RecuperarPass.Size = new System.Drawing.Size(28, 29);
+            this.btn_MostrarContraseña_RecuperarPass.TabIndex = 21;
+            this.btn_MostrarContraseña_RecuperarPass.UseVisualStyleBackColor = true;
+            this.btn_MostrarContraseña_RecuperarPass.Click += new System.EventHandler(this.btn_MostrarContraseña_RecuperarPass_Click);
+            // 
             // frm_RecuperarPass
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(469, 366);
+            this.Controls.Add(this.btn_MostrarContraseña_RecuperarPass);
             this.Controls.Add(this.txt_Documento_RecuperarPass);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.txt_ConfirmarContraseña_RecuperarPass);
@@ -161,5 +174,6 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox txt_Documento_RecuperarPass;
         private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Button btn_MostrarContraseña_RecuperarPass;
     }
 }

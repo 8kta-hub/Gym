@@ -15,9 +15,12 @@ namespace Gym.V.Login
     public partial class frm_RecuperarPass : Form
     {
         ControladorLogin controlador = new ControladorLogin();
+        private bool mostrarContraseña = false;
         public frm_RecuperarPass()
         {
             InitializeComponent();
+            txt_NuevaContraseña_RecuperarPass.PasswordChar = '*';
+            txt_ConfirmarContraseña_RecuperarPass.PasswordChar = '*';
         }
 
         private void btn_Guardar_RecuperarPass_Click(object sender, EventArgs e)
@@ -38,7 +41,7 @@ namespace Gym.V.Login
                 return;
             }
 
-            if (string.IsNullOrWhiteSpace(txt_NuevaContraseña_RecuperarPass.Text) || txt_NuevaContraseña_RecuperarPass.Text.Length <= 16)
+            if (string.IsNullOrWhiteSpace(txt_NuevaContraseña_RecuperarPass.Text) || txt_NuevaContraseña_RecuperarPass.Text.Length > 16)
             {
                 MessageBox.Show(
                     "Por favor, asegúrese que la contraseña esté completa y no sea mayor a 16 caracteres.",
@@ -48,7 +51,7 @@ namespace Gym.V.Login
                 return;
             }
 
-            if (string.IsNullOrWhiteSpace(txt_ConfirmarContraseña_RecuperarPass.Text) || txt_ConfirmarContraseña_RecuperarPass.Text.Length <= 16)
+            if (string.IsNullOrWhiteSpace(txt_ConfirmarContraseña_RecuperarPass.Text) || txt_ConfirmarContraseña_RecuperarPass.Text.Length > 16)
             {
                 MessageBox.Show(
                     "Por favor, asegúrese que la contraseña esté completa y no sea mayor a 16 caracteres.",
@@ -61,7 +64,7 @@ namespace Gym.V.Login
             string usuarioIngresado = txt_Usuario_RecuperarPass.Text;
             string dniIngresado = txt_Documento_RecuperarPass.Text;
             string nuevaContraseñaIngresada = txt_NuevaContraseña_RecuperarPass.Text;
-            string nuevaContraseñaHasheada = controlador.GenerarHash(nuevaContraseñaIngresada);
+            byte[] nuevaContraseñaHasheada = controlador.GenerarHash(nuevaContraseñaIngresada);
             string confirmarContraseñaIngresada = txt_ConfirmarContraseña_RecuperarPass.Text;
 
             DialogResult respuesta = MessageBox.Show("¿Está seguro que desea cambiar la contraseña?", "Confirmar contraseña", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
@@ -80,7 +83,7 @@ namespace Gym.V.Login
                     }
                     else
                     {
-                        MessageBox.Show("Las Contraseñas son distintas y/o la respuesta esta mal!!", "Recuperacion negada", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        MessageBox.Show("Las Contraseñas son distintas!!", "Recuperacion negada", MessageBoxButtons.OK, MessageBoxIcon.Error);
                         return;
                     }
 
@@ -94,6 +97,33 @@ namespace Gym.V.Login
             else
             {
                 return;
+            }
+        }
+
+        private void btn_MostrarContraseña_RecuperarPass_Click(object sender, EventArgs e)
+        {
+            mostrarContraseña = !mostrarContraseña;
+
+            if (mostrarContraseña)
+            {
+                txt_NuevaContraseña_RecuperarPass.PasswordChar = '\0';
+                btn_MostrarContraseña_RecuperarPass.BackgroundImage = Gym.Properties.Resources.hide;
+            }
+            else
+            {
+                txt_NuevaContraseña_RecuperarPass.PasswordChar = '*';
+                btn_MostrarContraseña_RecuperarPass.BackgroundImage = Gym.Properties.Resources.show;
+            }
+
+            if (mostrarContraseña)
+            {
+                txt_ConfirmarContraseña_RecuperarPass.PasswordChar = '\0';
+                btn_MostrarContraseña_RecuperarPass.BackgroundImage = Gym.Properties.Resources.hide;
+            }
+            else
+            {
+                txt_ConfirmarContraseña_RecuperarPass.PasswordChar = '*';
+                btn_MostrarContraseña_RecuperarPass.BackgroundImage = Gym.Properties.Resources.show;
             }
         }
     }
