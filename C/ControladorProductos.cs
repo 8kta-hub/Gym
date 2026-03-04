@@ -42,10 +42,10 @@ namespace Gym.C
         // ─────────────────────────────────────────
         // INSERT
         // ─────────────────────────────────────────
-        public bool InsertProducto(int idProveedor, int codigo, string nombre, int stock, decimal costo, decimal precioVenta, string descripcion)
+        public bool InsertProducto(int idProveedor, int codigo, string nombre, int stock, decimal costo, decimal precioVenta, string descripcion, string estado)
         {
-            string sql = @"INSERT INTO Productos (id_proveedor, codigo, nombre, stock, costo, precio_venta, descripcion)
-                           VALUES (@id_proveedor, @codigo, @nombre, @stock, @costo, @precio_venta, @descripcion)";
+            string sql = @"INSERT INTO Productos (id_proveedor, codigo, nombre, stock, costo, precio_venta, descripcion, estado)
+                           VALUES (@id_proveedor, @codigo, @nombre, @stock, @costo, @precio_venta, @descripcion, @estado)";
 
             SqlParameter[] parametros =
             {
@@ -55,7 +55,8 @@ namespace Gym.C
                 new SqlParameter("@stock", stock),
                 new SqlParameter("@costo", costo),
                 new SqlParameter("@precio_venta", precioVenta),
-                new SqlParameter("@descripcion", descripcion)
+                new SqlParameter("@descripcion", descripcion),
+                new SqlParameter("@estado", estado)
             };
 
             int filas = conexion.EjecutarComando(sql, parametros);

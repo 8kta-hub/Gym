@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.txt_Uusuario_RecuperarPass = new System.Windows.Forms.TextBox();
+            this.txt_Usuario_RecuperarPass = new System.Windows.Forms.TextBox();
             this.txt_NuevaContraseña_RecuperarPass = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
@@ -39,14 +39,14 @@
             this.label4 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
-            // txt_Uusuario_RecuperarPass
+            // txt_Usuario_RecuperarPass
             // 
-            this.txt_Uusuario_RecuperarPass.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_Uusuario_RecuperarPass.Location = new System.Drawing.Point(135, 53);
-            this.txt_Uusuario_RecuperarPass.Multiline = true;
-            this.txt_Uusuario_RecuperarPass.Name = "txt_Uusuario_RecuperarPass";
-            this.txt_Uusuario_RecuperarPass.Size = new System.Drawing.Size(199, 29);
-            this.txt_Uusuario_RecuperarPass.TabIndex = 12;
+            this.txt_Usuario_RecuperarPass.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_Usuario_RecuperarPass.Location = new System.Drawing.Point(135, 53);
+            this.txt_Usuario_RecuperarPass.Multiline = true;
+            this.txt_Usuario_RecuperarPass.Name = "txt_Usuario_RecuperarPass";
+            this.txt_Usuario_RecuperarPass.Size = new System.Drawing.Size(199, 29);
+            this.txt_Usuario_RecuperarPass.TabIndex = 12;
             // 
             // txt_NuevaContraseña_RecuperarPass
             // 
@@ -87,6 +87,7 @@
             this.btn_Guardar_RecuperarPass.TabIndex = 7;
             this.btn_Guardar_RecuperarPass.Text = "Guardar";
             this.btn_Guardar_RecuperarPass.UseVisualStyleBackColor = true;
+            this.btn_Guardar_RecuperarPass.Click += new System.EventHandler(this.btn_Guardar_RecuperarPass_Click);
             // 
             // txt_ConfirmarContraseña_RecuperarPass
             // 
@@ -135,7 +136,7 @@
             this.Controls.Add(this.label4);
             this.Controls.Add(this.txt_ConfirmarContraseña_RecuperarPass);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.txt_Uusuario_RecuperarPass);
+            this.Controls.Add(this.txt_Usuario_RecuperarPass);
             this.Controls.Add(this.txt_NuevaContraseña_RecuperarPass);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
@@ -151,7 +152,7 @@
 
         #endregion
 
-        private System.Windows.Forms.TextBox txt_Uusuario_RecuperarPass;
+        private System.Windows.Forms.TextBox txt_Usuario_RecuperarPass;
         private System.Windows.Forms.TextBox txt_NuevaContraseña_RecuperarPass;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;

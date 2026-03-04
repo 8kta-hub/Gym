@@ -284,6 +284,7 @@ namespace Gym.V.frmHijos.Reporte
         {
             cmb_Filtro_ReportesInventario.Items.Add("Todos");
             cmb_Filtro_ReportesInventario.Items.Add("Activo");
+            cmb_Filtro_ReportesInventario.Items.Add("Sin stock");
             cmb_Filtro_ReportesInventario.Items.Add("Inactivo");
             cmb_Filtro_ReportesInventario.SelectedIndex = 0;
         }

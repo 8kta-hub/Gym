@@ -121,11 +121,12 @@ namespace Gym.V.frmHijos.Productos
                 {
                     estado = "Sin stock";
                 }
+
                 bool resultado;
 
                 if (_esAlta)
                 {
-                    resultado = controlador.InsertProducto(idProveedor, codigo, nombre, stock, costo, precioVenta, descripcion);
+                    resultado = controlador.InsertProducto(idProveedor, codigo, nombre, stock, costo, precioVenta, descripcion, estado);
                 }
                 else
                 {

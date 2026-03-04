@@ -97,6 +97,7 @@
             this.lbl_OlvidarContraseña_Login.Size = new System.Drawing.Size(155, 16);
             this.lbl_OlvidarContraseña_Login.TabIndex = 6;
             this.lbl_OlvidarContraseña_Login.Text = "Olvidaste la contraseña?";
+            this.lbl_OlvidarContraseña_Login.Click += new System.EventHandler(this.lbl_OlvidarContraseña_Login_Click);
             // 
             // btn_MostrarContraseña_Login
             // 
@@ -107,6 +108,7 @@
             this.btn_MostrarContraseña_Login.Size = new System.Drawing.Size(28, 29);
             this.btn_MostrarContraseña_Login.TabIndex = 1;
             this.btn_MostrarContraseña_Login.UseVisualStyleBackColor = true;
+            this.btn_MostrarContraseña_Login.Click += new System.EventHandler(this.btn_MostrarContraseña_Login_Click);
             // 
             // pic_GimLogo_Login
             // 

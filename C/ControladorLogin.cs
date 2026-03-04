@@ -31,6 +31,43 @@ namespace Gym.C
             return cantidad > 0;
         }
 
+        public string TraerDNI(string usuario)
+        {
+            string consulta = @"
+            SELECT dni 
+            FROM Usuarios 
+            WHERE usuario = @usuario ";
+
+            SqlParameter[] parametros =
+            {
+                new SqlParameter("@usuario", usuario)
+            };
+
+            object resultado = conexion.ObtenerValor(consulta, parametros);
+
+
+
+            return resultado?.ToString();
+        }
+
+        public bool CambiarContraseñas(string usuario, string contraseña)
+        {
+            string consulta = @"
+            UPDATE Usuarios
+            SET contrasena = @contrasena
+            WHERE usuario = @usuario ";
+
+            SqlParameter[] parametros =
+            {
+                new SqlParameter("@contrasena", contraseña),
+                new SqlParameter("@usuario", usuario)
+            };
+
+            int filas = conexion.EjecutarComando(consulta, parametros);
+
+            return filas > 0;
+        }
+
         public string GenerarHash(string texto)
         {
             using (SHA256 sha256 = SHA256.Create())
