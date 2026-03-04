@@ -150,11 +150,13 @@
             // 
             this.btn_ExportarExcel_Movimientos.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btn_ExportarExcel_Movimientos.BackgroundImage")));
             this.btn_ExportarExcel_Movimientos.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btn_ExportarExcel_Movimientos.Enabled = false;
             this.btn_ExportarExcel_Movimientos.Location = new System.Drawing.Point(239, 41);
             this.btn_ExportarExcel_Movimientos.Name = "btn_ExportarExcel_Movimientos";
             this.btn_ExportarExcel_Movimientos.Size = new System.Drawing.Size(33, 32);
             this.btn_ExportarExcel_Movimientos.TabIndex = 39;
             this.btn_ExportarExcel_Movimientos.UseVisualStyleBackColor = true;
+            this.btn_ExportarExcel_Movimientos.Visible = false;
             // 
             // frm_Movimientos
             // 

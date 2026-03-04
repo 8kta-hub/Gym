@@ -121,6 +121,7 @@
             // 
             // btn_informacion_inicio
             // 
+            this.btn_informacion_inicio.Enabled = false;
             this.btn_informacion_inicio.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_informacion_inicio.Location = new System.Drawing.Point(120, 36);
             this.btn_informacion_inicio.Name = "btn_informacion_inicio";
@@ -128,6 +129,7 @@
             this.btn_informacion_inicio.TabIndex = 8;
             this.btn_informacion_inicio.Text = "Informacion";
             this.btn_informacion_inicio.UseVisualStyleBackColor = true;
+            this.btn_informacion_inicio.Visible = false;
             this.btn_informacion_inicio.Click += new System.EventHandler(this.btn_informacion_inicio_Click);
             // 
             // label7

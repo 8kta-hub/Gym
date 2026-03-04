@@ -23,6 +23,7 @@ namespace Gym
     {
         private Usuario usuarioActual;
         private Form Login;
+        private bool cerrandoSesion = false;
 
         public frm_Principal(string usuarioIngresado, Form login)
         {
@@ -126,11 +127,6 @@ namespace Gym
             Funciones.abrirForm(Config, pnl_base);
         }
 
-        private void frm_Principal_FormClosed(object sender, FormClosedEventArgs e)
-        {
-            Application.Exit();
-        }
-
         private void btn_CerrarSesion_Click(object sender, EventArgs e)
         {
             DialogResult confirmacion = MessageBox.Show(
@@ -141,8 +137,15 @@ namespace Gym
 
             if (confirmacion != DialogResult.Yes) return;
 
+            cerrandoSesion = true;
             Login.Show();
             this.Close();
+        }
+
+        private void frm_Principal_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            if (!cerrandoSesion)
+                Application.Exit();
         }
     }
 }

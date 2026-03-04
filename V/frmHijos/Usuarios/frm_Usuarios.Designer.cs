@@ -117,11 +117,13 @@
             // 
             this.btn_ExportarExcel_Usuarios.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btn_ExportarExcel_Usuarios.BackgroundImage")));
             this.btn_ExportarExcel_Usuarios.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btn_ExportarExcel_Usuarios.Enabled = false;
             this.btn_ExportarExcel_Usuarios.Location = new System.Drawing.Point(317, 40);
             this.btn_ExportarExcel_Usuarios.Name = "btn_ExportarExcel_Usuarios";
             this.btn_ExportarExcel_Usuarios.Size = new System.Drawing.Size(33, 32);
             this.btn_ExportarExcel_Usuarios.TabIndex = 38;
             this.btn_ExportarExcel_Usuarios.UseVisualStyleBackColor = true;
+            this.btn_ExportarExcel_Usuarios.Visible = false;
             // 
             // frm_Usuarios
             // 

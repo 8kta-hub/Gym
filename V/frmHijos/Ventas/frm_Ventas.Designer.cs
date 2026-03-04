@@ -162,11 +162,13 @@
             // 
             this.btn_ExportarExcel_Conceptos.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btn_ExportarExcel_Conceptos.BackgroundImage")));
             this.btn_ExportarExcel_Conceptos.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btn_ExportarExcel_Conceptos.Enabled = false;
             this.btn_ExportarExcel_Conceptos.Location = new System.Drawing.Point(354, 41);
             this.btn_ExportarExcel_Conceptos.Name = "btn_ExportarExcel_Conceptos";
             this.btn_ExportarExcel_Conceptos.Size = new System.Drawing.Size(33, 32);
             this.btn_ExportarExcel_Conceptos.TabIndex = 44;
             this.btn_ExportarExcel_Conceptos.UseVisualStyleBackColor = true;
+            this.btn_ExportarExcel_Conceptos.Visible = false;
             // 
             // frm_Ventas
             // 

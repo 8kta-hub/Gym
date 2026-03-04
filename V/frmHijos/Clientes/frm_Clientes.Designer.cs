@@ -165,11 +165,13 @@
             // 
             this.btn_ExportarExcel_Clientes.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btn_ExportarExcel_Clientes.BackgroundImage")));
             this.btn_ExportarExcel_Clientes.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btn_ExportarExcel_Clientes.Enabled = false;
             this.btn_ExportarExcel_Clientes.Location = new System.Drawing.Point(344, 36);
             this.btn_ExportarExcel_Clientes.Name = "btn_ExportarExcel_Clientes";
             this.btn_ExportarExcel_Clientes.Size = new System.Drawing.Size(33, 32);
             this.btn_ExportarExcel_Clientes.TabIndex = 45;
             this.btn_ExportarExcel_Clientes.UseVisualStyleBackColor = true;
+            this.btn_ExportarExcel_Clientes.Visible = false;
             // 
             // cbx_FiltroCliente
             // 

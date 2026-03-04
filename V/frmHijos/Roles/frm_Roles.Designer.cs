@@ -103,11 +103,13 @@
             // 
             this.btn_ExportarExcel_Roles.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btn_ExportarExcel_Roles.BackgroundImage")));
             this.btn_ExportarExcel_Roles.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btn_ExportarExcel_Roles.Enabled = false;
             this.btn_ExportarExcel_Roles.Location = new System.Drawing.Point(245, 41);
             this.btn_ExportarExcel_Roles.Name = "btn_ExportarExcel_Roles";
             this.btn_ExportarExcel_Roles.Size = new System.Drawing.Size(33, 32);
             this.btn_ExportarExcel_Roles.TabIndex = 38;
             this.btn_ExportarExcel_Roles.UseVisualStyleBackColor = true;
+            this.btn_ExportarExcel_Roles.Visible = false;
             // 
             // btn_Deshabilitar_Roles
             // 

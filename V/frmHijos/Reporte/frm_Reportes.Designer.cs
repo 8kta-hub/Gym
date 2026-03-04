@@ -151,11 +151,13 @@
             // 
             this.btn_ExportarExcel_Reporte_Movimientos.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btn_ExportarExcel_Reporte_Movimientos.BackgroundImage")));
             this.btn_ExportarExcel_Reporte_Movimientos.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btn_ExportarExcel_Reporte_Movimientos.Enabled = false;
             this.btn_ExportarExcel_Reporte_Movimientos.Location = new System.Drawing.Point(523, 8);
             this.btn_ExportarExcel_Reporte_Movimientos.Name = "btn_ExportarExcel_Reporte_Movimientos";
             this.btn_ExportarExcel_Reporte_Movimientos.Size = new System.Drawing.Size(33, 32);
             this.btn_ExportarExcel_Reporte_Movimientos.TabIndex = 44;
             this.btn_ExportarExcel_Reporte_Movimientos.UseVisualStyleBackColor = true;
+            this.btn_ExportarExcel_Reporte_Movimientos.Visible = false;
             // 
             // cmb_Tipo_ReportesMovimientos
             // 
@@ -266,11 +268,13 @@
             // 
             this.btn_ExportarExcel_Reporte_Ventas.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btn_ExportarExcel_Reporte_Ventas.BackgroundImage")));
             this.btn_ExportarExcel_Reporte_Ventas.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btn_ExportarExcel_Reporte_Ventas.Enabled = false;
             this.btn_ExportarExcel_Reporte_Ventas.Location = new System.Drawing.Point(345, 9);
             this.btn_ExportarExcel_Reporte_Ventas.Name = "btn_ExportarExcel_Reporte_Ventas";
             this.btn_ExportarExcel_Reporte_Ventas.Size = new System.Drawing.Size(33, 32);
             this.btn_ExportarExcel_Reporte_Ventas.TabIndex = 33;
             this.btn_ExportarExcel_Reporte_Ventas.UseVisualStyleBackColor = true;
+            this.btn_ExportarExcel_Reporte_Ventas.Visible = false;
             // 
             // dgv_ReportesVentas
             // 
@@ -422,11 +426,13 @@
             // 
             this.btn_ExportarExcel_Reporte_Visitias.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btn_ExportarExcel_Reporte_Visitias.BackgroundImage")));
             this.btn_ExportarExcel_Reporte_Visitias.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btn_ExportarExcel_Reporte_Visitias.Enabled = false;
             this.btn_ExportarExcel_Reporte_Visitias.Location = new System.Drawing.Point(353, 9);
             this.btn_ExportarExcel_Reporte_Visitias.Name = "btn_ExportarExcel_Reporte_Visitias";
             this.btn_ExportarExcel_Reporte_Visitias.Size = new System.Drawing.Size(33, 32);
             this.btn_ExportarExcel_Reporte_Visitias.TabIndex = 18;
             this.btn_ExportarExcel_Reporte_Visitias.UseVisualStyleBackColor = true;
+            this.btn_ExportarExcel_Reporte_Visitias.Visible = false;
             // 
             // btn_Buscar_ReportesVisitas
             // 
@@ -494,11 +500,13 @@
             // 
             this.btn_ExportarExcel_Reporte_Registro.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btn_ExportarExcel_Reporte_Registro.BackgroundImage")));
             this.btn_ExportarExcel_Reporte_Registro.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btn_ExportarExcel_Reporte_Registro.Enabled = false;
             this.btn_ExportarExcel_Reporte_Registro.Location = new System.Drawing.Point(360, 10);
             this.btn_ExportarExcel_Reporte_Registro.Name = "btn_ExportarExcel_Reporte_Registro";
             this.btn_ExportarExcel_Reporte_Registro.Size = new System.Drawing.Size(33, 32);
             this.btn_ExportarExcel_Reporte_Registro.TabIndex = 33;
             this.btn_ExportarExcel_Reporte_Registro.UseVisualStyleBackColor = true;
+            this.btn_ExportarExcel_Reporte_Registro.Visible = false;
             // 
             // dgv_ReportesRegistro
             // 
@@ -564,11 +572,13 @@
             // 
             this.btn_ExportarExcel_Reporte_Clientes.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btn_ExportarExcel_Reporte_Clientes.BackgroundImage")));
             this.btn_ExportarExcel_Reporte_Clientes.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btn_ExportarExcel_Reporte_Clientes.Enabled = false;
             this.btn_ExportarExcel_Reporte_Clientes.Location = new System.Drawing.Point(206, 6);
             this.btn_ExportarExcel_Reporte_Clientes.Name = "btn_ExportarExcel_Reporte_Clientes";
             this.btn_ExportarExcel_Reporte_Clientes.Size = new System.Drawing.Size(33, 32);
             this.btn_ExportarExcel_Reporte_Clientes.TabIndex = 19;
             this.btn_ExportarExcel_Reporte_Clientes.UseVisualStyleBackColor = true;
+            this.btn_ExportarExcel_Reporte_Clientes.Visible = false;
             // 
             // dgv_ReportesClientes
             // 
@@ -633,11 +643,13 @@
             // 
             this.btn_ExportarExcel_Reporte_Membresias.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btn_ExportarExcel_Reporte_Membresias.BackgroundImage")));
             this.btn_ExportarExcel_Reporte_Membresias.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btn_ExportarExcel_Reporte_Membresias.Enabled = false;
             this.btn_ExportarExcel_Reporte_Membresias.Location = new System.Drawing.Point(350, 6);
             this.btn_ExportarExcel_Reporte_Membresias.Name = "btn_ExportarExcel_Reporte_Membresias";
             this.btn_ExportarExcel_Reporte_Membresias.Size = new System.Drawing.Size(33, 32);
             this.btn_ExportarExcel_Reporte_Membresias.TabIndex = 37;
             this.btn_ExportarExcel_Reporte_Membresias.UseVisualStyleBackColor = true;
+            this.btn_ExportarExcel_Reporte_Membresias.Visible = false;
             // 
             // dgv_ReportesMembresias
             // 
@@ -735,11 +747,13 @@
             // 
             this.btn_ExportarExcel_Reporte_Inventario.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btn_ExportarExcel_Reporte_Inventario.BackgroundImage")));
             this.btn_ExportarExcel_Reporte_Inventario.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btn_ExportarExcel_Reporte_Inventario.Enabled = false;
             this.btn_ExportarExcel_Reporte_Inventario.Location = new System.Drawing.Point(206, 36);
             this.btn_ExportarExcel_Reporte_Inventario.Name = "btn_ExportarExcel_Reporte_Inventario";
             this.btn_ExportarExcel_Reporte_Inventario.Size = new System.Drawing.Size(33, 32);
             this.btn_ExportarExcel_Reporte_Inventario.TabIndex = 40;
             this.btn_ExportarExcel_Reporte_Inventario.UseVisualStyleBackColor = true;
+            this.btn_ExportarExcel_Reporte_Inventario.Visible = false;
             // 
             // dgv_ReportesInventario
             // 

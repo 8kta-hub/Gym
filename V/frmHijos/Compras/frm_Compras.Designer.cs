@@ -147,11 +147,13 @@
             // 
             this.btn_ExportarExcel_Compras.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btn_ExportarExcel_Compras.BackgroundImage")));
             this.btn_ExportarExcel_Compras.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btn_ExportarExcel_Compras.Enabled = false;
             this.btn_ExportarExcel_Compras.Location = new System.Drawing.Point(370, 39);
             this.btn_ExportarExcel_Compras.Name = "btn_ExportarExcel_Compras";
             this.btn_ExportarExcel_Compras.Size = new System.Drawing.Size(33, 32);
             this.btn_ExportarExcel_Compras.TabIndex = 44;
             this.btn_ExportarExcel_Compras.UseVisualStyleBackColor = true;
+            this.btn_ExportarExcel_Compras.Visible = false;
             // 
             // btn_Proveedores_Compras
             // 

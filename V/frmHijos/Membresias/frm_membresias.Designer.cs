@@ -112,11 +112,13 @@
             // 
             this.btn_ExportarExcel_Membresia.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btn_ExportarExcel_Membresia.BackgroundImage")));
             this.btn_ExportarExcel_Membresia.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btn_ExportarExcel_Membresia.Enabled = false;
             this.btn_ExportarExcel_Membresia.Location = new System.Drawing.Point(324, 41);
             this.btn_ExportarExcel_Membresia.Name = "btn_ExportarExcel_Membresia";
             this.btn_ExportarExcel_Membresia.Size = new System.Drawing.Size(33, 32);
             this.btn_ExportarExcel_Membresia.TabIndex = 39;
             this.btn_ExportarExcel_Membresia.UseVisualStyleBackColor = true;
+            this.btn_ExportarExcel_Membresia.Visible = false;
             // 
             // frm_membresias
             // 

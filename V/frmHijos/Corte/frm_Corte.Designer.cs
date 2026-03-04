@@ -171,11 +171,13 @@
             // 
             this.btn_ExportarExcel_Corte.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btn_ExportarExcel_Corte.BackgroundImage")));
             this.btn_ExportarExcel_Corte.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btn_ExportarExcel_Corte.Enabled = false;
             this.btn_ExportarExcel_Corte.Location = new System.Drawing.Point(259, 60);
             this.btn_ExportarExcel_Corte.Name = "btn_ExportarExcel_Corte";
             this.btn_ExportarExcel_Corte.Size = new System.Drawing.Size(33, 32);
             this.btn_ExportarExcel_Corte.TabIndex = 40;
             this.btn_ExportarExcel_Corte.UseVisualStyleBackColor = true;
+            this.btn_ExportarExcel_Corte.Visible = false;
             // 
             // frm_Corte
             // 

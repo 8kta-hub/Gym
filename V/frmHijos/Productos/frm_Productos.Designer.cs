@@ -107,11 +107,13 @@
             // 
             this.btn_ExportarExcel_Productos.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btn_ExportarExcel_Productos.BackgroundImage")));
             this.btn_ExportarExcel_Productos.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btn_ExportarExcel_Productos.Enabled = false;
             this.btn_ExportarExcel_Productos.Location = new System.Drawing.Point(246, 41);
             this.btn_ExportarExcel_Productos.Name = "btn_ExportarExcel_Productos";
             this.btn_ExportarExcel_Productos.Size = new System.Drawing.Size(33, 32);
             this.btn_ExportarExcel_Productos.TabIndex = 38;
             this.btn_ExportarExcel_Productos.UseVisualStyleBackColor = true;
+            this.btn_ExportarExcel_Productos.Visible = false;
             // 
             // frm_Productos
             // 
