@@ -21,5 +21,7 @@ namespace Gym.M.Entidades
         public string Descripcion { get; set; }
         public bool Activo { get; set; }
         public byte[] Foto { get; set; }
+        public string Rol { get; set; } // ← agregado
     }
+
 }

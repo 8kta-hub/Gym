@@ -263,6 +263,7 @@
             this.btn_CerrarSesion.Size = new System.Drawing.Size(32, 31);
             this.btn_CerrarSesion.TabIndex = 15;
             this.btn_CerrarSesion.UseVisualStyleBackColor = true;
+            this.btn_CerrarSesion.Click += new System.EventHandler(this.btn_CerrarSesion_Click);
             // 
             // btn_Reporte
             // 

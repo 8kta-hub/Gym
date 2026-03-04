@@ -128,6 +128,7 @@
             this.btn_informacion_inicio.TabIndex = 8;
             this.btn_informacion_inicio.Text = "Informacion";
             this.btn_informacion_inicio.UseVisualStyleBackColor = true;
+            this.btn_informacion_inicio.Click += new System.EventHandler(this.btn_informacion_inicio_Click);
             // 
             // label7
             // 
@@ -193,6 +194,7 @@
             this.Controls.Add(this.dvg_EntradasDia);
             this.Name = "frm_Inicio";
             this.Text = "frm_Inicio";
+            this.Load += new System.EventHandler(this.frm_Inicio_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dvg_EntradasDia)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pic_Usuario_Inicio)).EndInit();
             this.ResumeLayout(false);

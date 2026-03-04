@@ -42,7 +42,7 @@
             // btn_Acceder_Login
             // 
             this.btn_Acceder_Login.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_Acceder_Login.Location = new System.Drawing.Point(216, 376);
+            this.btn_Acceder_Login.Location = new System.Drawing.Point(216, 371);
             this.btn_Acceder_Login.Name = "btn_Acceder_Login";
             this.btn_Acceder_Login.Size = new System.Drawing.Size(75, 23);
             this.btn_Acceder_Login.TabIndex = 0;
@@ -54,7 +54,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(215, 284);
+            this.label1.Location = new System.Drawing.Point(214, 276);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(76, 16);
             this.label1.TabIndex = 2;
@@ -64,7 +64,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(226, 207);
+            this.label2.Location = new System.Drawing.Point(226, 214);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(54, 16);
             this.label2.TabIndex = 3;
@@ -72,29 +72,30 @@
             // 
             // txt_Contraseña_Login
             // 
-            this.txt_Contraseña_Login.Location = new System.Drawing.Point(154, 303);
-            this.txt_Contraseña_Login.Multiline = true;
+            this.txt_Contraseña_Login.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_Contraseña_Login.Location = new System.Drawing.Point(154, 298);
             this.txt_Contraseña_Login.Name = "txt_Contraseña_Login";
             this.txt_Contraseña_Login.PasswordChar = '*';
-            this.txt_Contraseña_Login.Size = new System.Drawing.Size(199, 29);
+            this.txt_Contraseña_Login.Size = new System.Drawing.Size(199, 26);
             this.txt_Contraseña_Login.TabIndex = 4;
             // 
             // txt_Usuario_Login
             // 
-            this.txt_Usuario_Login.Location = new System.Drawing.Point(154, 227);
-            this.txt_Usuario_Login.Multiline = true;
+            this.txt_Usuario_Login.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_Usuario_Login.Location = new System.Drawing.Point(155, 237);
             this.txt_Usuario_Login.Name = "txt_Usuario_Login";
-            this.txt_Usuario_Login.Size = new System.Drawing.Size(199, 29);
+            this.txt_Usuario_Login.Size = new System.Drawing.Size(199, 26);
             this.txt_Usuario_Login.TabIndex = 5;
             // 
             // lbl_OlvidarContraseña_Login
             // 
             this.lbl_OlvidarContraseña_Login.AutoSize = true;
-            this.lbl_OlvidarContraseña_Login.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_OlvidarContraseña_Login.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.lbl_OlvidarContraseña_Login.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_OlvidarContraseña_Login.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.lbl_OlvidarContraseña_Login.Location = new System.Drawing.Point(152, 338);
+            this.lbl_OlvidarContraseña_Login.Location = new System.Drawing.Point(152, 327);
             this.lbl_OlvidarContraseña_Login.Name = "lbl_OlvidarContraseña_Login";
-            this.lbl_OlvidarContraseña_Login.Size = new System.Drawing.Size(155, 16);
+            this.lbl_OlvidarContraseña_Login.Size = new System.Drawing.Size(141, 15);
             this.lbl_OlvidarContraseña_Login.TabIndex = 6;
             this.lbl_OlvidarContraseña_Login.Text = "Olvidaste la contraseña?";
             this.lbl_OlvidarContraseña_Login.Click += new System.EventHandler(this.lbl_OlvidarContraseña_Login_Click);
@@ -103,7 +104,7 @@
             // 
             this.btn_MostrarContraseña_Login.BackgroundImage = global::Gym.Properties.Resources.show;
             this.btn_MostrarContraseña_Login.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btn_MostrarContraseña_Login.Location = new System.Drawing.Point(360, 303);
+            this.btn_MostrarContraseña_Login.Location = new System.Drawing.Point(359, 297);
             this.btn_MostrarContraseña_Login.Name = "btn_MostrarContraseña_Login";
             this.btn_MostrarContraseña_Login.Size = new System.Drawing.Size(28, 29);
             this.btn_MostrarContraseña_Login.TabIndex = 1;
@@ -136,6 +137,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MaximizeBox = false;
             this.Name = "frm_Login";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Load += new System.EventHandler(this.frm_Login_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pic_GimLogo_Login)).EndInit();
             this.ResumeLayout(false);

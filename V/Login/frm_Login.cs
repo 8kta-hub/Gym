@@ -28,9 +28,6 @@ namespace Gym.V
         private void frm_Login_Load(object sender, EventArgs e)
         {
             txt_Usuario_Login.Select();
-
-            txt_Usuario_Login.Multiline = false;
-            txt_Contraseña_Login.Multiline = false;
         }
 
         private void btn_Acceder_Login_Click(object sender, EventArgs e)

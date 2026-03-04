@@ -56,6 +56,7 @@
     <Compile Include="C\ControladorClientes.cs" />
     <Compile Include="C\ControladorConceptos.cs" />
     <Compile Include="C\ControladorCorte.cs" />
+    <Compile Include="C\ControladorInicio.cs" />
     <Compile Include="C\ControladorLogin.cs" />
     <Compile Include="C\ControladorMembresias.cs" />
     <Compile Include="C\ControladorMembresiasHorarios.cs" />

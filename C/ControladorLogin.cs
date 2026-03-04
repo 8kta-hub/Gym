@@ -1,13 +1,14 @@
-﻿using System;
+﻿using Gym.M;
+using Gym.M.Entidades;
+using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Data.SqlClient;
 using System.Linq;
+using System.Security.Cryptography;
+using System.Security.Policy;
 using System.Text;
 using System.Threading.Tasks;
-using Gym.M;
-using System.Security.Cryptography;
-using System.Data;
-using System.Security.Policy;
 
 namespace Gym.C
 {
@@ -76,6 +77,42 @@ namespace Gym.C
             {
                 return sha256.ComputeHash(Encoding.UTF8.GetBytes(texto));
             }
+        }
+
+        public Usuario ObtenerUsuario(string nombreUsuario)
+        {
+            string consulta = @"
+                SELECT
+                    u.id_usuario,
+                    u.nombre,
+                    u.apellido,
+                    u.foto,
+                    r.nombre AS rol
+                FROM Usuarios u
+                LEFT JOIN Usuario_Rol ur ON ur.id_usuario = u.id_usuario
+                LEFT JOIN Roles r        ON r.id_rol       = ur.id_rol
+                WHERE u.usuario = @usuario";
+
+            SqlParameter[] parametros =
+            {
+                new SqlParameter("@usuario", nombreUsuario)
+            };
+
+            DataTable dt = conexion.ObtenerTabla(consulta, parametros);
+
+            if (dt.Rows.Count == 0) return null;
+
+            DataRow fila = dt.Rows[0];
+
+            return new Usuario
+            {
+                IdUsuario = Convert.ToInt32(fila["id_usuario"]),
+                Nombre = fila["nombre"].ToString(),
+                Apellido = fila["apellido"].ToString(),
+                NombreUsuario = nombreUsuario,
+                Rol = fila["rol"].ToString(),
+                Foto = fila["foto"] == DBNull.Value ? null : (byte[])fila["foto"]
+            };
         }
     }
 }
