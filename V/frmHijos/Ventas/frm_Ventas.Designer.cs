@@ -58,6 +58,7 @@
             // dtp_FechaFinal_Ventas
             // 
             this.dtp_FechaFinal_Ventas.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.dtp_FechaFinal_Ventas.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dtp_FechaFinal_Ventas.Location = new System.Drawing.Point(768, 53);
             this.dtp_FechaFinal_Ventas.Name = "dtp_FechaFinal_Ventas";
             this.dtp_FechaFinal_Ventas.Size = new System.Drawing.Size(184, 20);
@@ -88,6 +89,7 @@
             // dtp_FechaInicial_Ventas
             // 
             this.dtp_FechaInicial_Ventas.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.dtp_FechaInicial_Ventas.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dtp_FechaInicial_Ventas.Location = new System.Drawing.Point(495, 53);
             this.dtp_FechaInicial_Ventas.Name = "dtp_FechaInicial_Ventas";
             this.dtp_FechaInicial_Ventas.Size = new System.Drawing.Size(184, 20);

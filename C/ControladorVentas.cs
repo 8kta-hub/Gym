@@ -103,8 +103,6 @@ namespace Gym.C
             return conexion.EjecutarComando(consulta, parametros) > 0;
         }
 
-
-        // Lee el folio generado por SQL para mostrárselo al usuario
         public string ObtenerFolio(int idOperacion)
         {
             string consulta = "SELECT folio FROM Operaciones WHERE id_operacion = @idOperacion";
@@ -118,8 +116,6 @@ namespace Gym.C
             return dt.Rows[0]["folio"].ToString();
         }
 
-        // No borra el registro, cambia el estado a Anulado
-        // Así se conserva el historial del pago
         public bool AnularPago(int idPago)
         {
             string consulta = "UPDATE Pagos SET estado = 'Anulado' WHERE id_pago = @idPago";
@@ -133,8 +129,6 @@ namespace Gym.C
         }
 
 
-        // JOIN con Operaciones para traer el folio junto con los datos del pago
-        // ORDER BY DESC para mostrar el más reciente primero
         public void ListarPagosPorMembresia(int idClienteMembresia, DataGridView dgv)
         {
             string consulta = @"

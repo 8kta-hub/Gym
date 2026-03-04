@@ -129,9 +129,6 @@ namespace Gym.V.frmHijos.Ventas
 
         private void ConfigurarRangoFechas(DateTimePicker dtpInicial, DateTimePicker dtpFinal)
         {
-            dtpInicial.Format = DateTimePickerFormat.Short;
-            dtpFinal.Format = DateTimePickerFormat.Short;
-
             dtpInicial.MaxDate = DateTime.Today;
             dtpFinal.MaxDate = DateTime.Today;
 
