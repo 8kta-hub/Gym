@@ -82,6 +82,22 @@ namespace Gym.C
 
                     int idCompra = Convert.ToInt32(cmdCabecera.ExecuteScalar());
 
+                    string sqlMovimiento = @"
+                    INSERT INTO Movimiento_Caja
+                        (id_usuario, id_concepto, tipo_movimiento, fecha_creacion, monto, observaciones)
+                    VALUES
+                        (@id_usuario, @id_concepto, @tipo_movimiento, GETDATE(), @monto, @observaciones)";
+
+                    SqlCommand cmdMovimiento = new SqlCommand(sqlMovimiento, cn, tx);
+
+                    cmdMovimiento.Parameters.AddWithValue("@id_usuario", idUsuario);
+                    cmdMovimiento.Parameters.AddWithValue("@id_concepto", 2); // 🔥 ID concepto Compra
+                    cmdMovimiento.Parameters.AddWithValue("@tipo_movimiento", "Egreso");
+                    cmdMovimiento.Parameters.AddWithValue("@monto", total);
+                    cmdMovimiento.Parameters.AddWithValue("@observaciones", "Compra de productos");
+
+                    cmdMovimiento.ExecuteNonQuery();
+
                     foreach (var item in items)
                     {
                         string sqlDetalle = @"

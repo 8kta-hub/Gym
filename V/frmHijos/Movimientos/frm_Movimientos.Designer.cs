@@ -35,7 +35,6 @@
             this.label2 = new System.Windows.Forms.Label();
             this.dtp_FechaInicial_Movimientos = new System.Windows.Forms.DateTimePicker();
             this.dgv_Movimientos = new System.Windows.Forms.DataGridView();
-            this.btn_Eliminar_Movimientos = new System.Windows.Forms.Button();
             this.btn_Modificar_Movimientos = new System.Windows.Forms.Button();
             this.btn_Nuevo_Movimientos = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
@@ -103,16 +102,7 @@
             this.dgv_Movimientos.Name = "dgv_Movimientos";
             this.dgv_Movimientos.Size = new System.Drawing.Size(1004, 280);
             this.dgv_Movimientos.TabIndex = 16;
-            // 
-            // btn_Eliminar_Movimientos
-            // 
-            this.btn_Eliminar_Movimientos.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_Eliminar_Movimientos.Location = new System.Drawing.Point(158, 50);
-            this.btn_Eliminar_Movimientos.Name = "btn_Eliminar_Movimientos";
-            this.btn_Eliminar_Movimientos.Size = new System.Drawing.Size(75, 23);
-            this.btn_Eliminar_Movimientos.TabIndex = 14;
-            this.btn_Eliminar_Movimientos.Text = "Eliminar";
-            this.btn_Eliminar_Movimientos.UseVisualStyleBackColor = true;
+            this.dgv_Movimientos.DataBindingComplete += new System.Windows.Forms.DataGridViewBindingCompleteEventHandler(this.dgv_Movimientos_DataBindingComplete);
             // 
             // btn_Modificar_Movimientos
             // 
@@ -170,7 +160,6 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.dtp_FechaInicial_Movimientos);
             this.Controls.Add(this.dgv_Movimientos);
-            this.Controls.Add(this.btn_Eliminar_Movimientos);
             this.Controls.Add(this.btn_Modificar_Movimientos);
             this.Controls.Add(this.btn_Nuevo_Movimientos);
             this.Controls.Add(this.label1);
@@ -191,7 +180,6 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.DateTimePicker dtp_FechaInicial_Movimientos;
         private System.Windows.Forms.DataGridView dgv_Movimientos;
-        private System.Windows.Forms.Button btn_Eliminar_Movimientos;
         private System.Windows.Forms.Button btn_Modificar_Movimientos;
         private System.Windows.Forms.Button btn_Nuevo_Movimientos;
         private System.Windows.Forms.Button btn_ExportarExcel_Movimientos;

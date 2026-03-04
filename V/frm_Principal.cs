@@ -99,7 +99,7 @@ namespace Gym
 
         private void btn_Movimientos_Click(object sender, EventArgs e)
         {
-            frm_Movimientos Movimientos = new frm_Movimientos();
+            frm_Movimientos Movimientos = new frm_Movimientos(usuarioActual);
             Funciones.abrirForm(Movimientos, pnl_base);
         }
 

@@ -34,7 +34,7 @@
             this.label5 = new System.Windows.Forms.Label();
             this.txt_Total_MovimientosNuevo = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.cmb_TipoDePago_MoviemientosNuevos = new System.Windows.Forms.ComboBox();
+            this.cmb_TipoPago_MovimientosNuevos = new System.Windows.Forms.ComboBox();
             this.label3 = new System.Windows.Forms.Label();
             this.cmb_Concepto_MovimientosNuevo = new System.Windows.Forms.ComboBox();
             this.label2 = new System.Windows.Forms.Label();
@@ -50,7 +50,7 @@
             this.groupBox1.Controls.Add(this.label5);
             this.groupBox1.Controls.Add(this.txt_Total_MovimientosNuevo);
             this.groupBox1.Controls.Add(this.label4);
-            this.groupBox1.Controls.Add(this.cmb_TipoDePago_MoviemientosNuevos);
+            this.groupBox1.Controls.Add(this.cmb_TipoPago_MovimientosNuevos);
             this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Controls.Add(this.cmb_Concepto_MovimientosNuevo);
             this.groupBox1.Controls.Add(this.label2);
@@ -72,6 +72,7 @@
             this.btn_Guardar_MovimientosNuevos.TabIndex = 21;
             this.btn_Guardar_MovimientosNuevos.Text = "Guardar";
             this.btn_Guardar_MovimientosNuevos.UseVisualStyleBackColor = true;
+            this.btn_Guardar_MovimientosNuevos.Click += new System.EventHandler(this.btn_Guardar_MovimientosNuevos_Click);
             // 
             // txt_Observacion_MovimientosNuevos
             // 
@@ -108,13 +109,14 @@
             this.label4.TabIndex = 17;
             this.label4.Text = "Total";
             // 
-            // cmb_TipoDePago_MoviemientosNuevos
+            // cmb_TipoPago_MovimientosNuevos
             // 
-            this.cmb_TipoDePago_MoviemientosNuevos.FormattingEnabled = true;
-            this.cmb_TipoDePago_MoviemientosNuevos.Location = new System.Drawing.Point(125, 106);
-            this.cmb_TipoDePago_MoviemientosNuevos.Name = "cmb_TipoDePago_MoviemientosNuevos";
-            this.cmb_TipoDePago_MoviemientosNuevos.Size = new System.Drawing.Size(195, 21);
-            this.cmb_TipoDePago_MoviemientosNuevos.TabIndex = 16;
+            this.cmb_TipoPago_MovimientosNuevos.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmb_TipoPago_MovimientosNuevos.FormattingEnabled = true;
+            this.cmb_TipoPago_MovimientosNuevos.Location = new System.Drawing.Point(125, 106);
+            this.cmb_TipoPago_MovimientosNuevos.Name = "cmb_TipoPago_MovimientosNuevos";
+            this.cmb_TipoPago_MovimientosNuevos.Size = new System.Drawing.Size(195, 21);
+            this.cmb_TipoPago_MovimientosNuevos.TabIndex = 16;
             // 
             // label3
             // 
@@ -128,6 +130,7 @@
             // 
             // cmb_Concepto_MovimientosNuevo
             // 
+            this.cmb_Concepto_MovimientosNuevo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmb_Concepto_MovimientosNuevo.FormattingEnabled = true;
             this.cmb_Concepto_MovimientosNuevo.Location = new System.Drawing.Point(125, 64);
             this.cmb_Concepto_MovimientosNuevo.Name = "cmb_Concepto_MovimientosNuevo";
@@ -146,6 +149,7 @@
             // 
             // cmb_Tipo_MovimientosNuevo
             // 
+            this.cmb_Tipo_MovimientosNuevo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmb_Tipo_MovimientosNuevo.FormattingEnabled = true;
             this.cmb_Tipo_MovimientosNuevo.Location = new System.Drawing.Point(125, 24);
             this.cmb_Tipo_MovimientosNuevo.Name = "cmb_Tipo_MovimientosNuevo";
@@ -173,6 +177,7 @@
             this.MinimizeBox = false;
             this.Name = "frm_Movimientos_Nuevos";
             this.ShowIcon = false;
+            this.Load += new System.EventHandler(this.frm_Movimientos_Nuevos_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
@@ -187,7 +192,7 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.TextBox txt_Total_MovimientosNuevo;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.ComboBox cmb_TipoDePago_MoviemientosNuevos;
+        private System.Windows.Forms.ComboBox cmb_TipoPago_MovimientosNuevos;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.ComboBox cmb_Concepto_MovimientosNuevo;
         private System.Windows.Forms.Label label2;

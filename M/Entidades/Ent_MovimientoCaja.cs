@@ -11,7 +11,9 @@ namespace Gym.M.Entidades
         public int IdMovimientoCaja { get; set; }
         public int IdUsuario { get; set; }
         public int IdConcepto { get; set; }
+        public string NombreConcepto { get; set; }
         public string TipoMovimiento { get; set; }
+        public string TipoPago { get; set; }
         public DateTime FechaCreacion { get; set; }
         public decimal Monto { get; set; }
         public string Observaciones { get; set; }

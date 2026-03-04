@@ -67,6 +67,7 @@
             // 
             // cmb_TipoPago_VentasNuevo
             // 
+            this.cmb_TipoPago_VentasNuevo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmb_TipoPago_VentasNuevo.FormattingEnabled = true;
             this.cmb_TipoPago_VentasNuevo.Location = new System.Drawing.Point(521, 422);
             this.cmb_TipoPago_VentasNuevo.Name = "cmb_TipoPago_VentasNuevo";
