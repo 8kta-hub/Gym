@@ -204,13 +204,21 @@ namespace Gym.C
                         cmdDetalle.ExecuteNonQuery();
 
                         string sqlStock = @"
-                            UPDATE Productos SET stock = stock - @cantidad
-                            WHERE id_producto = @id_producto";
+                        UPDATE Productos 
+                        SET stock = stock - @cantidad
+                        WHERE id_producto = @id_producto
+                        AND stock >= @cantidad";
 
                         SqlCommand cmdStock = new SqlCommand(sqlStock, cn, tx);
                         cmdStock.Parameters.AddWithValue("@cantidad", item.Cantidad);
                         cmdStock.Parameters.AddWithValue("@id_producto", item.IdProducto);
-                        cmdStock.ExecuteNonQuery();
+
+                        int filasAfectadas = cmdStock.ExecuteNonQuery();
+
+                        if (filasAfectadas == 0)
+                        {
+                            throw new Exception("Stock insuficiente para el producto.");
+                        }
                     }
 
                     tx.Commit();

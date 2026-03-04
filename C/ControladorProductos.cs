@@ -130,7 +130,7 @@ namespace Gym.C
         public List<Producto> ObtenerProductosActivos()
         {
             string consulta = @"
-                SELECT id_producto, id_proveedor, codigo, nombre, costo, precio_venta
+                SELECT id_producto, id_proveedor, codigo, nombre, stock, costo, precio_venta
                 FROM Productos
                 WHERE estado = 'Activo'
                 ORDER BY nombre";
@@ -146,6 +146,7 @@ namespace Gym.C
                     IdProveedor = Convert.ToInt32(fila["id_proveedor"]), // antes faltaba
                     Codigo = Convert.ToInt32(fila["codigo"]),
                     Nombre = fila["nombre"].ToString(),
+                    Stock = Convert.ToInt32(fila["stock"]),
                     Costo = Convert.ToDecimal(fila["costo"]),
                     PrecioVenta = Convert.ToDecimal(fila["precio_venta"])
                 });

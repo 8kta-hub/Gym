@@ -124,7 +124,7 @@ namespace Gym.V.frmHijos.Ventas
             }
 
             DialogResult confirmacion = MessageBox.Show(
-                "¿Desea eliminar el producto seleccionado de la compra?",
+                "¿Desea eliminar el producto seleccionado de la venta?",
                 "Confirmar", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
 
             if (confirmacion != DialogResult.Yes) return;
@@ -189,17 +189,17 @@ namespace Gym.V.frmHijos.Ventas
             }
 
             DialogResult confirmacion = MessageBox.Show(
-                "¿Confirmar la compra por $" + lbl_Total_ComprasNuevo.Text + "?",
-                "Confirmar compra", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                "¿Confirmar la venta por $" + lbl_Total_VentasNuevo.Text + "?",
+                "Confirmar venta", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
 
             if (confirmacion != DialogResult.Yes) return;
 
-            var proveedor = (Proveedor)cmb_Proveedor_ComprasNuevo.SelectedItem;
+            var cliente = (Cliente)cmb_Cliente_VentasNuevo.SelectedItem;
 
-            var items = new List<DetalleCompraItem>();
+            var items = new List<DetalleVentaItem>();
             foreach (DataRow fila in tablaItems.Rows)
             {
-                items.Add(new DetalleCompraItem
+                items.Add(new DetalleVentaItem
                 {
                     IdProducto = Convert.ToInt32(fila["IdProducto"]),
                     Cantidad = Convert.ToDecimal(fila["Cantidad"]),
@@ -209,19 +209,19 @@ namespace Gym.V.frmHijos.Ventas
             }
 
             // TODO: reemplazar 1 por el id del usuario de sesión
-            bool resultado = controladorVentas.InsertCompraCompleta(
-                proveedor.IdProveedor, 1, items);
+            bool resultado = controladorVentas.InsertVentaCompleta(
+                cliente.IdCliente, 1, items);
 
             if (resultado)
             {
-                MessageBox.Show("Compra registrada correctamente.", "Éxito",
+                MessageBox.Show("Venta registrada correctamente.", "Éxito",
                     MessageBoxButtons.OK, MessageBoxIcon.Information);
                 this.DialogResult = DialogResult.OK;
                 this.Close();
             }
             else
             {
-                MessageBox.Show("No se pudo registrar la compra.", "Error",
+                MessageBox.Show("No se pudo registrar la venta.", "Error",
                     MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
