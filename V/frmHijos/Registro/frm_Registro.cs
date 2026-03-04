@@ -9,6 +9,7 @@ namespace Gym.V.frmHijos.Registro
     public partial class frm_Registro : Form
     {
         private ControladorRegistro controlador = new ControladorRegistro();
+        private System.Windows.Forms.Timer timerLimpiar;
 
         public frm_Registro()
         {
@@ -19,7 +20,17 @@ namespace Gym.V.frmHijos.Registro
         {
             lbl_Fecha_Registro.Text = DateTime.Now.ToString("dd / MM / yyyy");
             LimpiarDatos();
+
             txt_Clave_Registro.KeyPress += txt_Clave_Registro_KeyPress;
+
+            timerLimpiar = new System.Windows.Forms.Timer();
+            timerLimpiar.Interval = 10000;
+            timerLimpiar.Tick += (s, ev) =>
+            {
+                timerLimpiar.Stop();
+                LimpiarDatos();
+                txt_Clave_Registro.Focus();
+            };
         }
 
         private void txt_Clave_Registro_KeyPress(object sender, KeyPressEventArgs e)
@@ -38,7 +49,6 @@ namespace Gym.V.frmHijos.Registro
 
         private void BuscarYRegistrar()
         {
-            // Si está vacío, no hacer nada (sin MessageBox)
             if (string.IsNullOrWhiteSpace(txt_Clave_Registro.Text))
                 return;
 
@@ -84,16 +94,24 @@ namespace Gym.V.frmHijos.Registro
             if (estadoMem == "Activo")
             {
                 DateTime vencimiento = Convert.ToDateTime(fila["fecha_vencimiento"]);
-                int diasRestantes = Convert.ToInt32(fila["dias_restantes"]);
+                DateTime fechaInicio = Convert.ToDateTime(fila["fecha_inicio"]);
+                int idClienteMembresia = Convert.ToInt32(fila["id_cliente_membresias"]);
+                int idMembresia = Convert.ToInt32(fila["id_membresias"]);
+                int clasesRestantes = Convert.ToInt32(fila["clases_restantes"]);
+                DateTime? ultimaClase = fila["ultima_clase"] == DBNull.Value
+                    ? (DateTime?)null
+                    : Convert.ToDateTime(fila["ultima_clase"]);
+
+                int clasesActualizadas = controlador.RegistrarIngreso(
+                    idCliente, idClienteMembresia, idMembresia,
+                    clasesRestantes, ultimaClase, fechaInicio);
 
                 lbl_Vencimiento.Text = vencimiento.ToString("dd/MM/yyyy");
-                lbl_Clases_Registro.Text = diasRestantes > 0
-                    ? diasRestantes + " días" : "Vencida";
+                lbl_Clases_Registro.Text = clasesActualizadas > 0
+                    ? clasesActualizadas + " clases" : "Sin clases";
                 lbl_Vencimiento.ForeColor = Color.Black;
-                lbl_Clases_Registro.ForeColor = diasRestantes > 0
+                lbl_Clases_Registro.ForeColor = clasesActualizadas > 0
                     ? Color.Black : Color.OrangeRed;
-
-                controlador.RegistrarIngreso(idCliente);
             }
             else
             {
@@ -102,6 +120,10 @@ namespace Gym.V.frmHijos.Registro
                 lbl_Vencimiento.ForeColor = Color.OrangeRed;
                 lbl_Clases_Registro.ForeColor = Color.OrangeRed;
             }
+
+            // Reinicia el timer con cada búsqueda
+            timerLimpiar.Stop();
+            timerLimpiar.Start();
         }
 
         private void LimpiarDatos()
