@@ -55,7 +55,6 @@
     <Compile Include="C\ControladoarCompras.cs" />
     <Compile Include="C\ControladorClientes.cs" />
     <Compile Include="C\ControladorConceptos.cs" />
-    <Compile Include="C\ControladorCorte.cs" />
     <Compile Include="C\ControladorInicio.cs" />
     <Compile Include="C\ControladorLogin.cs" />
     <Compile Include="C\ControladorMembresias.cs" />
@@ -72,7 +71,6 @@
     <Compile Include="M\Entidades\Ent_Cliente.cs" />
     <Compile Include="M\Entidades\Ent_Compra.cs" />
     <Compile Include="M\Entidades\Ent_Concepto.cs" />
-    <Compile Include="M\Entidades\Ent_CorteCaja.cs" />
     <Compile Include="M\Entidades\Ent_Membresia.cs" />
     <Compile Include="M\Entidades\Ent_MovimientoCaja.cs" />
     <Compile Include="M\Entidades\Ent_Operacion.cs" />
@@ -140,18 +138,6 @@
     </Compile>
     <Compile Include="V\frmHijos\Conceptos\frm_Conceptos_Nuevo.Designer.cs">
       <DependentUpon>frm_Conceptos_Nuevo.cs</DependentUpon>
-    </Compile>
-    <Compile Include="V\frmHijos\Corte\frm_Corte.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="V\frmHijos\Corte\frm_Corte.Designer.cs">
-      <DependentUpon>frm_Corte.cs</DependentUpon>
-    </Compile>
-    <Compile Include="V\frmHijos\Corte\frm_Corte_Nuevo.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="V\frmHijos\Corte\frm_Corte_Nuevo.Designer.cs">
-      <DependentUpon>frm_Corte_Nuevo.cs</DependentUpon>
     </Compile>
     <Compile Include="V\frmHijos\frm_Inicio.cs">
       <SubType>Form</SubType>
@@ -323,12 +309,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="V\frmHijos\Conceptos\frm_Conceptos_Nuevo.resx">
       <DependentUpon>frm_Conceptos_Nuevo.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="V\frmHijos\Corte\frm_Corte.resx">
-      <DependentUpon>frm_Corte.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="V\frmHijos\Corte\frm_Corte_Nuevo.resx">
-      <DependentUpon>frm_Corte_Nuevo.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="V\frmHijos\frm_Inicio.resx">
       <DependentUpon>frm_Inicio.cs</DependentUpon>

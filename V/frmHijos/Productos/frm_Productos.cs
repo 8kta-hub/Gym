@@ -25,6 +25,7 @@ namespace Gym.V.frmHijos.Productos
 
         private void frm_Productos_Load(object sender, EventArgs e)
         {
+        CargarFiltro();
             CargarProductos();
         }
 
@@ -153,18 +154,32 @@ namespace Gym.V.frmHijos.Productos
             };
         }
 
+        private void CargarFiltro()
+        {
+            cbm_FiltroProducto.Items.Add("Activo");
+            cbm_FiltroProducto.Items.Add("Sin stock");
+            cbm_FiltroProducto.Items.Add("Inactivo");
+            cbm_FiltroProducto.Items.Add("Todos");
+            cbm_FiltroProducto.SelectedIndex = 0;
+
+            cbm_FiltroProducto.SelectedIndexChanged += cbm_FiltroProducto_SelectedIndexChanged;
+        }
+
+        private void cbm_FiltroProducto_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            CargarProductos();
+        }
+
         private void CargarProductos()
         {
-            controlador.ListarProductos(dgv_Productos);
-            dgv_Productos.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
-            dgv_Productos.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
-            dgv_Productos.MultiSelect = false;
-            dgv_Productos.ReadOnly = true;
+            string filtro = cbm_FiltroProducto.SelectedItem?.ToString() ?? "Activo";
+            controlador.ListarProductos(dgv_Productos, filtro);
         }
 
         private void dgv_Productos_DataBindingComplete(object sender, DataGridViewBindingCompleteEventArgs e)
         {
             dgv_Productos.ClearSelection();
         }
+
     }
 }

@@ -87,9 +87,13 @@
             this.dgv_Productos.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.dgv_Productos.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgv_Productos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgv_Productos.Location = new System.Drawing.Point(12, 79);
+            this.dgv_Productos.MultiSelect = false;
             this.dgv_Productos.Name = "dgv_Productos";
+            this.dgv_Productos.ReadOnly = true;
+            this.dgv_Productos.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgv_Productos.Size = new System.Drawing.Size(1004, 280);
             this.dgv_Productos.TabIndex = 7;
             this.dgv_Productos.DataBindingComplete += new System.Windows.Forms.DataGridViewBindingCompleteEventHandler(this.dgv_Productos_DataBindingComplete);
@@ -98,7 +102,7 @@
             // 
             this.cbm_FiltroProducto.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbm_FiltroProducto.FormattingEnabled = true;
-            this.cbm_FiltroProducto.Location = new System.Drawing.Point(289, 50);
+            this.cbm_FiltroProducto.Location = new System.Drawing.Point(258, 51);
             this.cbm_FiltroProducto.Name = "cbm_FiltroProducto";
             this.cbm_FiltroProducto.Size = new System.Drawing.Size(121, 21);
             this.cbm_FiltroProducto.TabIndex = 40;
@@ -108,7 +112,7 @@
             this.btn_ExportarExcel_Productos.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btn_ExportarExcel_Productos.BackgroundImage")));
             this.btn_ExportarExcel_Productos.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.btn_ExportarExcel_Productos.Enabled = false;
-            this.btn_ExportarExcel_Productos.Location = new System.Drawing.Point(246, 41);
+            this.btn_ExportarExcel_Productos.Location = new System.Drawing.Point(439, 39);
             this.btn_ExportarExcel_Productos.Name = "btn_ExportarExcel_Productos";
             this.btn_ExportarExcel_Productos.Size = new System.Drawing.Size(33, 32);
             this.btn_ExportarExcel_Productos.TabIndex = 38;

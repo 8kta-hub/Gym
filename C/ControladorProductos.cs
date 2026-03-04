@@ -15,15 +15,25 @@ namespace Gym.C
     {
         private ConDB conexion = new ConDB();
 
-        public void ListarProductos(DataGridView dgv)
+        public void ListarProductos(DataGridView dgv, string filtro = "Activo")
         {
-            string consulta = @"
+            string where = "";
+
+            if (filtro == "Activo")
+                where = "WHERE pr.estado = 'Activo'";
+            else if (filtro == "Inactivo")
+                where = "WHERE pr.estado = 'Inactivo'";
+            else if (filtro == "Sin stock")
+                where = "WHERE pr.stock = 0 AND pr.estado = 'Activo'";
+
+
+            string consulta = $@"
                 SELECT 
                     p.id_proveedor,
-                    p.nombre AS Proveedor,
+                    p.nombre        AS Proveedor,
                     pr.id_producto,
                     pr.codigo,
-                    pr.nombre AS ProductoNombre,
+                    pr.nombre       AS ProductoNombre,
                     pr.stock,
                     pr.costo,
                     pr.precio_venta,
@@ -32,16 +42,12 @@ namespace Gym.C
                     pr.fecha_creacion
                 FROM Productos pr
                 INNER JOIN Proveedores p ON pr.id_proveedor = p.id_proveedor
-            ";
+                {where}";
 
             conexion.CargarTabla(consulta, dgv);
         }
 
-        
 
-        // ─────────────────────────────────────────
-        // INSERT
-        // ─────────────────────────────────────────
         public bool InsertProducto(int idProveedor, int codigo, string nombre, int stock, decimal costo, decimal precioVenta, string descripcion, string estado)
         {
             string sql = @"INSERT INTO Productos (id_proveedor, codigo, nombre, stock, costo, precio_venta, descripcion, estado)
@@ -63,9 +69,6 @@ namespace Gym.C
             return filas > 0;
         }
 
-        // ─────────────────────────────────────────
-        // UPDATE
-        // ─────────────────────────────────────────
         public bool UpdateProducto(int id_producto, int idProveedor, int codigo, string nombre, int stock, decimal costo, decimal precioVenta, string descripcion, string estado)
         {
             string sql = @"UPDATE Productos
@@ -96,9 +99,6 @@ namespace Gym.C
             return filas > 0;
         }
 
-        // ─────────────────────────────────────────
-        // DELETE LÓGICO
-        // ─────────────────────────────────────────
         public bool DeleteProducto(int id_producto)
         {
             string sql = "UPDATE Productos SET estado = 'Inactivo' WHERE id_producto = @id_producto";
