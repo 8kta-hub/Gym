@@ -78,9 +78,13 @@
             this.dgv_Roles.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.dgv_Roles.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgv_Roles.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgv_Roles.Location = new System.Drawing.Point(12, 79);
+            this.dgv_Roles.MultiSelect = false;
             this.dgv_Roles.Name = "dgv_Roles";
+            this.dgv_Roles.ReadOnly = true;
+            this.dgv_Roles.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgv_Roles.Size = new System.Drawing.Size(1004, 280);
             this.dgv_Roles.TabIndex = 25;
             this.dgv_Roles.DataBindingComplete += new System.Windows.Forms.DataGridViewBindingCompleteEventHandler(this.dgv_Roles_DataBindingComplete);
@@ -104,7 +108,6 @@
             this.btn_ExportarExcel_Roles.Size = new System.Drawing.Size(33, 32);
             this.btn_ExportarExcel_Roles.TabIndex = 38;
             this.btn_ExportarExcel_Roles.UseVisualStyleBackColor = true;
-            this.btn_ExportarExcel_Roles.Click += new System.EventHandler(this.btn_ExportarExcel_Roles_Click);
             // 
             // btn_Deshabilitar_Roles
             // 

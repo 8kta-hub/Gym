@@ -23,17 +23,11 @@ namespace Gym.V.frmHijos.Roles
             InitializeComponent();
         }
 
-        // ─────────────────────────────────────────
-        // LOAD
-        // ─────────────────────────────────────────
         private void frm_Roles_Load(object sender, EventArgs e)
         {
             CargarRoles();
         }
 
-        // ─────────────────────────────────────────
-        // NUEVO
-        // ─────────────────────────────────────────
         private void btn_Nuevo_Roles_Click(object sender, EventArgs e)
         {
             frm_Roles_Nuevo frmNuevo = new frm_Roles_Nuevo();
@@ -41,16 +35,20 @@ namespace Gym.V.frmHijos.Roles
                 CargarRoles();
         }
 
-        // ─────────────────────────────────────────
-        // MODIFICAR
-        // ─────────────────────────────────────────
         private void btn_Modificar_Roles_Click(object sender, EventArgs e)
         {
             Rol seleccionado = CargarRolSeleccionado();
             if (seleccionado == null)
             {
                 MessageBox.Show("Seleccione un rol para modificar.", "Aviso",
-                                MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
+            if (seleccionado.Nombre == "Administrador")
+            {
+                MessageBox.Show("El rol Administrador no puede modificarse.", "Acción no permitida",
+                    MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
 
@@ -59,16 +57,20 @@ namespace Gym.V.frmHijos.Roles
                 CargarRoles();
         }
 
-        // ─────────────────────────────────────────
-        // ELIMINAR (baja lógica)
-        // ─────────────────────────────────────────
         private void btn_Eliminar_Roles_Click(object sender, EventArgs e)
         {
             Rol seleccionado = CargarRolSeleccionado();
             if (seleccionado == null)
             {
                 MessageBox.Show("Seleccione un rol para eliminar.", "Aviso",
-                                MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
+            if (seleccionado.Nombre == "Administrador")
+            {
+                MessageBox.Show("El rol Administrador no puede eliminarse.", "Acción no permitida",
+                    MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
 
@@ -91,65 +93,6 @@ namespace Gym.V.frmHijos.Roles
             }
         }
 
-        // ─────────────────────────────────────────
-        // EXPORTAR EXCEL
-        // ─────────────────────────────────────────
-        private void btn_ExportarExcel_Roles_Click(object sender, EventArgs e)
-        {
-            if (dgv_Roles.Rows.Count == 0)
-            {
-                MessageBox.Show("No hay datos para exportar.", "Aviso",
-                                MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                return;
-            }
-
-            try
-            {
-                SaveFileDialog sfd = new SaveFileDialog();
-                sfd.Filter = "Excel (*.xlsx)|*.xlsx";
-                sfd.FileName = "Roles_" + DateTime.Now.ToString("yyyyMMdd");
-
-                if (sfd.ShowDialog() != DialogResult.OK) return;
-
-                // Construir CSV compatible con Excel si no hay librería externa,
-                // o usar la exportación estándar del proyecto si ya existe un helper.
-                using (System.IO.StreamWriter sw = new System.IO.StreamWriter(sfd.FileName, false, System.Text.Encoding.UTF8))
-                {
-                    // Encabezados
-                    for (int c = 0; c < dgv_Roles.Columns.Count; c++)
-                    {
-                        if (!dgv_Roles.Columns[c].Visible) continue;
-                        sw.Write(dgv_Roles.Columns[c].HeaderText);
-                        if (c < dgv_Roles.Columns.Count - 1) sw.Write("\t");
-                    }
-                    sw.WriteLine();
-
-                    // Filas
-                    foreach (DataGridViewRow fila in dgv_Roles.Rows)
-                    {
-                        for (int c = 0; c < dgv_Roles.Columns.Count; c++)
-                        {
-                            if (!dgv_Roles.Columns[c].Visible) continue;
-                            sw.Write(fila.Cells[c].Value?.ToString() ?? "");
-                            if (c < dgv_Roles.Columns.Count - 1) sw.Write("\t");
-                        }
-                        sw.WriteLine();
-                    }
-                }
-
-                MessageBox.Show("Exportación completada.", "Éxito",
-                                MessageBoxButtons.OK, MessageBoxIcon.Information);
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Error al exportar: " + ex.Message, "Error",
-                                MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-        }
-
-        // ─────────────────────────────────────────
-        // CARGAR ROL SELECCIONADO
-        // ─────────────────────────────────────────
         private Rol CargarRolSeleccionado()
         {
             if (dgv_Roles.CurrentRow == null) return null;
@@ -167,24 +110,69 @@ namespace Gym.V.frmHijos.Roles
             };
         }
 
-        // ─────────────────────────────────────────
-        // CARGAR DGV
-        // ─────────────────────────────────────────
         private void CargarRoles()
         {
             controlador.ListarRoles(dgv_Roles);
             dgv_Roles.Columns["id_rol"].Visible = false;
-
-            dgv_Roles.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
-            dgv_Roles.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
-            dgv_Roles.MultiSelect = false;
-            dgv_Roles.ReadOnly = true;
         }
 
-        // Limpiar selección al terminar el binding
         private void dgv_Roles_DataBindingComplete(object sender, DataGridViewBindingCompleteEventArgs e)
         {
             dgv_Roles.ClearSelection();
         }
+
+
+        //private void btn_ExportarExcel_Roles_Click(object sender, EventArgs e)
+        //{
+        //    if (dgv_Roles.Rows.Count == 0)
+        //    {
+        //        MessageBox.Show("No hay datos para exportar.", "Aviso",
+        //                        MessageBoxButtons.OK, MessageBoxIcon.Warning);
+        //        return;
+        //    }
+
+        //    try
+        //    {
+        //        SaveFileDialog sfd = new SaveFileDialog();
+        //        sfd.Filter = "Excel (*.xlsx)|*.xlsx";
+        //        sfd.FileName = "Roles_" + DateTime.Now.ToString("yyyyMMdd");
+
+        //        if (sfd.ShowDialog() != DialogResult.OK) return;
+
+        //        // Construir CSV compatible con Excel si no hay librería externa,
+        //        // o usar la exportación estándar del proyecto si ya existe un helper.
+        //        using (System.IO.StreamWriter sw = new System.IO.StreamWriter(sfd.FileName, false, System.Text.Encoding.UTF8))
+        //        {
+        //            // Encabezados
+        //            for (int c = 0; c < dgv_Roles.Columns.Count; c++)
+        //            {
+        //                if (!dgv_Roles.Columns[c].Visible) continue;
+        //                sw.Write(dgv_Roles.Columns[c].HeaderText);
+        //                if (c < dgv_Roles.Columns.Count - 1) sw.Write("\t");
+        //            }
+        //            sw.WriteLine();
+
+        //            // Filas
+        //            foreach (DataGridViewRow fila in dgv_Roles.Rows)
+        //            {
+        //                for (int c = 0; c < dgv_Roles.Columns.Count; c++)
+        //                {
+        //                    if (!dgv_Roles.Columns[c].Visible) continue;
+        //                    sw.Write(fila.Cells[c].Value?.ToString() ?? "");
+        //                    if (c < dgv_Roles.Columns.Count - 1) sw.Write("\t");
+        //                }
+        //                sw.WriteLine();
+        //            }
+        //        }
+
+        //        MessageBox.Show("Exportación completada.", "Éxito",
+        //                        MessageBoxButtons.OK, MessageBoxIcon.Information);
+        //    }
+        //    catch (Exception ex)
+        //    {
+        //        MessageBox.Show("Error al exportar: " + ex.Message, "Error",
+        //                        MessageBoxButtons.OK, MessageBoxIcon.Error);
+        //    }
+        //}
     }
 }
