@@ -1,6 +1,7 @@
 ﻿using Gym.M;
 using Gym.M.Entidades;
 using System;
+using System.Collections.Generic;
 using System.Data;
 using System.Data.SqlClient;
 using System.Windows.Forms;
@@ -248,6 +249,30 @@ namespace Gym.C
             };
 
             return conexion.EjecutarComando(consulta, parametros) > 0;
+        }
+
+        public List<Cliente> ObtenerClientesActivos()
+        {
+            string consulta = @"
+                SELECT id_cliente, 
+                nombre + ' ' + apellido As Cliente
+                FROM Clientes
+                WHERE activo = 1
+                ORDER BY nombre";
+
+            DataTable dt = conexion.ObtenerTabla(consulta);
+            var lista = new List<Cliente>();
+
+            foreach (DataRow fila in dt.Rows)
+            {
+                lista.Add(new Cliente
+                {
+                    IdCliente = Convert.ToInt32(fila["id_cliente"]),
+                    NombreCompleto = fila["Cliente"].ToString()
+                });
+            }
+
+            return lista;
         }
     }
 }

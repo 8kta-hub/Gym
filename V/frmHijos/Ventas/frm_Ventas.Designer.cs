@@ -103,6 +103,7 @@
             this.dgv_Ventas.Name = "dgv_Ventas";
             this.dgv_Ventas.Size = new System.Drawing.Size(1004, 280);
             this.dgv_Ventas.TabIndex = 16;
+            this.dgv_Ventas.DataBindingComplete += new System.Windows.Forms.DataGridViewBindingCompleteEventHandler(this.dgv_Ventas_DataBindingComplete);
             // 
             // btn_Eliminar_Ventas
             // 
@@ -113,6 +114,7 @@
             this.btn_Eliminar_Ventas.TabIndex = 14;
             this.btn_Eliminar_Ventas.Text = "Eliminar";
             this.btn_Eliminar_Ventas.UseVisualStyleBackColor = true;
+            this.btn_Eliminar_Ventas.Click += new System.EventHandler(this.btn_Eliminar_Ventas_Click);
             // 
             // btn_Detalle_Ventas
             // 

@@ -6,13 +6,15 @@ using System.Text;
 using System.Threading.Tasks;
 using Gym.M;
 using System.Security.Cryptography;
+using System.Data;
+using System.Security.Policy;
 
 namespace Gym.C
 {
     public class ControladorLogin
     {
         ConDB conexion = new ConDB();
-        public bool ConfirmarUsuarioContraseña(string usuario, string contrasena)
+        public bool ConfirmarUsuarioContraseña(string usuario, byte[] contrasena)
         {
             string consulta = @"
             SELECT COUNT(*) 
@@ -23,7 +25,7 @@ namespace Gym.C
             SqlParameter[] parametros =
             {
                 new SqlParameter("@usuario", usuario),
-                new SqlParameter("@contrasena", contrasena)
+                new SqlParameter("@contrasena", SqlDbType.VarBinary) { Value = contrasena }
             };
 
             int cantidad = Convert.ToInt32(conexion.ObtenerValor(consulta, parametros));
@@ -31,19 +33,48 @@ namespace Gym.C
             return cantidad > 0;
         }
 
-        public string GenerarHash(string texto)
+        public string TraerDNI(string usuario)
+        {
+            string consulta = @"
+            SELECT dni 
+            FROM Usuarios 
+            WHERE usuario = @usuario ";
+
+            SqlParameter[] parametros =
+            {
+                new SqlParameter("@usuario", usuario)
+            };
+
+            object resultado = conexion.ObtenerValor(consulta, parametros);
+
+
+
+            return resultado?.ToString();
+        }
+
+        public bool CambiarContraseñas(string usuario, byte[] contrasena)
+        {
+            string consulta = @"
+            UPDATE Usuarios
+            SET contrasena = @contrasena
+            WHERE usuario = @usuario ";
+
+            SqlParameter[] parametros =
+            {
+                new SqlParameter("@contrasena", SqlDbType.VarBinary) { Value = contrasena },
+                new SqlParameter("@usuario", usuario)
+            };
+
+            int filas = conexion.EjecutarComando(consulta, parametros);
+
+            return filas > 0;
+        }
+
+        public byte[] GenerarHash(string texto)
         {
             using (SHA256 sha256 = SHA256.Create())
             {
-                byte[] bytes = sha256.ComputeHash(Encoding.UTF8.GetBytes(texto));
-
-                StringBuilder builder = new StringBuilder();
-                foreach (byte b in bytes)
-                {
-                    builder.Append(b.ToString("x2"));
-                }
-
-                return builder.ToString();
+                return sha256.ComputeHash(Encoding.UTF8.GetBytes(texto));
             }
         }
     }

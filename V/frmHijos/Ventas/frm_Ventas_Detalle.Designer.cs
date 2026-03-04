@@ -171,6 +171,7 @@
             this.MinimizeBox = false;
             this.Name = "frm_Ventas_Detalle";
             this.Text = "Ventas detalle";
+            this.Load += new System.EventHandler(this.frm_Ventas_Detalle_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgv_VentasDetalle)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

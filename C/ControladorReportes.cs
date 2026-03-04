@@ -41,7 +41,8 @@ namespace Gym.C
                 FROM Productos
                 WHERE (@estado = 'Todos' 
                 OR (@estado = 'Activo' AND estado = 'Activo')
-                OR (@estado = 'Inactivo' AND estado = 'Inactivo'))";
+                OR (@estado = 'Inactivo' AND estado = 'Inactivo')
+                OR (@estado = 'Sin stock' AND estado = 'Sin stock'))";
 
             SqlParameter[] parametros =
             {

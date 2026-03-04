@@ -25,11 +25,16 @@ namespace Gym
 {
     public partial class frm_Principal : Form
     {
-        public frm_Principal()
+        private string UsuarioIngresado;
+        private Form Login;
+        
+        public frm_Principal(string usuarioIngresado, Form login)
         {
             InitializeComponent();
             frm_Inicio Inicio = new frm_Inicio();
             Funciones.abrirForm(Inicio, pnl_base);
+            this.UsuarioIngresado = usuarioIngresado;
+            this.Login = login;
         }
 
         private void Principal_Load(object sender, EventArgs e)
@@ -120,6 +125,11 @@ namespace Gym
         {
             frm_Configuracion Config = new frm_Configuracion();
             Funciones.abrirForm(Config,pnl_base);
+        }
+
+        private void frm_Principal_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            Application.Exit();
         }
     }
 }
