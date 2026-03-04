@@ -110,6 +110,7 @@
             // 
             // btn_Roles_Usuarios
             // 
+            this.btn_Roles_Usuarios.Enabled = false;
             this.btn_Roles_Usuarios.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_Roles_Usuarios.Location = new System.Drawing.Point(255, 50);
             this.btn_Roles_Usuarios.Name = "btn_Roles_Usuarios";
@@ -117,6 +118,7 @@
             this.btn_Roles_Usuarios.TabIndex = 23;
             this.btn_Roles_Usuarios.Text = "Roles";
             this.btn_Roles_Usuarios.UseVisualStyleBackColor = true;
+            this.btn_Roles_Usuarios.Visible = false;
             this.btn_Roles_Usuarios.Click += new System.EventHandler(this.btn_Roles_Usuarios_Click);
             // 
             // btn_ExportarExcel_Usuarios
